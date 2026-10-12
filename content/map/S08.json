@@ -1,0 +1,63 @@
+{
+  "session": "S08",
+  "title": "Elasticity & Price Discrimination",
+  "spine": "Unique Value to Offer",
+  "learningObjectives": [
+    {"id": "S08-LO1", "text": "Know and understand the following concepts: own price elasticity, inelastic and elastic demand, the total revenue test, cross price elasticity", "src": "course-data.js Session 8 'Read: Chapter 3'"},
+    {"id": "S08-LO2", "text": "Know how to calculate the various forms of elasticity and understand how they relate to strategy", "src": "course-data.js Session 8"}
+  ],
+  "keyTerms": [
+    {"term": "Elasticity", "def": "A measure of responsiveness of one variable to changes in another variable; the percentage change in one variable relative to changes in another; a measure of sensitivity (e.g., price-sensitive customers).", "src": "S08 slides p.15"},
+    {"term": "Own-price elasticity (OPE)", "def": "OPE = %ΔQx/%ΔPx = (∂Qx/∂Px)(Px/Qx). OPE will always be negative (law of demand).", "src": "S08 slides p.16"},
+    {"term": "Elastic demand", "def": "OPE < −1. Consumers are relatively price sensitive.", "src": "S08 slides p.17"},
+    {"term": "Inelastic demand", "def": "−1 < OPE < 0. Consumers are relatively price insensitive.", "src": "S08 slides p.17"},
+    {"term": "Unitary elastic", "def": "OPE = −1.", "src": "S08 slides p.17"},
+    {"term": "Total revenue test", "def": "(1) If demand is elastic (OPE < −1), a price increase (decrease) leads to a decrease (increase) in total revenue. (2) If inelastic (−1 < OPE < 0), a price increase (decrease) leads to an increase (decrease) in total revenue. (3) Total revenue is maximized when demand is unitary elastic.", "src": "S08 slides p.18"},
+    {"term": "Cross-price elasticity (CPE)", "def": "CPE = %ΔQx/%ΔPy = (∂Qx/∂Py)(Py/Qx). Can be negative or positive: positive → substitutes (Dr Pepper vs. Mr. Pibb); negative → complements (milk and cereal).", "src": "S08 slides p.27"},
+    {"term": "Income elasticity", "def": "%ΔQx/%ΔI; positive for normal goods, negative for inferior goods.", "src": "Type listed on S08 slides p.15; formula = GENERAL ECON (B&P Ch 3 topic)"},
+    {"term": "Advertising elasticity", "def": "%ΔQx/%ΔA — responsiveness of quantity to advertising spending.", "src": "Type listed on S08 slides p.15; formula = GENERAL ECON (B&P Ch 3 topic)"}
+  ],
+  "formulas": [
+    {"name": "OPE (arc / algebraic)", "latex": "OPE = \\frac{\\%\\Delta Q_x}{\\%\\Delta P_x} = \\frac{(Q_{new}-Q_{old})/Q_{old}}{(P_{new}-P_{old})/P_{old}}", "src": "S08 slides p.23"},
+    {"name": "OPE (point / calculus)", "latex": "OPE = \\frac{\\partial Q_x}{\\partial P_x}\\cdot\\frac{P_x}{Q_x}", "src": "S08 slides p.16, p.25"},
+    {"name": "CPE", "latex": "CPE = \\frac{\\%\\Delta Q_x}{\\%\\Delta P_y} = \\frac{\\partial Q_x}{\\partial P_y}\\cdot\\frac{P_y}{Q_x}", "src": "S08 slides p.27"},
+    {"name": "Predict % change", "latex": "\\%\\Delta Q_x = E \\times \\%\\Delta P", "src": "S08 slides p.31; CQ4 Q8"},
+    {"name": "Income elasticity", "latex": "E_I = \\frac{\\partial Q_x}{\\partial I}\\cdot\\frac{I}{Q_x}", "src": "GENERAL ECON (B&P Ch 3)"},
+    {"name": "Log-linear demand", "latex": "\\ln Q = \\beta_0 + \\beta_P \\ln P + \\dots \\Rightarrow OPE = \\beta_P", "src": "GENERAL ECON (B&P Ch 3) — not in course slides"}
+  ],
+  "workedExamples": [
+    {"name": "Redbox OPE (algebraic)", "givens": "Oct 31, 2011: $1.00 → $1.20; 5,000 → 4,500 rentals per kiosk", "answer": "OPE = (−0.10)/(0.20) = −0.50 → inelastic at $1.00", "src": "S08 slides pp.21-23"},
+    {"name": "Redbox OPE (calculus)", "givens": "Qx = −3,728Px + 8,845; Px = $1.00", "answer": "OPE = −3,728 × 1/5,117 = −0.73", "src": "S08 slides p.25"},
+    {"name": "CPE exercise", "givens": "Qx = 500 − 5Px + 4Py; Px = 25, Py = 20", "answer": "y is a substitute; Qx = 455; CPE = 4 × 20/455 = 0.18; a 10% increase in Py → +1.8% Qx", "src": "S08 slides pp.28-31"},
+    {"name": "Dr Pepper OPE table", "givens": "Q = 30,000 − 20,000P at P = 0, 0.25, ..., 1.50", "answer": "OPE: 0, −0.2, −0.5, −1, −2, −5, −∞; revenue 0, 6,250, 10,000, 11,250, 10,000, 6,250, 0; max at P = $0.75, Q = 15,000, R = $11,250, OPE = −1; elastic above $0.75, inelastic below", "src": "S08 workbook, OPE - Solution!B14:E20 and comments B61, B70"},
+    {"name": "Dr Pepper / Mr. Pibb CPE", "givens": "CPE for Dr Pepper = 1.2; CPE for Mr. Pibb = 2.0; 25% price cut", "answer": "DP cuts price 25% → Mr. Pibb quantity −50%; Mr. Pibb cuts 25% → Dr Pepper −30%; Dr Pepper is a much stronger substitute for Mr. Pibb than vice versa", "src": "S08 workbook, CPE - Solution comments B15, B26, B37"},
+    {"name": "Netflix 2011 (CQ4 Q10)", "givens": "Expected 25M, actual 23.8M; price $10 → $16", "answer": "%ΔQ = −4.8%; %ΔP = 60%; OPE = −0.08 → inelastic", "src": "CQ4 Q10 feedback"},
+    {"name": "CQ4 elasticity set", "givens": "CPE −2.0, Py +20% → Qx −40% (complements); OPE −0.7 → raise price", "src": "CQ4 Q8-Q9"},
+    {"name": "TR test chart", "givens": "Linear demand from P = $40 (Q = 0) to Q = 80 (P = 0)", "answer": "Revenue peaks at $800 at P = $20 (midpoint); upper half elastic, lower half inelastic", "src": "S08 slides pp.19-20"}
+  ],
+  "elasticityAndStrategy": {
+    "Rivalry": "CPE between rival brands: high CPE → buyers switch brands easily → intense rivalry",
+    "Buyer power": "OPE of the firm's demand: elastic (OPE < −1) → price-sensitive buyers → strong buyer power",
+    "Threat of substitutes": "CPE with products outside the industry: high CPE → close substitutes → strong threat, caps prices",
+    "Supplier power / Threat of entry": "Not captured by demand elasticity; needs other evidence",
+    "rule": "The larger the elasticity (in absolute value), the stronger the force — and the less pricing power the firm has.",
+    "src": "S08 slides p.32"
+  },
+  "cases": [
+    "Netflix price increase (WSJ July 13, 2011): $9.99 combo plan replaced by $15.98 ($7.99 streaming + $7.99 DVD), +60% (S08 slides p.10)",
+    "Netflix subscribers 2009-2013 chart and NYT Oct 24, 2011 'How Netflix Lost 800,000 Members, and Good Will' (S08 slides pp.11-12)",
+    "'Should we raise our price?': wholesale distributors; current price $37, implied optimal price $19, implied elasticity 4.11, >$74K per month (+35%) more revenue (S08 slides p.13)",
+    "Syracuse University (WSJ Aug 29, 2026): 'the school thinks of itself as like an Ivy, but it's not' — enrollment crisis (S08 slides pp.7-9)"
+  ],
+  "priceDiscrimination": "The S08 deck title mentions price discrimination, but the slides contain no price discrimination content; it is covered in S11 (B&P Ch 11).",
+  "traps": [
+    "OPE is reported as NEGATIVE; elastic means OPE < −1 (|OPE| > 1)",
+    "Use the ORIGINAL (old) price and quantity as the base in the algebraic formula",
+    "Use the partial derivative coefficient (∂Q/∂P), not the inverse-demand slope",
+    "Netflix: measure the subscriber loss against the expected 25M, not the reported 800K",
+    "CPE sign: + substitutes, − complements; magnitude can differ by direction (DP 1.2 vs MP 2.0)",
+    "Revenue max at |OPE| = 1, not at maximum quantity"
+  ],
+  "quizQuestions": ["CQ4 Q5-Q10"],
+  "spreadsheetTasks": ["S08 in-class OPE and CPE tabs", "Differentiation Advantage Part 1 steps 6-8, Part 2 step 3, Part 3 (Netflix regression OPE)"]
+}

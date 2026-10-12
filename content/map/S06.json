@@ -1,0 +1,60 @@
+{
+  "session": "S06",
+  "title": "Cost & Economies of Scale",
+  "spine": "Unique Value to Offer",
+  "learningObjectives": [
+    {"id": "S06-LO1", "text": "Know and understand the sources of cost advantage", "src": "course-data.js Session 6 'Read: Chapter 5'"},
+    {"id": "S06-LO2", "text": "Know and understand the following economic concepts and how they relate to one another: fixed costs, variable costs, total cost, average fixed cost, average variable cost, average total cost, marginal cost, economies of scale", "src": "course-data.js Session 6"},
+    {"id": "S06-LO3", "text": "Understand the strategic implications of economies of scale (i.e., when does it make sense to grow?)", "src": "course-data.js Session 6"}
+  ],
+  "keyTerms": [
+    {"term": "Cost function", "def": "Defines the relationship between production (Q) and total cost (C). Total cost can be broken into fixed (FC) and variable costs (VC).", "src": "S06 Video Slides p.12"},
+    {"term": "Fixed cost (FC)", "def": "The part of the cost function that does not change with Q (the constant term).", "src": "S06 Video Slides p.14; CQ3 Q1 feedback"},
+    {"term": "Variable cost (VC)", "def": "Every term that changes with Q.", "src": "S06 Video Slides p.15; CQ3 Q2 feedback"},
+    {"term": "Average fixed cost (AFC)", "def": "AFC = FC/Q", "src": "S06 Video Slides p.17"},
+    {"term": "Average variable cost (AVC)", "def": "AVC = VC(Q)/Q", "src": "S06 Video Slides p.18"},
+    {"term": "Average total cost (ATC)", "def": "ATC = AVC + AFC (= C/Q)", "src": "S06 Video Slides p.19"},
+    {"term": "Marginal cost (MC)", "def": "The cost of producing an additional unit of output, or the change in cost attributable to the last unit of output. MC = ΔC/ΔQ = dC/dQ.", "src": "S06 Video Slides p.20"},
+    {"term": "Short run vs. long run", "def": "In the short run, capital (e.g., number of grills) is fixed and labor is variable; in the long run a manager is free to adjust all inputs — all costs are variable.", "src": "S06 Video Slides p.27"},
+    {"term": "Long-run average cost curve (LRAC)", "def": "Defines the minimum average cost of producing alternative levels of output, allowing for optimal selection of fixed and variable factors of production.", "src": "S06 Video Slides p.29"},
+    {"term": "Economies of scale", "def": "Exist when long-run average costs decline as output is increased.", "src": "S06 Video Slides p.29"},
+    {"term": "Diseconomies of scale", "def": "Exist when long-run average costs rise as output is increased.", "src": "S06 Video Slides p.29"},
+    {"term": "Learning and experience", "def": "'Practice makes perfect': firms become more efficient through practice; costs fall with cumulative output over time, whereas economies of scale come from the volume produced in a given period.", "src": "CQ3 Q9 feedback"},
+    {"term": "Scale curve", "def": "Cost per unit (y) plotted against scale (x), fit with a power function y = a·x^b. Slope of the curve = 2^b = cost multiplier per doubling; % drop per doubling = 1 − 2^b.", "src": "S06 workbook Solution!B49-E84; Cost Advantage Part 1 step 5"}
+  ],
+  "sourcesOfCostAdvantage": ["Economies of Scale and Scope", "Learning and Experience", "Proprietary Knowledge", "Input Costs", "Different Business Model", "src: S06 slides p.8"],
+  "formulas": [
+    {"name": "Total cost", "latex": "C(Q) = FC + VC(Q)", "src": "S06 Video p.12,16"},
+    {"name": "Averages", "latex": "AFC=\\frac{FC}{Q},\\; AVC=\\frac{VC(Q)}{Q},\\; ATC = AFC + AVC", "src": "S06 Video pp.17-19"},
+    {"name": "Marginal cost", "latex": "MC = \\frac{\\Delta C}{\\Delta Q} = \\frac{dC}{dQ}", "src": "S06 Video p.20"},
+    {"name": "Power-law scale curve", "latex": "ATC = a\\,Q^{b},\\quad \\text{cost after doubling} = 2^{b}\\times\\text{cost}", "src": "S06 workbook Solution!D83:E84"},
+    {"name": "DuPont", "latex": "ROA = ROS\\times AT,\\; ROE = ROA\\times\\text{Leverage}", "vars": {"ROS": "Net income / Revenue", "AT": "Revenue / Total assets", "Leverage": "Total assets / Total equity"}, "src": "S06 slides p.6 (relationships implied by the table)"}
+  ],
+  "workedExamples": [
+    {"name": "J. Dawgs one grill", "givens": "C(Q) = 0.00002Q³ − 0.005Q² + 0.8Q + 8; Q = 100", "answer": "FC = 8; VC = 20 − 50 + 80 = $50; C = $58; AFC = $0.08; AVC = $0.50; ATC = $0.58; MC = 0.6 − 1 + 0.8 = $0.40", "src": "S06 Video Slides pp.14-21"},
+    {"name": "J. Dawgs production table", "givens": "K = 1 grill at $8, wage $10; Q at L = 0..9: 0,10,28,54,84,116,146,172,190,200", "answer": "FC = 8; VC = 10L; C = 8, 18, 28, ..., 98. Increasing then diminishing marginal returns.", "src": "S06 Video Slides pp.4-10"},
+    {"name": "J. Dawgs two grills (CQ3)", "givens": "C = 0.000002Q³ − 0.0005Q² + 0.25Q + 16; Q = 400", "answer": "AFC $0.04; VC $148; AVC $0.37; MC $0.81; MC minimized at Q ≈ 83", "src": "S06 Video p.24; Comprehension Quiz 3 Q1-5"},
+    {"name": "Whole Foods / Kroger / Safeway FY2014", "givens": "Revenue 14,194 / 108,465 / 36,360; COGS 9,150 / 85,512 / 26,648; SG&A 4,110 / 19,816 / 9,148; Op income 934 / 3,137 / 534; NI 579 / 1,728 / 113; Assets 5,744 / 30,556 / 13,377; Liab 1,931 / 25,114 / 7,927; Equity 3,813 / 5,442 / 5,450 ($M)", "answer": "ROS 4.1% / 1.6% / 0.3%; AT 2.5 / 3.5 / 2.7; Leverage 1.5 / 5.6 / 2.5; ROA 10.1% / 5.7% / 0.8%; ROE 15.2% / 31.8% / 2.1%", "src": "S06 slides p.6"},
+    {"name": "Guest-Tek total cost curve", "givens": "11 quarters of rooms, FC, VC ($000s), 2004-Q3 to 2007-Q1", "answer": "TC($000s) = 37.8335·Rooms^0.4295", "src": "S06 workbook Solution!C91 formula"},
+    {"name": "Guest-Tek scale curve", "givens": "CPRPD = TC×1000/(Rooms×365/4); 2007-Q1 CPRPD = $0.2065", "answer": "CPRPD = 414.6136·Rooms^−0.5705; $0.15 needs ≈ 1,077,754 rooms; doubling cuts unit cost 32.7%", "src": "S06 workbook Solution!G47, C75:D76, E83"},
+    {"name": "Guest-Tek marginal cost", "givens": "MC per quarter = 0.4295 × 37.8335 × R^(−0.5705) × 1000; ÷ 91.25 days", "answer": "MC CPRPD: 100k rooms $0.250; 200k $0.168; 300k $0.134; 400k $0.113; 500k $0.0998", "src": "S06 workbook Solution!F91:F107"}
+  ],
+  "cases": [
+    "Competing on cost (S06 slides p.7): Kroger competes on cost (keeps 21¢ of each sales dollar after groceries vs. Whole Foods 36¢); Whole Foods on differentiation (premium covers overhead of 29% vs. Kroger's 18%); Kroger wins on volume ($3.50 sales per $ assets vs. $2.50); Safeway is stuck in the middle (1.5% operating margin; Albertsons bought it a year later); most successful in 2014: Whole Foods — best margins and ROA; Kroger's higher ROE comes mostly from debt.",
+    "HSIA Wars: Guest-Tek offered HSIA at $0.10 per room per day (early 2007); iBahn earned ~$0.65 on fixed-fee contracts; iBahn ~200,000 rooms, Guest-Tek ~500,000 after GoldenTree; ~2.5M rooms excluding 5-star; iBahn differentiated on security/VPN and 7-minute support calls (HSIA Wars case pp.1-3)",
+    "Guest-Tek verdict: can afford $0.10 since MC at current volume ≈ $0.10; but to cover fixed costs at that price they'd need ~2.2M rooms ≈ 88% of 2.5M select-service rooms; the competitor had a quality differentiator and scope economies, so Guest-Tek risked a price war it couldn't win (S06 workbook Solution!A112-A153)",
+    "Netflix vs. Redbox (Cost Advantage assignment): Redbox ATC per rental = 656.06·R^−0.476 (TC = 656.06·R^0.524); Netflix CPSPM = 38.10·S^−0.182; Redbox cost falls ~28.1% per doubling vs. Netflix ~11.9%; Netflix MCPEH ≈ $0.096/hr vs. Redbox ≈ $0.65/hr in 2016-2 (Kimball's Cost Advantage workbook — his answers, not an official key)",
+    "'Scale economies work in reverse': Redbox's rentals were shrinking, moving it UP its steep scale curve (Kimball's Cost Advantage Part 1 step 6)"
+  ],
+  "traps": [
+    "MC excludes fixed costs (marginal cost is only the variable cost of the last unit)",
+    "MC crosses AVC and ATC at their minimum points",
+    "ATC − AVC = AFC, which shrinks toward zero as Q rises",
+    "Units: Guest-Tek costs are in $000s; convert rooms to room-days (×365/4)",
+    "Learning/experience = cumulative output over time; scale = volume in a period",
+    "Video slide p.16 prints 'C = 8 + 58 = $58' — the correct arithmetic is 8 + 50 = $58",
+    "HSIA case table lists 2004-Q3 rooms 83,900 and VC 3,572; the S06 workbook uses 83,209 and 3,843.906 — follow the workbook"
+  ],
+  "quizQuestions": ["CQ3 Q1-Q10"],
+  "spreadsheetTasks": ["S06 Guest-Tek exercise: TC curve, CPRPD, scale curve, volume for target cost, doubling %, MC two ways", "Cost Advantage Exercise: Netflix vs. Redbox (TC power fits, CPSPM, breakeven subs at $7.99, slope 2^b, MCPEH), Blockbuster vs. Netflix (cost per store, CPSPM, cost structure %)"]
+}

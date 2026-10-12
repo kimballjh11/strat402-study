@@ -1,0 +1,30 @@
+{
+  "session": "S12",
+  "title": "Group Project (Sessions 2 & 12)",
+  "spine": "Framing",
+  "learningObjectives": [
+    {"id": "S12-LO1", "text": "Know the four group project checkpoints and what each one requires", "src": "course-data.js Session 12 Reading Quiz"},
+    {"id": "S12-LO2", "text": "Understand how Prova is used to give feedback on project ideas and to evaluate your final presentation", "src": "course-data.js Session 12"},
+    {"id": "S12-LO3", "text": "Know how the 100 project points are earned and how the participation score scales them", "src": "course-data.js Session 12"},
+    {"id": "S12-LO4", "text": "Know the showcase attendance expectation and the deadline for reporting a conflict", "src": "course-data.js Session 12"},
+    {"id": "S12-LO5", "text": "Be able to choose a project scope and data source that can be completed within the semester", "src": "course-data.js Session 12"}
+  ],
+  "facts": [
+    "Checkpoint 1: Breaking Bread — meet Wed Sep 9, due Sat Sep 12; eat together, ≥60 minutes, five-minute transformative-experience story; each member submits a short response",
+    "Checkpoint 2: Brainstorming and Narrowing — meet Wed Oct 14, due Sat Oct 17; 2-3 page doc: projects that stood out; at least 10 possible businesses with contact, position, relationship; top three ideas (problem, analysis type, data source); one member uploads",
+    "Checkpoint 3: Committing to Your Idea — meet Mon Nov 2, due Tue Nov 3; pitch top three ideas to Prova; submit Prova output + one-page proposal (managerial question, analysis type, data needed)",
+    "Checkpoint 4: Final Submission — meet Wed Dec 2, due Sat Dec 5; deck, data, analysis, supporting files; every number traceable",
+    "Presentations to Prova planned Mon Dec 7 and Wed Dec 9 (Groups 1-6 Monday, 7-12 Wednesday; Section 002 Groups 7-11 Wed); recorded; any member may be asked about any part",
+    "Deck structure: company background/history; managerial problem; method, analysis, results (bulk); recommendations and conclusions",
+    "Participation Survey opens Wed Dec 9, closes Sat Dec 12",
+    "Final Project Showcase planned Mon Dec 14, 11:00 a.m.-2:00 p.m.; top groups by Prova score invited (honor, no extra credit); ALL students expected to attend; conflict must be reported by the Checkpoint 2 due date (Sat Oct 17) to be excused; otherwise forfeit the 2 attendance points",
+    "Points: Prova assessment 50; analysis (deck, data, files) evaluated by Prof. Lewis with input from Prova 40; Checkpoints 1-4 on time 8 (2 each); showcase attendance 2; total 100; project = 15% of final grade",
+    "Participation Score = Actual % of workload shared ÷ Ideal % (100%/group size; 20% in a group of five); Group Project Grade = Participation Score × Project Score",
+    "Tips: choose a setting where tools help a decision-maker; keep scope narrow; focus on the problem, not the tool; act as a consulting team; start early on company data; use personal networks",
+    "Prior projects (18) by analysis: Elasticity & Price Discrimination (4), Pricing for Revenue & Profit (7), Production & Cost (6), Competition & Game Theory (1)",
+    "src: Group Project Instructions page; Skim: Group Projects from Prior Years page; Checkpoint 2 assignment"
+  ],
+  "quizFormat": "Session 12 Reading Quiz: ten true/false questions based on the Group Project Instructions (course-data.js quizzes)",
+  "quizQuestions": [],
+  "spreadsheetTasks": []
+}

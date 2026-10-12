@@ -1,0 +1,58 @@
+{
+  "session": "S07",
+  "title": "Demand & Consumer Surplus",
+  "spine": "Unique Value to Offer",
+  "learningObjectives": [
+    {"id": "S07-LO1", "text": "Know and understand the following concepts: market demand curve, law of demand, change in quantity demanded, shift in demand, normal good, inferior good, substitute, complement, demand function, inverse demand function, consumer surplus", "src": "course-data.js Session 7 'Read: Chapter 2: Demand'"},
+    {"id": "S07-LO2", "text": "Know and understand how to construct and plot a demand curve", "src": "course-data.js Session 7"},
+    {"id": "S07-LO3", "text": "Know how to calculate the revenue maximizing price using calculus", "src": "course-data.js Session 7"},
+    {"id": "S07-LO4", "text": "Know how to calculate consumer surplus and describe what it means", "src": "course-data.js Session 7"},
+    {"id": "S07-LO5", "text": "Know and understand the four major categories or sources of product or service differentiation", "src": "course-data.js Session 7 (taught in the 'Differentiation Advantage' LearnStrategy video — transcript not in materials)"}
+  ],
+  "keyTerms": [
+    {"term": "Market demand curve", "def": "Shows the total quantity of a good that all consumers in the market would purchase at each price, holding other factors constant.", "src": "GENERAL ECON (B&P Ch 2 topic)"},
+    {"term": "Law of demand", "def": "Price and quantity demanded are inversely related: a price increase leads to a decrease in quantity demanded (and vice versa), all else equal.", "src": "S08 slides p.16 (applied); GENERAL ECON wording"},
+    {"term": "Change in quantity demanded", "def": "A movement ALONG a demand curve caused by a change in the good's own price.", "src": "GENERAL ECON (B&P Ch 2 topic)"},
+    {"term": "Shift in demand", "def": "The whole curve moves (left = decrease, right = increase) because a non-price determinant changed: income, prices of related goods, advertising/consumer tastes, population, expectations.", "src": "GENERAL ECON (B&P Ch 2 topic); determinants listed in S05 slides p.41 and Math Review p.9"},
+    {"term": "Normal good", "def": "Demand increases when income rises; the coefficient on income in a demand function is positive.", "src": "CQ4 Q2 feedback (sign logic); Regression Exercise step 6 (Kimball)"},
+    {"term": "Inferior good", "def": "Demand decreases when income rises; the coefficient on income is negative.", "src": "CQ4 Q2 feedback"},
+    {"term": "Substitute", "def": "An increase in the price of good y raises demand for good x; the coefficient on Py is positive (CPE > 0).", "src": "CQ4 Q1 feedback; S08 slides p.27, p.29"},
+    {"term": "Complement", "def": "An increase in the price of good y lowers demand for good x; the coefficient on Py is negative (CPE < 0), e.g., milk and cereal.", "src": "S08 slides p.27"},
+    {"term": "Demand function", "def": "Quantity as a function of price (and other variables), e.g., Qx = 10,000 − 4Px + 5Py − 0.2I.", "src": "CQ4 Q3"},
+    {"term": "Inverse demand function", "def": "Price on the left, as a function of quantity: solve the demand function for P. E.g., Qx = 4,500 − 4Px → Px = 1,125 − 0.25Qx.", "src": "CQ4 Q3 feedback"},
+    {"term": "Consumer surplus", "def": "The area under the demand curve and above the price: the value consumers receive beyond what they pay. For linear demand, a triangle = ½ × quantity × (choke price − price).", "src": "CQ4 Q4 feedback; meaning = GENERAL ECON"},
+    {"term": "Choke price", "def": "The price where quantity demanded hits zero (the vertical intercept of demand).", "src": "CQ4 Q4 feedback"}
+  ],
+  "formulas": [
+    {"name": "Inverse demand", "latex": "Q = a - bP \\;\\Rightarrow\\; P = \\frac{a}{b} - \\frac{1}{b}Q", "src": "CQ4 Q3"},
+    {"name": "Revenue", "latex": "R(P) = P\\cdot Q(P)", "src": "S07 slides p.30"},
+    {"name": "Revenue-maximizing price", "latex": "\\frac{dR}{dP} = 0", "src": "S07 slides p.30"},
+    {"name": "Consumer surplus (linear)", "latex": "CS = \\tfrac12\\,Q(P)\\,(P_{choke}-P)", "src": "CQ4 Q4 feedback"}
+  ],
+  "workedExamples": [
+    {"name": "Redbox revenue-maximizing price", "givens": "Q = −3,728P + 8,845 (rentals per kiosk; 2011-1..2011-3 at $1.00 and 2012-2..2012-4 at $1.20)", "steps": ["R = 8,845P − 3,728P²", "dR/dP = 8,845 − 7,456P", "P* = 8,845/7,456 ≈ $1.19"], "answer": "P* ≈ $1.19 (≈ 4,423 rentals per kiosk, ≈ $5,247 revenue/kiosk)", "src": "S07 slides pp.27-30; Differentiation Advantage Part 1 step 7"},
+    {"name": "CQ4 demand with shifters", "givens": "Qx = 10,000 − 4Px + 5Py − 0.2I; Py = 100; I = 30,000", "answer": "y is a substitute; x is inferior; Qx = 4,500 − 4Px; inverse Px = 1,125 − 0.25Qx", "src": "CQ4 Q1-Q3"},
+    {"name": "Dr Pepper on BYU campus", "givens": "Q = 30,000 − 20,000P", "answer": "At $1.00: Q = 10,000, CS = ½(10,000)(0.50) = $2,500, OPE = −2.0; revenue-max P = $0.75 (Q = 15,000, R = $11,250)", "src": "CQ4 Q4-Q7; S08 workbook OPE-Solution"},
+    {"name": "Dr Pepper vs. Mr. Pibb survey", "givens": "Class WTP survey by section (S2-S5) at prices $1.50..$0", "answer": "Quantity at each price = cumulative count of respondents willing to pay at least that price; scale sample to market with a market-to-sample ratio (e.g., ×300)", "src": "S07 workbook (structure: F5 = SUM(B5:E5)+F4, H = F × ratio)"},
+    {"name": "Demand curves are dynamic", "givens": "Redbox inverse demand 2011-Q4: P = 2.1817 − 0.0002Q (R² 0.85); 2014-Q4: P = 2.4537 − 0.0003Q (R² 0.72)", "answer": "Demand shifted left (streaming substitutes) and became less price-sensitive among remaining customers; Kimball's fits: 2011 Q = 8,845 − 3,728P; 2014 Q = 7,019 − 2,426P", "src": "S07 slides p.32; S09 slides p.4; Differentiation Advantage Part 2"}
+  ],
+  "estimatingDemand": ["Experimental trial(s) (A/B tests)", "Market surveys (Dr Pepper)", "Historical data (Redbox)", "src: S07 slides p.16"],
+  "cases": [
+    "A/B testing: Microsoft Bing 2012 ad-headline tweak → 12% revenue increase, ~$100M/year; Microsoft, Amazon, Facebook, Google each run >10,000 online experiments annually; Booking.com: 'our predictions of how customers behave are wrong nine times out of ten' (S07 slides pp.11-12, WSJ Mar 15, 2020)",
+    "Behavioral nudges: UK tax letter '9 out of 10 people in your town have paid'; opt-out organ donation (S07 slides p.13)",
+    "Same Job, Different Cost: Netflix MCPEH ≈ $0.10 vs. Redbox ≈ $0.52-0.65 (S07 slides p.5)",
+    "Scale economies work in reverse: Redbox ATC = 656.06R^−0.476, R² = 0.7519 (S07 slides p.6)",
+    "Look at the trend, not the snapshot: total expense as % of revenue — Netflix 220% (2001) → 106% at IPO (May 2002) → 93%; Blockbuster 94% → 95% (S07 slides p.7)",
+    "Redbox 2009-2015: kiosks, revenue per rental, rentals per kiosk (S07 slides pp.20-26)"
+  ],
+  "traps": [
+    "Own-price change → movement along the curve; anything else → shift",
+    "Inverse demand puts P on the left; don't confuse slope of Q-on-P (−b) with slope of P-on-Q (−1/b)",
+    "Substitute in the demand-shifter values BEFORE inverting",
+    "CS uses the choke price (where Q = 0), not the current price alone",
+    "Revenue-max (dR/dP = 0) ≠ profit-max (MR = MC)"
+  ],
+  "gaps": ["Four sources of differentiation (S07-LO5) — only in the LearnStrategy 'Differentiation Advantage' video; no transcript in materials"],
+  "quizQuestions": ["CQ4 Q1-Q7"],
+  "spreadsheetTasks": ["S07 Dr Pepper vs. Mr. Pibb survey → demand schedules", "Differentiation Advantage Part 1-2 (Redbox demand, OPE, revenue-max by hand/table/Solver, 2011 vs 2014)"]
+}

@@ -1,0 +1,45 @@
+{
+  "session": "S11",
+  "title": "Advanced Pricing Strategies",
+  "spine": "Unique Value to Offer",
+  "learningObjectives": [
+    {"id": "S11-LO1", "text": "Know and understand the following economic terms: block pricing, commodity bundling, cross-subsidies, price discrimination, peak-load pricing, two-part pricing, transfer pricing", "src": "course-data.js Session 11"},
+    {"id": "S11-LO2", "text": "Know and understand the three forms of price discrimination", "src": "course-data.js Session 11"},
+    {"id": "S11-LO3", "text": "Know how to calculate the profit-maximizing price when using two-part pricing, block pricing, commodity bundling, peak-load pricing, cross-subsidies, and transfer pricing", "src": "course-data.js Session 11"},
+    {"id": "S11-LO4", "text": "Be able to articulate the benefits and risks of charging different prices to different customers", "src": "course-data.js Session 11"}
+  ],
+  "status": "Session 11 slides not yet posted. All definitions/formulas are GENERAL ECON (B&P Ch 11 'Pricing Strategies for Firms with Market Power', pp. 352-370 topics) until slides arrive.",
+  "keyTerms": [
+    {"term": "Price discrimination", "def": "Charging different prices to different consumers (or for different units) for the same good, where the price differences are not due to cost differences.", "src": "GENERAL ECON (B&P Ch 11)"},
+    {"term": "First-degree (perfect) price discrimination", "def": "Charging each consumer the maximum they are willing to pay for each unit; the firm captures all consumer surplus.", "src": "GENERAL ECON (B&P Ch 11)"},
+    {"term": "Second-degree price discrimination", "def": "Charging a per-unit price that depends on how many units are bought (e.g., quantity discounts); consumers self-select.", "src": "GENERAL ECON (B&P Ch 11)"},
+    {"term": "Third-degree price discrimination", "def": "Charging different groups (with different, identifiable elasticities) different prices, e.g., student or senior discounts. Charge the higher price to the less elastic group.", "src": "GENERAL ECON (B&P Ch 11)"},
+    {"term": "Two-part pricing", "def": "A fixed fee for the right to buy plus a per-unit price. Profit-maximizing: set per-unit price = MC and the fixed fee = the consumer surplus each consumer receives at that price.", "src": "GENERAL ECON (B&P Ch 11)"},
+    {"term": "Block pricing", "def": "Selling identical units only in a package (block); the profit-maximizing package price equals the total value (area under demand) of the package quantity, where package quantity is where P = MC.", "src": "GENERAL ECON (B&P Ch 11)"},
+    {"term": "Commodity bundling", "def": "Selling two or more different products together for a single price; profitable when consumers' reservation prices are negatively correlated and the firm cannot price discriminate.", "src": "GENERAL ECON (B&P Ch 11)"},
+    {"term": "Peak-load pricing", "def": "Charging a higher price during peak demand (when capacity is constrained and MC is high) and a lower price off-peak. Set P where MR = MC in each period.", "src": "GENERAL ECON (B&P Ch 11)"},
+    {"term": "Cross-subsidies", "def": "Pricing one product below cost (or low) to boost demand for a complementary product that earns the profit (e.g., cheap printers, profitable ink).", "src": "GENERAL ECON (B&P Ch 11)"},
+    {"term": "Transfer pricing", "def": "Setting the internal price at which an upstream division sells an input to a downstream division of the same firm; to maximize overall firm profit (no external market), set the transfer price equal to the upstream division's marginal cost.", "src": "GENERAL ECON (B&P Ch 11)"}
+  ],
+  "formulas": [
+    {"name": "Markup rule", "latex": "P = \\left[\\frac{E}{1+E}\\right] MC \\quad (E = OPE < -1)", "src": "GENERAL ECON (B&P Ch 11)"},
+    {"name": "Third-degree rule", "latex": "MR_1 = MR_2 = MC \\;\\Rightarrow\\; P_1\\frac{1+E_1}{E_1} = P_2\\frac{1+E_2}{E_2}", "src": "GENERAL ECON (B&P Ch 11)"},
+    {"name": "Two-part tariff", "latex": "P = MC,\\quad \\text{Fee} = CS = \\tfrac12 (P_{choke} - MC)\\,Q(MC)", "src": "GENERAL ECON (B&P Ch 11)"},
+    {"name": "Block price", "latex": "\\text{Package price} = MC\\cdot Q + CS \\text{ at } P=MC", "src": "GENERAL ECON (B&P Ch 11)"},
+    {"name": "Transfer price (no external market)", "latex": "P_T = MC_{upstream}", "src": "GENERAL ECON (B&P Ch 11)"}
+  ],
+  "cases": [
+    "Digital Dialog: Dynamic and Surveillance Pricing — dynamic pricing = adjusting prices in real time; personalized/bespoke/surveillance pricing = tailoring prices to individuals; raises questions of fairness, transparency, privacy, market power (S11 module Digital Dialog page)",
+    "Articles: 'How Companies Learn Your Secrets' (NYT Magazine — Target); 'Uber CEO: Surge Pricing Is Here To Stay' (WSJ); 'Delta Gets Blowback for Using AI to Set Airfares' (WSJ); 'How AI-driven pricing systems determine what you're willing to pay' (Deseret News) (S11 Digital Dialog page)",
+    "Discussion prompts: Who benefits, who is harmed, under what conditions? Ethical issues? Should policymakers intervene? (S11 Digital Dialog page)",
+    "BYU Testing Center group project used peak-load pricing; BYU Campus Printing used building-by-building price discrimination; BYU ROC Pass compared bundling options (Group Projects from Prior Years page)"
+  ],
+  "traps": [
+    "Third-degree: higher price to the LESS elastic group",
+    "Two-part pricing: per-unit price at MC, not at the monopoly price",
+    "Bundling only helps when reservation prices are negatively correlated",
+    "Markup rule needs elastic demand (E < −1)"
+  ],
+  "quizQuestions": [],
+  "spreadsheetTasks": ["Advanced Pricing assignment — not in inputs (not yet posted?)"]
+}

@@ -1,0 +1,13 @@
+node_modules/
+dist/
+dist-single/
+# raw course inputs and extraction artifacts stay local (regenerate with npm run ingest)
+inputs/
+work/
+Canvas Course/
+*.mhtml
+*.xlsx
+*.docx
+*.pdf
+~$*
+.DS_Store

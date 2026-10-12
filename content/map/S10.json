@@ -1,0 +1,58 @@
+{
+  "session": "S10",
+  "title": "Profit Maximization Across Market Structures",
+  "spine": "Unique Value to Offer",
+  "learningObjectives": [
+    {"id": "S10-LO1", "text": "Know and understand the following economic terms: marginal analysis, marginal benefit, marginal cost, marginal revenue, monopoly, monopolistic competition, perfectly competitive market", "src": "course-data.js Session 10"},
+    {"id": "S10-LO2", "text": "Be able to identify when a firm operates in an industry that is perfectly competitive, monopolistically competitive, or a monopoly", "src": "course-data.js Session 10"},
+    {"id": "S10-LO3", "text": "Be able to identify the sources of (and strategies for obtaining) monopoly power", "src": "course-data.js Session 10"},
+    {"id": "S10-LO4", "text": "Know how to calculate the profit-maximizing levels of price and quantity for perfectly competitive, monopolistically competitive, and monopoly firms using marginal analysis", "src": "course-data.js Session 10"}
+  ],
+  "keyTerms": [
+    {"term": "Marginal analysis", "def": "Deciding by comparing the benefit and cost of one more unit: keep going until the marginal benefit (MB) equals the marginal cost (MC). MB = MC.", "src": "S10 slides p.14"},
+    {"term": "Marginal benefit (MB)", "def": "The additional benefit (e.g., revenue) from one more unit of an activity.", "src": "S10 slides p.15 (table); wording GENERAL ECON"},
+    {"term": "Marginal cost (MC)", "def": "The additional cost of one more unit (dC/dQ).", "src": "S06 Video p.20; S10 slides p.15"},
+    {"term": "Marginal revenue (MR)", "def": "The additional revenue collected when one additional unit of production or service is rendered. MR = dR/dQ.", "src": "S10 slides p.17"},
+    {"term": "Perfectly competitive market", "def": "Many firms; homogeneous goods (commodities); perfect information: yes; transaction costs: no; free entry/exit: yes; no influence on price (price taker); D_firm = P_market = MR; Q* where P_market = MC(Q*); P* = P_market.", "src": "S10 slides p.44"},
+    {"term": "Monopolistic competition", "def": "Many firms; differentiated goods (fast food); perfect information: no; transaction costs: yes; free entry/exit: yes; price maker; faces its own D_firm; Q* where MR(Q*) = MC(Q*); P* = P(Q*).", "src": "S10 slides p.44"},
+    {"term": "Monopoly", "def": "One firm (e.g., rural gas station); price maker; D_firm = D_market; Q* where MR(Q*) = MC(Q*); P* = P(Q*). Information, transaction costs, entry: N/A in the professor's table.", "src": "S10 slides p.44"},
+    {"term": "Price taker vs. price maker", "def": "A price taker has no influence on price (perfect competition); a price maker sets price from its downward-sloping demand (monopoly, monopolistic competition).", "src": "S10 slides p.44"}
+  ],
+  "formulas": [
+    {"name": "Marginal revenue", "latex": "MR = \\frac{dR}{dQ},\\quad P = a - bQ \\Rightarrow R = aQ - bQ^2,\\; MR = a - 2bQ", "src": "S10 slides pp.17-19"},
+    {"name": "Profit max (price maker)", "latex": "MR(Q^*) = MC(Q^*),\\quad P^* = P(Q^*)", "src": "S10 slides p.44"},
+    {"name": "Profit max (price taker)", "latex": "P_{market} = MC(Q^*)", "src": "S10 slides p.44"},
+    {"name": "Profit", "latex": "\\pi = R - C = P\\,Q - C(Q)", "src": "S10 slides p.46"}
+  ],
+  "workedExamples": [
+    {"name": "Advertising spend", "givens": "Ads 0-10; TR 0, 90, 170, 240, 300, 350, 390, 420, 440, 450, 450; TC 0, 10, 30, 60, 100, 150, 210, 280, 360, 450, 550", "answer": "MB falls 90→0, MC rises 10→100; MB = MC = 50 at 5 ads; profit peaks at 200 (4 or 5 ads)", "src": "S10 slides p.15"},
+    {"name": "MR from inverse demand", "givens": "P = 10 − Q", "answer": "R = 10Q − Q², MR = 10 − 2Q; revenue peaks at Q = 5 (R = 25) where MR = 0", "src": "S10 slides pp.17-19"},
+    {"name": "Price taker at $40", "givens": "C(Q) = 125 + 4Q², P = $40", "answer": "MR = P = 40, MC = 8Q → Q* = 5; C = 225; R = 200; profit = −25. Operate in the short run, exit in the long run.", "src": "S10 slides p.46"},
+    {"name": "Monopoly", "givens": "C(Q) = 125 + 4Q², P = 100 − Q", "answer": "MR = 100 − 2Q = 8Q → Q* = 10; P* = 90; C = 525; R = 900; profit = 375. Will not face entry unless patents/entry barriers are eliminated.", "src": "S10 slides p.47"},
+    {"name": "Monopolistic competition", "givens": "Same cost; P = 100 − Q for your brand", "answer": "Short run identical to monopoly: Q = 10, P = 90, profit 375 (ATC 52.5). Long run: imitators enter, demand shifts to P = 50 − Q; tangency at Q = 5, P = ATC = 45, profit = 0.", "src": "S10 slides pp.48-49"},
+    {"name": "CQ5 monopoly", "givens": "P = 120 − 2Q; C = 500 + 2Q²", "answer": "MR = 120 − 4Q = MC = 4Q → Q = 15; P = 90; profit = 400", "src": "CQ5 Q6-Q7"},
+    {"name": "CQ5 price taker", "givens": "C = 50 + 10Q + 2Q²; P = 70", "answer": "70 = 10 + 4Q → Q = 15", "src": "CQ5 Q8"},
+    {"name": "Sandwich shop MB vs MC", "givens": "3 workers 60 sandwiches → 4th worker 75; $5 each; wage $50", "answer": "MR = 15 × $5 = $75 > $50 → hire", "src": "CQ5 Q10"},
+    {"name": "Provo Peaks Root Beer (midterm practice)", "givens": "350 obs, 7 states; Q (cases) on price ($) and income ($000/capita)", "answer": "Q = 200.152 − 5.849P + 7.804I; price t −2.151 p 0.032 (significant); income t 6.677 p 0.000 (significant, normal good); R² 0.122 (only 12.2% of variation explained); F 24.065", "src": "S10 slides pp.10-11"}
+  ],
+  "monopolyPower": {
+    "slides": ["Creating value isn't enough. You have to capture it.", "Profits give a firm room to look past survival.", "Creative monopolies expand what customers can choose from.", "The strategist's job: Avoid competition and move toward monopoly. (S10 slides p.51)"],
+    "sourcesGeneralEcon": ["Economies of scale", "Economies of scope", "Cost complementarity", "Patents and other legal barriers (licenses)", "Control of key resources / preferential access", "Network effects", "Switching costs / brand loyalty", "src: GENERAL ECON (B&P Ch 8 'Sources of Monopoly Power' topic); several overlap the S04 barriers-to-entry list"]
+  },
+  "cases": [
+    "Digital Dialog: Big Tech and Monopoly Power — Google lost (2024 search monopoly ruling; 2025 no breakup but exclusive default deals banned and data sharing required; ad tech also ruled monopolized); Meta won (2025, FTC challenge to Instagram/WhatsApp rejected — TikTok and YouTube compete); Amazon (sued 2023) and Apple (sued 2024) pending (S10 module Digital Dialog page)",
+    "Peter Thiel argues these companies are engines for making society better (Digital Dialog page)",
+    "Midterm Exam 1: opens Mon Oct 19 8:00 AM, closes Fri Oct 23 9:00 PM, late fee begins Friday ($5.00); MC conceptual (quizzes), short answer application (spreadsheets, calculations, analysis) (S10 slides p.7)",
+    "How to study: 'I use the Learning Objectives when deciding what questions to ask'; study guide spreadsheet maps each LO to readings, quiz questions, in-class exercises, spreadsheet questions (S10 slides p.8)"
+  ],
+  "traps": [
+    "Price taker: MR = P (horizontal demand), so set P = MC",
+    "Price maker: find Q from MR = MC FIRST, then read P off demand (not off MC)",
+    "MR has twice the slope of linear inverse demand",
+    "Negative profit in the short run ≠ shut down; long-run exit",
+    "Monopolistic competition: short-run profit is competed away in the long run (P = ATC)",
+    "Profit = R − C including fixed cost"
+  ],
+  "quizQuestions": ["CQ5 Q6-Q10"],
+  "spreadsheetTasks": ["In-class market-structure exercise C(Q) = 125 + 4Q²"]
+}

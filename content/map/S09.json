@@ -1,0 +1,51 @@
+{
+  "session": "S09",
+  "title": "Forecasting Demand Using Linear Regression",
+  "spine": "Unique Value to Offer",
+  "learningObjectives": [
+    {"id": "S09-LO1", "text": "Know and understand the following statistical terms: regression coefficient, standard error, t-statistic, p-value, R-squared", "src": "course-data.js Session 9"},
+    {"id": "S09-LO2", "text": "Know how to run a regression model in Excel", "src": "course-data.js Session 9"},
+    {"id": "S09-LO3", "text": "Know and understand how to interpret and use regression output", "src": "course-data.js Session 9"}
+  ],
+  "keyTerms": [
+    {"term": "OLS regression", "def": "The line that minimizes the sum of squared deviations between the line and the actual data points. Y = a + bX, where a and b are parameters that define the intercept and slope. Objective: estimate the parameters that define the true relationship between Y and X(s).", "src": "S09 slides p.20"},
+    {"term": "Regression coefficients", "def": "Estimates of the true parameters that define the relationship between dependent and independent variables. Interpretation: 'A one-unit increase in x leads to (magnitude of coefficient) increase/decrease (sign of coefficient) in y.'", "src": "S09 slides p.24"},
+    {"term": "Standard error", "def": "The standard deviation of the parameter estimate; a measure of how noisy our estimate is. The smaller/greater the standard error, the more/less precise your parameter estimate.", "src": "S09 slides p.26"},
+    {"term": "t-statistic", "def": "The ratio of the parameter estimate (regression coefficient) to its standard error. Generally, t-statistics greater than 2 in absolute value indicate the coefficient is statistically significant (not equal to zero).", "src": "S09 slides p.29"},
+    {"term": "p-value", "def": "An alternative measure of statistical significance; per the slides, it 'tells you the probability that a true parameter that you estimated is equal to zero.' By convention, a coefficient is statistically significant when its p-value is less than 0.05.", "src": "S09 slides p.31"},
+    {"term": "R-squared", "def": "Coefficient of determination; a measure of model fit equal to explained variation over total variation; ranges from 0 to 1. 'An R-squared of ___ indicates that ___% of the variation in y can be explained by variation in the x's.'", "src": "S09 slides p.33"},
+    {"term": "Multiple R", "def": "Square root of R-squared.", "src": "CQ5 Q2 feedback"},
+    {"term": "Adjusted R-squared", "def": "R-squared penalized for the number of variables the model uses.", "src": "CQ5 Q2 feedback"},
+    {"term": "Isolating effects", "def": "Multiple regression isolates the effect of one variable holding others constant (the airline fare example; Netflix growth and season removed).", "src": "S09 slides pp.9-14"}
+  ],
+  "formulas": [
+    {"name": "Simple regression line", "latex": "Y = a + bX", "src": "S09 slides p.20"},
+    {"name": "t-stat", "latex": "t = \\frac{\\text{coefficient}}{\\text{standard error}}", "src": "S09 slides p.29"},
+    {"name": "R-squared", "latex": "R^2 = \\frac{SS_{Regression}}{SS_{Total}}", "src": "S09 slides p.33 (explained/total)"},
+    {"name": "Elasticity from linear regression", "latex": "OPE = b_P\\cdot\\frac{\\bar P}{\\bar Q}", "src": "S09 workbook Solution!A57"}
+  ],
+  "workedExamples": [
+    {"name": "Pittsburgh TVs", "givens": "10 observations (Q, P): (180,475),(590,400),(430,450),(250,550),(275,575),(720,375),(660,375),(490,450),(700,400),(210,500)", "answer": "Q = 1,631.47 − 2.60P; R² 0.75; adj R² 0.72; SE 112.22; F 23.94 (Sig F 0.0012); intercept SE 243.97 t 6.69 p 0.0002; price SE 0.53 t −4.89 p 0.0012; 95% CI price (−3.82, −1.37)", "src": "S09 slides pp.16, 22-25"},
+    {"name": "Redstone Residential", "givens": "10 complexes; Q on rent, advertising ($100s), distance (miles)", "answer": "Q = 135.15 − 0.14P + 0.54A − 5.78D; R² 0.79; adj 0.69; F 7.59 (p 0.018); distance significant (p 0.004); price borderline (t −2.41, p 0.053); advertising not (p 0.43); $100 rent increase → −14.3 units; OPE at means = −0.143 × 420/53.1 = −1.13 → elastic → raising rent lowers revenue", "src": "S09 workbook Solution!B18:G34, A37-A57"},
+    {"name": "Airline cost per mile (CQ5)", "givens": "75 airports; R² 0.722; passengers (100,000s) −0.027; departures (1,000s) +0.052; distance −0.007", "answer": "+100k passengers → −0.027¢/mile; 72.2% explained; departures significant; 200 extra miles → 1.4¢ difference; +17,000 departures → +0.88¢", "src": "CQ5 Q1-Q5"},
+    {"name": "Netflix subscription regression", "givens": "Subs = 15,296.5 − 595.77·Price + year dummies (2010 5,406; 2011 13,929; 2012 12,636; 2013 18,610) + quarter dummies (Q2 856; Q3 2,388; Q4 3,686); R² 0.987", "answer": "Price coefficient: ~596K fewer subscribers per $1 (t −2.97, p 0.013); OPE at $10 in 2011-Q2 ≈ −0.25; revenue-max price ≈ $25.25", "src": "S09 slides pp.10-14; Kimball's Differentiation Advantage Part 3"},
+    {"name": "Mrs. Smith's pies (Regression Exercise)", "givens": "48 quarterly obs across 6 MSAs", "answer": "Q = 504,428 − 120,906P + 5,737A + 29,691Pc + 2,596I + 30,422Pop; R² 0.870; income not significant (p 0.478); OPE at $6.75/$6.00 = −2.11; CPE = 0.46; Atlanta 2007-Q4 forecast 379,068 vs actual 361,677 (+4.8%)", "src": "Kimball's Regression Exercise (assignment; his computed output)"}
+  ],
+  "cases": [
+    "Airline Industry Revisited: Cincinnati 0.22 $/mile rank 1; Atlanta 0.20; SLC 0.17; Boston 0.14; LA 0.12 — how do you isolate the effect of individual variables? (S09 slides p.9; S01 slides pp.60-67)",
+    "WSJ 'The Most Expensive Airports to Fly To' (May 22, 2014): wealthy communities and business travelers → higher fares; busy airports → lower fares (S09 slides pp.7-8)",
+    "Netflix Revisited: raw data −855K per $1; growth and season removed −596K per $1; waterfall 9.3M + 13.9M growth + 3.7M season − 3.6M price (6 × 596K) = 23.4M predicted vs 21.7M actual 2011-Q4 (S09 slides pp.10-14)",
+    "Demand curves are dynamic: Redbox 2011 vs 2014 (S09 slides p.4)",
+    "Same cost, different margin: Netflix vs Redbox 2016-2 gross margin ~41% vs ~30%, operating expenses ~7% vs ~6% (S09 slides p.5)"
+  ],
+  "traps": [
+    "Check the UNITS of each x (passengers in 100,000s, departures in 1,000s, advertising in $100s)",
+    "Significance: |t| > 2 OR p < 0.05 — look at the right row",
+    "R² vs adjusted R² vs Multiple R",
+    "Small samples: |t| > 2 rule can disagree with p < 0.05 (Redstone price t = −2.41, p = 0.053)",
+    "When forecasting, plug in ALL variables (including dummies) for the scenario",
+    "Elasticity from a linear regression requires a P and Q at which to evaluate"
+  ],
+  "quizQuestions": ["CQ5 Q1-Q5"],
+  "spreadsheetTasks": ["S09 Redstone Residential regression", "Regression Exercise (Mrs. Smith's pies)", "Differentiation Advantage Part 3 (Netflix regression)"]
+}

@@ -1,0 +1,77 @@
+{
+  "session": "S04",
+  "title": "Industry Analysis",
+  "spine": "Markets to Pursue",
+  "learningObjectives": [
+    {"id": "S04-LO1", "text": "Know and understand the following concepts: rivalry, substitute, barriers to entry, buyer power, supplier power, attractiveness of an industry, switching costs, backward integration, forward integration, network effects", "src": "course-data.js Session 4 'Read: Chapter 2'; S04 slides p.11"},
+    {"id": "S04-LO2", "text": "Know and understand how to correctly identify a firm's industries and markets", "src": "course-data.js Session 4"},
+    {"id": "S04-LO3", "text": "Be able to identify and evaluate the five major forces that shape average industry profitability to evaluate the overall attractiveness of an industry", "src": "course-data.js Session 4"},
+    {"id": "S04-LO4", "text": "Be able to identify the factors in the general environment that affect firm and industry profitability", "src": "course-data.js Session 4"},
+    {"id": "S04-LO5", "text": "Know and understand where to find information necessary to perform industry analysis", "src": "course-data.js Session 4"}
+  ],
+  "keyTerms": [
+    {"term": "Rivalry", "def": "Competition between firms within the incumbent industry. Lower levels of rivalry tend to have a positive effect on industry profits.", "src": "Five Forces Tool, Glossary!B1"},
+    {"term": "Buyer power", "def": "The relative power of companies and/or consumers who purchase products or services from the incumbent industry. When buyers have a lot of power they negotiate for lower prices and/or other concessions. High buyer power makes the focus industry less attractive.", "src": "Five Forces Tool, Glossary!B12"},
+    {"term": "Supplier power", "def": "The relative power of firms who sell materials/products to the incumbent industry. High supplier power has a negative effect on the profitability of the incumbent industry.", "src": "Five Forces Tool, Glossary!B25"},
+    {"term": "Threat of new entrants / barriers to entry", "def": "The possibility of newcomers entering and capturing market share from incumbents. If barriers to entry are high, the threat of new entrants is low, making the industry more attractive for incumbents.", "src": "Five Forces Tool, Glossary!B32"},
+    {"term": "Substitute", "def": "A product that customers could switch to that is not necessarily in direct rivalry with incumbents, e.g., driving instead of flying (Honda is not in direct rivalry with Delta). Fulfills the same job in a different way.", "src": "Five Forces Tool, Glossary!B47; S04 slides p.23"},
+    {"term": "Switching costs", "def": "How hard it is for customers to switch from one incumbent's product to another. The harder it is, the more attractive the industry.", "src": "Five Forces Tool, Glossary!B7"},
+    {"term": "Backward integration", "def": "A buyer entering the incumbent industry and becoming its own supplier. The easier it is for buyers to backward integrate, the more power buyers have.", "src": "Five Forces Tool, Glossary!B17"},
+    {"term": "Forward integration", "def": "A supplier entering the incumbent industry. If it is easy for suppliers to forward integrate, suppliers have greater power relative to incumbents.", "src": "Five Forces Tool, Glossary!B31"},
+    {"term": "Network effects", "def": "A product becomes more valuable to consumers as more consumers use it; strong network effects lower the threat of new entrants.", "src": "Five Forces Tool, Glossary!B42"},
+    {"term": "Attractiveness of an industry", "def": "Evaluated from the incumbent's point of view; the five forces shape average industry profitability. Scored 1 (least) to 5 (most attractive) in the tool.", "src": "Five Forces Tool, Instructions!A2; S04 Solution"}
+  ],
+  "industryDefinition": [
+    "Three ways: (1) 'What job are your customers hiring you to do?' test; (2) industry classifications (NAICS); (3) organizational self-descriptions (S04 slides p.13)",
+    "NAICS codes range from 2 to 6 digits; more digits = more narrowly defined industry. Netflix: 51 Information → 516210 Media Streaming Distribution Services... Before 2022 Netflix was 532282 Video Tape and Disc Rental; streaming overtook DVD-by-mail in 2011; classifications lag in dynamic industries (Skills: Defining a Company's Industry page)",
+    "Self-descriptions: About page and Item 1 (Business) of the 10-K (Skills page)",
+    "Home Depot & Lowe's: NAICS 444110 Home Centers (S04 slides p.15). Home Depot 10-K: 'world's largest home improvement retailer', 2,347 stores (S04 slides p.17)",
+    "Prof's conclusion: Netflix competes in the global streaming entertainment industry (Skills page)"
+  ],
+  "diagnosticQuestions": {
+    "rivalry": ["Who are the competitors in the industry?", "Is the industry fragmented or concentrated?", "Are products or services in the industry standardized?", "Are switching costs in the industry high?", "Is there growth in demand?", "Are industry assets efficiently utilized?", "Does the industry have high fixed costs?"],
+    "buyer": ["Who are the primary customers in the industry? How many are there?", "Can buyers backward integrate?", "Are buyers in the industry price sensitive?", "Are the industry's products a significant proportion of the buyer's costs?", "Do buyers purchase in large volumes?", "Do the industry's products affect buyers' performance?", "Do the industry's products save buyers money?"],
+    "supplier": ["Who are the primary suppliers in the industry? How many are there?", "Can suppliers forward integrate?"],
+    "entry": ["Do economies of scale, experience, or learning exist in the industry?", "Are patents or proprietary technology important for this industry?", "Do industry incumbents have preferential access to critical resources?", "Does entry into the industry require high capital investments?", "Are there network effects in the industry that deter entry?", "Do government policies or regulations make it more difficult to enter?"],
+    "substitutes": ["What are substitute products or services that fulfill the same job but do so in a different way?", "Are customers aware of substitute products or services?", "Are substitute products or services readily available?", "Are substitute products or services more or less expensive than those offered in the focal industry?"],
+    "src": "S04 slides pp.19-23"
+  },
+  "toolsByForce": {
+    "New entrants": ["Economies of scale", "Learning curves", "Network effects", "Limit pricing"],
+    "Supplier power": ["Industry concentration (C4, HHI)", "Backward integration"],
+    "Substitutes": ["Price elasticity (CPE)", "Switching costs"],
+    "Buyer power": ["Industry concentration (C4, HHI)", "Price elasticity (OPE)", "Backward integration"],
+    "Rivalry": ["Industry concentration (C4, HHI)"],
+    "src": "S04 slides p.29"
+  },
+  "workedExamples": [
+    {"name": "S04 Solution: Storage & Warehouse Leasing (self-storage) Five Forces", "answer": "Rivalry 2.36 (moderately unattractive); Buyer power 3.33 (moderately attractive); Supplier power 4.78 (very attractive); Threat of entry 2.83 (moderately unattractive); Substitutes 3.40 (moderately attractive); Overall 3.34", "src": "S04 Solution, Five Forces!G22,G45,G59,G86,G101,G116"},
+    {"name": "Scoring mechanics", "answer": "Each component rated 1-5 (whole numbers). Force score = weighted average of component scores (weights col I); component with sub-components = weighted avg of sub-ratings (sub-weights col K). Overall = weighted avg of the five force scores. Bands: 1-2 very unattractive, 2-3 moderately unattractive, 3-4 moderately attractive, 4-5 very attractive.", "src": "S04 Solution, Calculations Hub!K21..K107; Five Forces!A23"}
+  ],
+  "debriefLessons": [
+    "Growth rate: rate on the forward-looking rate (2026-31 CAGR -0.1%), not the trailing 2021-26 CAGR (+4.3%): 'industry analysis asks whether the industry will be attractive from now into the near future, not what growth has already been captured' (S04 Solution Five Forces!A15, A33, A85)",
+    "Buyer concentration: market SEGMENTS (long-term residential 52.5%) are not buyers; millions of households → top-4 buyers far below 40% → rating 5. 'Reading the 52.5% as a buyer concentration figure is the most common error on this component.' (S04 Solution!A29)",
+    "Profitability of average buyer: households don't earn a profit; 0-5% (S04 Solution!A44)",
+    "Reasoned judgement is acceptable when the report lacks data; note reasoning (Instructions!A21)"
+  ],
+  "cases": [
+    "Theory Meets Practice (WSJ Aug 30, 2025): Thompson Traders copper bathtubs & tariffs; Lowe's/Home Depot set retail price, agreed only to 4-5% increase — which party has leverage? Who eats the cost of tariffs? (buyer power) (S04 slides pp.8-10)",
+    "Meta 10-K Item 1A risk factors → PEST; reputation loss could increase rivalry, buyer power (advertisers), and substitutes; Aug 2026 update: $18B settlement with 48 state AGs, under-18 limits; last $5.3B contingent on TikTok/YouTube agreeing (Skills: Analyzing the General Environment page)",
+    "Most profitable industries 2015-2024 by ROIC: Internet Software & Services 33%; Interactive Media 27%; Software 22%; Specialty Retail 19% (Home Depot, Lowe's, Best Buy); Household Products 17%. Least: Tech Hardware -9%; Insurance 1%; Banks 2%; Energy Equipment 2%; Office REITs 3% (S04 slides pp.27-28)",
+    "Neighbor, 'the Airbnb of storage' (videos) — a substitute/new entrant for self-storage (S04 module)",
+    "IBISWorld industry reports as a data source (S04 slides p.24; IBISWorld 44411 report)"
+  ],
+  "pest": {
+    "def": "Political, Economic, Social, Technological trends in the general environment that may alter one or more of the five forces and industry attractiveness. Identify them via 10-K Item 1A Risk Factors.",
+    "src": "Skills: Analyzing the General Environment page"
+  },
+  "traps": [
+    "Ratings run 1 = least attractive to 5 = most attractive for incumbents — high buyer power → LOW rating",
+    "Segments ≠ buyers when rating buyer concentration",
+    "Use forward-looking growth rates",
+    "Substitutes do the same job a different way; rivals do the same job the same way"
+  ],
+  "quizQuestions": [],
+  "spreadsheetTasks": ["Five Forces Strategy Excel Tool: Home Improvement (in class, IBISWorld 44411)", "Industry Analysis assignment (solution: Storage & Warehouse Leasing)"],
+  "notes": "TASK.md said S04 Solution = Home Depot/Lowe's; actual S04 Solution workbook evaluates Storage & Warehouse Leasing. Home Depot is the in-class exercise (no solution posted)."
+}

@@ -1,0 +1,25 @@
+{
+  "session": "S01",
+  "title": "Course Introduction",
+  "spine": "Framing",
+  "learningObjectives": [
+    {"id": "S01-LO1", "text": "Develop competent understanding of basic economic concepts and principles (i.e., \"book smarts\")", "src": "S01 slides p.38 (course learning objective 1; Session 1 module has no LO list in course-data.js)"},
+    {"id": "S01-LO2", "text": "Acquire skill in applying the tools of economic analysis to management problems (i.e., \"street smarts\")", "src": "S01 slides p.40"},
+    {"id": "S01-LO3", "text": "Know the course policies tested in Comprehension Quiz 1 (syllabus: exams, AI policy, late policy, grading, prerequisites)", "src": "Comprehension Quiz 1 (derived LO — not stated by the professor)"}
+  ],
+  "keyTerms": [
+    {"term": "Economics", "def": "The science of making decisions in the presence of scarce resources; the study of how to direct resources in a way that most efficiently achieves a given goal.", "src": "S01 slides p.29"},
+    {"term": "Strategy", "def": "A company's plan to create value in a marketplace; a plan to create and sustain a competitive advantage.", "src": "S01 slides p.29"},
+    {"term": "Course objective", "def": "Learn how to apply economic concepts and principles to achieve superior profit performance for firms. STRAT 401 = conceptual foundations; STRAT 402 = analytical underpinnings and quantitative rigor.", "src": "S01 slides p.33"},
+    {"term": "Audit trail (Besanko et al. 2016)", "def": "Economics requires the analyst to be explicit about key elements; there is a clear linkage between conclusions and assumptions, which 'leaves an audit trail that allows one to distinguish between derived propositions and unsupported conjectures.'", "src": "S01 slides p.32"},
+    {"term": "Managerial perspective", "def": "'In this class, we are managers, not consumers.' (How would you feel about Netflix raising their price?)", "src": "S01 slides p.37"},
+    {"term": "Four strategy questions", "def": "Markets to Pursue (industry, product, geographic markets most attractive); Unique Value to Offer (cost or differentiation); Resources and Capabilities to Develop; Sustaining Advantage (barriers to imitation).", "src": "S01 slides p.36"},
+    {"term": "AI Assessment Scale (AIAS v2.1)", "def": "Level 1 No AI; 2 AI Planning; 3 AI Collaboration; 4 Full AI; 5 AI Exploration. Midterms = Level 1; pre-class quizzes = 'clarify, don't answer'; spreadsheets/in-class = Levels 2-3; group project = Level 4.", "src": "Using AI in STRAT 402 page"},
+    {"term": "EDGE method", "def": "Explain (readings, videos), Demonstrate (quizzes, in-class exercises), Guide (assignments, solutions), Enable (group project, midterm exams).", "src": "S01 slides p.44"}
+  ],
+  "grading": {"preClassQuizzes": "5%", "participation": "5%", "weeklyQuizzes": "10%", "midtermExams": "50%", "spreadsheetExercises": "15%", "groupProject": "15%", "src": "S01 slides pp.39, 41"},
+  "examFacts": ["Two midterms in Canvas — 50% of grade; closed book, closed note, Testing Center", "Exam average below 80% → comprehensive retake in finals week, capped at 80%", "src: S01 slides p.53"],
+  "cases": ["Airline case: rank airports by cost per mile — Cincinnati 0.22 (1), Atlanta 0.20 (2), SLC 0.17 (3), Boston 0.14 (4), LA 0.12 (5); factors: affluence, business travelers, traffic, plane type, number/concentration of airlines, geography (S01 slides pp.60-67)"],
+  "quizQuestions": ["CQ1 Q1-Q10"],
+  "spreadsheetTasks": []
+}

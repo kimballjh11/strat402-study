@@ -1,0 +1,1657 @@
+[
+ {
+  "session": "S01",
+  "title": "Course Introduction",
+  "spine": "Framing",
+  "learningObjectives": [
+   {
+    "id": "S01-LO1",
+    "text": "Develop competent understanding of basic economic concepts and principles (i.e., \"book smarts\")",
+    "src": "S01 slides p.38 (course learning objective 1; Session 1 module has no LO list in course-data.js)"
+   },
+   {
+    "id": "S01-LO2",
+    "text": "Acquire skill in applying the tools of economic analysis to management problems (i.e., \"street smarts\")",
+    "src": "S01 slides p.40"
+   },
+   {
+    "id": "S01-LO3",
+    "text": "Know the course policies tested in Comprehension Quiz 1 (syllabus: exams, AI policy, late policy, grading, prerequisites)",
+    "src": "Comprehension Quiz 1 (derived LO — not stated by the professor)"
+   }
+  ],
+  "keyTerms": [
+   {
+    "term": "Economics",
+    "def": "The science of making decisions in the presence of scarce resources; the study of how to direct resources in a way that most efficiently achieves a given goal.",
+    "src": "S01 slides p.29"
+   },
+   {
+    "term": "Strategy",
+    "def": "A company's plan to create value in a marketplace; a plan to create and sustain a competitive advantage.",
+    "src": "S01 slides p.29"
+   },
+   {
+    "term": "Course objective",
+    "def": "Learn how to apply economic concepts and principles to achieve superior profit performance for firms. STRAT 401 = conceptual foundations; STRAT 402 = analytical underpinnings and quantitative rigor.",
+    "src": "S01 slides p.33"
+   },
+   {
+    "term": "Audit trail (Besanko et al. 2016)",
+    "def": "Economics requires the analyst to be explicit about key elements; there is a clear linkage between conclusions and assumptions, which 'leaves an audit trail that allows one to distinguish between derived propositions and unsupported conjectures.'",
+    "src": "S01 slides p.32"
+   },
+   {
+    "term": "Managerial perspective",
+    "def": "'In this class, we are managers, not consumers.' (How would you feel about Netflix raising their price?)",
+    "src": "S01 slides p.37"
+   },
+   {
+    "term": "Four strategy questions",
+    "def": "Markets to Pursue (industry, product, geographic markets most attractive); Unique Value to Offer (cost or differentiation); Resources and Capabilities to Develop; Sustaining Advantage (barriers to imitation).",
+    "src": "S01 slides p.36"
+   },
+   {
+    "term": "AI Assessment Scale (AIAS v2.1)",
+    "def": "Level 1 No AI; 2 AI Planning; 3 AI Collaboration; 4 Full AI; 5 AI Exploration. Midterms = Level 1; pre-class quizzes = 'clarify, don't answer'; spreadsheets/in-class = Levels 2-3; group project = Level 4.",
+    "src": "Using AI in STRAT 402 page"
+   },
+   {
+    "term": "EDGE method",
+    "def": "Explain (readings, videos), Demonstrate (quizzes, in-class exercises), Guide (assignments, solutions), Enable (group project, midterm exams).",
+    "src": "S01 slides p.44"
+   }
+  ],
+  "grading": {
+   "preClassQuizzes": "5%",
+   "participation": "5%",
+   "weeklyQuizzes": "10%",
+   "midtermExams": "50%",
+   "spreadsheetExercises": "15%",
+   "groupProject": "15%",
+   "src": "S01 slides pp.39, 41"
+  },
+  "examFacts": [
+   "Two midterms in Canvas — 50% of grade; closed book, closed note, Testing Center",
+   "Exam average below 80% → comprehensive retake in finals week, capped at 80%",
+   "src: S01 slides p.53"
+  ],
+  "cases": [
+   "Airline case: rank airports by cost per mile — Cincinnati 0.22 (1), Atlanta 0.20 (2), SLC 0.17 (3), Boston 0.14 (4), LA 0.12 (5); factors: affluence, business travelers, traffic, plane type, number/concentration of airlines, geography (S01 slides pp.60-67)"
+  ],
+  "quizQuestions": [
+   "CQ1 Q1-Q10"
+  ],
+  "spreadsheetTasks": []
+ },
+ {
+  "session": "S12",
+  "title": "Group Project (Sessions 2 & 12)",
+  "spine": "Framing",
+  "learningObjectives": [
+   {
+    "id": "S12-LO1",
+    "text": "Know the four group project checkpoints and what each one requires",
+    "src": "course-data.js Session 12 Reading Quiz"
+   },
+   {
+    "id": "S12-LO2",
+    "text": "Understand how Prova is used to give feedback on project ideas and to evaluate your final presentation",
+    "src": "course-data.js Session 12"
+   },
+   {
+    "id": "S12-LO3",
+    "text": "Know how the 100 project points are earned and how the participation score scales them",
+    "src": "course-data.js Session 12"
+   },
+   {
+    "id": "S12-LO4",
+    "text": "Know the showcase attendance expectation and the deadline for reporting a conflict",
+    "src": "course-data.js Session 12"
+   },
+   {
+    "id": "S12-LO5",
+    "text": "Be able to choose a project scope and data source that can be completed within the semester",
+    "src": "course-data.js Session 12"
+   }
+  ],
+  "facts": [
+   "Checkpoint 1: Breaking Bread — meet Wed Sep 9, due Sat Sep 12; eat together, ≥60 minutes, five-minute transformative-experience story; each member submits a short response",
+   "Checkpoint 2: Brainstorming and Narrowing — meet Wed Oct 14, due Sat Oct 17; 2-3 page doc: projects that stood out; at least 10 possible businesses with contact, position, relationship; top three ideas (problem, analysis type, data source); one member uploads",
+   "Checkpoint 3: Committing to Your Idea — meet Mon Nov 2, due Tue Nov 3; pitch top three ideas to Prova; submit Prova output + one-page proposal (managerial question, analysis type, data needed)",
+   "Checkpoint 4: Final Submission — meet Wed Dec 2, due Sat Dec 5; deck, data, analysis, supporting files; every number traceable",
+   "Presentations to Prova planned Mon Dec 7 and Wed Dec 9 (Groups 1-6 Monday, 7-12 Wednesday; Section 002 Groups 7-11 Wed); recorded; any member may be asked about any part",
+   "Deck structure: company background/history; managerial problem; method, analysis, results (bulk); recommendations and conclusions",
+   "Participation Survey opens Wed Dec 9, closes Sat Dec 12",
+   "Final Project Showcase planned Mon Dec 14, 11:00 a.m.-2:00 p.m.; top groups by Prova score invited (honor, no extra credit); ALL students expected to attend; conflict must be reported by the Checkpoint 2 due date (Sat Oct 17) to be excused; otherwise forfeit the 2 attendance points",
+   "Points: Prova assessment 50; analysis (deck, data, files) evaluated by Prof. Lewis with input from Prova 40; Checkpoints 1-4 on time 8 (2 each); showcase attendance 2; total 100; project = 15% of final grade",
+   "Participation Score = Actual % of workload shared ÷ Ideal % (100%/group size; 20% in a group of five); Group Project Grade = Participation Score × Project Score",
+   "Tips: choose a setting where tools help a decision-maker; keep scope narrow; focus on the problem, not the tool; act as a consulting team; start early on company data; use personal networks",
+   "Prior projects (18) by analysis: Elasticity & Price Discrimination (4), Pricing for Revenue & Profit (7), Production & Cost (6), Competition & Game Theory (1)",
+   "src: Group Project Instructions page; Skim: Group Projects from Prior Years page; Checkpoint 2 assignment"
+  ],
+  "quizFormat": "Session 12 Reading Quiz: ten true/false questions based on the Group Project Instructions (course-data.js quizzes)",
+  "quizQuestions": [],
+  "spreadsheetTasks": []
+ },
+ {
+  "session": "S03",
+  "title": "Industry Structure",
+  "spine": "Markets to Pursue",
+  "learningObjectives": [
+   {
+    "id": "S03-LO1",
+    "text": "Know and understand the following concepts: C4 ratio, HHI",
+    "src": "course-data.js Session 3 'Read: Chapter 7'; S03 slides p.3"
+   },
+   {
+    "id": "S03-LO2",
+    "text": "Know how to calculate various measures of industry concentration and how they relate to market competitiveness",
+    "src": "course-data.js Session 3"
+   },
+   {
+    "id": "S03-LO3",
+    "text": "Understand the limitations of concentration measures",
+    "src": "course-data.js Session 3"
+   }
+  ],
+  "keyTerms": [
+   {
+    "term": "Concentrated industry",
+    "def": "An industry is 'concentrated' when a few large firms control the industry (e.g., Auto, Airline, etc.).",
+    "src": "S03 slides p.4"
+   },
+   {
+    "term": "Concentration vs. competitiveness",
+    "def": "Industry concentration and market competitiveness are inversely related (i.e., monopoly at 100% vs. perfect competition at ≈ 0%).",
+    "src": "S03 slides p.4"
+   },
+   {
+    "term": "Four-firm concentration ratio (C4)",
+    "def": "The fraction of total sales generated by the four largest firms in the industry (ranges from 0 = extremely competitive to 1 = highly concentrated).",
+    "src": "S03 slides p.5"
+   },
+   {
+    "term": "Herfindahl-Hirschman Index (HHI)",
+    "def": "The sum of the squared market shares of firms in a given industry multiplied by 10,000 (ranges from 0 = extremely competitive to 10,000 = monopoly).",
+    "src": "S03 slides p.6"
+   }
+  ],
+  "formulas": [
+   {
+    "name": "C4",
+    "latex": "C_4 = \\frac{S_1+S_2+S_3+S_4}{S_T} = w_1+w_2+w_3+w_4",
+    "vars": {
+     "S_i": "sales of firm i",
+     "S_T": "total industry sales",
+     "w_i": "market share of firm i (decimal)"
+    },
+    "src": "S03 slides p.5"
+   },
+   {
+    "name": "HHI",
+    "latex": "HHI = 10{,}000\\sum w_i^2 = 10{,}000\\sum\\left(\\frac{S_i}{S_T}\\right)^2",
+    "vars": {
+     "w_i": "market share of firm i as a decimal"
+    },
+    "src": "S03 slides p.6"
+   }
+  ],
+  "workedExamples": [
+   {
+    "name": "US mobile telecom 2013",
+    "givens": "Verizon 42%, AT&T 33%, Sprint 16%, T-Mobile 3%; remaining 6% treated as one firm",
+    "answer": "C4 = 94%; HHI = (0.1764+0.1089+0.0256+0.0009+0.0036)×10,000 = 3,154",
+    "src": "S03 slides p.7"
+   },
+   {
+    "name": "US mobile telecom 2014",
+    "givens": "37/31/14/12 + 6 other as one firm",
+    "answer": "C4 = 94%; HHI = 2,706",
+    "src": "S03 slides p.9"
+   },
+   {
+    "name": "Allegiant airports (Dec 2025 BTS data)",
+    "givens": "OAK vs SFO, HOU vs IAH, MDW vs ORD shares",
+    "answer": "OAK HHI 7,323 C4 95.4% vs SFO 2,765 / 76.8%; HOU 8,939 / 98.8% vs IAH 3,602 / 78.7%; MDW 8,632 / 99.2% vs ORD 2,503 / 78.2%. Allegiant cities are more concentrated, consistent with its strategy of avoiding competition at smaller airports.",
+    "src": "S03 workbook, Solution!D42:H65, B69"
+   }
+  ],
+  "cases": [
+   "US domestic airlines 2025: C4 = 64.4%, HHI = 1,162 (S03 slides p.12)",
+   "Route-level HHIs 2025: National 1,162; LAS-LAX 1,620; ATL-MCO 5,324; LAX-SFO 2,104; ORD-LGA 3,227; LAX-JFK 3,433 (S03 slides p.14)",
+   "US autos 2025 all firms: GM 18, Toyota 16, Ford 14, Hyundai/Kia 11; C4 59%, HHI 2,578. Domestic only: GM 50, Ford 39, Tesla 10, Rivian 1; C4 100%, HHI 4,122 (S03 slides p.15)",
+   "Change in avg top-4 share by sector 1997-2017: increasing lack of competition (S03 slides p.10)",
+   "Allegiant business model: low-cost, leisure-only, ~75% of routes no nonstop competition, ancillary $76.35/passenger in 2025 (S03 workbook Solution!B18)"
+  ],
+  "usefulness": [
+   "Useful in quantifying industry rivalry, degree of buyer, and supplier power (S03 p.10)",
+   "Used by the Justice Department when determining whether to approve a merger (S03 p.10)",
+   "C4 and HHI positively correlated; C4 uses top four firms, HHI uses all firms; HHI squares shares so it places greater weight on firms with larger shares (S03 p.11)"
+  ],
+  "limitations": [
+   "Do the relevant companies compete at a national, regional, or local level? (S03 p.17)",
+   "Do the measures account for foreign imports? (S03 p.17)",
+   "In what product segments do firms actually compete? (S03 p.17)"
+  ],
+  "traps": [
+   "Use shares as decimals before squaring (42% → 0.42), then ×10,000",
+   "Treat 'remaining share' as one firm only when told (professor's telecom convention)",
+   "C4 can be identical while HHI differs (telecom 2013 vs 2014: both 94%, HHI 3,154 vs 2,706)",
+   "National HHI understates route/local concentration"
+  ],
+  "quizQuestions": [],
+  "spreadsheetTasks": [
+   "S03 In-Class Exercise: compute C4 and HHI for 3 Allegiant airports vs comparison airports; judge strategic fit"
+  ]
+ },
+ {
+  "session": "S04",
+  "title": "Industry Analysis",
+  "spine": "Markets to Pursue",
+  "learningObjectives": [
+   {
+    "id": "S04-LO1",
+    "text": "Know and understand the following concepts: rivalry, substitute, barriers to entry, buyer power, supplier power, attractiveness of an industry, switching costs, backward integration, forward integration, network effects",
+    "src": "course-data.js Session 4 'Read: Chapter 2'; S04 slides p.11"
+   },
+   {
+    "id": "S04-LO2",
+    "text": "Know and understand how to correctly identify a firm's industries and markets",
+    "src": "course-data.js Session 4"
+   },
+   {
+    "id": "S04-LO3",
+    "text": "Be able to identify and evaluate the five major forces that shape average industry profitability to evaluate the overall attractiveness of an industry",
+    "src": "course-data.js Session 4"
+   },
+   {
+    "id": "S04-LO4",
+    "text": "Be able to identify the factors in the general environment that affect firm and industry profitability",
+    "src": "course-data.js Session 4"
+   },
+   {
+    "id": "S04-LO5",
+    "text": "Know and understand where to find information necessary to perform industry analysis",
+    "src": "course-data.js Session 4"
+   }
+  ],
+  "keyTerms": [
+   {
+    "term": "Rivalry",
+    "def": "Competition between firms within the incumbent industry. Lower levels of rivalry tend to have a positive effect on industry profits.",
+    "src": "Five Forces Tool, Glossary!B1"
+   },
+   {
+    "term": "Buyer power",
+    "def": "The relative power of companies and/or consumers who purchase products or services from the incumbent industry. When buyers have a lot of power they negotiate for lower prices and/or other concessions. High buyer power makes the focus industry less attractive.",
+    "src": "Five Forces Tool, Glossary!B12"
+   },
+   {
+    "term": "Supplier power",
+    "def": "The relative power of firms who sell materials/products to the incumbent industry. High supplier power has a negative effect on the profitability of the incumbent industry.",
+    "src": "Five Forces Tool, Glossary!B25"
+   },
+   {
+    "term": "Threat of new entrants / barriers to entry",
+    "def": "The possibility of newcomers entering and capturing market share from incumbents. If barriers to entry are high, the threat of new entrants is low, making the industry more attractive for incumbents.",
+    "src": "Five Forces Tool, Glossary!B32"
+   },
+   {
+    "term": "Substitute",
+    "def": "A product that customers could switch to that is not necessarily in direct rivalry with incumbents, e.g., driving instead of flying (Honda is not in direct rivalry with Delta). Fulfills the same job in a different way.",
+    "src": "Five Forces Tool, Glossary!B47; S04 slides p.23"
+   },
+   {
+    "term": "Switching costs",
+    "def": "How hard it is for customers to switch from one incumbent's product to another. The harder it is, the more attractive the industry.",
+    "src": "Five Forces Tool, Glossary!B7"
+   },
+   {
+    "term": "Backward integration",
+    "def": "A buyer entering the incumbent industry and becoming its own supplier. The easier it is for buyers to backward integrate, the more power buyers have.",
+    "src": "Five Forces Tool, Glossary!B17"
+   },
+   {
+    "term": "Forward integration",
+    "def": "A supplier entering the incumbent industry. If it is easy for suppliers to forward integrate, suppliers have greater power relative to incumbents.",
+    "src": "Five Forces Tool, Glossary!B31"
+   },
+   {
+    "term": "Network effects",
+    "def": "A product becomes more valuable to consumers as more consumers use it; strong network effects lower the threat of new entrants.",
+    "src": "Five Forces Tool, Glossary!B42"
+   },
+   {
+    "term": "Attractiveness of an industry",
+    "def": "Evaluated from the incumbent's point of view; the five forces shape average industry profitability. Scored 1 (least) to 5 (most attractive) in the tool.",
+    "src": "Five Forces Tool, Instructions!A2; S04 Solution"
+   }
+  ],
+  "industryDefinition": [
+   "Three ways: (1) 'What job are your customers hiring you to do?' test; (2) industry classifications (NAICS); (3) organizational self-descriptions (S04 slides p.13)",
+   "NAICS codes range from 2 to 6 digits; more digits = more narrowly defined industry. Netflix: 51 Information → 516210 Media Streaming Distribution Services... Before 2022 Netflix was 532282 Video Tape and Disc Rental; streaming overtook DVD-by-mail in 2011; classifications lag in dynamic industries (Skills: Defining a Company's Industry page)",
+   "Self-descriptions: About page and Item 1 (Business) of the 10-K (Skills page)",
+   "Home Depot & Lowe's: NAICS 444110 Home Centers (S04 slides p.15). Home Depot 10-K: 'world's largest home improvement retailer', 2,347 stores (S04 slides p.17)",
+   "Prof's conclusion: Netflix competes in the global streaming entertainment industry (Skills page)"
+  ],
+  "diagnosticQuestions": {
+   "rivalry": [
+    "Who are the competitors in the industry?",
+    "Is the industry fragmented or concentrated?",
+    "Are products or services in the industry standardized?",
+    "Are switching costs in the industry high?",
+    "Is there growth in demand?",
+    "Are industry assets efficiently utilized?",
+    "Does the industry have high fixed costs?"
+   ],
+   "buyer": [
+    "Who are the primary customers in the industry? How many are there?",
+    "Can buyers backward integrate?",
+    "Are buyers in the industry price sensitive?",
+    "Are the industry's products a significant proportion of the buyer's costs?",
+    "Do buyers purchase in large volumes?",
+    "Do the industry's products affect buyers' performance?",
+    "Do the industry's products save buyers money?"
+   ],
+   "supplier": [
+    "Who are the primary suppliers in the industry? How many are there?",
+    "Can suppliers forward integrate?"
+   ],
+   "entry": [
+    "Do economies of scale, experience, or learning exist in the industry?",
+    "Are patents or proprietary technology important for this industry?",
+    "Do industry incumbents have preferential access to critical resources?",
+    "Does entry into the industry require high capital investments?",
+    "Are there network effects in the industry that deter entry?",
+    "Do government policies or regulations make it more difficult to enter?"
+   ],
+   "substitutes": [
+    "What are substitute products or services that fulfill the same job but do so in a different way?",
+    "Are customers aware of substitute products or services?",
+    "Are substitute products or services readily available?",
+    "Are substitute products or services more or less expensive than those offered in the focal industry?"
+   ],
+   "src": "S04 slides pp.19-23"
+  },
+  "toolsByForce": {
+   "New entrants": [
+    "Economies of scale",
+    "Learning curves",
+    "Network effects",
+    "Limit pricing"
+   ],
+   "Supplier power": [
+    "Industry concentration (C4, HHI)",
+    "Backward integration"
+   ],
+   "Substitutes": [
+    "Price elasticity (CPE)",
+    "Switching costs"
+   ],
+   "Buyer power": [
+    "Industry concentration (C4, HHI)",
+    "Price elasticity (OPE)",
+    "Backward integration"
+   ],
+   "Rivalry": [
+    "Industry concentration (C4, HHI)"
+   ],
+   "src": "S04 slides p.29"
+  },
+  "workedExamples": [
+   {
+    "name": "S04 Solution: Storage & Warehouse Leasing (self-storage) Five Forces",
+    "answer": "Rivalry 2.36 (moderately unattractive); Buyer power 3.33 (moderately attractive); Supplier power 4.78 (very attractive); Threat of entry 2.83 (moderately unattractive); Substitutes 3.40 (moderately attractive); Overall 3.34",
+    "src": "S04 Solution, Five Forces!G22,G45,G59,G86,G101,G116"
+   },
+   {
+    "name": "Scoring mechanics",
+    "answer": "Each component rated 1-5 (whole numbers). Force score = weighted average of component scores (weights col I); component with sub-components = weighted avg of sub-ratings (sub-weights col K). Overall = weighted avg of the five force scores. Bands: 1-2 very unattractive, 2-3 moderately unattractive, 3-4 moderately attractive, 4-5 very attractive.",
+    "src": "S04 Solution, Calculations Hub!K21..K107; Five Forces!A23"
+   }
+  ],
+  "debriefLessons": [
+   "Growth rate: rate on the forward-looking rate (2026-31 CAGR -0.1%), not the trailing 2021-26 CAGR (+4.3%): 'industry analysis asks whether the industry will be attractive from now into the near future, not what growth has already been captured' (S04 Solution Five Forces!A15, A33, A85)",
+   "Buyer concentration: market SEGMENTS (long-term residential 52.5%) are not buyers; millions of households → top-4 buyers far below 40% → rating 5. 'Reading the 52.5% as a buyer concentration figure is the most common error on this component.' (S04 Solution!A29)",
+   "Profitability of average buyer: households don't earn a profit; 0-5% (S04 Solution!A44)",
+   "Reasoned judgement is acceptable when the report lacks data; note reasoning (Instructions!A21)"
+  ],
+  "cases": [
+   "Theory Meets Practice (WSJ Aug 30, 2025): Thompson Traders copper bathtubs & tariffs; Lowe's/Home Depot set retail price, agreed only to 4-5% increase — which party has leverage? Who eats the cost of tariffs? (buyer power) (S04 slides pp.8-10)",
+   "Meta 10-K Item 1A risk factors → PEST; reputation loss could increase rivalry, buyer power (advertisers), and substitutes; Aug 2026 update: $18B settlement with 48 state AGs, under-18 limits; last $5.3B contingent on TikTok/YouTube agreeing (Skills: Analyzing the General Environment page)",
+   "Most profitable industries 2015-2024 by ROIC: Internet Software & Services 33%; Interactive Media 27%; Software 22%; Specialty Retail 19% (Home Depot, Lowe's, Best Buy); Household Products 17%. Least: Tech Hardware -9%; Insurance 1%; Banks 2%; Energy Equipment 2%; Office REITs 3% (S04 slides pp.27-28)",
+   "Neighbor, 'the Airbnb of storage' (videos) — a substitute/new entrant for self-storage (S04 module)",
+   "IBISWorld industry reports as a data source (S04 slides p.24; IBISWorld 44411 report)"
+  ],
+  "pest": {
+   "def": "Political, Economic, Social, Technological trends in the general environment that may alter one or more of the five forces and industry attractiveness. Identify them via 10-K Item 1A Risk Factors.",
+   "src": "Skills: Analyzing the General Environment page"
+  },
+  "traps": [
+   "Ratings run 1 = least attractive to 5 = most attractive for incumbents — high buyer power → LOW rating",
+   "Segments ≠ buyers when rating buyer concentration",
+   "Use forward-looking growth rates",
+   "Substitutes do the same job a different way; rivals do the same job the same way"
+  ],
+  "quizQuestions": [],
+  "spreadsheetTasks": [
+   "Five Forces Strategy Excel Tool: Home Improvement (in class, IBISWorld 44411)",
+   "Industry Analysis assignment (solution: Storage & Warehouse Leasing)"
+  ],
+  "notes": "TASK.md said S04 Solution = Home Depot/Lowe's; actual S04 Solution workbook evaluates Storage & Warehouse Leasing. Home Depot is the in-class exercise (no solution posted)."
+ },
+ {
+  "session": "S05",
+  "title": "Math & Excel Review",
+  "spine": "Unique Value to Offer",
+  "learningObjectives": [
+   {
+    "id": "S05-LO1",
+    "text": "Know and understand the following mathematical concepts: function, slope, derivative, power rule, partial derivative",
+    "src": "course-data.js Session 5 'Read: STRAT 402 Math Review'"
+   },
+   {
+    "id": "S05-LO2",
+    "text": "Know and understand how to use calculus to optimize managerial decisions",
+    "src": "course-data.js Session 5"
+   },
+   {
+    "id": "S05-LO3",
+    "text": "Know and understand how to do the following in Excel: create a scatterplot; adjust the horizontal and vertical axes to fit the range of the data; add a title and label the x- and y-axes; add a trendline to a plot; use Solver to optimize managerial decisions",
+    "src": "course-data.js Session 5 'Watch: Essential Excel Skills'"
+   }
+  ],
+  "keyTerms": [
+   {
+    "term": "Function",
+    "def": "A quantitative formula that defines the relationship between a set of inputs and outputs.",
+    "src": "Math Review p.1"
+   },
+   {
+    "term": "Slope",
+    "def": "The rise over the run, or the change in y over the change in x (Δy/Δx). For y = mx + b, m is the slope and b is the intercept.",
+    "src": "Math Review p.3"
+   },
+   {
+    "term": "Derivative",
+    "def": "A function that evaluates the instantaneous rate of change of some original function, i.e., it tells you the slope (Δy/Δx) at any given value of x. For a straight line, the slope and derivative are equal; for a curve, it is the slope of the tangent line at that point.",
+    "src": "Math Review p.5; S05 slides pp.19-20"
+   },
+   {
+    "term": "Power rule",
+    "def": "For y = x^a, dy/dx = a·x^(a−1). Bring the exponent down in front and subtract 1 from the exponent; constants (no x) drop out.",
+    "src": "Math Review p.5; S05 slides p.27"
+   },
+   {
+    "term": "Partial derivative",
+    "def": "The derivative of a function with respect to one individual independent variable while the other variables are held constant. Written ∂y/∂x. Used to isolate the effect of specific variables.",
+    "src": "Math Review p.10; S05 slides p.43"
+   }
+  ],
+  "formulas": [
+   {
+    "name": "Line",
+    "latex": "y = mx + b",
+    "src": "S05 slides p.15"
+   },
+   {
+    "name": "Power rule",
+    "latex": "y = x^a \\Rightarrow \\frac{dy}{dx} = a x^{a-1}",
+    "src": "S05 slides p.27"
+   },
+   {
+    "name": "Three-step optimization",
+    "latex": "\\text{1) } f'(x) \\quad \\text{2) } f'(x)=0 \\quad \\text{3) solve for } x",
+    "src": "Math Review p.7"
+   }
+  ],
+  "workedExamples": [
+   {
+    "name": "Revenue-maximizing price",
+    "givens": "R(P) = 100P − 2P²",
+    "steps": [
+     "dR/dP = 100 − 4P",
+     "0 = 100 − 4P",
+     "P* = 25"
+    ],
+    "answer": "P* = 25 (revenue = 1,250)",
+    "src": "Math Review pp.7-8; S05 slides p.36"
+   },
+   {
+    "name": "Cost-minimizing quantity",
+    "givens": "ATC(Q) = 2Q² − 100Q + 1,400",
+    "steps": [
+     "dATC/dQ = 4Q − 100",
+     "0 = 4Q − 100",
+     "Q* = 25"
+    ],
+    "answer": "Q* = 25",
+    "src": "Math Review pp.8-9; S05 slides p.40"
+   },
+   {
+    "name": "Derivative table",
+    "givens": "y = x² + 3",
+    "answer": "dy/dx = 2x: x=0 → 0; x=1 → 2; x=2 → 4; x=3 → 6",
+    "src": "Math Review p.6"
+   },
+   {
+    "name": "Practice derivative",
+    "givens": "y = −5x³ + 4x + 1",
+    "answer": "dy/dx = −15x² + 4",
+    "src": "S05 slides p.32"
+   },
+   {
+    "name": "iPhone partial derivatives",
+    "givens": "Q_IP = 1,000 − 4P_IP + 2P_SG + 100A_IP + 500I²",
+    "answer": "∂Q/∂P_IP = −4 (each $1 price increase → 4 fewer units); ∂Q/∂P_SG = 2 (a $10 Galaxy increase → +20 units); ∂Q/∂A = 100; ∂Q/∂I = 1,000I",
+    "src": "Math Review p.10; S05 slides p.45"
+   },
+   {
+    "name": "Sundance season passes",
+    "givens": "Q = 6,000 − 12P",
+    "steps": [
+     "R = 6,000P − 12P²",
+     "dR/dP = 6,000 − 24P",
+     "P = 250"
+    ],
+    "answer": "P* = $250",
+    "src": "S05 Optional Practice p.4"
+   }
+  ],
+  "practiceProblems": {
+   "algebra": [
+    [
+     "500 = 20x + 300",
+     "x = 10"
+    ],
+    [
+     "10/(2√x) = 5",
+     "x = 1"
+    ],
+    [
+     "x^-0.5 = 1/4",
+     "x = 16"
+    ],
+    [
+     "6 = 4^0.5 x^0.5",
+     "x = 9"
+    ],
+    [
+     "10 + 20/x = 50",
+     "x = 0.5"
+    ]
+   ],
+   "derivatives": [
+    [
+     "y = 1,250x² + 5,000x",
+     "2,500x + 5,000"
+    ],
+    [
+     "y = −5x² + 300x",
+     "−10x + 300"
+    ],
+    [
+     "y = (60 − 5x)x",
+     "60 − 10x"
+    ],
+    [
+     "y = 50 + 3x²",
+     "6x"
+    ],
+    [
+     "y = 350x^-0.5",
+     "−175x^-1.5"
+    ]
+   ],
+   "partials": [
+    [
+     "y = 5,000 − 2x + 5z²",
+     "−2"
+    ],
+    [
+     "y = 5,000 − 2z + 5x²",
+     "10x"
+    ],
+    [
+     "y = 130 − .14z + .5x²",
+     "x"
+    ],
+    [
+     "y = 10x − 2x² − 2xz",
+     "10 − 4x − 2z"
+    ],
+    [
+     "y = 2z²x^.5",
+     "z²/√x"
+    ]
+   ],
+   "src": "S05 Optional Practice - Math Review Problems pp.1-3"
+  },
+  "whyCalculus": [
+   "To optimize common managerial decisions",
+   "To isolate the effects of specific variables",
+   "src: Math Review p.1; S05 slides p.12"
+  ],
+  "debrief": "S05 opened with the Industry Analysis debrief (self-storage): BP 1.1 buyer concentration (20 groups rated 5, 3 rated 1 by mistaking segments for buyers); BP 2.1 profitability of average buyer (two error modes: parked in the middle; used the industry's own 45% margin); R.3 growth rate (trailing 4.3%, current 0.3%, forward −0.1%) (S05 slides pp.5-9)",
+  "traps": [
+   "Constants vanish when differentiating (y = x² + 3 → 2x)",
+   "Setting the derivative to zero finds max OR min; check the shape (−P² opens down = max; +Q² opens up = min)",
+   "Partial derivative: treat other variables as constants",
+   "Slide p.30 table shows y=11 at x=3; the Math Review and p.29 correctly show 12"
+  ],
+  "quizQuestions": [],
+  "spreadsheetTasks": [
+   "Essential Excel Skills workbook: scatterplot, axes, title/labels, trendline, Solver"
+  ]
+ },
+ {
+  "session": "S06",
+  "title": "Cost & Economies of Scale",
+  "spine": "Unique Value to Offer",
+  "learningObjectives": [
+   {
+    "id": "S06-LO1",
+    "text": "Know and understand the sources of cost advantage",
+    "src": "course-data.js Session 6 'Read: Chapter 5'"
+   },
+   {
+    "id": "S06-LO2",
+    "text": "Know and understand the following economic concepts and how they relate to one another: fixed costs, variable costs, total cost, average fixed cost, average variable cost, average total cost, marginal cost, economies of scale",
+    "src": "course-data.js Session 6"
+   },
+   {
+    "id": "S06-LO3",
+    "text": "Understand the strategic implications of economies of scale (i.e., when does it make sense to grow?)",
+    "src": "course-data.js Session 6"
+   }
+  ],
+  "keyTerms": [
+   {
+    "term": "Cost function",
+    "def": "Defines the relationship between production (Q) and total cost (C). Total cost can be broken into fixed (FC) and variable costs (VC).",
+    "src": "S06 Video Slides p.12"
+   },
+   {
+    "term": "Fixed cost (FC)",
+    "def": "The part of the cost function that does not change with Q (the constant term).",
+    "src": "S06 Video Slides p.14; CQ3 Q1 feedback"
+   },
+   {
+    "term": "Variable cost (VC)",
+    "def": "Every term that changes with Q.",
+    "src": "S06 Video Slides p.15; CQ3 Q2 feedback"
+   },
+   {
+    "term": "Average fixed cost (AFC)",
+    "def": "AFC = FC/Q",
+    "src": "S06 Video Slides p.17"
+   },
+   {
+    "term": "Average variable cost (AVC)",
+    "def": "AVC = VC(Q)/Q",
+    "src": "S06 Video Slides p.18"
+   },
+   {
+    "term": "Average total cost (ATC)",
+    "def": "ATC = AVC + AFC (= C/Q)",
+    "src": "S06 Video Slides p.19"
+   },
+   {
+    "term": "Marginal cost (MC)",
+    "def": "The cost of producing an additional unit of output, or the change in cost attributable to the last unit of output. MC = ΔC/ΔQ = dC/dQ.",
+    "src": "S06 Video Slides p.20"
+   },
+   {
+    "term": "Short run vs. long run",
+    "def": "In the short run, capital (e.g., number of grills) is fixed and labor is variable; in the long run a manager is free to adjust all inputs — all costs are variable.",
+    "src": "S06 Video Slides p.27"
+   },
+   {
+    "term": "Long-run average cost curve (LRAC)",
+    "def": "Defines the minimum average cost of producing alternative levels of output, allowing for optimal selection of fixed and variable factors of production.",
+    "src": "S06 Video Slides p.29"
+   },
+   {
+    "term": "Economies of scale",
+    "def": "Exist when long-run average costs decline as output is increased.",
+    "src": "S06 Video Slides p.29"
+   },
+   {
+    "term": "Diseconomies of scale",
+    "def": "Exist when long-run average costs rise as output is increased.",
+    "src": "S06 Video Slides p.29"
+   },
+   {
+    "term": "Learning and experience",
+    "def": "'Practice makes perfect': firms become more efficient through practice; costs fall with cumulative output over time, whereas economies of scale come from the volume produced in a given period.",
+    "src": "CQ3 Q9 feedback"
+   },
+   {
+    "term": "Scale curve",
+    "def": "Cost per unit (y) plotted against scale (x), fit with a power function y = a·x^b. Slope of the curve = 2^b = cost multiplier per doubling; % drop per doubling = 1 − 2^b.",
+    "src": "S06 workbook Solution!B49-E84; Cost Advantage Part 1 step 5"
+   }
+  ],
+  "sourcesOfCostAdvantage": [
+   "Economies of Scale and Scope",
+   "Learning and Experience",
+   "Proprietary Knowledge",
+   "Input Costs",
+   "Different Business Model",
+   "src: S06 slides p.8"
+  ],
+  "formulas": [
+   {
+    "name": "Total cost",
+    "latex": "C(Q) = FC + VC(Q)",
+    "src": "S06 Video p.12,16"
+   },
+   {
+    "name": "Averages",
+    "latex": "AFC=\\frac{FC}{Q},\\; AVC=\\frac{VC(Q)}{Q},\\; ATC = AFC + AVC",
+    "src": "S06 Video pp.17-19"
+   },
+   {
+    "name": "Marginal cost",
+    "latex": "MC = \\frac{\\Delta C}{\\Delta Q} = \\frac{dC}{dQ}",
+    "src": "S06 Video p.20"
+   },
+   {
+    "name": "Power-law scale curve",
+    "latex": "ATC = a\\,Q^{b},\\quad \\text{cost after doubling} = 2^{b}\\times\\text{cost}",
+    "src": "S06 workbook Solution!D83:E84"
+   },
+   {
+    "name": "DuPont",
+    "latex": "ROA = ROS\\times AT,\\; ROE = ROA\\times\\text{Leverage}",
+    "vars": {
+     "ROS": "Net income / Revenue",
+     "AT": "Revenue / Total assets",
+     "Leverage": "Total assets / Total equity"
+    },
+    "src": "S06 slides p.6 (relationships implied by the table)"
+   }
+  ],
+  "workedExamples": [
+   {
+    "name": "J. Dawgs one grill",
+    "givens": "C(Q) = 0.00002Q³ − 0.005Q² + 0.8Q + 8; Q = 100",
+    "answer": "FC = 8; VC = 20 − 50 + 80 = $50; C = $58; AFC = $0.08; AVC = $0.50; ATC = $0.58; MC = 0.6 − 1 + 0.8 = $0.40",
+    "src": "S06 Video Slides pp.14-21"
+   },
+   {
+    "name": "J. Dawgs production table",
+    "givens": "K = 1 grill at $8, wage $10; Q at L = 0..9: 0,10,28,54,84,116,146,172,190,200",
+    "answer": "FC = 8; VC = 10L; C = 8, 18, 28, ..., 98. Increasing then diminishing marginal returns.",
+    "src": "S06 Video Slides pp.4-10"
+   },
+   {
+    "name": "J. Dawgs two grills (CQ3)",
+    "givens": "C = 0.000002Q³ − 0.0005Q² + 0.25Q + 16; Q = 400",
+    "answer": "AFC $0.04; VC $148; AVC $0.37; MC $0.81; MC minimized at Q ≈ 83",
+    "src": "S06 Video p.24; Comprehension Quiz 3 Q1-5"
+   },
+   {
+    "name": "Whole Foods / Kroger / Safeway FY2014",
+    "givens": "Revenue 14,194 / 108,465 / 36,360; COGS 9,150 / 85,512 / 26,648; SG&A 4,110 / 19,816 / 9,148; Op income 934 / 3,137 / 534; NI 579 / 1,728 / 113; Assets 5,744 / 30,556 / 13,377; Liab 1,931 / 25,114 / 7,927; Equity 3,813 / 5,442 / 5,450 ($M)",
+    "answer": "ROS 4.1% / 1.6% / 0.3%; AT 2.5 / 3.5 / 2.7; Leverage 1.5 / 5.6 / 2.5; ROA 10.1% / 5.7% / 0.8%; ROE 15.2% / 31.8% / 2.1%",
+    "src": "S06 slides p.6"
+   },
+   {
+    "name": "Guest-Tek total cost curve",
+    "givens": "11 quarters of rooms, FC, VC ($000s), 2004-Q3 to 2007-Q1",
+    "answer": "TC($000s) = 37.8335·Rooms^0.4295",
+    "src": "S06 workbook Solution!C91 formula"
+   },
+   {
+    "name": "Guest-Tek scale curve",
+    "givens": "CPRPD = TC×1000/(Rooms×365/4); 2007-Q1 CPRPD = $0.2065",
+    "answer": "CPRPD = 414.6136·Rooms^−0.5705; $0.15 needs ≈ 1,077,754 rooms; doubling cuts unit cost 32.7%",
+    "src": "S06 workbook Solution!G47, C75:D76, E83"
+   },
+   {
+    "name": "Guest-Tek marginal cost",
+    "givens": "MC per quarter = 0.4295 × 37.8335 × R^(−0.5705) × 1000; ÷ 91.25 days",
+    "answer": "MC CPRPD: 100k rooms $0.250; 200k $0.168; 300k $0.134; 400k $0.113; 500k $0.0998",
+    "src": "S06 workbook Solution!F91:F107"
+   }
+  ],
+  "cases": [
+   "Competing on cost (S06 slides p.7): Kroger competes on cost (keeps 21¢ of each sales dollar after groceries vs. Whole Foods 36¢); Whole Foods on differentiation (premium covers overhead of 29% vs. Kroger's 18%); Kroger wins on volume ($3.50 sales per $ assets vs. $2.50); Safeway is stuck in the middle (1.5% operating margin; Albertsons bought it a year later); most successful in 2014: Whole Foods — best margins and ROA; Kroger's higher ROE comes mostly from debt.",
+   "HSIA Wars: Guest-Tek offered HSIA at $0.10 per room per day (early 2007); iBahn earned ~$0.65 on fixed-fee contracts; iBahn ~200,000 rooms, Guest-Tek ~500,000 after GoldenTree; ~2.5M rooms excluding 5-star; iBahn differentiated on security/VPN and 7-minute support calls (HSIA Wars case pp.1-3)",
+   "Guest-Tek verdict: can afford $0.10 since MC at current volume ≈ $0.10; but to cover fixed costs at that price they'd need ~2.2M rooms ≈ 88% of 2.5M select-service rooms; the competitor had a quality differentiator and scope economies, so Guest-Tek risked a price war it couldn't win (S06 workbook Solution!A112-A153)",
+   "Netflix vs. Redbox (Cost Advantage assignment): Redbox ATC per rental = 656.06·R^−0.476 (TC = 656.06·R^0.524); Netflix CPSPM = 38.10·S^−0.182; Redbox cost falls ~28.1% per doubling vs. Netflix ~11.9%; Netflix MCPEH ≈ $0.096/hr vs. Redbox ≈ $0.65/hr in 2016-2 (Kimball's Cost Advantage workbook — his answers, not an official key)",
+   "'Scale economies work in reverse': Redbox's rentals were shrinking, moving it UP its steep scale curve (Kimball's Cost Advantage Part 1 step 6)"
+  ],
+  "traps": [
+   "MC excludes fixed costs (marginal cost is only the variable cost of the last unit)",
+   "MC crosses AVC and ATC at their minimum points",
+   "ATC − AVC = AFC, which shrinks toward zero as Q rises",
+   "Units: Guest-Tek costs are in $000s; convert rooms to room-days (×365/4)",
+   "Learning/experience = cumulative output over time; scale = volume in a period",
+   "Video slide p.16 prints 'C = 8 + 58 = $58' — the correct arithmetic is 8 + 50 = $58",
+   "HSIA case table lists 2004-Q3 rooms 83,900 and VC 3,572; the S06 workbook uses 83,209 and 3,843.906 — follow the workbook"
+  ],
+  "quizQuestions": [
+   "CQ3 Q1-Q10"
+  ],
+  "spreadsheetTasks": [
+   "S06 Guest-Tek exercise: TC curve, CPRPD, scale curve, volume for target cost, doubling %, MC two ways",
+   "Cost Advantage Exercise: Netflix vs. Redbox (TC power fits, CPSPM, breakeven subs at $7.99, slope 2^b, MCPEH), Blockbuster vs. Netflix (cost per store, CPSPM, cost structure %)"
+  ]
+ },
+ {
+  "session": "S07",
+  "title": "Demand & Consumer Surplus",
+  "spine": "Unique Value to Offer",
+  "learningObjectives": [
+   {
+    "id": "S07-LO1",
+    "text": "Know and understand the following concepts: market demand curve, law of demand, change in quantity demanded, shift in demand, normal good, inferior good, substitute, complement, demand function, inverse demand function, consumer surplus",
+    "src": "course-data.js Session 7 'Read: Chapter 2: Demand'"
+   },
+   {
+    "id": "S07-LO2",
+    "text": "Know and understand how to construct and plot a demand curve",
+    "src": "course-data.js Session 7"
+   },
+   {
+    "id": "S07-LO3",
+    "text": "Know how to calculate the revenue maximizing price using calculus",
+    "src": "course-data.js Session 7"
+   },
+   {
+    "id": "S07-LO4",
+    "text": "Know how to calculate consumer surplus and describe what it means",
+    "src": "course-data.js Session 7"
+   },
+   {
+    "id": "S07-LO5",
+    "text": "Know and understand the four major categories or sources of product or service differentiation",
+    "src": "course-data.js Session 7 (taught in the 'Differentiation Advantage' LearnStrategy video — transcript not in materials)"
+   }
+  ],
+  "keyTerms": [
+   {
+    "term": "Market demand curve",
+    "def": "Shows the total quantity of a good that all consumers in the market would purchase at each price, holding other factors constant.",
+    "src": "GENERAL ECON (B&P Ch 2 topic)"
+   },
+   {
+    "term": "Law of demand",
+    "def": "Price and quantity demanded are inversely related: a price increase leads to a decrease in quantity demanded (and vice versa), all else equal.",
+    "src": "S08 slides p.16 (applied); GENERAL ECON wording"
+   },
+   {
+    "term": "Change in quantity demanded",
+    "def": "A movement ALONG a demand curve caused by a change in the good's own price.",
+    "src": "GENERAL ECON (B&P Ch 2 topic)"
+   },
+   {
+    "term": "Shift in demand",
+    "def": "The whole curve moves (left = decrease, right = increase) because a non-price determinant changed: income, prices of related goods, advertising/consumer tastes, population, expectations.",
+    "src": "GENERAL ECON (B&P Ch 2 topic); determinants listed in S05 slides p.41 and Math Review p.9"
+   },
+   {
+    "term": "Normal good",
+    "def": "Demand increases when income rises; the coefficient on income in a demand function is positive.",
+    "src": "CQ4 Q2 feedback (sign logic); Regression Exercise step 6 (Kimball)"
+   },
+   {
+    "term": "Inferior good",
+    "def": "Demand decreases when income rises; the coefficient on income is negative.",
+    "src": "CQ4 Q2 feedback"
+   },
+   {
+    "term": "Substitute",
+    "def": "An increase in the price of good y raises demand for good x; the coefficient on Py is positive (CPE > 0).",
+    "src": "CQ4 Q1 feedback; S08 slides p.27, p.29"
+   },
+   {
+    "term": "Complement",
+    "def": "An increase in the price of good y lowers demand for good x; the coefficient on Py is negative (CPE < 0), e.g., milk and cereal.",
+    "src": "S08 slides p.27"
+   },
+   {
+    "term": "Demand function",
+    "def": "Quantity as a function of price (and other variables), e.g., Qx = 10,000 − 4Px + 5Py − 0.2I.",
+    "src": "CQ4 Q3"
+   },
+   {
+    "term": "Inverse demand function",
+    "def": "Price on the left, as a function of quantity: solve the demand function for P. E.g., Qx = 4,500 − 4Px → Px = 1,125 − 0.25Qx.",
+    "src": "CQ4 Q3 feedback"
+   },
+   {
+    "term": "Consumer surplus",
+    "def": "The area under the demand curve and above the price: the value consumers receive beyond what they pay. For linear demand, a triangle = ½ × quantity × (choke price − price).",
+    "src": "CQ4 Q4 feedback; meaning = GENERAL ECON"
+   },
+   {
+    "term": "Choke price",
+    "def": "The price where quantity demanded hits zero (the vertical intercept of demand).",
+    "src": "CQ4 Q4 feedback"
+   }
+  ],
+  "formulas": [
+   {
+    "name": "Inverse demand",
+    "latex": "Q = a - bP \\;\\Rightarrow\\; P = \\frac{a}{b} - \\frac{1}{b}Q",
+    "src": "CQ4 Q3"
+   },
+   {
+    "name": "Revenue",
+    "latex": "R(P) = P\\cdot Q(P)",
+    "src": "S07 slides p.30"
+   },
+   {
+    "name": "Revenue-maximizing price",
+    "latex": "\\frac{dR}{dP} = 0",
+    "src": "S07 slides p.30"
+   },
+   {
+    "name": "Consumer surplus (linear)",
+    "latex": "CS = \\tfrac12\\,Q(P)\\,(P_{choke}-P)",
+    "src": "CQ4 Q4 feedback"
+   }
+  ],
+  "workedExamples": [
+   {
+    "name": "Redbox revenue-maximizing price",
+    "givens": "Q = −3,728P + 8,845 (rentals per kiosk; 2011-1..2011-3 at $1.00 and 2012-2..2012-4 at $1.20)",
+    "steps": [
+     "R = 8,845P − 3,728P²",
+     "dR/dP = 8,845 − 7,456P",
+     "P* = 8,845/7,456 ≈ $1.19"
+    ],
+    "answer": "P* ≈ $1.19 (≈ 4,423 rentals per kiosk, ≈ $5,247 revenue/kiosk)",
+    "src": "S07 slides pp.27-30; Differentiation Advantage Part 1 step 7"
+   },
+   {
+    "name": "CQ4 demand with shifters",
+    "givens": "Qx = 10,000 − 4Px + 5Py − 0.2I; Py = 100; I = 30,000",
+    "answer": "y is a substitute; x is inferior; Qx = 4,500 − 4Px; inverse Px = 1,125 − 0.25Qx",
+    "src": "CQ4 Q1-Q3"
+   },
+   {
+    "name": "Dr Pepper on BYU campus",
+    "givens": "Q = 30,000 − 20,000P",
+    "answer": "At $1.00: Q = 10,000, CS = ½(10,000)(0.50) = $2,500, OPE = −2.0; revenue-max P = $0.75 (Q = 15,000, R = $11,250)",
+    "src": "CQ4 Q4-Q7; S08 workbook OPE-Solution"
+   },
+   {
+    "name": "Dr Pepper vs. Mr. Pibb survey",
+    "givens": "Class WTP survey by section (S2-S5) at prices $1.50..$0",
+    "answer": "Quantity at each price = cumulative count of respondents willing to pay at least that price; scale sample to market with a market-to-sample ratio (e.g., ×300)",
+    "src": "S07 workbook (structure: F5 = SUM(B5:E5)+F4, H = F × ratio)"
+   },
+   {
+    "name": "Demand curves are dynamic",
+    "givens": "Redbox inverse demand 2011-Q4: P = 2.1817 − 0.0002Q (R² 0.85); 2014-Q4: P = 2.4537 − 0.0003Q (R² 0.72)",
+    "answer": "Demand shifted left (streaming substitutes) and became less price-sensitive among remaining customers; Kimball's fits: 2011 Q = 8,845 − 3,728P; 2014 Q = 7,019 − 2,426P",
+    "src": "S07 slides p.32; S09 slides p.4; Differentiation Advantage Part 2"
+   }
+  ],
+  "estimatingDemand": [
+   "Experimental trial(s) (A/B tests)",
+   "Market surveys (Dr Pepper)",
+   "Historical data (Redbox)",
+   "src: S07 slides p.16"
+  ],
+  "cases": [
+   "A/B testing: Microsoft Bing 2012 ad-headline tweak → 12% revenue increase, ~$100M/year; Microsoft, Amazon, Facebook, Google each run >10,000 online experiments annually; Booking.com: 'our predictions of how customers behave are wrong nine times out of ten' (S07 slides pp.11-12, WSJ Mar 15, 2020)",
+   "Behavioral nudges: UK tax letter '9 out of 10 people in your town have paid'; opt-out organ donation (S07 slides p.13)",
+   "Same Job, Different Cost: Netflix MCPEH ≈ $0.10 vs. Redbox ≈ $0.52-0.65 (S07 slides p.5)",
+   "Scale economies work in reverse: Redbox ATC = 656.06R^−0.476, R² = 0.7519 (S07 slides p.6)",
+   "Look at the trend, not the snapshot: total expense as % of revenue — Netflix 220% (2001) → 106% at IPO (May 2002) → 93%; Blockbuster 94% → 95% (S07 slides p.7)",
+   "Redbox 2009-2015: kiosks, revenue per rental, rentals per kiosk (S07 slides pp.20-26)"
+  ],
+  "traps": [
+   "Own-price change → movement along the curve; anything else → shift",
+   "Inverse demand puts P on the left; don't confuse slope of Q-on-P (−b) with slope of P-on-Q (−1/b)",
+   "Substitute in the demand-shifter values BEFORE inverting",
+   "CS uses the choke price (where Q = 0), not the current price alone",
+   "Revenue-max (dR/dP = 0) ≠ profit-max (MR = MC)"
+  ],
+  "gaps": [
+   "Four sources of differentiation (S07-LO5) — only in the LearnStrategy 'Differentiation Advantage' video; no transcript in materials"
+  ],
+  "quizQuestions": [
+   "CQ4 Q1-Q7"
+  ],
+  "spreadsheetTasks": [
+   "S07 Dr Pepper vs. Mr. Pibb survey → demand schedules",
+   "Differentiation Advantage Part 1-2 (Redbox demand, OPE, revenue-max by hand/table/Solver, 2011 vs 2014)"
+  ]
+ },
+ {
+  "session": "S08",
+  "title": "Elasticity & Price Discrimination",
+  "spine": "Unique Value to Offer",
+  "learningObjectives": [
+   {
+    "id": "S08-LO1",
+    "text": "Know and understand the following concepts: own price elasticity, inelastic and elastic demand, the total revenue test, cross price elasticity",
+    "src": "course-data.js Session 8 'Read: Chapter 3'"
+   },
+   {
+    "id": "S08-LO2",
+    "text": "Know how to calculate the various forms of elasticity and understand how they relate to strategy",
+    "src": "course-data.js Session 8"
+   }
+  ],
+  "keyTerms": [
+   {
+    "term": "Elasticity",
+    "def": "A measure of responsiveness of one variable to changes in another variable; the percentage change in one variable relative to changes in another; a measure of sensitivity (e.g., price-sensitive customers).",
+    "src": "S08 slides p.15"
+   },
+   {
+    "term": "Own-price elasticity (OPE)",
+    "def": "OPE = %ΔQx/%ΔPx = (∂Qx/∂Px)(Px/Qx). OPE will always be negative (law of demand).",
+    "src": "S08 slides p.16"
+   },
+   {
+    "term": "Elastic demand",
+    "def": "OPE < −1. Consumers are relatively price sensitive.",
+    "src": "S08 slides p.17"
+   },
+   {
+    "term": "Inelastic demand",
+    "def": "−1 < OPE < 0. Consumers are relatively price insensitive.",
+    "src": "S08 slides p.17"
+   },
+   {
+    "term": "Unitary elastic",
+    "def": "OPE = −1.",
+    "src": "S08 slides p.17"
+   },
+   {
+    "term": "Total revenue test",
+    "def": "(1) If demand is elastic (OPE < −1), a price increase (decrease) leads to a decrease (increase) in total revenue. (2) If inelastic (−1 < OPE < 0), a price increase (decrease) leads to an increase (decrease) in total revenue. (3) Total revenue is maximized when demand is unitary elastic.",
+    "src": "S08 slides p.18"
+   },
+   {
+    "term": "Cross-price elasticity (CPE)",
+    "def": "CPE = %ΔQx/%ΔPy = (∂Qx/∂Py)(Py/Qx). Can be negative or positive: positive → substitutes (Dr Pepper vs. Mr. Pibb); negative → complements (milk and cereal).",
+    "src": "S08 slides p.27"
+   },
+   {
+    "term": "Income elasticity",
+    "def": "%ΔQx/%ΔI; positive for normal goods, negative for inferior goods.",
+    "src": "Type listed on S08 slides p.15; formula = GENERAL ECON (B&P Ch 3 topic)"
+   },
+   {
+    "term": "Advertising elasticity",
+    "def": "%ΔQx/%ΔA — responsiveness of quantity to advertising spending.",
+    "src": "Type listed on S08 slides p.15; formula = GENERAL ECON (B&P Ch 3 topic)"
+   }
+  ],
+  "formulas": [
+   {
+    "name": "OPE (arc / algebraic)",
+    "latex": "OPE = \\frac{\\%\\Delta Q_x}{\\%\\Delta P_x} = \\frac{(Q_{new}-Q_{old})/Q_{old}}{(P_{new}-P_{old})/P_{old}}",
+    "src": "S08 slides p.23"
+   },
+   {
+    "name": "OPE (point / calculus)",
+    "latex": "OPE = \\frac{\\partial Q_x}{\\partial P_x}\\cdot\\frac{P_x}{Q_x}",
+    "src": "S08 slides p.16, p.25"
+   },
+   {
+    "name": "CPE",
+    "latex": "CPE = \\frac{\\%\\Delta Q_x}{\\%\\Delta P_y} = \\frac{\\partial Q_x}{\\partial P_y}\\cdot\\frac{P_y}{Q_x}",
+    "src": "S08 slides p.27"
+   },
+   {
+    "name": "Predict % change",
+    "latex": "\\%\\Delta Q_x = E \\times \\%\\Delta P",
+    "src": "S08 slides p.31; CQ4 Q8"
+   },
+   {
+    "name": "Income elasticity",
+    "latex": "E_I = \\frac{\\partial Q_x}{\\partial I}\\cdot\\frac{I}{Q_x}",
+    "src": "GENERAL ECON (B&P Ch 3)"
+   },
+   {
+    "name": "Log-linear demand",
+    "latex": "\\ln Q = \\beta_0 + \\beta_P \\ln P + \\dots \\Rightarrow OPE = \\beta_P",
+    "src": "GENERAL ECON (B&P Ch 3) — not in course slides"
+   }
+  ],
+  "workedExamples": [
+   {
+    "name": "Redbox OPE (algebraic)",
+    "givens": "Oct 31, 2011: $1.00 → $1.20; 5,000 → 4,500 rentals per kiosk",
+    "answer": "OPE = (−0.10)/(0.20) = −0.50 → inelastic at $1.00",
+    "src": "S08 slides pp.21-23"
+   },
+   {
+    "name": "Redbox OPE (calculus)",
+    "givens": "Qx = −3,728Px + 8,845; Px = $1.00",
+    "answer": "OPE = −3,728 × 1/5,117 = −0.73",
+    "src": "S08 slides p.25"
+   },
+   {
+    "name": "CPE exercise",
+    "givens": "Qx = 500 − 5Px + 4Py; Px = 25, Py = 20",
+    "answer": "y is a substitute; Qx = 455; CPE = 4 × 20/455 = 0.18; a 10% increase in Py → +1.8% Qx",
+    "src": "S08 slides pp.28-31"
+   },
+   {
+    "name": "Dr Pepper OPE table",
+    "givens": "Q = 30,000 − 20,000P at P = 0, 0.25, ..., 1.50",
+    "answer": "OPE: 0, −0.2, −0.5, −1, −2, −5, −∞; revenue 0, 6,250, 10,000, 11,250, 10,000, 6,250, 0; max at P = $0.75, Q = 15,000, R = $11,250, OPE = −1; elastic above $0.75, inelastic below",
+    "src": "S08 workbook, OPE - Solution!B14:E20 and comments B61, B70"
+   },
+   {
+    "name": "Dr Pepper / Mr. Pibb CPE",
+    "givens": "CPE for Dr Pepper = 1.2; CPE for Mr. Pibb = 2.0; 25% price cut",
+    "answer": "DP cuts price 25% → Mr. Pibb quantity −50%; Mr. Pibb cuts 25% → Dr Pepper −30%; Dr Pepper is a much stronger substitute for Mr. Pibb than vice versa",
+    "src": "S08 workbook, CPE - Solution comments B15, B26, B37"
+   },
+   {
+    "name": "Netflix 2011 (CQ4 Q10)",
+    "givens": "Expected 25M, actual 23.8M; price $10 → $16",
+    "answer": "%ΔQ = −4.8%; %ΔP = 60%; OPE = −0.08 → inelastic",
+    "src": "CQ4 Q10 feedback"
+   },
+   {
+    "name": "CQ4 elasticity set",
+    "givens": "CPE −2.0, Py +20% → Qx −40% (complements); OPE −0.7 → raise price",
+    "src": "CQ4 Q8-Q9"
+   },
+   {
+    "name": "TR test chart",
+    "givens": "Linear demand from P = $40 (Q = 0) to Q = 80 (P = 0)",
+    "answer": "Revenue peaks at $800 at P = $20 (midpoint); upper half elastic, lower half inelastic",
+    "src": "S08 slides pp.19-20"
+   }
+  ],
+  "elasticityAndStrategy": {
+   "Rivalry": "CPE between rival brands: high CPE → buyers switch brands easily → intense rivalry",
+   "Buyer power": "OPE of the firm's demand: elastic (OPE < −1) → price-sensitive buyers → strong buyer power",
+   "Threat of substitutes": "CPE with products outside the industry: high CPE → close substitutes → strong threat, caps prices",
+   "Supplier power / Threat of entry": "Not captured by demand elasticity; needs other evidence",
+   "rule": "The larger the elasticity (in absolute value), the stronger the force — and the less pricing power the firm has.",
+   "src": "S08 slides p.32"
+  },
+  "cases": [
+   "Netflix price increase (WSJ July 13, 2011): $9.99 combo plan replaced by $15.98 ($7.99 streaming + $7.99 DVD), +60% (S08 slides p.10)",
+   "Netflix subscribers 2009-2013 chart and NYT Oct 24, 2011 'How Netflix Lost 800,000 Members, and Good Will' (S08 slides pp.11-12)",
+   "'Should we raise our price?': wholesale distributors; current price $37, implied optimal price $19, implied elasticity 4.11, >$74K per month (+35%) more revenue (S08 slides p.13)",
+   "Syracuse University (WSJ Aug 29, 2026): 'the school thinks of itself as like an Ivy, but it's not' — enrollment crisis (S08 slides pp.7-9)"
+  ],
+  "priceDiscrimination": "The S08 deck title mentions price discrimination, but the slides contain no price discrimination content; it is covered in S11 (B&P Ch 11).",
+  "traps": [
+   "OPE is reported as NEGATIVE; elastic means OPE < −1 (|OPE| > 1)",
+   "Use the ORIGINAL (old) price and quantity as the base in the algebraic formula",
+   "Use the partial derivative coefficient (∂Q/∂P), not the inverse-demand slope",
+   "Netflix: measure the subscriber loss against the expected 25M, not the reported 800K",
+   "CPE sign: + substitutes, − complements; magnitude can differ by direction (DP 1.2 vs MP 2.0)",
+   "Revenue max at |OPE| = 1, not at maximum quantity"
+  ],
+  "quizQuestions": [
+   "CQ4 Q5-Q10"
+  ],
+  "spreadsheetTasks": [
+   "S08 in-class OPE and CPE tabs",
+   "Differentiation Advantage Part 1 steps 6-8, Part 2 step 3, Part 3 (Netflix regression OPE)"
+  ]
+ },
+ {
+  "session": "S09",
+  "title": "Forecasting Demand Using Linear Regression",
+  "spine": "Unique Value to Offer",
+  "learningObjectives": [
+   {
+    "id": "S09-LO1",
+    "text": "Know and understand the following statistical terms: regression coefficient, standard error, t-statistic, p-value, R-squared",
+    "src": "course-data.js Session 9"
+   },
+   {
+    "id": "S09-LO2",
+    "text": "Know how to run a regression model in Excel",
+    "src": "course-data.js Session 9"
+   },
+   {
+    "id": "S09-LO3",
+    "text": "Know and understand how to interpret and use regression output",
+    "src": "course-data.js Session 9"
+   }
+  ],
+  "keyTerms": [
+   {
+    "term": "OLS regression",
+    "def": "The line that minimizes the sum of squared deviations between the line and the actual data points. Y = a + bX, where a and b are parameters that define the intercept and slope. Objective: estimate the parameters that define the true relationship between Y and X(s).",
+    "src": "S09 slides p.20"
+   },
+   {
+    "term": "Regression coefficients",
+    "def": "Estimates of the true parameters that define the relationship between dependent and independent variables. Interpretation: 'A one-unit increase in x leads to (magnitude of coefficient) increase/decrease (sign of coefficient) in y.'",
+    "src": "S09 slides p.24"
+   },
+   {
+    "term": "Standard error",
+    "def": "The standard deviation of the parameter estimate; a measure of how noisy our estimate is. The smaller/greater the standard error, the more/less precise your parameter estimate.",
+    "src": "S09 slides p.26"
+   },
+   {
+    "term": "t-statistic",
+    "def": "The ratio of the parameter estimate (regression coefficient) to its standard error. Generally, t-statistics greater than 2 in absolute value indicate the coefficient is statistically significant (not equal to zero).",
+    "src": "S09 slides p.29"
+   },
+   {
+    "term": "p-value",
+    "def": "An alternative measure of statistical significance; per the slides, it 'tells you the probability that a true parameter that you estimated is equal to zero.' By convention, a coefficient is statistically significant when its p-value is less than 0.05.",
+    "src": "S09 slides p.31"
+   },
+   {
+    "term": "R-squared",
+    "def": "Coefficient of determination; a measure of model fit equal to explained variation over total variation; ranges from 0 to 1. 'An R-squared of ___ indicates that ___% of the variation in y can be explained by variation in the x's.'",
+    "src": "S09 slides p.33"
+   },
+   {
+    "term": "Multiple R",
+    "def": "Square root of R-squared.",
+    "src": "CQ5 Q2 feedback"
+   },
+   {
+    "term": "Adjusted R-squared",
+    "def": "R-squared penalized for the number of variables the model uses.",
+    "src": "CQ5 Q2 feedback"
+   },
+   {
+    "term": "Isolating effects",
+    "def": "Multiple regression isolates the effect of one variable holding others constant (the airline fare example; Netflix growth and season removed).",
+    "src": "S09 slides pp.9-14"
+   }
+  ],
+  "formulas": [
+   {
+    "name": "Simple regression line",
+    "latex": "Y = a + bX",
+    "src": "S09 slides p.20"
+   },
+   {
+    "name": "t-stat",
+    "latex": "t = \\frac{\\text{coefficient}}{\\text{standard error}}",
+    "src": "S09 slides p.29"
+   },
+   {
+    "name": "R-squared",
+    "latex": "R^2 = \\frac{SS_{Regression}}{SS_{Total}}",
+    "src": "S09 slides p.33 (explained/total)"
+   },
+   {
+    "name": "Elasticity from linear regression",
+    "latex": "OPE = b_P\\cdot\\frac{\\bar P}{\\bar Q}",
+    "src": "S09 workbook Solution!A57"
+   }
+  ],
+  "workedExamples": [
+   {
+    "name": "Pittsburgh TVs",
+    "givens": "10 observations (Q, P): (180,475),(590,400),(430,450),(250,550),(275,575),(720,375),(660,375),(490,450),(700,400),(210,500)",
+    "answer": "Q = 1,631.47 − 2.60P; R² 0.75; adj R² 0.72; SE 112.22; F 23.94 (Sig F 0.0012); intercept SE 243.97 t 6.69 p 0.0002; price SE 0.53 t −4.89 p 0.0012; 95% CI price (−3.82, −1.37)",
+    "src": "S09 slides pp.16, 22-25"
+   },
+   {
+    "name": "Redstone Residential",
+    "givens": "10 complexes; Q on rent, advertising ($100s), distance (miles)",
+    "answer": "Q = 135.15 − 0.14P + 0.54A − 5.78D; R² 0.79; adj 0.69; F 7.59 (p 0.018); distance significant (p 0.004); price borderline (t −2.41, p 0.053); advertising not (p 0.43); $100 rent increase → −14.3 units; OPE at means = −0.143 × 420/53.1 = −1.13 → elastic → raising rent lowers revenue",
+    "src": "S09 workbook Solution!B18:G34, A37-A57"
+   },
+   {
+    "name": "Airline cost per mile (CQ5)",
+    "givens": "75 airports; R² 0.722; passengers (100,000s) −0.027; departures (1,000s) +0.052; distance −0.007",
+    "answer": "+100k passengers → −0.027¢/mile; 72.2% explained; departures significant; 200 extra miles → 1.4¢ difference; +17,000 departures → +0.88¢",
+    "src": "CQ5 Q1-Q5"
+   },
+   {
+    "name": "Netflix subscription regression",
+    "givens": "Subs = 15,296.5 − 595.77·Price + year dummies (2010 5,406; 2011 13,929; 2012 12,636; 2013 18,610) + quarter dummies (Q2 856; Q3 2,388; Q4 3,686); R² 0.987",
+    "answer": "Price coefficient: ~596K fewer subscribers per $1 (t −2.97, p 0.013); OPE at $10 in 2011-Q2 ≈ −0.25; revenue-max price ≈ $25.25",
+    "src": "S09 slides pp.10-14; Kimball's Differentiation Advantage Part 3"
+   },
+   {
+    "name": "Mrs. Smith's pies (Regression Exercise)",
+    "givens": "48 quarterly obs across 6 MSAs",
+    "answer": "Q = 504,428 − 120,906P + 5,737A + 29,691Pc + 2,596I + 30,422Pop; R² 0.870; income not significant (p 0.478); OPE at $6.75/$6.00 = −2.11; CPE = 0.46; Atlanta 2007-Q4 forecast 379,068 vs actual 361,677 (+4.8%)",
+    "src": "Kimball's Regression Exercise (assignment; his computed output)"
+   }
+  ],
+  "cases": [
+   "Airline Industry Revisited: Cincinnati 0.22 $/mile rank 1; Atlanta 0.20; SLC 0.17; Boston 0.14; LA 0.12 — how do you isolate the effect of individual variables? (S09 slides p.9; S01 slides pp.60-67)",
+   "WSJ 'The Most Expensive Airports to Fly To' (May 22, 2014): wealthy communities and business travelers → higher fares; busy airports → lower fares (S09 slides pp.7-8)",
+   "Netflix Revisited: raw data −855K per $1; growth and season removed −596K per $1; waterfall 9.3M + 13.9M growth + 3.7M season − 3.6M price (6 × 596K) = 23.4M predicted vs 21.7M actual 2011-Q4 (S09 slides pp.10-14)",
+   "Demand curves are dynamic: Redbox 2011 vs 2014 (S09 slides p.4)",
+   "Same cost, different margin: Netflix vs Redbox 2016-2 gross margin ~41% vs ~30%, operating expenses ~7% vs ~6% (S09 slides p.5)"
+  ],
+  "traps": [
+   "Check the UNITS of each x (passengers in 100,000s, departures in 1,000s, advertising in $100s)",
+   "Significance: |t| > 2 OR p < 0.05 — look at the right row",
+   "R² vs adjusted R² vs Multiple R",
+   "Small samples: |t| > 2 rule can disagree with p < 0.05 (Redstone price t = −2.41, p = 0.053)",
+   "When forecasting, plug in ALL variables (including dummies) for the scenario",
+   "Elasticity from a linear regression requires a P and Q at which to evaluate"
+  ],
+  "quizQuestions": [
+   "CQ5 Q1-Q5"
+  ],
+  "spreadsheetTasks": [
+   "S09 Redstone Residential regression",
+   "Regression Exercise (Mrs. Smith's pies)",
+   "Differentiation Advantage Part 3 (Netflix regression)"
+  ]
+ },
+ {
+  "session": "S10",
+  "title": "Profit Maximization Across Market Structures",
+  "spine": "Unique Value to Offer",
+  "learningObjectives": [
+   {
+    "id": "S10-LO1",
+    "text": "Know and understand the following economic terms: marginal analysis, marginal benefit, marginal cost, marginal revenue, monopoly, monopolistic competition, perfectly competitive market",
+    "src": "course-data.js Session 10"
+   },
+   {
+    "id": "S10-LO2",
+    "text": "Be able to identify when a firm operates in an industry that is perfectly competitive, monopolistically competitive, or a monopoly",
+    "src": "course-data.js Session 10"
+   },
+   {
+    "id": "S10-LO3",
+    "text": "Be able to identify the sources of (and strategies for obtaining) monopoly power",
+    "src": "course-data.js Session 10"
+   },
+   {
+    "id": "S10-LO4",
+    "text": "Know how to calculate the profit-maximizing levels of price and quantity for perfectly competitive, monopolistically competitive, and monopoly firms using marginal analysis",
+    "src": "course-data.js Session 10"
+   }
+  ],
+  "keyTerms": [
+   {
+    "term": "Marginal analysis",
+    "def": "Deciding by comparing the benefit and cost of one more unit: keep going until the marginal benefit (MB) equals the marginal cost (MC). MB = MC.",
+    "src": "S10 slides p.14"
+   },
+   {
+    "term": "Marginal benefit (MB)",
+    "def": "The additional benefit (e.g., revenue) from one more unit of an activity.",
+    "src": "S10 slides p.15 (table); wording GENERAL ECON"
+   },
+   {
+    "term": "Marginal cost (MC)",
+    "def": "The additional cost of one more unit (dC/dQ).",
+    "src": "S06 Video p.20; S10 slides p.15"
+   },
+   {
+    "term": "Marginal revenue (MR)",
+    "def": "The additional revenue collected when one additional unit of production or service is rendered. MR = dR/dQ.",
+    "src": "S10 slides p.17"
+   },
+   {
+    "term": "Perfectly competitive market",
+    "def": "Many firms; homogeneous goods (commodities); perfect information: yes; transaction costs: no; free entry/exit: yes; no influence on price (price taker); D_firm = P_market = MR; Q* where P_market = MC(Q*); P* = P_market.",
+    "src": "S10 slides p.44"
+   },
+   {
+    "term": "Monopolistic competition",
+    "def": "Many firms; differentiated goods (fast food); perfect information: no; transaction costs: yes; free entry/exit: yes; price maker; faces its own D_firm; Q* where MR(Q*) = MC(Q*); P* = P(Q*).",
+    "src": "S10 slides p.44"
+   },
+   {
+    "term": "Monopoly",
+    "def": "One firm (e.g., rural gas station); price maker; D_firm = D_market; Q* where MR(Q*) = MC(Q*); P* = P(Q*). Information, transaction costs, entry: N/A in the professor's table.",
+    "src": "S10 slides p.44"
+   },
+   {
+    "term": "Price taker vs. price maker",
+    "def": "A price taker has no influence on price (perfect competition); a price maker sets price from its downward-sloping demand (monopoly, monopolistic competition).",
+    "src": "S10 slides p.44"
+   }
+  ],
+  "formulas": [
+   {
+    "name": "Marginal revenue",
+    "latex": "MR = \\frac{dR}{dQ},\\quad P = a - bQ \\Rightarrow R = aQ - bQ^2,\\; MR = a - 2bQ",
+    "src": "S10 slides pp.17-19"
+   },
+   {
+    "name": "Profit max (price maker)",
+    "latex": "MR(Q^*) = MC(Q^*),\\quad P^* = P(Q^*)",
+    "src": "S10 slides p.44"
+   },
+   {
+    "name": "Profit max (price taker)",
+    "latex": "P_{market} = MC(Q^*)",
+    "src": "S10 slides p.44"
+   },
+   {
+    "name": "Profit",
+    "latex": "\\pi = R - C = P\\,Q - C(Q)",
+    "src": "S10 slides p.46"
+   }
+  ],
+  "workedExamples": [
+   {
+    "name": "Advertising spend",
+    "givens": "Ads 0-10; TR 0, 90, 170, 240, 300, 350, 390, 420, 440, 450, 450; TC 0, 10, 30, 60, 100, 150, 210, 280, 360, 450, 550",
+    "answer": "MB falls 90→0, MC rises 10→100; MB = MC = 50 at 5 ads; profit peaks at 200 (4 or 5 ads)",
+    "src": "S10 slides p.15"
+   },
+   {
+    "name": "MR from inverse demand",
+    "givens": "P = 10 − Q",
+    "answer": "R = 10Q − Q², MR = 10 − 2Q; revenue peaks at Q = 5 (R = 25) where MR = 0",
+    "src": "S10 slides pp.17-19"
+   },
+   {
+    "name": "Price taker at $40",
+    "givens": "C(Q) = 125 + 4Q², P = $40",
+    "answer": "MR = P = 40, MC = 8Q → Q* = 5; C = 225; R = 200; profit = −25. Operate in the short run, exit in the long run.",
+    "src": "S10 slides p.46"
+   },
+   {
+    "name": "Monopoly",
+    "givens": "C(Q) = 125 + 4Q², P = 100 − Q",
+    "answer": "MR = 100 − 2Q = 8Q → Q* = 10; P* = 90; C = 525; R = 900; profit = 375. Will not face entry unless patents/entry barriers are eliminated.",
+    "src": "S10 slides p.47"
+   },
+   {
+    "name": "Monopolistic competition",
+    "givens": "Same cost; P = 100 − Q for your brand",
+    "answer": "Short run identical to monopoly: Q = 10, P = 90, profit 375 (ATC 52.5). Long run: imitators enter, demand shifts to P = 50 − Q; tangency at Q = 5, P = ATC = 45, profit = 0.",
+    "src": "S10 slides pp.48-49"
+   },
+   {
+    "name": "CQ5 monopoly",
+    "givens": "P = 120 − 2Q; C = 500 + 2Q²",
+    "answer": "MR = 120 − 4Q = MC = 4Q → Q = 15; P = 90; profit = 400",
+    "src": "CQ5 Q6-Q7"
+   },
+   {
+    "name": "CQ5 price taker",
+    "givens": "C = 50 + 10Q + 2Q²; P = 70",
+    "answer": "70 = 10 + 4Q → Q = 15",
+    "src": "CQ5 Q8"
+   },
+   {
+    "name": "Sandwich shop MB vs MC",
+    "givens": "3 workers 60 sandwiches → 4th worker 75; $5 each; wage $50",
+    "answer": "MR = 15 × $5 = $75 > $50 → hire",
+    "src": "CQ5 Q10"
+   },
+   {
+    "name": "Provo Peaks Root Beer (midterm practice)",
+    "givens": "350 obs, 7 states; Q (cases) on price ($) and income ($000/capita)",
+    "answer": "Q = 200.152 − 5.849P + 7.804I; price t −2.151 p 0.032 (significant); income t 6.677 p 0.000 (significant, normal good); R² 0.122 (only 12.2% of variation explained); F 24.065",
+    "src": "S10 slides pp.10-11"
+   }
+  ],
+  "monopolyPower": {
+   "slides": [
+    "Creating value isn't enough. You have to capture it.",
+    "Profits give a firm room to look past survival.",
+    "Creative monopolies expand what customers can choose from.",
+    "The strategist's job: Avoid competition and move toward monopoly. (S10 slides p.51)"
+   ],
+   "sourcesGeneralEcon": [
+    "Economies of scale",
+    "Economies of scope",
+    "Cost complementarity",
+    "Patents and other legal barriers (licenses)",
+    "Control of key resources / preferential access",
+    "Network effects",
+    "Switching costs / brand loyalty",
+    "src: GENERAL ECON (B&P Ch 8 'Sources of Monopoly Power' topic); several overlap the S04 barriers-to-entry list"
+   ]
+  },
+  "cases": [
+   "Digital Dialog: Big Tech and Monopoly Power — Google lost (2024 search monopoly ruling; 2025 no breakup but exclusive default deals banned and data sharing required; ad tech also ruled monopolized); Meta won (2025, FTC challenge to Instagram/WhatsApp rejected — TikTok and YouTube compete); Amazon (sued 2023) and Apple (sued 2024) pending (S10 module Digital Dialog page)",
+   "Peter Thiel argues these companies are engines for making society better (Digital Dialog page)",
+   "Midterm Exam 1: opens Mon Oct 19 8:00 AM, closes Fri Oct 23 9:00 PM, late fee begins Friday ($5.00); MC conceptual (quizzes), short answer application (spreadsheets, calculations, analysis) (S10 slides p.7)",
+   "How to study: 'I use the Learning Objectives when deciding what questions to ask'; study guide spreadsheet maps each LO to readings, quiz questions, in-class exercises, spreadsheet questions (S10 slides p.8)"
+  ],
+  "traps": [
+   "Price taker: MR = P (horizontal demand), so set P = MC",
+   "Price maker: find Q from MR = MC FIRST, then read P off demand (not off MC)",
+   "MR has twice the slope of linear inverse demand",
+   "Negative profit in the short run ≠ shut down; long-run exit",
+   "Monopolistic competition: short-run profit is competed away in the long run (P = ATC)",
+   "Profit = R − C including fixed cost"
+  ],
+  "quizQuestions": [
+   "CQ5 Q6-Q10"
+  ],
+  "spreadsheetTasks": [
+   "In-class market-structure exercise C(Q) = 125 + 4Q²"
+  ]
+ },
+ {
+  "session": "S11",
+  "title": "Advanced Pricing Strategies",
+  "spine": "Unique Value to Offer",
+  "learningObjectives": [
+   {
+    "id": "S11-LO1",
+    "text": "Know and understand the following economic terms: block pricing, commodity bundling, cross-subsidies, price discrimination, peak-load pricing, two-part pricing, transfer pricing",
+    "src": "course-data.js Session 11"
+   },
+   {
+    "id": "S11-LO2",
+    "text": "Know and understand the three forms of price discrimination",
+    "src": "course-data.js Session 11"
+   },
+   {
+    "id": "S11-LO3",
+    "text": "Know how to calculate the profit-maximizing price when using two-part pricing, block pricing, commodity bundling, peak-load pricing, cross-subsidies, and transfer pricing",
+    "src": "course-data.js Session 11"
+   },
+   {
+    "id": "S11-LO4",
+    "text": "Be able to articulate the benefits and risks of charging different prices to different customers",
+    "src": "course-data.js Session 11"
+   }
+  ],
+  "status": "Session 11 slides not yet posted. All definitions/formulas are GENERAL ECON (B&P Ch 11 'Pricing Strategies for Firms with Market Power', pp. 352-370 topics) until slides arrive.",
+  "keyTerms": [
+   {
+    "term": "Price discrimination",
+    "def": "Charging different prices to different consumers (or for different units) for the same good, where the price differences are not due to cost differences.",
+    "src": "GENERAL ECON (B&P Ch 11)"
+   },
+   {
+    "term": "First-degree (perfect) price discrimination",
+    "def": "Charging each consumer the maximum they are willing to pay for each unit; the firm captures all consumer surplus.",
+    "src": "GENERAL ECON (B&P Ch 11)"
+   },
+   {
+    "term": "Second-degree price discrimination",
+    "def": "Charging a per-unit price that depends on how many units are bought (e.g., quantity discounts); consumers self-select.",
+    "src": "GENERAL ECON (B&P Ch 11)"
+   },
+   {
+    "term": "Third-degree price discrimination",
+    "def": "Charging different groups (with different, identifiable elasticities) different prices, e.g., student or senior discounts. Charge the higher price to the less elastic group.",
+    "src": "GENERAL ECON (B&P Ch 11)"
+   },
+   {
+    "term": "Two-part pricing",
+    "def": "A fixed fee for the right to buy plus a per-unit price. Profit-maximizing: set per-unit price = MC and the fixed fee = the consumer surplus each consumer receives at that price.",
+    "src": "GENERAL ECON (B&P Ch 11)"
+   },
+   {
+    "term": "Block pricing",
+    "def": "Selling identical units only in a package (block); the profit-maximizing package price equals the total value (area under demand) of the package quantity, where package quantity is where P = MC.",
+    "src": "GENERAL ECON (B&P Ch 11)"
+   },
+   {
+    "term": "Commodity bundling",
+    "def": "Selling two or more different products together for a single price; profitable when consumers' reservation prices are negatively correlated and the firm cannot price discriminate.",
+    "src": "GENERAL ECON (B&P Ch 11)"
+   },
+   {
+    "term": "Peak-load pricing",
+    "def": "Charging a higher price during peak demand (when capacity is constrained and MC is high) and a lower price off-peak. Set P where MR = MC in each period.",
+    "src": "GENERAL ECON (B&P Ch 11)"
+   },
+   {
+    "term": "Cross-subsidies",
+    "def": "Pricing one product below cost (or low) to boost demand for a complementary product that earns the profit (e.g., cheap printers, profitable ink).",
+    "src": "GENERAL ECON (B&P Ch 11)"
+   },
+   {
+    "term": "Transfer pricing",
+    "def": "Setting the internal price at which an upstream division sells an input to a downstream division of the same firm; to maximize overall firm profit (no external market), set the transfer price equal to the upstream division's marginal cost.",
+    "src": "GENERAL ECON (B&P Ch 11)"
+   }
+  ],
+  "formulas": [
+   {
+    "name": "Markup rule",
+    "latex": "P = \\left[\\frac{E}{1+E}\\right] MC \\quad (E = OPE < -1)",
+    "src": "GENERAL ECON (B&P Ch 11)"
+   },
+   {
+    "name": "Third-degree rule",
+    "latex": "MR_1 = MR_2 = MC \\;\\Rightarrow\\; P_1\\frac{1+E_1}{E_1} = P_2\\frac{1+E_2}{E_2}",
+    "src": "GENERAL ECON (B&P Ch 11)"
+   },
+   {
+    "name": "Two-part tariff",
+    "latex": "P = MC,\\quad \\text{Fee} = CS = \\tfrac12 (P_{choke} - MC)\\,Q(MC)",
+    "src": "GENERAL ECON (B&P Ch 11)"
+   },
+   {
+    "name": "Block price",
+    "latex": "\\text{Package price} = MC\\cdot Q + CS \\text{ at } P=MC",
+    "src": "GENERAL ECON (B&P Ch 11)"
+   },
+   {
+    "name": "Transfer price (no external market)",
+    "latex": "P_T = MC_{upstream}",
+    "src": "GENERAL ECON (B&P Ch 11)"
+   }
+  ],
+  "cases": [
+   "Digital Dialog: Dynamic and Surveillance Pricing — dynamic pricing = adjusting prices in real time; personalized/bespoke/surveillance pricing = tailoring prices to individuals; raises questions of fairness, transparency, privacy, market power (S11 module Digital Dialog page)",
+   "Articles: 'How Companies Learn Your Secrets' (NYT Magazine — Target); 'Uber CEO: Surge Pricing Is Here To Stay' (WSJ); 'Delta Gets Blowback for Using AI to Set Airfares' (WSJ); 'How AI-driven pricing systems determine what you're willing to pay' (Deseret News) (S11 Digital Dialog page)",
+   "Discussion prompts: Who benefits, who is harmed, under what conditions? Ethical issues? Should policymakers intervene? (S11 Digital Dialog page)",
+   "BYU Testing Center group project used peak-load pricing; BYU Campus Printing used building-by-building price discrimination; BYU ROC Pass compared bundling options (Group Projects from Prior Years page)"
+  ],
+  "traps": [
+   "Third-degree: higher price to the LESS elastic group",
+   "Two-part pricing: per-unit price at MC, not at the monopoly price",
+   "Bundling only helps when reservation prices are negatively correlated",
+   "Markup rule needs elastic demand (E < −1)"
+  ],
+  "quizQuestions": [],
+  "spreadsheetTasks": [
+   "Advanced Pricing assignment — not in inputs (not yet posted?)"
+  ]
+ }
+]

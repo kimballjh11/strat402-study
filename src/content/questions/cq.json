@@ -1,0 +1,577 @@
+[
+ {
+  "id": "CQ1-Q1",
+  "quiz": 1,
+  "number": 1,
+  "type": "tf",
+  "stemHtml": "<p>You can find a checklist of items needed to prepare for class in each session’s module in Canvas.</p>",
+  "optionsHtml": [
+   "True",
+   "False"
+  ],
+  "correct": 0,
+  "feedbackHtml": "<p><strong>Answer: True.</strong></p><p>From the <em>Course Logistics</em> section of the syllabus:</p><p>There will typically be a checklist of items that you must complete in order to be adequately prepared for class. You can find these items in each session’s module in Canvas.</p>"
+ },
+ {
+  "id": "CQ1-Q2",
+  "quiz": 1,
+  "number": 2,
+  "type": "tf",
+  "stemHtml": "<p>You are permitted to use AI on your exams.</p>",
+  "optionsHtml": [
+   "True",
+   "False"
+  ],
+  "correct": 1,
+  "feedbackHtml": "<p><strong>Answer: False.</strong></p><p>From the <em>Grading Policy — Exams</em> section of the syllabus:</p><p>All assessments are closed-book, closed-note, closed-neighbor and must be taken without access to generative AI tools.</p>"
+ },
+ {
+  "id": "CQ1-Q3",
+  "quiz": 1,
+  "number": 3,
+  "type": "tf",
+  "stemHtml": "<p>The professor evaluates your attendance and participation in class as part of your final grade.</p>",
+  "optionsHtml": [
+   "True",
+   "False"
+  ],
+  "correct": 0,
+  "feedbackHtml": "<p><strong>Answer: True.</strong></p><p>From the <em>Grading Policy — Participation &amp; Professionalism</em> section of the syllabus:</p><p>This grade will be a holistic assessment of your preparation for class, your active participation, including attendance and punctuality, and your overall attitude as you engage with your peers, your instructor, and the course content.</p>"
+ },
+ {
+  "id": "CQ1-Q4",
+  "quiz": 1,
+  "number": 4,
+  "type": "tf",
+  "stemHtml": "<p>According to BYU’s Credit Hour Policy, for a 3-credit course like STRAT 402 you can expect to put in up to 9 hours of work a week, including time in class.</p>",
+  "optionsHtml": [
+   "True",
+   "False"
+  ],
+  "correct": 0,
+  "feedbackHtml": "<p><strong>Answer: True.</strong></p><p>From the <em>Read: Succeeding in STRAT 402</em> section of the syllabus:</p><p>As a 3-credit course, you can expect to average up to 9 hours of work and study.</p>"
+ },
+ {
+  "id": "CQ1-Q5",
+  "quiz": 1,
+  "number": 5,
+  "type": "tf",
+  "stemHtml": "<p>If you miss a pre-class assignment, you can still submit it late for partial credit.</p>",
+  "optionsHtml": [
+   "True",
+   "False"
+  ],
+  "correct": 1,
+  "feedbackHtml": "<p><strong>Answer: False.</strong></p><p>From the <em>Late Policy</em> section of the syllabus:</p><p>Pre-class assignments (e.g., reading quizzes) must be turned in before the close deadline to receive credit. However, to accommodate forgetfulness, sickness, emergencies, travel, etc., I will drop your two lowest pre-class assignments at the end of the semester.</p>"
+ },
+ {
+  "id": "CQ1-Q6",
+  "quiz": 1,
+  "number": 6,
+  "type": "tf",
+  "stemHtml": "<p>Although a calculus course is not required for STRAT 402, the course uses calculus concepts such as derivatives and optimization.</p>",
+  "optionsHtml": [
+   "True",
+   "False"
+  ],
+  "correct": 0,
+  "feedbackHtml": "<p><strong>Answer: True.</strong></p><p>From the <em>Learning Objectives &amp; Prerequisites</em> section of the syllabus:</p><p>Learning Objective 2: “Students will analyze and optimize pricing, production, and cost decisions using calculus and data.” Prerequisites lists MATH 116 Essentials of Calculus as helpful but not required: “While not required, background in related disciplines such as statistics, mathematics, and business analysis will strengthen your ability to analyze and evaluate economic decisions and tradeoffs.”</p>"
+ },
+ {
+  "id": "CQ1-Q7",
+  "quiz": 1,
+  "number": 7,
+  "type": "tf",
+  "stemHtml": "<p>STRAT 402 has a grade curve of 3.6, which means only a certain number of students can earn A’s.</p>",
+  "optionsHtml": [
+   "True",
+   "False"
+  ],
+  "correct": 1,
+  "feedbackHtml": "<p><strong>Answer: False.</strong></p><p>From the <em>Grading Policy</em> section of the syllabus:</p><p>As a program, we have a target GPA of 3.6 for all junior-core classes (STRAT 401, 402, 411, and 412). This is not a quota; in theory, the GPA could end up being higher or lower, but this is the target we aim for in order to have a consistent degree of rigor across the entire strategy junior core.</p>"
+ },
+ {
+  "id": "CQ1-Q8",
+  "quiz": 1,
+  "number": 8,
+  "type": "tf",
+  "stemHtml": "<p>If your average exam score is below 80%, you will have an opportunity to retake a comprehensive exam during finals week.</p>",
+  "optionsHtml": [
+   "True",
+   "False"
+  ],
+  "correct": 0,
+  "feedbackHtml": "<p><strong>Answer: True.</strong></p><p>From the <em>Grading Policy — Exams</em> section of the syllabus:</p><p>At the end of the semester, students with an average exam score below 80% will have an opportunity to retake a final comprehensive exam during finals week. This retake exam will be capped at 80%.</p>"
+ },
+ {
+  "id": "CQ1-Q9",
+  "quiz": 1,
+  "number": 9,
+  "type": "tf",
+  "stemHtml": "<p>Your group members’ evaluations of your contribution factor into your participation and professionalism grade.</p>",
+  "optionsHtml": [
+   "True",
+   "False"
+  ],
+  "correct": 0,
+  "feedbackHtml": "<p><strong>Answer: True.</strong></p><p>From the <em>Late Policy — Group Projects</em> section of the syllabus:</p><p>Students will have the ability to evaluate the contributions of their group members on all projects at the end of the semester as part of their participation and professionalism grade.</p>"
+ },
+ {
+  "id": "CQ1-Q10",
+  "quiz": 1,
+  "number": 10,
+  "type": "tf",
+  "stemHtml": "<p>STRAT 402 covers the same material as ECON 110.</p>",
+  "optionsHtml": [
+   "True",
+   "False"
+  ],
+  "correct": 1,
+  "feedbackHtml": "<p><strong>Answer: False.</strong></p><p>From the <em>Prerequisites &amp; Description</em> section of the syllabus:</p><p>“As an intermediate economics course, STRAT 402 builds on ECON 110 Economic Principles and Problems.” The Description adds that the course “bridges the gap between economics and strategic management by equipping students with rigorous analytical tools to evaluate and shape competitive advantage.”</p>"
+ },
+ {
+  "id": "CQ3-Q1",
+  "quiz": 3,
+  "number": 1,
+  "type": "mc",
+  "stemHtml": "<p>A year after its founding, J-Dawgs decides to expand its facility to include two functioning grills. Suppose total cost as a function of the quantity of hot dogs produced can be represented by the following relationship:</p><p>C = 0.000002Q<sup>3</sup> − 0.0005Q<sup>2</sup> + 0.25Q + 16</p><p>What is the average fixed cost (AFC) of producing 400 hot dogs?</p>",
+  "optionsHtml": [
+   "<p>$0.04</p>",
+   "<p>$0.10</p>",
+   "<p>$0.16</p>",
+   "<p>$0.40</p>"
+  ],
+  "correct": 0,
+  "feedbackHtml": "<p><strong>Answer: $0.04.</strong></p><p>Fixed cost is the part of the cost function that does not change with Q: FC = 16.<br/>AFC = FC / Q = 16 / 400 = $0.04</p>"
+ },
+ {
+  "id": "CQ3-Q2",
+  "quiz": 3,
+  "number": 2,
+  "type": "mc",
+  "stemHtml": "<p>A year after its founding, J-Dawgs decides to expand its facility to include two functioning grills. Suppose total cost as a function of the quantity of hot dogs produced can be represented by the following relationship:</p><p>C = 0.000002Q<sup>3</sup> − 0.0005Q<sup>2</sup> + 0.25Q + 16</p><p>What is the variable cost (VC) of producing 400 hot dogs?</p>",
+  "optionsHtml": [
+   "<p>$52</p>",
+   "<p>$148</p>",
+   "<p>$308</p>",
+   "<p>$324</p>"
+  ],
+  "correct": 1,
+  "feedbackHtml": "<p><strong>Answer: $148.</strong></p><p>Variable cost is every term that changes with Q:<br/>VC(Q) = 0.000002Q<sup>3</sup> − 0.0005Q<sup>2</sup> + 0.25Q<br/>VC(400) = 0.000002(400)<sup>3</sup> − 0.0005(400)<sup>2</sup> + 0.25(400)<br/>VC(400) = 128 − 80 + 100 = $148</p>"
+ },
+ {
+  "id": "CQ3-Q3",
+  "quiz": 3,
+  "number": 3,
+  "type": "mc",
+  "stemHtml": "<p>A year after its founding, J-Dawgs decides to expand its facility to include two functioning grills. Suppose total cost as a function of the quantity of hot dogs produced can be represented by the following relationship:</p><p>C = 0.000002Q<sup>3</sup> − 0.0005Q<sup>2</sup> + 0.25Q + 16</p><p>What is the average variable cost (AVC) of producing 400 hot dogs?</p>",
+  "optionsHtml": [
+   "<p>$0.37</p>",
+   "<p>$0.77</p>",
+   "<p>$0.81</p>",
+   "<p>$1.81</p>"
+  ],
+  "correct": 0,
+  "feedbackHtml": "<p><strong>Answer: $0.37.</strong></p><p>AVC = VC / Q<br/>AVC = [0.000002(400)<sup>3</sup> − 0.0005(400)<sup>2</sup> + 0.25(400)] / 400<br/>AVC = (128 − 80 + 100) / 400 = 148 / 400 = $0.37</p>"
+ },
+ {
+  "id": "CQ3-Q4",
+  "quiz": 3,
+  "number": 4,
+  "type": "mc",
+  "stemHtml": "<p>A year after its founding, J-Dawgs decides to expand its facility to include two functioning grills. Suppose total cost as a function of the quantity of hot dogs produced can be represented by the following relationship:</p><p>C = 0.000002Q<sup>3</sup> − 0.0005Q<sup>2</sup> + 0.25Q + 16</p><p>What is the marginal cost (MC) of producing 400 hot dogs?</p>",
+  "optionsHtml": [
+   "<p>$0.25</p>",
+   "<p>$0.31</p>",
+   "<p>$0.67</p>",
+   "<p>$0.81</p>"
+  ],
+  "correct": 3,
+  "feedbackHtml": "<p><strong>Answer: $0.81.</strong></p><p>Marginal cost is the derivative of total cost with respect to Q. Using the power rule:<br/>MC = dC/dQ = 3(0.000002)Q<sup>2</sup> − 2(0.0005)Q + 0.25<br/>MC = 0.000006Q<sup>2</sup> − 0.001Q + 0.25<br/>MC(400) = 0.000006(400)<sup>2</sup> − 0.001(400) + 0.25<br/>MC(400) = 0.96 − 0.40 + 0.25 = $0.81</p>"
+ },
+ {
+  "id": "CQ3-Q5",
+  "quiz": 3,
+  "number": 5,
+  "type": "mc",
+  "stemHtml": "<p>A year after its founding, J-Dawgs decides to expand its facility to include two functioning grills. Suppose total cost as a function of the quantity of hot dogs produced can be represented by the following relationship:</p><p>C = 0.000002Q<sup>3</sup> − 0.0005Q<sup>2</sup> + 0.25Q + 16</p><p>At what quantity (Q) is the marginal cost of producing one more hot dog minimized?</p>",
+  "optionsHtml": [
+   "<p>9</p>",
+   "<p>42</p>",
+   "<p>83</p>",
+   "<p>250</p>"
+  ],
+  "correct": 2,
+  "feedbackHtml": "<p><strong>Answer: 83.</strong></p><p><strong>Step 1: Find the marginal cost function.</strong><br/>MC(Q) = dC/dQ = 0.000006Q<sup>2</sup> − 0.001Q + 0.25<br/><br/><strong>Step 2: Take the derivative of the MC function.</strong><br/>dMC/dQ = 0.000012Q − 0.001<br/><br/><strong>Step 3: Set that derivative equal to zero and solve for Q.</strong><br/>0.000012Q − 0.001 = 0<br/>Q = 0.001 / 0.000012 ≈ 83.33, or about 83 hot dogs</p>"
+ },
+ {
+  "id": "CQ3-Q6",
+  "quiz": 3,
+  "number": 6,
+  "type": "mc",
+  "stemHtml": "<p>Average total cost (ATC) and average variable cost (AVC) get closer together as output increases because _____.</p>",
+  "optionsHtml": [
+   "<p>the only difference between ATC and AVC is average fixed cost (AFC)</p>",
+   "<p>AFC gets closer to zero</p>",
+   "<p>Both of the above</p>",
+   "<p>Neither of the above</p>"
+  ],
+  "correct": 2,
+  "feedbackHtml": "<p><strong>Answer: Both of the above.</strong></p><p>ATC = AVC + AFC, so the gap between the two curves <em>is</em> average fixed cost. Because fixed cost is spread over more and more units as output rises, AFC = FC / Q shrinks toward zero and the two curves converge.</p>"
+ },
+ {
+  "id": "CQ3-Q7",
+  "quiz": 3,
+  "number": 7,
+  "type": "mc",
+  "stemHtml": "<p>The marginal cost (MC) curve _____.</p>",
+  "optionsHtml": [
+   "<p>always lies below the average total cost (ATC) curve.</p>",
+   "<p>always lies above the average total cost (ATC) curve.</p>",
+   "<p>intersects the average total cost (ATC) curve and average variable cost (AVC) curve at their maximum points.</p>",
+   "<p>intersects the average total cost (ATC) curve and average variable cost (AVC) curve at their minimum points.</p>"
+  ],
+  "correct": 3,
+  "feedbackHtml": "<p><strong>Answer: At their minimum points.</strong></p><p>When the cost of the next unit is below the current average, producing it pulls the average down; when it is above the average, producing it pulls the average up. So ATC and AVC fall while MC lies below them and rise once MC lies above them, which means MC must cross each curve at its minimum.</p>"
+ },
+ {
+  "id": "CQ3-Q8",
+  "quiz": 3,
+  "number": 8,
+  "type": "mc",
+  "stemHtml": "<p>If costs per unit of production decrease with scale, why might a firm want to price its product aggressively (i.e., lower its price)?</p>",
+  "optionsHtml": [
+   "<p>Pricing aggressively can increase the market share of a product.</p>",
+   "<p>Pricing aggressively can decrease the cost per unit of production.</p>",
+   "<p>Both of the above</p>",
+   "<p>Neither of the above</p>"
+  ],
+  "correct": 2,
+  "feedbackHtml": "<p><strong>Answer: Both of the above.</strong></p><p>A lower price increases demand and wins market share. The larger volume moves the firm down its scale curve, lowering its cost per unit, which in turn lets it keep prices low. See the <em>Creating a Scale or Experience Curve</em> video for more.</p>"
+ },
+ {
+  "id": "CQ3-Q9",
+  "quiz": 3,
+  "number": 9,
+  "type": "mc",
+  "stemHtml": "<p>“Practice makes perfect” applies to which cost advantage?</p>",
+  "optionsHtml": [
+   "<p>Proprietary knowledge</p>",
+   "<p>Economies of scale</p>",
+   "<p>Learning and experience</p>",
+   "<p>A different business model</p>"
+  ],
+  "correct": 2,
+  "feedbackHtml": "<p><strong>Answer: Learning and experience.</strong></p><p>Firms that become more efficient through practice exhibit economies of learning or experience. Their costs fall with <em>cumulative</em> output over time, whereas economies of scale come from the volume produced in a given period.</p>"
+ },
+ {
+  "id": "CQ3-Q10",
+  "quiz": 3,
+  "number": 10,
+  "type": "mc",
+  "stemHtml": "<p>Which section(s) of an annual report (10-K) likely contain(s) the information required to compute a scale curve?</p>",
+  "optionsHtml": [
+   "<p>Item 7 – “Management’s Discussion and Analysis of Financial Condition and Results of Operations”</p>",
+   "<p>Item 8 – “Financial Statements and Supplementary Data”</p>",
+   "<p>Both of the above</p>",
+   "<p>Neither of the above</p>"
+  ],
+  "correct": 2,
+  "feedbackHtml": "<p><strong>Answer: Both of the above.</strong></p><p>A scale curve needs two kinds of data. Operational measures of scale (number of stores, subscribers, users, and so on) are typically found in Item 7, Management’s Discussion and Analysis. The expense data used to compute cost per unit is found in Item 8, Financial Statements and Supplementary Data. See the <em>Finding Data to Construct Scale and Experience Curves Using AI</em> video for more.</p>"
+ },
+ {
+  "id": "CQ4-Q1",
+  "quiz": 4,
+  "number": 1,
+  "type": "mc",
+  "stemHtml": "<p>Suppose the demand for a particular good x can be represented by the following function:</p><p>Q<sub>x</sub> = 10,000 − 4P<sub>x</sub> + 5P<sub>y</sub> − 0.2I</p><p>where Q<sub>x</sub> is the quantity demanded of good x, P<sub>x</sub> is the price of good x, P<sub>y</sub> is the price of some other related good, and I is the average income of the target population. Research also shows that the average price of good y is P<sub>y</sub> = $100 and the average income of the target population is $30,000.</p><p>Good y and good x are complements.</p>",
+  "optionsHtml": [
+   "<p>True</p>",
+   "<p>False</p>"
+  ],
+  "correct": 1,
+  "feedbackHtml": "<p><strong>Answer: False.</strong></p><p>The coefficient on P<sub>y</sub> is positive (+5), so good y is a <em>substitute</em> for good x, not a complement. All else equal, an increase in the price of good y raises the quantity demanded of good x.</p>"
+ },
+ {
+  "id": "CQ4-Q2",
+  "quiz": 4,
+  "number": 2,
+  "type": "mc",
+  "stemHtml": "<p>Suppose the demand for a particular good x can be represented by the following function:</p><p>Q<sub>x</sub> = 10,000 − 4P<sub>x</sub> + 5P<sub>y</sub> − 0.2I</p><p>where Q<sub>x</sub> is the quantity demanded of good x, P<sub>x</sub> is the price of good x, P<sub>y</sub> is the price of some other related good, and I is the average income of the target population. Research also shows that the average price of good y is P<sub>y</sub> = $100 and the average income of the target population is $30,000.</p><p>Good x is a normal good.</p>",
+  "optionsHtml": [
+   "<p>True</p>",
+   "<p>False</p>"
+  ],
+  "correct": 1,
+  "feedbackHtml": "<p><strong>Answer: False.</strong></p><p>The coefficient on I is negative (−0.2), so good x is an <em>inferior</em> good. All else equal, an increase in the average income of the target population lowers the quantity demanded of good x.</p>"
+ },
+ {
+  "id": "CQ4-Q3",
+  "quiz": 4,
+  "number": 3,
+  "type": "mc",
+  "stemHtml": "<p>Suppose the demand for a particular good x can be represented by the following function:</p><p>Q<sub>x</sub> = 10,000 − 4P<sub>x</sub> + 5P<sub>y</sub> − 0.2I</p><p>where Q<sub>x</sub> is the quantity demanded of good x, P<sub>x</sub> is the price of good x, P<sub>y</sub> is the price of some other related good, and I is the average income of the target population. Research also shows that the average price of good y is P<sub>y</sub> = $100 and the average income of the target population is $30,000.</p><p>Given the information above, what is the inverse demand function for good x?</p>",
+  "optionsHtml": [
+   "<p>Q<sub>x</sub> = 4,500 − 4P<sub>x</sub></p>",
+   "<p>Q<sub>x</sub> = 10,000 − 4P<sub>x</sub></p>",
+   "<p>P<sub>x</sub> = 2,500 − 0.25Q<sub>x</sub></p>",
+   "<p>P<sub>x</sub> = 1,125 − 0.25Q<sub>x</sub></p>"
+  ],
+  "correct": 3,
+  "feedbackHtml": "<p><strong>Answer: P<sub>x</sub> = 1,125 − 0.25Q<sub>x</sub>.</strong></p><p><strong>Step 1: Substitute the known values of P<sub>y</sub> and I.</strong><br/>Q<sub>x</sub> = 10,000 − 4P<sub>x</sub> + 5(100) − 0.2(30,000)<br/>Q<sub>x</sub> = 10,000 − 4P<sub>x</sub> + 500 − 6,000 = 4,500 − 4P<sub>x</sub><br/><br/><strong>Step 2: Solve for price.</strong><br/>That is the demand function. The inverse demand function puts price on the left:<br/>4P<sub>x</sub> = 4,500 − Q<sub>x</sub><br/>P<sub>x</sub> = 1,125 − 0.25Q<sub>x</sub></p>"
+ },
+ {
+  "id": "CQ4-Q4",
+  "quiz": 4,
+  "number": 4,
+  "type": "mc",
+  "stemHtml": "<p>Suppose the demand curve for Dr Pepper on BYU campus can be represented by the following function:</p><p>Q<sub>DP</sub> = 30,000 − 20,000P<sub>DP</sub></p><p>What is the total consumer surplus when the price of Dr Pepper is $1.00?</p>",
+  "optionsHtml": [
+   "<p>$2,500</p>",
+   "<p>$5,000</p>",
+   "<p>$10,000</p>",
+   "<p>$20,000</p>"
+  ],
+  "correct": 0,
+  "feedbackHtml": "<p><strong>Answer: $2,500.</strong></p><p><strong>Step 1: Find the inverse demand function.</strong><br/>Q<sub>DP</sub> = 30,000 − 20,000P<sub>DP</sub>, so P<sub>DP</sub> = 1.50 − Q<sub>DP</sub>/20,000<br/>The choke price — where quantity demanded hits zero — is $1.50.<br/><br/><strong>Step 2: Find quantity at the given price.</strong><br/>Q<sub>DP</sub> = 30,000 − 20,000(1.00) = 10,000 cans<br/><br/><strong>Step 3: Take the area under demand and above price.</strong><br/>That is a triangle with base 10,000 and height $0.50 ($1.50 − $1.00):<br/>CS = (10,000 × $0.50) / 2 = $2,500</p>"
+ },
+ {
+  "id": "CQ4-Q5",
+  "quiz": 4,
+  "number": 5,
+  "type": "mc",
+  "stemHtml": "<p>Suppose the demand curve for Dr Pepper on BYU campus can be represented by the following function:</p><p>Q<sub>DP</sub> = 30,000 − 20,000P<sub>DP</sub></p><p>What is the own price elasticity (OPE) when the price of a can of Dr Pepper is $1.00?</p>",
+  "optionsHtml": [
+   "<p>−2.0</p>",
+   "<p>−1.0</p>",
+   "<p>−0.7</p>",
+   "<p>2.0</p>"
+  ],
+  "correct": 0,
+  "feedbackHtml": "<p><strong>Answer: −2.0.</strong></p><p>Own price elasticity is the derivative of quantity with respect to price, scaled by price over quantity:<br/>OPE = (dQ/dP) × (P/Q)<br/><br/>dQ/dP = −20,000, the coefficient on P<sub>DP</sub>.<br/>At P = $1.00, Q = 30,000 − 20,000(1.00) = 10,000.<br/><br/>OPE = (−20,000) × ($1.00 / 10,000) = −2.0</p>"
+ },
+ {
+  "id": "CQ4-Q6",
+  "quiz": 4,
+  "number": 6,
+  "type": "mc",
+  "stemHtml": "<p>Suppose the demand curve for Dr Pepper on BYU campus can be represented by the following function:</p><p>Q<sub>DP</sub> = 30,000 − 20,000P<sub>DP</sub></p><p>According to the total revenue test, if Dr Pepper were to _____ the price, total revenue would decline because demand is _____ at a price of $1.00 per can.</p>",
+  "optionsHtml": [
+   "<p>decrease, elastic</p>",
+   "<p>increase, elastic</p>",
+   "<p>decrease, inelastic</p>",
+   "<p>increase, inelastic</p>"
+  ],
+  "correct": 1,
+  "feedbackHtml": "<p><strong>Answer: Increase, elastic.</strong></p><p>At $1.00 the own price elasticity is −2.0, which is elastic (greater than 1 in absolute value). When demand is elastic, quantity falls proportionally more than price rises, so raising the price lowers total revenue.</p>"
+ },
+ {
+  "id": "CQ4-Q7",
+  "quiz": 4,
+  "number": 7,
+  "type": "mc",
+  "stemHtml": "<p>Suppose the demand curve for Dr Pepper on BYU campus can be represented by the following function:</p><p>Q<sub>DP</sub> = 30,000 − 20,000P<sub>DP</sub></p><p>What is the revenue maximizing price?</p>",
+  "optionsHtml": [
+   "<p>$0.50</p>",
+   "<p>$0.75</p>",
+   "<p>$1.00</p>",
+   "<p>$1.50</p>"
+  ],
+  "correct": 1,
+  "feedbackHtml": "<p><strong>Answer: $0.75.</strong></p><p><strong>Step 1: Write revenue as a function of price.</strong><br/>R(P) = P × Q = P(30,000 − 20,000P) = 30,000P − 20,000P<sup>2</sup><br/><br/><strong>Step 2: Take the derivative and set it equal to zero.</strong><br/>dR/dP = 30,000 − 40,000P = 0<br/>P = 30,000 / 40,000 = $0.75</p>"
+ },
+ {
+  "id": "CQ4-Q8",
+  "quiz": 4,
+  "number": 8,
+  "type": "mc",
+  "stemHtml": "<p>Suppose the cross price elasticity between good x and good y is −2.0. If the price of good y increases by 20%, what would you expect to happen to demand for good x?</p>",
+  "optionsHtml": [
+   "<p>40% decrease in demand</p>",
+   "<p>10% decrease in demand</p>",
+   "<p>10% increase in demand</p>",
+   "<p>40% increase in demand</p>"
+  ],
+  "correct": 0,
+  "feedbackHtml": "<p><strong>Answer: 40% decrease in demand.</strong></p><p>Cross price elasticity is the percentage change in the quantity of one good over the percentage change in the price of another:<br/>CPE = (% change in Q<sub>x</sub>) / (% change in P<sub>y</sub>)<br/><br/>−2.0 = (% change in Q<sub>x</sub>) / 20%<br/>% change in Q<sub>x</sub> = −2.0 × 20% = −40%<br/><br/>The cross price elasticity is negative, so x and y are complements — when good y gets more expensive, demand for good x falls with it.</p>"
+ },
+ {
+  "id": "CQ4-Q9",
+  "quiz": 4,
+  "number": 9,
+  "type": "mc",
+  "stemHtml": "<p>Analysts at your firm have calculated that the own price elasticity (OPE) for your firm’s product is currently −0.7. The firm, like all firms, wants to make more money (i.e., wants to maximize revenue). Unfortunately, the executive team has forgotten everything they learned in college and is relying on you to interpret the elasticity for them.</p><p>Based on the information above, you should advise the CEO to _____ the price in order to maximize revenue.</p>",
+  "optionsHtml": [
+   "<p>raise</p>",
+   "<p>maintain</p>",
+   "<p>lower</p>"
+  ],
+  "correct": 0,
+  "feedbackHtml": "<p><strong>Answer: Raise.</strong></p><p>Revenue is maximized where the own price elasticity equals −1. At −0.7 demand is inelastic (between −1 and 0), which means a price increase costs the firm proportionally less volume than it gains in price. The firm should keep raising price until the elasticity reaches −1.</p>"
+ },
+ {
+  "id": "CQ4-Q10",
+  "quiz": 4,
+  "number": 10,
+  "type": "mc",
+  "stemHtml": "<p><strong>Netflix Price Increase, July 2011</strong></p><p>Netflix said Monday that it ended the third quarter of the year with 23.8 million subscribers in the United States, a loss of 800,000 in three months, representing a notable decline after years of consistent growth.</p><p>Heading into the summer, the company was expected to have 25 million subscribers at the end of the third quarter. But at the end of the second quarter, Netflix announced a change to its pricing structure that caused the cost of the combination streaming and DVD-by-mail service to rise to $16 a month, from $10.</p><p>Given this information, the own price elasticity of demand (OPE) at the original price of $10 was ______, suggesting that demand for Netflix’s streaming and DVD service was _____.</p>",
+  "optionsHtml": [
+   "<p>−0.05, elastic</p>",
+   "<p>−0.05, inelastic</p>",
+   "<p>−0.08, elastic</p>",
+   "<p>−0.08, inelastic</p>"
+  ],
+  "correct": 3,
+  "feedbackHtml": "<p><strong>Answer: −0.08, inelastic.</strong></p><p>Every elasticity offered is between −1 and 0, so demand was inelastic at $10.<br/><br/><strong>Step 1: Find the percentage change in quantity.</strong><br/>Netflix was projected to reach 25 million subscribers and finished with 23.8 million, so the price increase cost it 1.2 million subscribers — not the 800,000 the article reports, because that figure ignores the growth that was expected anyway.<br/>% change in Q = (23.8 − 25) / 25 = −4.8%<br/><br/><strong>Step 2: Find the percentage change in price.</strong><br/>% change in P = ($16 − $10) / $10 = 60%<br/><br/><strong>Step 3: Divide.</strong><br/>OPE = −4.8% / 60% = −0.08</p>"
+ },
+ {
+  "id": "CQ5-Q1",
+  "quiz": 5,
+  "number": 1,
+  "type": "mc",
+  "stemHtml": "<p>The WSJ article <em>The Most Expensive Airports to Fly To</em> suggests that the cost of a flight (measured in cents per mile) is influenced by the following five factors:</p><ol><li>The affluence of the surrounding community (income per capita)</li><li>The amount of business travel (# of Fortune 500 companies)</li><li>The overall size of the airport (# of departures in 1,000s and # of passengers in 100,000s)</li><li>The degree to which an airport is dominated by one airline (HHI, a measure of pricing power)</li><li>The average distance of a flight (measured in miles)</li></ol><p>Use the regression output below to answer the question. The dependent variable is the cost of a flight in cents per mile.</p><table><thead><tr><th>Regression Statistics</th><th></th></tr></thead><tbody><tr><td>Multiple R</td><td>0.850</td></tr><tr><td>R Square</td><td>0.722</td></tr><tr><td>Adjusted R Square</td><td>0.697</td></tr><tr><td>Standard Error</td><td>1.480</td></tr><tr><td>Observations</td><td>75</td></tr></tbody></table><table><thead><tr><th></th><th>Coefficients</th><th>Standard Error</th><th>t Stat</th><th>P-value</th></tr></thead><tbody><tr><td>Intercept</td><td>24.179</td><td>1.188</td><td>20.345</td><td>0.000</td></tr><tr><td>Income (1,000s of $)</td><td>−0.020</td><td>0.017</td><td>−1.144</td><td>0.257</td></tr><tr><td># of Fortune 500 Companies</td><td>0.014</td><td>0.013</td><td>1.060</td><td>0.293</td></tr><tr><td># of Departures (1,000s)</td><td>0.052</td><td>0.009</td><td>5.784</td><td>0.000</td></tr><tr><td># of Passengers (100,000s)</td><td>−0.027</td><td>0.005</td><td>−5.762</td><td>0.000</td></tr><tr><td>Pricing Power (HHI)</td><td>0.000</td><td>0.000</td><td>0.496</td><td>0.622</td></tr><tr><td>Average Flight Distance (miles)</td><td>−0.007</td><td>0.001</td><td>−9.062</td><td>0.000</td></tr></tbody></table><p>All else equal, how would the cost of a flight out of Salt Lake City change if the number of passengers who departed from the airport increased by 100,000?</p>",
+  "optionsHtml": [
+   "<p>The cost would increase by 0.027 cents per mile.</p>",
+   "<p>The cost would increase by 2.7 cents per mile.</p>",
+   "<p>The cost would decrease by 0.027 cents per mile.</p>",
+   "<p>The cost would decrease by 2.7 cents per mile.</p>"
+  ],
+  "correct": 2,
+  "feedbackHtml": "<p><strong>Answer: The cost would decrease by 0.027 cents per mile.</strong></p><p>The coefficient on # of Passengers is negative (−0.027), so more passengers means a lower cost per mile. That rules out both “increase” choices.<br/><br/>Passengers are measured in 100,000s, so an increase of 100,000 passengers is a one-unit increase in the variable. One unit × −0.027 = a decrease of 0.027 cents per mile.</p>"
+ },
+ {
+  "id": "CQ5-Q2",
+  "quiz": 5,
+  "number": 2,
+  "type": "mc",
+  "stemHtml": "<p>The WSJ article <em>The Most Expensive Airports to Fly To</em> suggests that the cost of a flight (measured in cents per mile) is influenced by the following five factors:</p><ol><li>The affluence of the surrounding community (income per capita)</li><li>The amount of business travel (# of Fortune 500 companies)</li><li>The overall size of the airport (# of departures in 1,000s and # of passengers in 100,000s)</li><li>The degree to which an airport is dominated by one airline (HHI, a measure of pricing power)</li><li>The average distance of a flight (measured in miles)</li></ol><p>Use the regression output below to answer the question. The dependent variable is the cost of a flight in cents per mile.</p><table><thead><tr><th>Regression Statistics</th><th></th></tr></thead><tbody><tr><td>Multiple R</td><td>0.850</td></tr><tr><td>R Square</td><td>0.722</td></tr><tr><td>Adjusted R Square</td><td>0.697</td></tr><tr><td>Standard Error</td><td>1.480</td></tr><tr><td>Observations</td><td>75</td></tr></tbody></table><table><thead><tr><th></th><th>Coefficients</th><th>Standard Error</th><th>t Stat</th><th>P-value</th></tr></thead><tbody><tr><td>Intercept</td><td>24.179</td><td>1.188</td><td>20.345</td><td>0.000</td></tr><tr><td>Income (1,000s of $)</td><td>−0.020</td><td>0.017</td><td>−1.144</td><td>0.257</td></tr><tr><td># of Fortune 500 Companies</td><td>0.014</td><td>0.013</td><td>1.060</td><td>0.293</td></tr><tr><td># of Departures (1,000s)</td><td>0.052</td><td>0.009</td><td>5.784</td><td>0.000</td></tr><tr><td># of Passengers (100,000s)</td><td>−0.027</td><td>0.005</td><td>−5.762</td><td>0.000</td></tr><tr><td>Pricing Power (HHI)</td><td>0.000</td><td>0.000</td><td>0.496</td><td>0.622</td></tr><tr><td>Average Flight Distance (miles)</td><td>−0.007</td><td>0.001</td><td>−9.062</td><td>0.000</td></tr></tbody></table><p>How much of the variation in the cost of a flight is explained by the regression model?</p>",
+  "optionsHtml": [
+   "<p>85.0%</p>",
+   "<p>72.2%</p>",
+   "<p>69.7%</p>",
+   "<p>1.5%</p>"
+  ],
+  "correct": 1,
+  "feedbackHtml": "<p><strong>Answer: 72.2%.</strong></p><p>R-squared (0.722) is the share of the variation in the dependent variable — here, the cost of a flight — that the x variables in the model explain together. Multiple R (0.850) is its square root, and adjusted R-squared (0.697) penalizes the model for the number of variables it uses.</p>"
+ },
+ {
+  "id": "CQ5-Q3",
+  "quiz": 5,
+  "number": 3,
+  "type": "mc",
+  "stemHtml": "<p>The WSJ article <em>The Most Expensive Airports to Fly To</em> suggests that the cost of a flight (measured in cents per mile) is influenced by the following five factors:</p><ol><li>The affluence of the surrounding community (income per capita)</li><li>The amount of business travel (# of Fortune 500 companies)</li><li>The overall size of the airport (# of departures in 1,000s and # of passengers in 100,000s)</li><li>The degree to which an airport is dominated by one airline (HHI, a measure of pricing power)</li><li>The average distance of a flight (measured in miles)</li></ol><p>Use the regression output below to answer the question. The dependent variable is the cost of a flight in cents per mile.</p><table><thead><tr><th>Regression Statistics</th><th></th></tr></thead><tbody><tr><td>Multiple R</td><td>0.850</td></tr><tr><td>R Square</td><td>0.722</td></tr><tr><td>Adjusted R Square</td><td>0.697</td></tr><tr><td>Standard Error</td><td>1.480</td></tr><tr><td>Observations</td><td>75</td></tr></tbody></table><table><thead><tr><th></th><th>Coefficients</th><th>Standard Error</th><th>t Stat</th><th>P-value</th></tr></thead><tbody><tr><td>Intercept</td><td>24.179</td><td>1.188</td><td>20.345</td><td>0.000</td></tr><tr><td>Income (1,000s of $)</td><td>−0.020</td><td>0.017</td><td>−1.144</td><td>0.257</td></tr><tr><td># of Fortune 500 Companies</td><td>0.014</td><td>0.013</td><td>1.060</td><td>0.293</td></tr><tr><td># of Departures (1,000s)</td><td>0.052</td><td>0.009</td><td>5.784</td><td>0.000</td></tr><tr><td># of Passengers (100,000s)</td><td>−0.027</td><td>0.005</td><td>−5.762</td><td>0.000</td></tr><tr><td>Pricing Power (HHI)</td><td>0.000</td><td>0.000</td><td>0.496</td><td>0.622</td></tr><tr><td>Average Flight Distance (miles)</td><td>−0.007</td><td>0.001</td><td>−9.062</td><td>0.000</td></tr></tbody></table><p>Of the economic factors listed below, which would you consider to be a statistically significant predictor of the cost of a flight?</p>",
+  "optionsHtml": [
+   "<p># of Departures</p>",
+   "<p># of Fortune 500 Companies</p>",
+   "<p>Pricing Power</p>",
+   "<p>All of the above</p>"
+  ],
+  "correct": 0,
+  "feedbackHtml": "<p><strong>Answer: # of Departures.</strong></p><p>A variable is statistically significant when its t-stat is greater than 2 in absolute value or, equivalently, its p-value is less than 0.05. # of Departures has a t-stat of 5.784 and a p-value of 0.000. # of Fortune 500 Companies (p = 0.293) and Pricing Power (p = 0.622) are not significant.</p>"
+ },
+ {
+  "id": "CQ5-Q4",
+  "quiz": 5,
+  "number": 4,
+  "type": "mc",
+  "stemHtml": "<p>The WSJ article <em>The Most Expensive Airports to Fly To</em> suggests that the cost of a flight (measured in cents per mile) is influenced by the following five factors:</p><ol><li>The affluence of the surrounding community (income per capita)</li><li>The amount of business travel (# of Fortune 500 companies)</li><li>The overall size of the airport (# of departures in 1,000s and # of passengers in 100,000s)</li><li>The degree to which an airport is dominated by one airline (HHI, a measure of pricing power)</li><li>The average distance of a flight (measured in miles)</li></ol><p>Use the regression output below to answer the question. The dependent variable is the cost of a flight in cents per mile.</p><table><thead><tr><th>Regression Statistics</th><th></th></tr></thead><tbody><tr><td>Multiple R</td><td>0.850</td></tr><tr><td>R Square</td><td>0.722</td></tr><tr><td>Adjusted R Square</td><td>0.697</td></tr><tr><td>Standard Error</td><td>1.480</td></tr><tr><td>Observations</td><td>75</td></tr></tbody></table><table><thead><tr><th></th><th>Coefficients</th><th>Standard Error</th><th>t Stat</th><th>P-value</th></tr></thead><tbody><tr><td>Intercept</td><td>24.179</td><td>1.188</td><td>20.345</td><td>0.000</td></tr><tr><td>Income (1,000s of $)</td><td>−0.020</td><td>0.017</td><td>−1.144</td><td>0.257</td></tr><tr><td># of Fortune 500 Companies</td><td>0.014</td><td>0.013</td><td>1.060</td><td>0.293</td></tr><tr><td># of Departures (1,000s)</td><td>0.052</td><td>0.009</td><td>5.784</td><td>0.000</td></tr><tr><td># of Passengers (100,000s)</td><td>−0.027</td><td>0.005</td><td>−5.762</td><td>0.000</td></tr><tr><td>Pricing Power (HHI)</td><td>0.000</td><td>0.000</td><td>0.496</td><td>0.622</td></tr><tr><td>Average Flight Distance (miles)</td><td>−0.007</td><td>0.001</td><td>−9.062</td><td>0.000</td></tr></tbody></table><p>A flight from Salt Lake City to Phoenix is approximately 500 miles, while a flight from Salt Lake City to Seattle is 700 miles. Assuming all other factors are equal (i.e., not changing), what would you expect the difference between these two flights to be in terms of cost per mile?</p>",
+  "optionsHtml": [
+   "<p>1.4 cents per mile</p>",
+   "<p>3.5 cents per mile</p>",
+   "<p>4.9 cents per mile</p>",
+   "<p>8.4 cents per mile</p>"
+  ],
+  "correct": 0,
+  "feedbackHtml": "<p><strong>Answer: 1.4 cents per mile.</strong></p><p>The coefficient on Average Flight Distance is −0.007 cents per mile for each mile flown.<br/><br/>Seattle: 700 × −0.007 = −4.9 cents per mile<br/>Phoenix: 500 × −0.007 = −3.5 cents per mile<br/>Difference: 4.9 − 3.5 = 1.4 cents per mile<br/><br/>Equivalently, the 200-mile difference × 0.007 = 1.4. The longer Seattle flight is the cheaper one per mile.</p>"
+ },
+ {
+  "id": "CQ5-Q5",
+  "quiz": 5,
+  "number": 5,
+  "type": "mc",
+  "stemHtml": "<p>The WSJ article <em>The Most Expensive Airports to Fly To</em> suggests that the cost of a flight (measured in cents per mile) is influenced by the following five factors:</p><ol><li>The affluence of the surrounding community (income per capita)</li><li>The amount of business travel (# of Fortune 500 companies)</li><li>The overall size of the airport (# of departures in 1,000s and # of passengers in 100,000s)</li><li>The degree to which an airport is dominated by one airline (HHI, a measure of pricing power)</li><li>The average distance of a flight (measured in miles)</li></ol><p>Use the regression output below to answer the question. The dependent variable is the cost of a flight in cents per mile.</p><table><thead><tr><th>Regression Statistics</th><th></th></tr></thead><tbody><tr><td>Multiple R</td><td>0.850</td></tr><tr><td>R Square</td><td>0.722</td></tr><tr><td>Adjusted R Square</td><td>0.697</td></tr><tr><td>Standard Error</td><td>1.480</td></tr><tr><td>Observations</td><td>75</td></tr></tbody></table><table><thead><tr><th></th><th>Coefficients</th><th>Standard Error</th><th>t Stat</th><th>P-value</th></tr></thead><tbody><tr><td>Intercept</td><td>24.179</td><td>1.188</td><td>20.345</td><td>0.000</td></tr><tr><td>Income (1,000s of $)</td><td>−0.020</td><td>0.017</td><td>−1.144</td><td>0.257</td></tr><tr><td># of Fortune 500 Companies</td><td>0.014</td><td>0.013</td><td>1.060</td><td>0.293</td></tr><tr><td># of Departures (1,000s)</td><td>0.052</td><td>0.009</td><td>5.784</td><td>0.000</td></tr><tr><td># of Passengers (100,000s)</td><td>−0.027</td><td>0.005</td><td>−5.762</td><td>0.000</td></tr><tr><td>Pricing Power (HHI)</td><td>0.000</td><td>0.000</td><td>0.496</td><td>0.622</td></tr><tr><td>Average Flight Distance (miles)</td><td>−0.007</td><td>0.001</td><td>−9.062</td><td>0.000</td></tr></tbody></table><p>Salt Lake City International Airport (SLC) recently expanded the number of gates, increasing the number of departing flights by 17,000 flights per year. Assuming all other factors are equal (i.e., not changing), how would you expect the cost of a flight to change based on this expansion?</p>",
+  "optionsHtml": [
+   "<p>Prices would be expected to increase by 0.88 cents per mile.</p>",
+   "<p>Prices would be expected to decrease by 0.88 cents per mile.</p>",
+   "<p>Prices would be expected to increase by 0.46 cents per mile.</p>",
+   "<p>Prices would be expected to decrease by 0.46 cents per mile.</p>"
+  ],
+  "correct": 0,
+  "feedbackHtml": "<p><strong>Answer: Prices would be expected to increase by 0.88 cents per mile.</strong></p><p>Departures are measured in 1,000s, so 17,000 more departing flights is a 17-unit increase in the variable.<br/><br/>The coefficient on # of Departures is +0.052 (p = 0.000):<br/>17 × 0.052 = +0.884, or about 0.88 cents per mile</p>"
+ },
+ {
+  "id": "CQ5-Q6",
+  "quiz": 5,
+  "number": 6,
+  "type": "mc",
+  "stemHtml": "<p>You are the manager of a monopoly, and your demand and cost functions are P = 120 − 2Q and C = 500 + 2Q<sup>2</sup>, respectively.</p><p>If you want to maximize profits, how much should you produce?</p>",
+  "optionsHtml": [
+   "<p>15</p>",
+   "<p>20</p>",
+   "<p>30</p>",
+   "<p>40</p>"
+  ],
+  "correct": 0,
+  "feedbackHtml": "<p><strong>Answer: 15.</strong></p><p>A monopoly maximizes profit where marginal revenue equals marginal cost.<br/><br/><strong>Step 1: Find marginal revenue.</strong><br/>R(Q) = PQ = (120 − 2Q)Q = 120Q − 2Q<sup>2</sup><br/>MR = dR/dQ = 120 − 4Q<br/><br/><strong>Step 2: Find marginal cost.</strong><br/>C(Q) = 500 + 2Q<sup>2</sup><br/>MC = dC/dQ = 4Q<br/><br/><strong>Step 3: Set MR = MC and solve.</strong><br/>120 − 4Q = 4Q<br/>120 = 8Q, so Q = 15</p>"
+ },
+ {
+  "id": "CQ5-Q7",
+  "quiz": 5,
+  "number": 7,
+  "type": "mc",
+  "stemHtml": "<p>You are the manager of a monopoly, and your demand and cost functions are P = 120 − 2Q and C = 500 + 2Q<sup>2</sup>, respectively.</p><p>If you want to maximize profits, what price should you charge?</p>",
+  "optionsHtml": [
+   "<p>$40</p>",
+   "<p>$60</p>",
+   "<p>$80</p>",
+   "<p>$90</p>"
+  ],
+  "correct": 3,
+  "feedbackHtml": "<p><strong>Answer: $90.</strong></p><p>From the previous question, the profit-maximizing quantity is Q = 15. Plug it into the inverse demand function:<br/>P = 120 − 2(15) = 120 − 30 = $90<br/><br/>At that price and quantity, profit = 90(15) − [500 + 2(15)<sup>2</sup>] = 1,350 − 950 = $400.</p>"
+ },
+ {
+  "id": "CQ5-Q8",
+  "quiz": 5,
+  "number": 8,
+  "type": "mc",
+  "stemHtml": "<p>You are the manager of a perfectly competitive firm with a cost function of C = 50 + 10Q + 2Q<sup>2</sup>. The current market price for your good is $70. How much should your firm produce in the short run?</p>",
+  "optionsHtml": [
+   "<p>10</p>",
+   "<p>15</p>",
+   "<p>20</p>",
+   "<p>25</p>"
+  ],
+  "correct": 1,
+  "feedbackHtml": "<p><strong>Answer: 15.</strong></p><p>A perfectly competitive firm produces where price equals marginal cost.<br/><br/>C = 50 + 10Q + 2Q<sup>2</sup>, so MC = 10 + 4Q<br/>Set P = MC: 70 = 10 + 4Q<br/>60 = 4Q, so Q = 15</p>"
+ },
+ {
+  "id": "CQ5-Q9",
+  "quiz": 5,
+  "number": 9,
+  "type": "mc",
+  "stemHtml": "<p>Pizza Hut began with just one style of pizza but has since expanded to offer many different varieties. In which type of market structure does Pizza Hut compete?</p>",
+  "optionsHtml": [
+   "<p>Monopolistic competition</p>",
+   "<p>Monopoly</p>",
+   "<p>Oligopoly</p>",
+   "<p>Perfect competition</p>"
+  ],
+  "correct": 0,
+  "feedbackHtml": "<p><strong>Answer: Monopolistic competition.</strong></p><p>Monopolistic competition is characterized by many firms selling similar but differentiated products — here, different pizza styles, crusts, and toppings. Firms compete through product differentiation, branding, and advertising.<br/><br/>In the short run, Pizza Hut may earn economic profits when it introduces new menu items before rivals copy them. In the long run, other pizza companies innovate too and compete those profits away, leaving zero economic profit — though Pizza Hut still earns a normal accounting profit.</p>"
+ },
+ {
+  "id": "CQ5-Q10",
+  "quiz": 5,
+  "number": 10,
+  "type": "mc",
+  "stemHtml": "<p>A sandwich shop currently has 3 workers producing 60 sandwiches per day. Adding a 4th worker increases total output to 75 sandwiches. Each sandwich sells for $5, and the daily wage per worker is $50. Should the shop hire the 4th worker?</p>",
+  "optionsHtml": [
+   "<p>No, because marginal revenue ($25) is less than marginal cost ($50).</p>",
+   "<p>Yes, because marginal revenue ($75) exceeds marginal cost ($50).</p>",
+   "<p>No, because total revenue will decrease.</p>",
+   "<p>Yes, because the 4th worker reduces average cost.</p>"
+  ],
+  "correct": 1,
+  "feedbackHtml": "<p><strong>Answer: Yes, because marginal revenue ($75) exceeds marginal cost ($50).</strong></p><p>Compare the extra revenue the 4th worker brings in with what the worker costs.<br/><br/><strong>Step 1: Find the marginal product.</strong><br/>Output rises from 60 to 75 sandwiches, so the 4th worker adds 15 sandwiches.<br/><br/><strong>Step 2: Find the marginal revenue.</strong><br/>15 sandwiches × $5 = $75<br/><br/><strong>Step 3: Compare it with the marginal cost (the wage).</strong><br/>$75 &gt; $50, so hiring the 4th worker adds $25 to profit. Keep hiring as long as the marginal benefit exceeds the marginal cost.</p>"
+ }
+]

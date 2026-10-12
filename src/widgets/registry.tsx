@@ -21,6 +21,8 @@ const registry: Record<string, React.LazyExoticComponent<ComponentType>> = {
   'find-max': lazy(() => import('./FindMax')),
   'hhi-calc': lazy(() => import('./HhiCalc')),
   'five-forces': lazy(() => import('./FiveForcesRater')),
+  'spine-sorter': lazy(() => import('./SpineSorter')),
+  'points-calc': lazy(() => import('./PointsCalc')),
 }
 
 export function Widget({ id }: { id: string }) {

@@ -150,6 +150,7 @@ function Screen({ m, screen }: { m: SessionModule; screen: ScreenKey }) {
       return (
         <div className="space-y-4">
           {m.mathIntro && <Rich>{m.mathIntro}</Rich>}
+          {m.formulas.length === 0 && <p className="callout">No formulas in this session. It’s concepts and course policies. Spend the time on the Check-yourself questions.</p>}
           {m.formulas.map((f) => (
             <div key={f.id} className="card p-4">
               <div className="flex flex-wrap items-center gap-2">
@@ -226,7 +227,12 @@ function Screen({ m, screen }: { m: SessionModule; screen: ScreenKey }) {
     case 'apply':
       return (
         <div className="space-y-4">
-          <p className="muted">Spreadsheet-style short answers. Every problem regenerates with new numbers, so practice until it's automatic.</p>
+          <p className="muted">{m.applyGenerators.length ? "Spreadsheet-style short answers. Every problem regenerates with new numbers, so practice until it's automatic." : 'No calculations in this session. Practice with the quiz-style questions instead.'}</p>
+          {m.applyGenerators.length === 0 &&
+            mcqs
+              .filter((q) => q.session === m.id && !m.checkIds.includes(q.id))
+              .slice(0, 6)
+              .map((q, k) => <McqCard key={q.id} q={q} index={k} />)}
           {m.applyGenerators.map((gid, k) => (
             <ProblemCard key={gid} gen={generatorById[gid]} index={k} />
           ))}

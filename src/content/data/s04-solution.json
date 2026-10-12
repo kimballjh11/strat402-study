@@ -1,0 +1,678 @@
+{
+ "industry": "Storage & Warehouse Leasing (self-storage)",
+ "overall": 3.3389285714285712,
+ "forces": [
+  {
+   "name": "Rivalry",
+   "components": [
+    {
+     "label": "Number and Relative Size of Competitors: Top 4 competitors combined market share",
+     "rating": 1,
+     "weight": 1,
+     "scale": [
+      "<40%",
+      "40-50%",
+      "50-60%",
+      "60-70%",
+      ">70%"
+     ],
+     "subs": [],
+     "note": "Market share concentration is low as the industry's largest companies comprise less than one-quarter of revenue (p. 28). Public Storage (11.5%) and Extra Space Storage (8.8%) hold 20.3% combined, and U-Haul and CubeSmart add 2.5–5% each (pp. 28–29), so the top four hold roughly one-quarter of revenue (about 25-30%), well below 40%. Other companies account for 79.7% (p. 3)."
+    },
+    {
+     "label": "Degree of industry product standardization",
+     "rating": null,
+     "weight": 1,
+     "scale": [
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "subs": [
+      {
+       "label": "Difference between competitors in price of similar product",
+       "rating": 3,
+       "weight": 1,
+       "scale": [
+        "<2%",
+        "2-5%",
+        "5-10%",
+        "10-15%",
+        ">15%"
+       ],
+       "note": "•“Storage unit rental prices have declined for three consecutive years as lessors discount to attract a thinner pool of new tenants.” (p. 5)\n•Large REITs use dynamic pricing and AI-driven revenue management, while many independent operators still rely on static pricing (p. 9), so prices for similar units can differ between competitors in the same market.\n•Price gaps are limited because operators “compete mainly on location and price” (p. 25), and inelastic demand lets “all companies … keep prices fairly elevated without losing significant business” (p. 36). The report gives no direct price-gap data, so 5–10% is a reasoned judgement."
+      },
+      {
+       "label": "What % of industry's products are sold at discount",
+       "rating": 4,
+       "weight": 2,
+       "scale": [
+        1,
+        0.75,
+        0.5,
+        0.25,
+        0
+       ],
+       "note": "•Military personnel “typically have access to special discounts and incentives,” and commercial tenants are courted “with volume-based lease discounts” (p. 17).\n•National chains use “steep move-in discounts” to win new tenants (p. 23), and heavy promotional discounting has weighed on revenue per unit (p. 9).\n•However, operators protect the residential segment (75% of revenue, p. 18) “mainly through existing-customer rate increases, seldom reaching for street discounts to compete” (p. 17). Discounts go mainly to new move-ins, the military (3.1%), and commercial operators (18.7%) (p. 18), so roughly 25% of revenue is sold at a discount (reasoned judgement)."
+      },
+      {
+       "label": "Customer's ability to recognize brands from industry",
+       "rating": 4,
+       "weight": 2,
+       "scale": [
+        "Low",
+        null,
+        "Med",
+        null,
+        "High"
+       ],
+       "note": "•“A strong reputation will make customers loyal to the brand. In periods of economic volatility, having a dependable client base can maintain consistent demand and stabilize the business.” (p. 12)\n•“Most customers are aware of the storage and warehousing leasing companies in their area” (p. 36), and Public Storage, CubeSmart, and Extra Space Storage operate throughout the entire United States (p. 23).\n•Recognition is high but mostly local: differentiation is “inherently weak, since most operators offer functionally identical storage units” (p. 25)."
+      },
+      {
+       "label": "Degree of buyer switching costs",
+       "rating": 4,
+       "weight": 2,
+       "scale": [
+        "Low",
+        null,
+        "Med",
+        null,
+        "High"
+       ],
+       "note": "•“Renewing a storage lease at the same facility year after year is simpler than relocating a unit's contents, so tenants rarely shop around once they've settled in.” (p. 23)\n•“Moving costs and convenience keep short-term renters from switching facilities despite regular rate increases.” (p. 15)\n•The average customer length of stay reached 19.3 months in 2026, up over 6.0% year over year (p. 9).\n•Offsetting factor: buyers can negotiate contract length and terms (p. 27), and leases are month-to-month (p. 16), so there is no contractual lock-in. The switching cost is the hassle of moving belongings."
+      }
+     ],
+     "note": null
+    },
+    {
+     "label": "Industry growth rate",
+     "rating": 1,
+     "weight": 2,
+     "scale": [
+      "<0%",
+      "0-1%",
+      "1-3%",
+      "3-5%",
+      ">5%"
+     ],
+     "subs": [],
+     "note": "2021-26 Revenue CAGR +4.3% (p. 8); 2026 revenue growth +0.3% (p. 6); 2026-31 Revenue CAGR -0.1% (p. 9). Rated on the forward-looking rate (2026-31 CAGR -0.1%, p. 9): industry analysis asks whether the industry will be attractive from now into the near future, not what growth has already been captured. Revenue is forecast to inch downward to $40.0 billion by 2031 (p. 5). A shrinking industry intensifies rivalry, since incumbents can only grow by taking share from one another."
+    },
+    {
+     "label": "Industry production capacity: % of industry wide production capacity in use",
+     "rating": 3,
+     "weight": 1,
+     "scale": [
+      "<70%",
+      "70-80%",
+      "80-90%",
+      "90-100%",
+      ">100%"
+     ],
+     "subs": [],
+     "note": "The report does not give an occupancy rate, so this is a reasoned judgement.\n•New construction added more than 292.9 million square feet of rentable storage space over the past five years, including 55.1 million square feet in 2025 alone (p. 9), “pushing vacancy higher, especially in many Southern states” (p. 5).\n•National occupancy “remains broadly flat” because existing tenants are staying longer (p. 9), and slower new supply will give facilities “more room to absorb excess capacity” (p. 10).\n•There is excess capacity, but facilities are far from empty, so 80–90% utilization is a reasonable estimate."
+    },
+    {
+     "label": "Degree to which firms have high fixed costs, high storage costs, or highly perishable goods",
+     "rating": 3,
+     "weight": 2,
+     "scale": [
+      "High",
+      null,
+      "Med",
+      null,
+      "Low"
+     ],
+     "subs": [],
+     "note": "•Fixed costs are high. Depreciation is the largest cost at 11.2% of revenue, “reflecting the industry's asset-heavy ownership structure” (pp. 35–36). IBISWorld places the industry on the capital-intensive side of its investment chart (p. 37), and other costs, including mortgage and interest payments, make up about one-third of revenue (p. 37).\n•Variable costs are small. Sites “run on a skeleton staff once built” (p. 25); wages are 8.9% of revenue and purchases are less than 2.0% (p. 36).\n•Storage costs and perishability are low for the lessor, since operators hold no inventory of their own. But an empty unit earns nothing that month, which is why operators discount to fill new supply (p. 5). High fixed costs offset by low storage/perishability risk → Medium."
+    },
+    {
+     "label": "Extent of exit barriers",
+     "rating": 3,
+     "weight": 1,
+     "scale": [
+      "High",
+      null,
+      "Med",
+      null,
+      "Low"
+     ],
+     "subs": [],
+     "note": "•Facilities are specialized real estate. The main investment is “land or facility acquisition, security and climate-control systems and the structure itself” (p. 25), and these sunk costs are hard to redeploy.\n•However, an active acquisition market lowers exit barriers. Public Storage bought Simply Self Storage for $2.2 billion in 2024 (p. 23) and announced a $10.5 billion deal for National Storage Affiliates in March 2026 (p. 30). “Smaller companies that operate in highly sought-after areas are likely acquisition candidates for larger companies looking to expand” (p. 47).\n•Operators can also lease rather than own facilities, which lowers exposure (p. 25). On balance → Medium."
+    }
+   ],
+   "score": 2.357142857142857,
+   "verdict": "Based on assessment of rivalry, this industry is moderately unattractive for incumbents."
+  },
+  {
+   "name": "Buyer Power",
+   "components": [
+    {
+     "label": "Buyer industry bargaining power",
+     "rating": null,
+     "weight": 1,
+     "scale": [
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "subs": [
+      {
+       "label": "Buyer concentration (top 4 buyers as a % of total industry volume sold by buyer)",
+       "rating": 5,
+       "weight": 1,
+       "scale": [
+        ">70%",
+        "60-70%",
+        "50-60%",
+        "40-50%",
+        "<40%"
+       ],
+       "note": "The report gives no four-firm concentration figure for buyers, so this rating follows from the structure of the buyer base. \"Small businesses and households, not corporations, sign most self-storage leases,\" which keeps revenue spread across many buyers (p. 23). Long-term residential customers are 52.5% of revenue, short-term residential 22.5% and commercial operators 18.7% (p. 18) - but those are MARKET SEGMENTS, not buyers. Each segment is composed of millions of individual households and small firms, most renting a single unit. There is no conceivable way the four largest buyers approach 40% of industry revenue, so the rating is 5. Reading the 52.5% as a buyer concentration figure is the most common error on this component."
+      },
+      {
+       "label": "Buyer switching costs",
+       "rating": 4,
+       "weight": 1,
+       "scale": [
+        "Low",
+        null,
+        "Med",
+        null,
+        "High"
+       ],
+       "note": "•“Renewing a storage lease at the same facility year after year is simpler than relocating a unit's contents, so tenants rarely shop around once they've settled in.” (p. 23)\n•Moving costs and convenience keep short-term renters from switching despite regular rate increases (p. 15), and the average length of stay is 19.3 months (p. 9).\n•Offsetting factor: “Buyers also can negotiate contract length and terms” (p. 27), and IBISWorld notes buyer power is rising “thanks to a robust spread of quality and price options” (p. 23), though it still rates buyer power Low and Steady (p. 23)."
+      },
+      {
+       "label": "Demand (incumbent industry growth rate)",
+       "rating": 1,
+       "weight": 1,
+       "scale": [
+        "<0%",
+        "0-1%",
+        "1-3%",
+        "3-5%",
+        ">5%"
+       ],
+       "note": "2021-26 Revenue CAGR +4.3% (p. 8); 2026 revenue growth +0.3% (p. 6); 2026-31 Revenue CAGR -0.1% (p. 9). Rated on the forward-looking rate (2026-31 CAGR -0.1%, p. 9): what matters for industry attractiveness is demand from now forward, not growth already captured. A frozen housing market has slowed the relocations that drive new leasing (p. 9), and softening demand strengthens buyers' hand. A rating of 2 is also accepted: page 3 prints the 2026-31 forecast directly beneath the historic rate, and the current-year growth of +0.3% (p. 6) falls in the 0-1% band. The trailing 2021-26 rate of 4.3% describes growth already captured, so it does not support a rating of 4."
+      },
+      {
+       "label": "Possibility of buyer backward integration",
+       "rating": 4,
+       "weight": 1,
+       "scale": [
+        "High",
+        null,
+        "Med",
+        null,
+        "Low"
+       ],
+       "note": "•Households (75% of revenue, p. 18) cannot realistically build their own storage facilities, since start-up costs for land, facilities, and security are significant (p. 25). Their closest option is DIY storage in a basement or garage, which the report treats as a substitute (p. 25).\n•Commercial buyers can integrate: “Many businesses, especially larger ones, maintain their own storage and distribution networks” (p. 23), some businesses have opted “to store extra materials on-site to save money” (p. 17), and large e-commerce retailers are “consolidating inventory into dedicated fulfillment centers” (p. 5).\n•Because commercial operators are only 18.7% of revenue (p. 18), the overall possibility of backward integration is low to medium."
+      }
+     ],
+     "note": null
+    },
+    {
+     "label": "Buyer industry price sensitivity",
+     "rating": null,
+     "weight": 1,
+     "scale": [
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "subs": [
+      {
+       "label": "Profitability of average buyer",
+       "rating": 2,
+       "weight": 1,
+       "scale": [
+        "<0%",
+        "0-5%",
+        "5-10%",
+        "10-15%",
+        ">15%"
+       ],
+       "note": null
+      },
+      {
+       "label": "% of incumbents' products which are sold at a discount",
+       "rating": 3,
+       "weight": 1,
+       "scale": [
+        ">50%",
+        "30-50%",
+        "20-30%",
+        "5-20%",
+        "<5%"
+       ],
+       "note": "Discounts go mainly to new move-ins, which national chains win with “steep move-in discounts” (p. 23), to military personnel (p. 17), and to commercial tenants through volume-based lease discounts (p. 17). The residential segment, 75% of revenue (p. 18), is protected mainly through existing-customer rate increases, “seldom reaching for street discounts” (p. 17). Roughly 20–30% of revenue is sold at a discount (reasoned judgement)."
+      },
+      {
+       "label": "Cost of incumbent industry products as a % of total buyer costs",
+       "rating": 5,
+       "weight": 1,
+       "scale": [
+        ">50%",
+        "30-50%",
+        "20-30%",
+        "5-20%",
+        "<5%"
+       ],
+       "note": null
+      },
+      {
+       "label": "Number of high volume purchases",
+       "rating": 5,
+       "weight": 1,
+       "scale": [
+        "Most",
+        null,
+        "Half",
+        null,
+        "Few"
+       ],
+       "note": null
+      },
+      {
+       "label": "Impact of incumbents' products on buyer quality/performance",
+       "rating": 1,
+       "weight": 1,
+       "scale": [
+        "Low",
+        null,
+        "Med",
+        null,
+        "High"
+       ],
+       "note": null
+      },
+      {
+       "label": "Degree to which incumbents' products save buyers money",
+       "rating": 3,
+       "weight": 1,
+       "scale": [
+        "Low",
+        null,
+        "Med",
+        null,
+        "High"
+       ],
+       "note": "•2.1 Profitability of average buyer (0–5%): Most buyers are households (75% of revenue, p. 18), which don't earn a profit, and the consumer confidence index is expected to decline in the current year (p. 33). Commercial buyers are retail and wholesale companies (p. 17), which typically operate on thin margins. The report has no buyer-profit data, so this is a reasoned judgement.\n•2.3 Cost as a % of total buyer costs (<5%): Storage is a small line item for most households and businesses. Businesses in high-rent regions use large units instead of “traditional warehouse rental or purchase” (p. 15), and self-storage is “cost-effective for business and personal use” as real estate costs climb (p. 10). No direct data, so this is a reasoned judgement.\n•2.4 Number of high-volume purchases (Few): Most customers are small businesses and households, so large providers “typically can't take over a large portion of the market by entering into contracts with major corporations” (p. 23). Commercial operators, the segment most likely to buy in volume, are 18.7% of revenue (p. 18).\n•2.5 Impact on buyer quality/performance (Low): The top reason for renting self-storage is “a lack of space at home” (p. 8); for most households storage is a convenience, not a performance factor. Some online businesses need climate-controlled units to maintain product quality (p. 16), but these fall within the “Other” product segment at 11.5% of revenue (p. 16).\n•2.6 Degree to which products save buyers money (Med): Self-storage is “cost-effective for business and personal use” as commercial and residential real estate costs climb (p. 10), and operators market large units as “flexible, lower-cost logistics space” (p. 15). Urban households use storage to supplement smaller living spaces instead of paying for larger homes (p. 8). Still, many businesses treat storage as a non-essential expense to cut when times are tight (p. 17), so savings are moderate."
+      }
+     ],
+     "note": null
+    }
+   ],
+   "score": 3.333333333333333,
+   "verdict": "Based on assessment of buyer power, this industry is moderately attractive for incumbents."
+  },
+  {
+   "name": "Supplier Power",
+   "components": [
+    {
+     "label": "Number/size of suppliers: top 4 suppliers combined market share",
+     "rating": 5,
+     "weight": 1,
+     "scale": [
+      ">70%",
+      "60-70%",
+      "50-60%",
+      "40-50%",
+      "<40%"
+     ],
+     "subs": [],
+     "note": "As with buyer concentration, the report gives no four-firm figure for suppliers, so the rating follows from the structure of the supply base. First-tier suppliers come from several unrelated industries: alarm and signal equipment manufacturing, electric power, municipal building construction, and security services (p. 26). Each of those is itself a fragmented industry containing hundreds of firms, serving 206.3k storage businesses (p. 3) spread across the country, so no four suppliers could hold 40% of industry-wide supply. IBISWorld rates supplier power Low and Steady (p. 23), and lessors further reduce leverage by \"reducing reliance on a single or small number of providers\" (p. 27). Electric utilities are often local monopolies, but utilities account for \"only a small portion of revenue\" (p. 37). Rating = 5."
+    },
+    {
+     "label": "Difficulty of switching suppliers",
+     "rating": null,
+     "weight": 1,
+     "scale": [
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "subs": [
+      {
+       "label": "Cost of switching suppliers as a % of total input costs (costs include not just higher prices but all switching costs)",
+       "rating": 5,
+       "weight": 1,
+       "scale": [
+        ">30%",
+        "20-30%",
+        "10-20%",
+        "5-10%",
+        "<5%"
+       ],
+       "note": null
+      },
+      {
+       "label": "Difference between suppliers in price of similar products",
+       "rating": 3,
+       "weight": 1,
+       "scale": [
+        ">15%",
+        "10-15%",
+        "5-10%",
+        "2-5%",
+        "<2%"
+       ],
+       "note": null
+      },
+      {
+       "label": "Importance of suppliers' brands to the end consumer",
+       "rating": 5,
+       "weight": 1,
+       "scale": [
+        "High",
+        null,
+        "Med",
+        null,
+        "Low"
+       ],
+       "note": "•2.1 Cost of switching suppliers (<5%): Purchases are less than 2.0% of revenue, rent less than 2.0%, and marketing less than 1.0% (p. 36), so individual supplier relationships are a small share of costs. Many companies have shielded themselves from input costs “by entering into long-term contracts with upstream suppliers” (p. 36) and keep “long-term contractual relationships with suppliers from various areas” (p. 27). The choice of construction firm matters mainly before a facility is built.\n•2.2 Difference between suppliers in price (5–10%): Steel and aluminum tariffs have raised construction costs (p. 9), so construction bids can vary widely, while ongoing inputs like security services and equipment vary less and utility rates vary little. Suppliers still “have significant leeway in setting the prices they charge” (p. 27). Reasoned judgement.\n•2.3 Importance of suppliers' brands to the end consumer (Low): Customers choose on location and price (p. 25), not on who built the facility or supplies the power. Even customer-facing technology, like the Onity DirectKey locks Extra Space Storage integrated into its mobile app (p. 31), is delivered under the storage operator's brand."
+      }
+     ],
+     "note": null
+    },
+    {
+     "label": "Possibility of supplier forward integration",
+     "rating": 5,
+     "weight": 1,
+     "scale": [
+      "High",
+      null,
+      "Med",
+      null,
+      "Low"
+     ],
+     "subs": [],
+     "note": "The possibility of supplier forward integration is Low. Entering requires “land or facility acquisition, security and climate-control systems and the structure itself” (p. 25), plus zoning and land-use approval (p. 25). Construction firms have the building know-how but would have to take on real estate ownership and property management, a fundamentally different business model. For utilities, security providers, and equipment manufacturers, entry is highly unrealistic, and the report identifies no supplier forward integration."
+    }
+   ],
+   "score": 4.777777777777778,
+   "verdict": "Based on assessment of supplier power, this industry is very attractive for incumbents."
+  },
+  {
+   "name": "Threat of New Entrants",
+   "components": [
+    {
+     "label": "Incumbent firm's cost advantage",
+     "rating": null,
+     "weight": 2,
+     "scale": [
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "subs": [
+      {
+       "label": "Size of scale economies: measured as the slope of the scale curve",
+       "rating": 2,
+       "weight": 1,
+       "scale": [
+        ">95%",
+        "85-95%",
+        "80-85%",
+        "70-80%",
+        "<70%"
+       ],
+       "note": "•Scale advantages exist and are growing: large REITs outperform “by using dynamic pricing and AI-driven revenue management,” and the profitability gap with smaller providers “is expected to widen, reinforcing the competitive advantages of scale and digital sophistication” (p. 9). Public Storage reports digital channels have cut on-site labor hours by more than 30.0% (p. 10).\n•But costs do not fall sharply with size: the industry has 206.3k businesses averaging about one employee each (p. 7), and local familiarity “helps small providers remain competitive with larger companies” (p. 23). Scale economies are modest (85–95%)."
+      },
+      {
+       "label": "Size of investment in plant and machinery required to enter industry",
+       "rating": 5,
+       "weight": 3,
+       "scale": [
+        "Small",
+        null,
+        "Med",
+        null,
+        "Large"
+       ],
+       "note": "•“Capital, not labor, is the binding constraint for new entrants, since self-storage sites run on a skeleton staff once built.” (p. 25)\n•“Property taxes and purchase or lease costs can be significant financial obstacles, particularly in densely populated areas.” (p. 25)\n•Steel and aluminum tariffs imposed in 2025 “have added meaningful cost pressure to storage facility construction” (p. 9), and IBISWorld lists High Capital Requirements as an industry weakness (p. 4).\n•Leasing rather than owning can lower this exposure (p. 25), but land and buildings still require a large investment."
+      },
+      {
+       "label": "Size of investment in marketing needed to match incumbent brand awareness",
+       "rating": 2,
+       "weight": 3,
+       "scale": [
+        "Small",
+        null,
+        "Med",
+        null,
+        "Large"
+       ],
+       "note": "•Marketing accounts for less than 1.0% of revenue and declined over the past five years (p. 36).\n•Local search results act as “a low-cost acquisition channel, reducing the need to invest heavily in traditional marketing campaigns,” and most customers already know the storage companies in their area (p. 36).\n•“New entrants without brand recognition can still win share through localized market knowledge, introductory pricing and app-based access technology” (p. 25), and new operators build share “through referrals and local reputation rather than product features” (p. 25). A visible location serves as “continuous, cost-effective advertising” (p. 22).\n•National REITs do have well-known brands (Public Storage 11.5%, Extra Space Storage 8.8%, p. 28), but matching their local awareness does not require a large marketing budget."
+      },
+      {
+       "label": "Degree to which incumbents employ property rights (e.g. patents) to protect market share",
+       "rating": 1,
+       "weight": 1,
+       "scale": [
+        "Low",
+        null,
+        "Med",
+        null,
+        "High"
+       ],
+       "note": "The degree to which incumbents employ property rights (e.g., patents) to protect market share is Low. Units are “functionally identical” (p. 25), and IBISWorld rates innovation Low (p. 4), so intellectual property is not a meaningful factor. Competitive advantage comes from location, capital access, and scale. Zoning and land-use approval is “the binding constraint” for entrants (p. 25), but that is a regulatory barrier (see 2.4), not a property right incumbents own."
+      },
+      {
+       "label": "Market share required to break even",
+       "rating": 1,
+       "weight": 1,
+       "scale": [
+        "<5%",
+        "5-15%",
+        "15-30%",
+        "30-40%",
+        ">40%"
+       ],
+       "note": "•“The storage and warehouse leasing industry is highly fragmented, with numerous small and medium-sized companies dominating the market.” (p. 23)\n•Even the largest firm, Public Storage, holds only 11.5% of revenue (p. 28), and other companies account for 79.7% (p. 3).\n•The industry has 206.3k businesses with average revenue of $194.3k each (p. 7), a tiny fraction of the $40.1 billion industry (p. 3), and average profit per business is $87.4k (p. 8).\n•Because storage facilities “generally service local market demand” (p. 13), a single facility can break even by filling its units locally with a sliver of national share. The market share required to break even is less than 5%."
+      }
+     ],
+     "note": null
+    },
+    {
+     "label": "Other incumbent firm advantages",
+     "rating": null,
+     "weight": 1,
+     "scale": [
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "subs": [
+      {
+       "label": "Strength of incumbents' brands (how influential in customer purchase decisions?)",
+       "rating": 3,
+       "weight": 1,
+       "scale": [
+        "Weak",
+        null,
+        "Neutral",
+        null,
+        "Strong"
+       ],
+       "note": null
+      },
+      {
+       "label": "Size of switching cost for incumbents' customers",
+       "rating": 4,
+       "weight": 1,
+       "scale": [
+        "Low",
+        null,
+        "Med",
+        null,
+        "High"
+       ],
+       "note": null
+      },
+      {
+       "label": "Degree to which network effects affect buying decision",
+       "rating": 1,
+       "weight": 1,
+       "scale": [
+        "Low",
+        null,
+        "Med",
+        null,
+        "High"
+       ],
+       "note": null
+      },
+      {
+       "label": "Cost for entrants to comply with government regulations",
+       "rating": 3,
+       "weight": 1,
+       "scale": [
+        "Low",
+        null,
+        "Med",
+        null,
+        "High"
+       ],
+       "note": "•2.1 Strength of incumbents' brands (Neutral): Reputation matters (“A strong reputation will make customers loyal to the brand,” p. 12), and an established brand “can attract more customers because of perceived reliability and quality” (p. 27). But “differentiation is inherently weak, since most operators offer functionally identical storage units and compete mainly on location and price” (p. 25), and tenant loyalty “rewards whichever provider already holds the closest, most familiar location” (p. 23) rather than a national brand.\n•2.2 Size of switching cost for incumbents' customers (Med-High): Tenants “rarely shop around once they've settled in” (p. 23), moving costs keep short-term renters from switching (p. 15), and the average length of stay is 19.3 months (p. 9). Entrants must compete mainly for new move-ins rather than winning existing tenants.\n•2.3 Network effects (Low): Customers choose on location and price (p. 25), not on how many others use the same company. Word-of-mouth referrals help (p. 25), but that is reputation, not a network effect.\n•2.4 Cost to comply with government regulations (Med): IBISWorld rates regulation Moderate and Steady (p. 4). New entrants “don't need a specialized federal license,” but “zoning and land-use approval is the binding constraint, varying widely by municipality” (p. 25). Operators must also meet OSHA standards (p. 33) and fire codes, which state regulators will likely enforce more strictly (p. 34)."
+      }
+     ],
+     "note": null
+    },
+    {
+     "label": "Additional considerations",
+     "rating": null,
+     "weight": 1,
+     "scale": [
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "subs": [
+      {
+       "label": "Profitability of average incumbent",
+       "rating": 1,
+       "weight": 1,
+       "scale": [
+        ">15%",
+        "10-15%",
+        "5-10%",
+        "0-5%",
+        "<0%"
+       ],
+       "note": "The industry profit margin is 45.0% in 2026 (p. 35), “well above the sector average” (p. 5), on $18.0 billion of total profit (p. 3). Operators “are very profitable since demand for storage is relatively inelastic” (p. 36)."
+      },
+      {
+       "label": "Incumbent industry growth rate",
+       "rating": 5,
+       "weight": 1,
+       "scale": [
+        ">5%",
+        "3-5%",
+        "1-3%",
+        "0-1%",
+        "<0%"
+       ],
+       "note": "2021-26 Revenue CAGR +4.3% (p. 8); 2026 revenue growth +0.3% (p. 6); 2026-31 Revenue CAGR -0.1% (p. 9). Rated on the forward-looking rate (2026-31 CAGR -0.1%, p. 9): an entrant commits capital today against future demand, so the forecast is the relevant figure. A market with flat-to-declining revenue is unattractive to enter, which lowers the threat of new entrants to incumbents."
+      }
+     ],
+     "note": null
+    }
+   ],
+   "score": 2.826388888888889,
+   "verdict": "Based on assessment of threat of new entrants, this industry is moderately unattractive for incumbents."
+  },
+  {
+   "name": "Threat of Substitutes",
+   "components": [
+    {
+     "label": "Customer awareness of substitutes: ability to recognize brands from substitute industry",
+     "rating": 1,
+     "weight": 1,
+     "scale": [
+      "High",
+      null,
+      "Med",
+      null,
+      "Low"
+     ],
+     "subs": [],
+     "note": "Customer awareness of substitutes is High. Individuals can “repurpose a basement, a garage, or even a spare room into a storage space,” and businesses can convert unused office areas into storage (p. 25). Businesses also know third-party logistics providers, an established alternative to warehouse leasing (p. 25). These substitutes are mostly unbranded, but nearly every buyer is familiar with them."
+    },
+    {
+     "label": "Availability of substitutes",
+     "rating": 5,
+     "weight": 1,
+     "scale": [
+      "Better",
+      null,
+      "Same",
+      null,
+      "Worse"
+     ],
+     "subs": [],
+     "note": "The availability of substitutes is Worse than industry offerings. “There aren't that many substitutes in this industry since there aren't many replacements for storage space” (p. 23), and IBISWorld rates substitutes Low and Steady (p. 23). DIY space is scarce for the urban renters who drive demand; the top reason for renting self-storage is “a lack of space at home” (p. 8). 3PLs are “often seen as a complement rather than a complete substitute” (p. 25)."
+    },
+    {
+     "label": "Price of substitutes",
+     "rating": 5,
+     "weight": 1,
+     "scale": [
+      "Lower",
+      null,
+      "Same",
+      null,
+      "Higher"
+     ],
+     "subs": [],
+     "note": "The price of substitutes is Higher for most buyers. DIY storage “eliminates monthly rental fees” (p. 25), but only for buyers who already have the space. For everyone else the alternative is more space, which costs more: rising housing costs push people to “downsize into smaller units and use self-storage to supplement their smaller living spaces” (p. 8), and self-storage is “cost-effective for business and personal use” compared with real estate (p. 10). 3PLs bundle inventory management, fulfillment, and transportation (p. 25), which costs more than space alone."
+    },
+    {
+     "label": "Performance of substitutes",
+     "rating": 4,
+     "weight": 1,
+     "scale": [
+      "Better",
+      null,
+      "Same",
+      null,
+      "Worse"
+     ],
+     "subs": [],
+     "note": "The performance of substitutes is somewhat Worse. DIY storage “offers round-the-clock access to stored items” and “better control over them,” but DIY solutions “are generally intended for short-term solutions rather than meeting long-term storage needs” (p. 25). 3PLs outperform storage for businesses that need fulfillment services, but households “typically only need space to store their items” (p. 25). Substitutes are better on some dimensions but worse at the main need, space."
+    },
+    {
+     "label": "Customer switching costs",
+     "rating": 2,
+     "weight": 1,
+     "scale": [
+      "Lower",
+      null,
+      "Med",
+      null,
+      "High"
+     ],
+     "subs": [],
+     "note": "Customer switching costs are Low to Medium, closer to Low. Self-storage's “month-to-month lease structure” (p. 16) means customers can leave without a contract penalty, and moving belongings into a garage or spare room costs little (p. 25). The main switching cost is the hassle of moving belongings, and it only applies to buyers who have space elsewhere."
+    }
+   ],
+   "score": 3.4,
+   "verdict": "Based on assessment of threat of substitutes, this industry is moderately attractive for incumbents."
+  }
+ ]
+}

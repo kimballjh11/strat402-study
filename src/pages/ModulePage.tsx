@@ -377,8 +377,8 @@ function Mastery({ m }: { m: SessionModule }) {
     if (attempt === null) return []
     const g = new Rng(attempt)
     const bank = mcqs.filter((q) => q.session === m.id)
-    const qs = g.shuffle(bank).slice(0, 6)
     const gens = g.shuffle(generators.filter((x) => x.session === m.id)).slice(0, 3)
+    const qs = g.shuffle(bank).slice(0, 9 - gens.length)
     return g.shuffle<QuizItem>([...qs.map((q) => ({ kind: 'mcq' as const, id: q.id })), ...gens.map((x) => ({ kind: 'gen' as const, id: x.id, seed: g.int(1, 2 ** 30) }))])
   }, [attempt, m.id])
 
@@ -386,7 +386,7 @@ function Mastery({ m }: { m: SessionModule }) {
     return (
       <div className="card p-5 space-y-3">
         <p>
-          9 mixed questions: 6 conceptual multiple choice and 3 short-answer calculations, drawn fresh each time. No hints until you submit. Score <strong>80% or better</strong> to mark Session {m.num} mastered. Misses link back to the exact screen to review.
+          9 mixed questions (conceptual multiple choice plus short-answer calculations where the session has them), drawn fresh each time. No hints until you submit. Score <strong>80% or better</strong> to mark Session {m.num} mastered. Misses link back to the exact screen to review.
         </p>
         <button type="button" className="btn btn-primary" onClick={() => setAttempt(newSeed())} data-testid="start-mastery">
           Start mastery check

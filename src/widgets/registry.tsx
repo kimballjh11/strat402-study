@@ -20,6 +20,7 @@ const registry: Record<string, React.LazyExoticComponent<ComponentType>> = {
   'power-drill': lazy(() => import('./PowerDrill')),
   'find-max': lazy(() => import('./FindMax')),
   'hhi-calc': lazy(() => import('./HhiCalc')),
+  'five-forces': lazy(() => import('./FiveForcesRater')),
 }
 
 export function Widget({ id }: { id: string }) {

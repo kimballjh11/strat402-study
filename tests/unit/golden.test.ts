@@ -222,3 +222,13 @@ describe('S03 Allegiant workbook [S03 workbook, Solution!D42:H65]', () => {
     expect(c4(s.slice(0, 4)) / 100).toBeCloseTo(C, 6)
   })
 })
+
+describe('S04 Five Forces scoring reproduces the professor’s solution [S04 Solution, Calculations Hub]', () => {
+  it('force and overall scores', async () => {
+    const { solution, forceScore, professorRatings } = await import('../../src/content/data/fiveforces')
+    const r = professorRatings()
+    const want = [2.357142857142857, 3.333333333333333, 4.777777777777778, 2.826388888888889, 3.4]
+    solution.forces.forEach((f, i) => expect(forceScore(f, i, r)).toBeCloseTo(want[i], 10))
+    expect(want.reduce((a, b) => a + b, 0) / 5).toBeCloseTo(3.3389285714285712, 10)
+  })
+})

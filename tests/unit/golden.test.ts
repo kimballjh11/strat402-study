@@ -232,3 +232,15 @@ describe('S04 Five Forces scoring reproduces the professor’s solution [S04 Sol
     expect(want.reduce((a, b) => a + b, 0) / 5).toBeCloseTo(3.3389285714285712, 10)
   })
 })
+
+describe('Essential Excel Skills (Squatty Potty) [Essential Excel Skills, Solution]', () => {
+  it('linear trendline Q = −1.881P + 207.75 and Solver P* = 55.22', () => {
+    const P = [28, 29, 30, 31, 32, 33, 34, 35]
+    const Q = [145, 163, 140, 161, 144, 162, 144, 129]
+    const f = simpleOls(P, Q)
+    expect(f.b).toBeCloseTo(-1.881, 3)
+    expect(f.a).toBeCloseTo(207.75, 2)
+    expect(207.75 / (2 * 1.881)).toBeCloseTo(55.22328504013936, 5) // Solver stops at its tolerance
+    expect(-1.881 * 55.22328504013936 ** 2 + 207.75 * 55.22328504013936).toBeCloseTo(5736.318779904306, 6)
+  })
+})

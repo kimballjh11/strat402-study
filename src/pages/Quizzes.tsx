@@ -21,7 +21,7 @@ export function Quizzes() {
   const route = useRoute()
   const n = Number(route.query.get('q')) || null
   const answers = useProgress((p) => p.answers)
-  if (n) return <TakeQuiz n={n} />
+  if (n) return <TakeQuiz key={n} n={n} />
   return (
     <div className="space-y-5">
       <header>

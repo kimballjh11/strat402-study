@@ -60,7 +60,7 @@ export function Frame({ ax, xLabel, yLabel, fmtX = shortNum, fmtY = shortNum, ch
       ref={svgRef}
       viewBox={`0 0 ${ax.w} ${ax.h}`}
       className="graph w-full h-auto select-none"
-      role="img"
+      role="group"
       aria-label={title}
       style={{ touchAction: 'none' }}
       {...ev}

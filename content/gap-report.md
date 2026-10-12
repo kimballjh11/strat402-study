@@ -38,9 +38,15 @@
 | S10-LO3 sources of monopoly power | The slides give framing only; the list is general econ |
 | S11-LO1–LO4 | No slides yet |
 | S05-LO3 Excel skills | Excel Lab only; we can't confirm Excel is on the exam |
-| S09-LO2 run a regression in Excel | Excel Lab only |
+| S09-LO2 run a regression in Excel | Excel Lab plus 4 Excel MCQs (added after the coverage gate flagged it) |
 | S04-LO5 where to find data | One slide (p.24, IBISWorld) plus the 10-K items |
 
 ## Kimball's own work used (labeled "your work, not an official key")
 
 Cost Advantage, Differentiation Advantage, Regression Exercise (Mrs. Smith's pies), and the Bottling Five Forces. Every number is recomputed by code from the data tabs.
+
+## Status after the build (Phase 5)
+
+- Every LO has at least 3 MCQs, and every quantitative LO has a generator (enforced by `npm test`; see `content/coverage-report.md`).
+- Fidelity audit: 40 sampled cited claims, all verified, with 4 citation fixes (see `content/audit.md`).
+- Still open: S11 slides, the study guide, the practice exam, and the differentiation video transcript. Drop any of them into `inputs/later/` and run `npm run ingest`.

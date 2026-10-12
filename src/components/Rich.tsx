@@ -1,5 +1,5 @@
 import katex from 'katex'
-import { Fragment, type ReactNode, useMemo } from 'react'
+import { Fragment, type ReactNode, useEffect, useMemo, useRef, useState } from 'react'
 import { Cite, GeneralBadge } from './Cite'
 
 const mathCache = new Map<string, string>()
@@ -14,9 +14,26 @@ export function texHtml(latex: string, display = false) {
 }
 
 export function Tex({ children, display = false }: { children: string; display?: boolean }) {
+  const ref = useRef<HTMLSpanElement>(null)
+  // a display equation wider than the screen scrolls sideways; make it keyboard-reachable only then
+  const [wide, setWide] = useState(false)
+  useEffect(() => {
+    if (!display) return
+    const check = () => ref.current && setWide(ref.current.scrollWidth > ref.current.clientWidth + 1)
+    check()
+    document.fonts?.ready.then(check)
+    const ro = new ResizeObserver(check)
+    if (ref.current) {
+      ro.observe(ref.current)
+      if (ref.current.firstElementChild) ro.observe(ref.current.firstElementChild)
+    }
+    return () => ro.disconnect()
+  }, [display, children])
   return (
     <span
+      ref={ref}
       className={display ? 'block overflow-x-auto overflow-y-hidden py-1' : ''}
+      {...(wide ? { tabIndex: 0, role: 'region', 'aria-label': 'Equation (scroll sideways)' } : {})}
       dangerouslySetInnerHTML={{ __html: texHtml(children, display) }}
     />
   )

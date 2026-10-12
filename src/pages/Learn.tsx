@@ -17,7 +17,7 @@ export function Learn() {
       {SPINES.map((sp) => {
         const mods = sessions.filter((s) => s.spine === sp.key)
         return (
-          <section key={sp.key} aria-labelledby={`sp-${sp.key}`} className={sp.locked ? 'opacity-60' : ''}>
+          <section key={sp.key} aria-labelledby={`sp-${sp.key}`} className={sp.locked ? 'rounded-xl border border-dashed p-4' : ''} style={sp.locked ? { borderColor: 'var(--line)' } : undefined}>
             <h2 id={`sp-${sp.key}`} className="text-xl font-semibold">
               {sp.title} {sp.locked && <span className="chip ml-1">🔒 coming later</span>}
             </h2>

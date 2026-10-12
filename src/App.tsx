@@ -31,7 +31,7 @@ export default function App() {
 
   let page
   const m = path.match(/^\/learn\/(S\d\d)$/)
-  if (m && sessionById[m[1] as SessionId]) page = <ModulePage id={m[1] as SessionId} />
+  if (m && sessionById[m[1] as SessionId]) page = <ModulePage key={m[1]} id={m[1] as SessionId} />
   else
     switch (path) {
       case '/':

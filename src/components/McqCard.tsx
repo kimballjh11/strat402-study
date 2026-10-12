@@ -92,14 +92,12 @@ export function McqCard({ q, mode = 'learn', shuffleSeed, onResult, onChoose, in
           const cls = checked ? (orig === q.correct ? 'ok' : isSel ? 'bad' : '') : ''
           return (
             <button key={orig} type="button" className={`opt ${cls}`} aria-pressed={isSel} onClick={() => choose(orig)}>
-              <span className="opt-key" aria-hidden>{i + 1}</span>
+              <span className="opt-key">{i + 1}</span>
               <span className="flex-1">
                 <RichInline>{q.options[orig].text}</RichInline>
                 {checked && orig === q.correct && <span className="sr-only"> (correct answer)</span>}
                 {checked && isSel && orig !== q.correct && <span className="sr-only"> (your answer, incorrect)</span>}
               </span>
-              {checked && orig === q.correct && <span aria-hidden className="verdict-ok">✓</span>}
-              {checked && isSel && orig !== q.correct && <span aria-hidden className="verdict-bad">✗</span>}
             </button>
           )
         })}

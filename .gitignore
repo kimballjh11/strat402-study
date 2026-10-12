@@ -11,3 +11,5 @@ Canvas Course/
 *.pdf
 ~$*
 .DS_Store
+test-results/
+playwright-report/

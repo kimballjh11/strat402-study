@@ -14,6 +14,8 @@ const registry: Record<string, React.LazyExoticComponent<ComponentType>> = {
   'shift-sim': lazy(() => import('./ShiftSim')),
   'cost-curves': lazy(() => import('./CostCurves')),
   'scale-fitter': lazy(() => import('./ScaleFitter')),
+  'two-part': lazy(() => import('./TwoPartTariff')),
+  'bundle-table': lazy(() => import('./BundleTable')),
 }
 
 export function Widget({ id }: { id: string }) {

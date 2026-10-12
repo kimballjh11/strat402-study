@@ -93,8 +93,8 @@ export const opeLinear: Generator = {
       title: 'Point OPE on linear demand',
       prompt: r`Demand for ${biz} is \(Q = ${tex(a, 2)} - ${tex(b, 2)}P\), where \(Q\) is ${units} per month and \(P\) is the price.`,
       parts: [
-        { type: 'num', label: r`Quantity demanded at \(P = ${dollars(P)}\)`, answer: Q, tol: 0.005, abs: 0.5 },
-        { type: 'num', label: r`OPE at \(P = ${dollars(P)}\)`, answer: E, tol: 0.01, abs: 0.005 },
+        { type: 'num', label: r`Quantity demanded at P = ${dollars(P)}`, answer: Q, tol: 0.005, abs: 0.5 },
+        { type: 'num', label: r`OPE at P = ${dollars(P)}`, answer: E, tol: 0.01, abs: 0.005 },
         { type: 'choice', label: 'Demand at that price is…', options: CLASS_OPTS, correct: classify(E) },
         { type: 'num', label: 'Revenue-maximizing price', answer: Pstar, kind: 'money', tol: 0.005 },
       ],

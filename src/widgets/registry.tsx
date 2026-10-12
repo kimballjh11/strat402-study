@@ -6,6 +6,9 @@ const registry: Record<string, React.LazyExoticComponent<ComponentType>> = {
   'revenue-drill': lazy(() => import('./RevenueDrill')),
   'cpe-classifier': lazy(() => import('./CpeClassifier')),
   'profit-max-lab': lazy(() => import('./ProfitMaxLab')),
+  'regression-output': lazy(() => import('./RegressionOutput')),
+  'sse-dragger': lazy(() => import('./SseDragger')),
+  'interpret-drill': lazy(() => import('./InterpretDrill')),
 }
 
 export function Widget({ id }: { id: string }) {

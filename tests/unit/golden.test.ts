@@ -207,3 +207,18 @@ describe('Cost Advantage assignment fits [your Cost Advantage, Part 1; S07 slide
     expect((f.A / 7.99) ** (1 / -f.B)).toBeCloseTo(5338.9, 0)
   })
 })
+
+describe('S03 Allegiant workbook [S03 workbook, Solution!D42:H65]', () => {
+  const cases: [string, number[], number, number][] = [
+    ['OAK', [85.3, 4.08, 3.78, 2.2, 1.8, 2.84], 7323.1704, 0.9536],
+    ['SFO', [46.5, 10.56, 10.48, 9.3, 7.87, 15.28], 2765.4993, 0.7684],
+    ['HOU', [94.5, 2.48, 1.18, 0.68, 0.38, 0.77], 8938.9925, 0.9884],
+    ['IAH', [56.01, 10.15, 7.12, 5.45, 5.38, 15.89], 3601.976, 0.7873],
+    ['MDW', [92.81, 3.7, 1.61, 1.07, 0.16, 0.65], 8631.5712, 0.9919],
+    ['ORD', [38.91, 22.46, 9.36, 7.46, 3.7, 18.1], 2503.0009, 0.7819],
+  ]
+  it.each(cases)('%s HHI and C4', (_n, s, H, C) => {
+    expect(hhi(s)).toBeCloseTo(H, 3)
+    expect(c4(s.slice(0, 4)) / 100).toBeCloseTo(C, 6)
+  })
+})

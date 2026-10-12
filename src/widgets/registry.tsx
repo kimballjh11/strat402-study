@@ -19,6 +19,7 @@ const registry: Record<string, React.LazyExoticComponent<ComponentType>> = {
   'tangent-slider': lazy(() => import('./TangentSlider')),
   'power-drill': lazy(() => import('./PowerDrill')),
   'find-max': lazy(() => import('./FindMax')),
+  'hhi-calc': lazy(() => import('./HhiCalc')),
 }
 
 export function Widget({ id }: { id: string }) {

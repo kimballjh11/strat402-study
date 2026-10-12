@@ -29,7 +29,8 @@ What the course materials do not cover, where sources conflict, and how the site
 4. **Botswana 1966.** The case says under 20 km of paved road and fewer than a dozen graduates. The slides say 12 km and 22 graduates. Both are shown with tags.
 5. **Aldi item count.** The Porter paper says about 1,400. The Aldi case says 1,400–2,000. Both are tagged.
 6. **"Five diagnoses."** The VRIO Brief's Exhibit 1 is titled "Five Diagnoses" but lists four cases, and the text skips Case D. **Handling:** "the five diagnoses" means the five verdicts in §5.
-7. **Notation vs. STRAT 402.**
+7. **Scale Brief Exhibit A2 rounding.** The exhibit prints 1.63× for k = 0.70. The exact value is 2^0.7 = 1.6245, which rounds to 1.62. Its 0.812× per-unit figure is correct. The golden test allows ±0.006.
+8. **Notation vs. STRAT 402.**
    - HHI: 401 uses percentage points (30² + 30² + …). 402 multiplies decimal shares by 10,000.
    - Learning curves: 401 writes Y = aX^−b with b > 0. 402 fits ATC = aQ^b with b < 0.
    - Both courses' conventions are labeled wherever they meet.

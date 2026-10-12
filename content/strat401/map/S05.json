@@ -1,0 +1,78 @@
+{
+  "id": "S05",
+  "title": "Industry III: Concentration (HHI and C4) and Cracking Well-Guarded Markets",
+  "part": "Where profit lives: concentration and entry",
+  "keyQuestion": "How does concentration affect strategy? How do you break into concentrated markets?",
+  "keyQuestionSrc": "Canvas S5",
+  "reading": { "name": "Measuring Market Concentration (HHI C4 Brief) + Cracking Well-Guarded Markets, Redux", "tag": "HHI / Cracking" },
+  "case": { "name": "In-class questions: crack internet search; will the DOJ allow Netflix or Paramount to buy Warner Bros; which merger makes the most sense; who should pay the most", "tag": "Canvas S5" },
+  "slides": "No slides for this session (Canvas). The S7 deck opens with a Capital One + Discover HHI/C4 calculation.",
+  "framework": {
+    "name": "Concentration measures + the indirect-assault entry framework",
+    "summary": "Concentration is the most widely used proxy for rivalry, and the same arithmetic drives agency merger review. C4 is simple and blind to distribution; HHI squares shares so it registers asymmetry and is what the DOJ/FTC apply. Market definition decides the answer. Because attractive markets are defensible, entrants should attack indirectly: leverage assets they already own, reconfigure the value chain, create a niche the incumbent can't match cheaply — and combine at least two.",
+    "components": [
+      { "name": "C4 (concentration ratio)", "what": "Combined share of the four largest firms (30/25/15/10 → C4 = 80). Conventional, non-legal reading: <40 competitive/fragmented, 40-60 loose oligopoly, >60 tight oligopoly, >90 effectively monopoly. Blind to distribution inside the group and to everything outside it.", "src": "HHI §2" },
+      { "name": "HHI", "what": "Sum of squared market shares of every firm (DOJ example 30/30/20/20 → 2,600). Runs from near 0 to 10,000 (monopoly). Squaring weights large firms disproportionately.", "src": "HHI §3" },
+      { "name": "Numbers equivalent", "what": "10,000 ÷ HHI = the number of equal-sized firms that would produce the same score (2,000 → 5 firms; 2,600 → ~3.8).", "src": "HHI §3" },
+      { "name": "Merger shortcut", "what": "ΔHHI = 2 × s1 × s2, regardless of the rest of the market (12% and 8% → 192).", "src": "HHI §3" },
+      { "name": "2023 Merger Guidelines presumptions", "what": "Concentration test: post-merger HHI > 1,800 AND ΔHHI > 100 → presumed to substantially lessen competition. Share test: merged share > 30% AND ΔHHI > 100 → same presumption even if the market isn't highly concentrated. Bands: <1,000 unconcentrated; 1,000-1,800 moderately; >1,800 highly. (2010 Guidelines used 2,500 and 200.) Presumptions are rebuttable; they shift who must prove what.", "src": "HHI §4, Ex.3" },
+      { "name": "Market definition (hypothetical monopolist / SSNIP)", "what": "A candidate market is right if a hypothetical monopolist of it could profitably impose a small but significant non-transitory price increase; if customers would switch outside, widen it. Product and geographic dimensions. Compute concentration under at least two defensible definitions.", "src": "HHI §5" },
+      { "name": "Leverage what you already own", "what": "Lower the cost of entry using capacity already paid for (T-Mobile fixed wireless on spare 5G: 8.5M customers; Amazon ads $68.6B on search and purchase data it already owned; Walmart Connect).", "src": "Cracking §3" },
+      { "name": "Reconfigure the chain", "what": "Change which activities are performed so the incumbent's most valuable assets become irrelevant (SpaceX reusability ~$3,000/kg vs. Shuttle $54,000; Cost Plus Drugs removes the PBM).", "src": "Cracking §4" },
+      { "name": "Create a niche the incumbent can't match cheaply", "what": "Valuable not for its revenue but because matching it damages something the incumbent already sells (Athletic Brewing's dedicated NA brewing; prebiotic soda).", "src": "Cracking §5" },
+      { "name": "The combination does the work", "what": "A single move is usually answerable; successful entrants deployed at least two. Strongest pairing: reconfigured chain + niche (Hims & Hers controlled the patient relationship; Novo went from partner to adversary to distribution partner in 11 months).", "src": "Cracking §6" }
+    ]
+  },
+  "terms": [
+    { "term": "C4 / CR4", "def": "Sum of the four largest firms' market shares; published by the Census Bureau with CR8, CR20, CR50 and HHI.", "src": "HHI §2" },
+    { "term": "HHI", "def": "Herfindahl-Hirschman Index: sum of squared shares of every firm; the measure the DOJ and FTC apply.", "src": "HHI §3" },
+    { "term": "ΔHHI", "def": "Change in HHI from a merger = 2 × s1 × s2.", "src": "HHI §3" },
+    { "term": "Structural presumption", "def": "Under Guideline 1 (2023), a merger crossing the concentration or share test is presumed unlawful; rebuttable with evidence on entry, failing firm, no real overlap, or a too-narrow market definition.", "src": "HHI §4" },
+    { "term": "Hart-Scott-Rodino threshold", "def": "Size-of-transaction notification threshold ($133.9M for 2026, up from $126.4M); triggers filing and a waiting period regardless of concentration.", "src": "HHI §4" },
+    { "term": "Hypothetical monopolist test", "def": "Market definition test: could a monopolist of the candidate market profitably impose a small but significant non-transitory price increase?", "src": "HHI §5" },
+    { "term": "Indirect assault", "def": "Bryce & Dyer's finding: successful entrants don't duplicate the incumbent's model, fight for crowded distribution, or chase mainstream customers first; they attack a weak point, build advantage there, then move toward the stronghold.", "src": "Cracking §1" },
+    { "term": "The 30% penalty", "def": "Newcomers to the most attractive markets earn returns roughly 30% below newcomers to less attractive ones: attractiveness and defensibility come from the same conditions.", "src": "Cracking §1, §9" },
+    { "term": "Fallow capacity model", "def": "T-Mobile's term for selling home broadband over spare capacity on a network already built for wireless.", "src": "Cracking §3" }
+  ],
+  "claims": [
+    { "claim": "C4 cannot distinguish a 65/5/5/5 market from a 20/20/20/20 one (both 80); with eight firms the HHIs are 4,400 vs. 1,700 — 2,700 apart — and only the first is highly concentrated.", "src": "HHI §2, Fig.1, Ex.1" },
+    { "claim": "The arithmetic is trivial; everything contested happens one step earlier, in the choice of denominator (market definition).", "src": "HHI §5" },
+    { "claim": "Staples/Office Depot was blocked twice under two different market definitions; Whole Foods/Wild Oats shows that where the boundary is contested the presumption may never be reached and the case turns on customer behavior.", "src": "HHI §5" },
+    { "claim": "Concentration does not show entry conditions, buyer power, capacity and cost position, dynamic/potential competition, or non-price dimensions (quality, innovation, privacy, labor markets). The diamond cartel sustained near-maximum concentration and then lost value to a product made outside the market.", "src": "HHI §6" },
+    { "claim": "Under Armour aimed big strengths where Nike was organized to fight (footwear $1.1B, −11%); On and Hoka entered through specialty running doors the incumbent didn't defend (Hoka $2.59B +15.9%; On CHF 3.01B +30%).", "src": "Cracking §2, Ex.2" },
+    { "claim": "Proposition 1: attractiveness and accessibility are inversely related; the only reliable way around the 30% penalty is to enter where the incumbent has decided not to defend.", "src": "Cracking §9" },
+    { "claim": "Proposition 2: the entrant's advantage is a lower cost of competing rather than a larger budget.", "src": "Cracking §9" },
+    { "claim": "Proposition 3 (the addition): indirect entry buys time, not permanence; the head start ends when the incumbent decides the segment is worth the cannibalization, so build something that survives that decision.", "src": "Cracking §9" },
+    { "claim": "Ask what a competent incumbent would have to GIVE UP to respond — revenue already booked, channel conflict, cannibalized margin, organizational contradiction. That asymmetry, not secrecy, buys time.", "src": "Cracking §8" }
+  ],
+  "failures": [
+    { "name": "Single definition reported as fact", "what": "A concentration figure without its denominator is an assertion, not a finding.", "src": "HHI §5" },
+    { "name": "Treating concentration as competitive intensity", "what": "Ignores contestability, buyer power, capacity, potential competition and non-price competition.", "src": "HHI §6" },
+    { "name": "Acquisition destroys what it buys", "what": "Moving a challenger onto the incumbent's distribution removes what made it work (poppi declining in H1 2026 after the transition).", "src": "Cracking §7" },
+    { "name": "Holding company for other people's niches", "what": "Celsius: Alani Nu +55.7% while Celsius brand −11.7%.", "src": "Cracking §7" },
+    { "name": "The niche fills faster", "what": "Liquid Death growth 139% → 27% → ~2%; On's Americas growth decelerating.", "src": "Cracking §7" },
+    { "name": "The incumbent eventually fights", "what": "Nike +35.4% in run specialty while On −19.7% and Hoka −7.4% in that channel.", "src": "Cracking §7" }
+  ],
+  "caseFacts": [
+    { "fact": "Exhibit 2 worked calculations: 30/25/20/15/10 → C4 90, HHI 2,250, merge 20+15 → +600 → 2,850 (presumed); 35/30/20/15 → 2,750, merge 35+15 → +1,050 → 3,800 (both tests, 50% share); 20×4 + 5×4 → 1,700, merge 20+5 → +200 → 1,900 (crosses into highly concentrated); ten at 10 → 1,000, merge → +200 → 1,200 (no); 65 + 5×7 → 4,400, merge 5+5 → +50 → 4,450 (no presumption from the change); 12 and 8 → +192 (depends on level).", "why": "The golden numbers every HHI calculation must reproduce.", "src": "HHI Ex.2" },
+    { "fact": "Real cases: Staples/Office Depot 1997 (avg ΔHHI 2,715) and 2016 (3,270 → 6,265); Sysco/US Foods 2015 (5,836, +2,800; San Diego 10,000); AT&T/T-Mobile 2011 (national >3,100, +~700); H&R Block/TaxACT 2011 (4,691, +~400); Aetna/Humana 2017; Tapestry/Capri 2024 (+1,449, 59% share, court adopted 30% threshold); Kroger/Albertsons 2024 (1,922 local markets presumptively unlawful under 2023 thresholds vs. 1,574 under 2010).", "why": "Evidence that concentration arithmetic plus market definition decides real deals.", "src": "HHI §5, Ex.5" },
+    { "fact": "Capital One + Discover (S7 slide): pre-merger HHI 1,085.49, post 1,319.48, change 233.99; C4 55.5% → 64.5%.", "why": "A course worked example. Note: the slide uses a 22.1% combined share although 13.1 + 9.1 = 22.2; by formula ΔHHI = 2 × 13.1 × 9.1 = 238.42.", "src": "S7 slides 2" },
+    { "fact": "Cracking examples: Red Bull took ~65% of a category it created via bars and nightclubs while Virgin Cola finished under 1%; Cost Plus Drugs formula = acquisition cost + 15% + $5 pharmacy fee + $5 shipping; Athletic Brewing >19% of US NA beer.", "why": "Concrete illustrations of each entry move.", "src": "Cracking §2, §4, §5" }
+  ],
+  "strongAnalysis": [
+    "How concentration affects strategy: in a concentrated market rivalry can be milder (fewer, larger players can avoid price wars) and returns higher, but (1) mergers that raise concentration face presumptions — compute ΔHHI before engaging advisers; (2) the measure is only as good as the market definition; (3) concentration invites indirect entry because incumbents defend the core.",
+    "Crack internet search (in-class): don't attack Google where it's organized to fight (general web search on its distribution defaults). Combine moves: leverage assets you own (an installed base of devices, an AI assistant, purchase or social data), reconfigure the chain (answer engines that skip the results page), and start in a niche Google can't match without cannibalizing ads (ad-free/subscription, vertical or private search). Ask what Google must give up to respond.",
+    "Netflix or Paramount buying Warner Bros (in-class): define the market two ways (premium SVOD subscriptions vs. all TV/video including YouTube); compute ΔHHI = 2 × s1 × s2 with the shares you assume, compare to 1,800/100 and the 30% share test, then argue rebuttal factors (entry, YouTube/TikTok as substitutes). The site's simulator lets you test assumptions — no share data for this deal is given in the materials.",
+    "Who should pay the most: the bidder for whom WB's assets are worth most — e.g., a firm that can amortize the library over the largest subscriber base (scale logic from S8) — but the regulatory presumption lowers the expected value for a buyer whose merger raises concentration most.",
+    "Use the 'after entry' findings: plan the second product, price the channel not only the brand if selling to an incumbent, and build something that holds when the incumbent fights back in 3-5 years."
+  ],
+  "counter": {
+    "argument": "High concentration means low competition and should be blocked; HHI thresholds are a sound rule.",
+    "response": "Concentration describes supply-side shares at one moment. A concentrated, contestable market can discipline prices better than a fragmented, protected one; buyer power, spare capacity and potential entrants (and substitutes from outside the defined market) all constrain price. That is why the presumption is rebuttable and why the definition of the market is where cases are actually won."
+  },
+  "courseMap": { "text": "Concentration is one input to rivalry in the Five Forces (S4); cracking well-guarded markets is the entrant's answer to strong entry barriers, using value-chain reconfiguration (S7) and niches (focus strategies, S1).", "src": "HHI §1; Cracking §1" },
+  "slideExtras": [ { "topic": "Capital One + Discover worked HHI", "detail": "Shares: JPMorgan 18.7, Citi 14.6, Capital One 13.1, Discover 9.1, Bank of America 9.1, American Express 8.7, Synchrony 8.6, Wells Fargo 4.6, Barclays 2.8, Navy Federal 2.6. Pre HHI 1,085.49 → post 1,319.48 (Δ 233.99 as shown); C4 55.5 → 64.5.", "src": "S7 slides 2" } ],
+  "quant": [ { "what": "C4, HHI, numbers equivalent, ΔHHI = 2·s1·s2, presumption tests.", "src": "HHI §2-4, Ex.2-3" } ],
+  "crossLinks402": [ { "topic": "C4 and HHI calculations", "note": "402 computes C4/HHI from shares (×10,000 convention when shares are decimals). 401 uses shares in percentage points (30² + 30² + ... = 2,600). Same number, different notation." } ],
+  "gaps": [ "No slides and no case document for S5: the WB/Netflix/Paramount and internet-search questions are answered from the briefs' frameworks; any market shares used in the simulator are labeled as student assumptions.", "Capital One/Discover slide arithmetic inconsistency (22.1 vs. 22.2 combined share)." ]
+}

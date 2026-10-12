@@ -1,0 +1,89 @@
+{
+  "id": "S02",
+  "title": "Structured Problem Solving: Minto's Pyramid Principle",
+  "part": "Communicate: structured reasoning",
+  "keyQuestion": "What is a theory? How do I organize a compelling case?",
+  "keyQuestionSrc": "Canvas S2",
+  "reading": { "name": "Strategic Reasoning with Barbara Minto's Pyramid Principle", "tag": "Minto" },
+  "case": { "name": "Worked examples: Granite Peak, Aldridge, Helios; assignment scenarios Tessera, Verdant, Atlas (graded with the posted Answer Key)", "tag": "Minto Asg" },
+  "slides": "S2 slides (19): SCQA, deductive vs. inductive (Minto), logic trees (profitability, market sizing, drivers), Strategic Logic in-class exercise with key",
+  "framework": {
+    "name": "The two-pyramid (hourglass) model",
+    "summary": "Two pyramids joined at one point, the Answer. The top pyramid is inverted (SCQA) and funnels to the Answer; the bottom pyramid is upright and proves it. If the Answer that ends the introduction and the Answer that heads the support are not the same sentence, the argument is broken.",
+    "components": [
+      { "name": "Situation", "what": "Something the reader already knows and will not dispute: the stable current state. No argument, no tension. Establish common ground.", "src": "Minto §2" },
+      { "name": "Complication", "what": "What has changed or gone wrong (new entrant, shifting margin, regulatory shock, activist). It makes the Situation no longer good enough and creates the need to act.", "src": "Minto §2" },
+      { "name": "Question", "what": "The question the Complication provokes, stated explicitly and narrowly. Vague ('What should we do?') yields vague analysis; sharp ('Should we accept the national distribution deal?') disciplines everything downstream.", "src": "Minto §2" },
+      { "name": "Answer", "what": "The single governing thought: a complete, declarative, falsifiable sentence that directly answers the Question ('Decline the deal and reinvest in DTC', not 'the distribution decision').", "src": "Minto §2" },
+      { "name": "Deductive support", "what": "A chain: major premise (statement about the world) → minor premise (statement about this situation) → therefore. Powerful when tight; reject any one link and the whole chain falls.", "src": "Minto §2" },
+      { "name": "Inductive support", "what": "A group of separate, parallel arguments of the same kind that together justify one summarizing statement. More robust (lose one of three and the case is weakened, not collapsed). Must be parallel and MECE.", "src": "Minto §2" },
+      { "name": "Combined structure", "what": "A deductive spine at the top, each premise supported by an inductive group of parallel evidence beneath it (Helios; Scenario C).", "src": "Minto §2-3" },
+      { "name": "Four quality tests", "what": "Single governing thought; MECE groupings; valid logic (deductive chains follow, inductive groups are truly parallel); 'So what?' (every group summarizes up into the idea above).", "src": "Minto §2" },
+      { "name": "Defeat the competing answer", "what": "State the strongest alternative fairly and dismantle it on its own terms — not a straw man (Helios dismantles 'defend hardware' inductively: three pillars, each knocked down).", "src": "Minto §1, §3" }
+    ]
+  },
+  "terms": [
+    { "term": "Pyramid Principle", "def": "Minto's rule that ideas are easiest to absorb as a pyramid: one governing thought on top, supported by a small number of grouped, logically ordered arguments. Lead with the conclusion, then support it.", "src": "Minto intro" },
+    { "term": "MECE", "def": "Mutually exclusive, collectively exhaustive: ideas in a group don't overlap and don't leave gaps. Coined by Minto.", "src": "Minto intro" },
+    { "term": "SCQA", "def": "Situation, Complication, Question, Answer: the inverted top pyramid that makes the reader feel the question is the right question.", "src": "Minto §2" },
+    { "term": "Governing thought", "def": "The Answer, functioning as the apex of the supporting pyramid.", "src": "Minto §2" },
+    { "term": "Major premise", "def": "In a deductive chain, a statement about the world (e.g., 'All premium brands lose pricing power when sold in discount channels').", "src": "Minto §2" },
+    { "term": "Minor premise", "def": "In a deductive chain, a statement about the related situation (e.g., 'Cartier is a premium brand').", "src": "Minto §2" },
+    { "term": "Topic vs. thought", "def": "'The pricing decision' is a topic; 'Tessera should not adopt usage-based pricing' is a thought. The Answer and every box must be a thought.", "src": "Minto Asg §6" },
+    { "term": "So-what test", "def": "If you can read a group and still ask 'so what?', the summarizing thought is missing.", "src": "Minto §2" },
+    { "term": "Logic tree", "def": "Break a dependent variable into drivers until you reach something you can measure and act on; every level should be MECE (children sum to the parent).", "src": "S2 slides 11" },
+    { "term": "Identity vs. hypothesis", "def": "Sales = price × volume is an identity (always true). 'Market prices are dropping' is a hypothesis about why a term moved and must be checked against evidence.", "src": "S2 slides 13" },
+    { "term": "Key line", "def": "The level directly under the Answer; it states the plan of the document.", "src": "S2 slides 9" }
+  ],
+  "claims": [
+    { "claim": "Clear writing is a by-product of clear thinking; forcing an argument into pyramid form exposes gaps in logic, thin evidence and muddled conclusions before a client sees them.", "src": "Minto intro" },
+    { "claim": "Senior leaders are paid to reach a defensible conclusion and make it persuasive to people with less time and more skepticism, not to gather facts.", "src": "Minto §1" },
+    { "claim": "Deduction: if A and B, then C — reject one link and it falls. Induction: a list of independent supports — drop one and the conclusion mostly stands.", "src": "Minto §2" },
+    { "claim": "Strong deductive writing anticipates and defends its weakest link (Granite Peak's major premise that its advantage is brand and relationship).", "src": "Minto Ex.1" },
+    { "claim": "A common inductive error is slipping a different type of claim into the group ('and the CEO is new and needs time' is about people, not combined value).", "src": "Minto Ex.2" },
+    { "claim": "A counterintuitive Answer raises the burden of proof, which is why a tight deductive form suits it (Helios cannibalizing hardware).", "src": "Minto Ex.3" },
+    { "claim": "Students are graded on the structure and rigor of the argument, not on matching a 'correct' conclusion; different Answers can earn full marks.", "src": "Minto Asg §4; Minto Key" },
+    { "claim": "In logic trees every join is an arithmetic operator (channels add; price × volume multiply). If you cannot name the operator, the branch is not yet a decomposition.", "src": "S2 slides 12 notes" },
+    { "claim": "Split a market into channels first whenever frequency of purchase and price differ substantially; a blended average hides both.", "src": "S2 slides 12" }
+  ],
+  "failures": [
+    { "name": "Topic instead of thought", "what": "An Answer or box that names a subject rather than asserting something.", "src": "Minto Asg §6" },
+    { "name": "Complication with no tension", "what": "If Situation and Complication could both be true with no problem to solve, it isn't the real Complication.", "src": "Minto Asg §6" },
+    { "name": "Mixed groups", "what": "Two types of reason in one inductive group (market + org-culture + financial). Group by type first, then order.", "src": "Minto Asg §6" },
+    { "name": "Deduction with a hidden weak link", "what": "A chain is only as strong as its most disputable premise; name it and defend it before the reader does.", "src": "Minto Asg §6" },
+    { "name": "Ignoring the alternative", "what": "An Answer that never engages the competing factions reads as advocacy, not analysis.", "src": "Minto Asg §6" },
+    { "name": "Evidence as decoration", "what": "Numbers must test or prove a premise; a figure that proves nothing should be cut.", "src": "Minto Asg §6" },
+    { "name": "Not MECE / mixed logic (in-class taxonomy)", "what": "In each answer set one option is well-structured, one is not MECE (overlapping or gappy: 'unprofitable, loses money, negative margins'), and one mixes inductive and deductive logic (a syllogism with unrelated gripes bolted on).", "src": "S2 slides 16" }
+  ],
+  "caseFacts": [
+    { "fact": "Granite Peak ($40M premium outdoor brand): decline the 900-store big-box deal; DTC gross margin ~62% vs. wholesale ~31%, 68% repeat rate, ~35% price premium; contract mandates two 30%-off markdown periods.", "why": "The canonical clean deductive pyramid with evidence under each premise and a named weak link.", "src": "Minto Ex.1" },
+    { "fact": "Aldridge ($600M, EBIT 14%→8%, activist with 6%): reject break-up for three parallel reasons — shared scale ($22M procurement leverage, 4 of 7 plants shared), shared technology (alloys for EV lightweighting), turnaround upside (utilization 9 pts below peers, SKUs +40%).", "why": "The canonical inductive group: same type of claim (value destroyed by separating now), non-overlapping (scale, technology, timing).", "src": "Minto Ex.2" },
+    { "fact": "Helios ($2.5B telematics, 1.2M connected vehicles, 70% hardware revenue): cannibalize hardware; become OEM-neutral data-and-software platform; defeat 'defend hardware' on three pillars.", "why": "The combined structure plus defeating the competing answer.", "src": "Minto Ex.3" },
+    { "fact": "Answer Key, Tessera: Yes — hybrid base-plus-usage pricing with a managed transition; NRR 124%→103%; weak link is the major premise (could be cyclical); full marks require naming and defending it.", "why": "Shows what earns full marks on a deductive scenario.", "src": "Minto Key A" },
+    { "fact": "Answer Key, Verdant: Stay in North America and deepen; three reasons — urgent threat is domestic; advantages don't travel; capital works harder at home. 'Expand to Europe' can earn full marks only if it confronts the capability gap and price war head-on.", "why": "Shows MECE lenses (threat / capability / capital) and what an alternative answer must do.", "src": "Minto Key B" },
+    { "fact": "Answer Key, Atlas: Build AI products on its corpora with a capability partner; strongest competing answer is 'license for cash' (one-time, non-exclusive sale of a depreciating asset; funds own disintermediation); 'withhold and litigate' is a tactic, not a strategy. A 'license the backfile to fund building' hybrid can earn full marks.", "why": "Shows a fair teardown of the strongest faction on its own terms.", "src": "Minto Key C" },
+    { "fact": "Rubric: SCQA 20, logical validity 20, MECE 15, so-what 15, evidence 10, competing answer (C) 10, memo & writing 10. Key's point split: A 30, B 30, C 40.", "why": "Use the rubric to self-grade every pyramid in this site.", "src": "Minto Asg §5; Minto Key" }
+  ],
+  "strongAnalysis": [
+    "What is a theory? A theory is a causal claim that can be tested: a major premise about the world ('durable SaaS growth requires a value-aligned price metric'). Deduction applies a theory to a case; induction builds a conclusion from parallel observations. Every framework in this course (Five Forces, VRIO, the value chain) is a theory you apply deductively to a case.",
+    "How do I organize a compelling case? Lead with the Answer as one falsifiable sentence; choose deductive when the decision turns on one causal claim, inductive when several independent considerations bear on it; put evidence under each premise; name the weakest link; dismantle the strongest competing answer.",
+    "Pick structure by the problem: deductive for a single causal crux (Tessera), inductive for weighing independent considerations (Verdant), combined plus competing-answer for contested, high-stakes choices (Atlas)."
+  ],
+  "counter": {
+    "argument": "Leading with the answer is presumptuous; executives in principles-first cultures (France, Germany per the Culture Map) expect the reasoning before the conclusion, and a rigid pyramid can oversimplify messy problems.",
+    "response": "Minto's argument is about reader capacity — readers hold few ideas at once, so give the conclusion first and the support beneath. The SCQA introduction still walks the reader to the answer. Where the audience is principles-first, keep the pyramid but spend more of the introduction on the governing premise; the structure discipline (MECE, valid logic, so-what) holds either way."
+  },
+  "courseMap": { "text": "Structured reasoning is the way to communicate every answer in the course: each case's Key Question gets an SCQA and a pyramid, and every framework (generic strategies, PEST, Five Forces, VRIO, value chain, scale, differentiation) supplies the major premise of a deductive spine.", "src": "Course design (prompt §6)" },
+  "slideExtras": [
+    { "topic": "SCQA diagram", "detail": "'The introduction tells the reader a story about what he already knows'; the key line gives the answer to the question and indicates the plan of the document.", "src": "S2 slides 9" },
+    { "topic": "Minto's deduction/induction rule of thumb", "detail": "In deduction the second point comments on the first ('Birds fly. I am a bird. Therefore I fly.'); in induction the points are separate but of the same kind ('French/German/Russian/Italian tourists... → Poland is becoming a prime attraction').", "src": "S2 slides 10" },
+    { "topic": "Logic tree: firm profitability", "detail": "Profitability = sales − costs; sales by product = unit price × unit volume; costs = production (R&D, labor, COGS, plant), distribution, SG&A (marketing, selling, overhead). Alternative cut: fixed vs. variable when the question is about operating leverage.", "src": "S2 slides 11" },
+    { "topic": "Logic tree: US ice cream market", "detail": "Market = channel 1 (grocery/convenience) + channel 2 (ice cream stores/restaurants); each = average unit price × total unit volume; volume = population × % who buy × frequency × volume per purchase.", "src": "S2 slides 12" },
+    { "topic": "What drives each driver?", "detail": "Sales = average price × unit volume (identity). Candidate explanations: market prices dropping, mix shift to lower-price products, total demand dropping, share declining (hypotheses to check).", "src": "S2 slides 13" },
+    { "topic": "Strategic Logic in-class exercise", "detail": "Part 1 name the logic (5 items); Part 2 pick the best-structured answer (MapleCo, Brazil, recurring revenue, merger) with a key classifying each option as best / not MECE / mixed logic.", "src": "S2 slides 14-16" },
+    { "topic": "Practice prompts", "detail": "'Temu Range Rover' (JAECOO 7 vs. Range Rover — are they comparable?), 'Why have politics become increasingly uncivil?', 'Does a cold shower every day for 30 days improve health?'", "src": "S2 slides 17-19" }
+  ],
+  "quant": [ { "what": "Market-sizing logic tree arithmetic (population × penetration × frequency × volume × price, by channel).", "src": "S2 slides 12" } ],
+  "crossLinks402": [],
+  "gaps": [ "Slide 16 answer key for item 9(c) is cut off at the slide edge; its classification ('mixed logic') is inferred from the stated pattern (one best, one not MECE, one mixed per set)." ]
+}

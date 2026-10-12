@@ -1,0 +1,78 @@
+{
+  "id": "S04",
+  "title": "Industry II: Five Forces — Where the Profit Goes",
+  "part": "Where profit lives: industry structure",
+  "keyQuestion": "How did Coke structure an industry to give itself a competitive advantage?",
+  "keyQuestionSrc": "Canvas S4",
+  "reading": { "name": "Where the Profit Goes (Five Forces Brief)", "tag": "5F" },
+  "case": { "name": "The US Carbonated Drink Wars in 2026 (Cola Wars Case 2026)", "tag": "Cola" },
+  "slides": "No slides for this session (Canvas). PROVA Case Quiz 1: evaluate the cola CONCENTRATE industry with Five Forces.",
+  "framework": {
+    "name": "Porter's Five Forces",
+    "summary": "Before 'how do we win?' ask 'is this game worth winning?' Structure sets a ceiling on returns that varies roughly seven-fold across industries. Five parties contend for the value an industry creates; suppliers, buyers, entrants and substitutes take their share, and what remains is what rivals compete over. Industry profitability is the residual.",
+    "components": [
+      { "name": "Threat of new entrants", "what": "Not whether anyone entered, but what a determined, well-capitalized entrant would face: scale economies, capital requirements, switching costs, control of distribution, regulation, incumbency advantages money can't buy quickly (data, decades-old brand, installed base) — plus expected retaliation. Most dangerous when latent: 'High returns in an accessible industry are a countdown, not an achievement.'", "src": "5F §3, Ex.1" },
+      { "name": "Supplier power", "what": "Strong when suppliers are more concentrated than the industry, the input is differentiated or has high switching costs, the industry is a minor customer, no substitute exists, or forward integration is credible. Labor is a supplier. Test: for every input that matters, how many qualified alternatives exist and what would it cost to qualify another?", "src": "5F §3, Ex.1" },
+      { "name": "Buyer power", "what": "Strong when buyers are few or buy in volume, the product is undifferentiated, switching costs are low, the purchase is a large share of the buyer's costs, or backward integration is credible. Distribution channels hold buyer power independent of end customers. Power is only partly about size.", "src": "5F §3, Ex.1" },
+      { "name": "Threat of substitutes", "what": "Performs the same function by different means, so it doesn't appear in the industry's competitive set (video calls vs. business travel; index funds vs. active; lab-grown vs. mined). Places a ceiling on price industry discipline cannot lift; wins on a trajectory, so incumbents misjudge timing.", "src": "5F §3, Ex.1-2" },
+      { "name": "Rivalry", "what": "Most destructive with many similar competitors, slow growth, high fixed/low marginal cost, large capacity increments, commodity products, high exit barriers. The DIMENSION matters as much as intensity: price rivalry transfers value to customers; rivalry on features, brand, service can expand value.", "src": "5F §3, Ex.1" },
+      { "name": "Structure vs. position (capital allocation)", "what": "Two axes: attractiveness of structure × strength of position. Attractive/strong: invest and defend. Attractive/weak: harvest or exit (fix fast or sell). Unattractive/strong: milk, or reshape (most commonly misread — cash reinvested into the same structure). Unattractive/weak: exit (the most expensive quadrant, where effort feels virtuous and returns nothing).", "src": "5F §6, Fig.3" },
+      { "name": "Three uses: position, exploit change, reshape", "what": "Position where forces are weakest (segments differ); exploit change in the forces before rivals; reshape the structure (consolidation, switching costs, standards, supplier development, demand creation) — the highest-return move. Name in advance which force an initiative changes and by what mechanism; otherwise it is an operating improvement.", "src": "5F §5" },
+      { "name": "Government and complements", "what": "Not a sixth force (Porter 2008): both operate THROUGH the five. Regulation raising entry costs strengthens barriers; interoperability mandates strengthen buyers; a complement controlled by one powerful party behaves like a powerful supplier.", "src": "5F §7" }
+    ]
+  },
+  "terms": [
+    { "term": "Industry structure", "def": "The configuration of the five forces that sets the ceiling on returns available to any competitor in the industry.", "src": "5F §1" },
+    { "term": "The seven-to-one ceiling", "def": "Porter's 1992-2006 US ROIC data: average 14.9%; security brokers 40.9%, soft drinks and prepackaged software 37.6%, pharma 31.7%, airlines 5.9% — roughly seven to one, persistent for decades.", "src": "5F §1, Fig.2" },
+    { "term": "Profit as residual", "def": "What remains after suppliers (input cost), buyers (price pressure), entrants (added capacity) and substitutes (price ceiling) take their share.", "src": "5F §2" },
+    { "term": "Latent entry", "def": "Entry that hasn't happened yet but caps returns at the level that would attract it.", "src": "5F §3, Ex.1" },
+    { "term": "Expected retaliation", "def": "Entrants model the incumbent's response; a credible history of defense deters entry the arithmetic alone would encourage.", "src": "5F §3" },
+    { "term": "Binding force", "def": "One of the one or two forces that account for most of an industry's structural effect; identifying them is the objective of the analysis.", "src": "5F §6, Ex.1" },
+    { "term": "Concentrate vs. bottling", "def": "The cola industry's vertical split: capital-light, brand-driven, ~31% EBITDA concentrate vs. capital-intensive, 5-10% operating margin bottling.", "src": "Cola" },
+    { "term": "Refranchised model", "def": "Coke and Pepsi sell finished-goods rights to a few large bottlers while keeping national accounts, marketing and product development.", "src": "Cola" }
+  ],
+  "claims": [
+    { "claim": "A competent management team in a structurally poor industry will usually underperform a mediocre one in a structurally good industry; no operating discipline closes that gap.", "src": "5F §1" },
+    { "claim": "Five Forces is a theory of how the value an industry creates gets divided, not a market survey or list of events.", "src": "5F §1" },
+    { "claim": "A profitable product line with a single qualified supplier is not as profitable as it looks: the supplier holds an option on the margin.", "src": "5F §2" },
+    { "claim": "Proposition 1: structure sets the ceiling on returns, the ceiling varies by roughly a factor of seven, and no operating program lifts it; the decision to compete in an industry is larger than any decision made within it.", "src": "5F §9" },
+    { "claim": "Proposition 2: the framework earns its keep used comparatively and converted into a decision: name the one or two binding forces, state which way they're moving, specify what would have to change.", "src": "5F §9" },
+    { "claim": "Proposition 3: structure can be shaped, and the returns to shaping it exceed the returns to performing well within it; know which conditions were built rather than found, because anything built can be dismantled.", "src": "5F §9" },
+    { "claim": "A business generating strong cash in a structurally deteriorating industry is a source of funds, not a use; the burden of proof on reinvestment should be high.", "src": "5F §6" },
+    { "claim": "The diamond industry manufactured both scarcity and the social norm that supported its prices — the most complete example of structural engineering, and a reminder a manufactured structure can be dismantled.", "src": "5F §5" }
+  ],
+  "failures": [
+    { "name": "Defining the industry incorrectly", "what": "The most common and consequential error. Too broad averages away different structures; too narrow excludes substitutes and entrants by definition. Test: do firms inside the boundary face the same forces and readily serve each other's customers? Boundaries are geographic too.", "src": "5F §4" },
+    { "name": "Mistaking growth for attractiveness", "what": "Growth is not a force; it often attracts entry and capacity faster than demand (airlines, solar modules, food delivery, streaming). Ask what growth does to each force.", "src": "5F §4" },
+    { "name": "Confusing your position with the industry's structure", "what": "A strong competitor in a poor industry concludes the industry is fine. Structure = what returns are available; position = what share you capture.", "src": "5F §4" },
+    { "name": "Treating the analysis as a snapshot", "what": "Run it at two points in time; a force weak today and strengthening is the one to act on.", "src": "5F §4" },
+    { "name": "Adding a sixth box", "what": "Resist adding government or complements; identify which of the five a factor operates through. That answer is actionable; a sixth box is not.", "src": "5F §7" }
+  ],
+  "caseFacts": [
+    { "fact": "Concentrate per-case economics (2025): sales $1.30, COGS $0.30 (23.1%), gross profit $1.00 (76.9%), advertising $0.28 (21.5%), G&A $0.32 (24.6%), EBITDA $0.40 (30.8%).", "why": "The 'extraordinarily profitable' half of the chain; contrast with bottling at 5-10% operating margins, ROIC often below the cost of capital.", "src": "Cola Ex.2" },
+    { "fact": "A concentrate plant for 10% of the market costs $35-70M (<1% of a year's concentrate sales at 10% share); a bottling plant costs $300-750M for 250-500M cases; ~3 plants for 10% share = $1,575M; total entry ~$1,628M if a niche entrant can't access refranchised networks.", "why": "The entry barrier isn't the concentrate plant — it's access to bottling/distribution (which Coke and Pepsi control).", "src": "Cola Ex.3" },
+    { "fact": "Shares 2025: Coca-Cola 46%, PepsiCo 25%, KDP 22%, private label ~3%, all others ~4% (functional soda ~1-1.5% of volume). Big three ~90%+ of volume.", "why": "Concentrated rivalry; C4 ≈ 96 (three firms + private label). Rivalry has historically been on advertising/brand, not price.", "src": "Cola Ex.4" },
+    { "fact": "Coke raised US concentrate prices 5-7% a year 2021-2024 with volume declines under 1% a year.", "why": "Pricing power evidence: buyers (bottlers, retailers) and substitutes did not cap price — yet.", "src": "Cola" },
+    { "fact": "Exclusive bottler territories and 10-20 year fountain exclusives (McDonald's/BK/Wendy's = Coke; Yum!/Subway = Pepsi); PepsiCo bought Pizza Hut (1977), Taco Bell (1978), KFC (1986) partly to secure fountain sales. A 20-oz cold bottle returns 5-7x the per-ounce margin of a supermarket 12-pack.", "why": "How the concentrate producers structured the chain: control distribution and channels, keep the high-margin layer, push capital intensity onto bottlers.", "src": "Cola" },
+    { "fact": "Per-capita CSD consumption fell from 53 gallons (1998 peak) to 28 (2025); dollar sales still grew 2-4% a year on mix and price.", "why": "Direction of the substitute force: water ($36B→$58B), energy ($12B→$24B), RTD coffee/tea, and functional soda (<$0.1B → $1.2B, 50%+ growth) are all moving against CSDs.", "src": "Cola; Ex.1; Ex.5" },
+    { "fact": "PepsiCo bought poppi for $1.95B (~20x revenue) in 2025 after its internal SoulBoost failed; Coke discussed acquisitions; PepsiCo paid $550M for 8.5% of Celsius and distribution rights.", "why": "Incumbents responding to entry via niches by buying rather than building (links to Cracking Markets §7).", "src": "Cola" },
+    { "fact": "Regulatory front: SNAP waivers restricting soda (Nebraska May 2025; 18 states ~28% of SNAP recipients by Q1 2026; 1.5-3% volume hit in affected states), front-of-pack warnings, dye phase-outs, municipal sugar taxes; Mexico's 2014 tax cut consumption 7.6% in year one.", "why": "Government operating THROUGH the forces: lowers demand and strengthens substitutes rather than acting as a sixth force.", "src": "Cola; 5F §7" },
+    { "fact": "Dr Pepper became the #2 single brand (tied in 2023 at 8.34% vs. Pepsi 8.31%; clear #2 by 2024) partly by riding Coke and Pepsi bottlers who carry it because it isn't a cola.", "why": "Shows the distribution system as the moat and how a non-cola can use incumbents' networks.", "src": "Cola" }
+  ],
+  "strongAnalysis": [
+    "Define the industry correctly first: concentrate production (US), not 'beverages' and not bottling — they face very different forces (PROVA Quiz 1 asked about concentrate).",
+    "Concentrate THEN: entry low threat (barrier is bottling/distribution access and brand, plus retaliation), suppliers weak (commodity inputs: sweetener, caramel, packaging), buyers (bottlers) weak because Coke/Pepsi granted exclusive territories and controlled them, substitutes weak-to-moderate, rivalry intense but on advertising not price → very high returns (soft drinks 37.6% ROIC).",
+    "How Coke structured it: kept the capital-light, brand-heavy layer; pushed capital intensity to bottlers; used exclusive territories and refranchising to control the buyer force; locked fountain channels with long exclusives; competed with Pepsi on brand rather than price; built distribution density no entrant could replicate.",
+    "Concentrate NOW (direction): substitutes strengthening fast (water, energy, functional soda), regulators/government acting through demand and substitutes, consumer shift; entry via niches (poppi/Olipop) succeeding because they avoid incumbents' channels; buyer power of retailers rising in take-home. Binding forces: substitutes and (through them) rivalry for the consumer occasion.",
+    "Capital allocation: strong position in a deteriorating structure → 'milk, or reshape' — use CSD cash to reshape (functional and energy portfolios) rather than reinvest into the same structure (5F Fig.3)."
+  ],
+  "counter": {
+    "argument": "Coke's advantage is its brand, not industry structure — the brand would earn premium margins in any structure (a VRIO resource), so Five Forces overstates the role of structure.",
+    "response": "Both are true and they answer different questions (structure vs. position, 5F §4). Five Forces explains why the whole concentrate layer (including Pepsi and KDP) earns ~30% while bottling earns 5-10% — the same brands, different structure. Coke's brand explains its share of the concentrate pool. And the brand's value depends on structural choices: exclusive bottlers and channel control are what keep buyers weak and entrants out."
+  },
+  "courseMap": { "text": "Where profit lives: Five Forces sets the ceiling; PEST (S3) tells you which forces are about to move; concentration (S5) measures one input to rivalry; generic strategies (S1) are the firm's answer to the forces; VRIO (S6) explains position within the structure.", "src": "5F §2, §6; Porter §9" },
+  "slideExtras": [],
+  "quant": [ { "what": "Concentrate per-case P&L and margin percentages.", "src": "Cola Ex.2" }, { "what": "Entry capex arithmetic: 3 plants × $525M + $53M = $1,628M.", "src": "Cola Ex.3" }, { "what": "Shares → C4/HHI of the CSD industry (links to S5).", "src": "Cola Ex.4" } ],
+  "crossLinks402": [ { "topic": "Five Forces rated 1-5 with evidence (Five Forces Excel Tool)", "note": "402 rates forces numerically; 401 emphasizes direction, binding forces and reshaping." } ],
+  "gaps": [ "Case internal inconsistency: text says 12.5B cases at the 2004 peak and a decade of decline; Exhibit 1 shows 10,300M cases in 2000 and volume rising 2020-2026E to 9,547M. Taught as written, both cited.", "Text gives advertising as ~22% of revenue; Exhibit 2 shows 21.5%.", "No slides were posted for S4; PROVA questions are not available — the oral drill is written from the PROVA prompt only and is labeled as practice, not PROVA's questions." ]
+}

@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "e2e": "npm run build && playwright test",
-    "ingest": "python3 -I scripts/ingest.py && python3 -I scripts/contact.py && python3 -I scripts/parse_quizzes.py && python3 -I scripts/build_map.py && vitest run tests/unit/coverage.test.ts"
+    "ingest": "python3 -I scripts/ingest.py && python3 -I scripts/contact.py && python3 -I scripts/parse_quizzes.py && python3 -I scripts/build_map.py && vitest run tests/unit/coverage.test.ts",
+    "ingest:401": "python3 -I scripts/strat401/ingest.py && python3 -I scripts/strat401/build_map.py"
   },
   "dependencies": {
     "katex": "^0.19.0",

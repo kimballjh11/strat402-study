@@ -1,0 +1,14 @@
+/* STRAT 401 look: same accessible base as the site, its own accent so the two courses never blur together. */
+.s401 {
+  --accent: #0f5b5f;
+  --accent-ink: #ffffff;
+}
+.dark .s401 {
+  --accent: #6fc9c6;
+  --accent-ink: #0d1420;
+}
+.s401 .rich p { margin: .5rem 0; }
+.s401 .reading { max-width: 70ch; }
+@media print {
+  .s401 .card { break-inside: avoid; }
+}

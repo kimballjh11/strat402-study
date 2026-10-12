@@ -1,0 +1,70 @@
+{
+  "id": "S10",
+  "title": "Differentiation II: Beyond-Product (Alternative) Differentiation",
+  "part": "How it wins: differentiation",
+  "keyQuestion": "Is beyond-product differentiation better or worse than product differentiation?",
+  "keyQuestionSrc": "Canvas S10",
+  "reading": { "name": "Differentiation Brief (re-read) — no new brief for this session", "tag": "Diff" },
+  "case": { "name": "A More Company: Valuation or Value Creation", "tag": "More Co" },
+  "slides": "No slides for this session (Canvas). The last S9 slide shows the Clegg Auto / A More Company logo.",
+  "framework": {
+    "name": "Beyond-product differentiation, judged with the Differentiation Brief",
+    "summary": "Product differentiation raises WTP through the offering itself (performance, features). Beyond-product differentiation raises WTP — or lowers cost — through what surrounds the product: the people who deliver it, the trust they earn, the ownership and governance that make promises credible, the community and movement around the firm. Judge it with the same tests: does the buyer perceive and pay, which source of WTP is it, which durability mechanism protects it, and where does the gain land?",
+    "components": [
+      { "name": "People as the differentiation engine", "what": "Porter's third engine: 'people, where the encounter is the product' (Ritz-Carlton, Chick-fil-A, USAA, Nordstrom). Clegg's theory: a business that helps a person progress toward what they want produces an employee who cares, who produces work customers value.", "src": "Porter §4; More Co" },
+      { "name": "Trust in a market the buyer cannot verify", "what": "Auto repair is a trust/credence business: 'customers cannot verify the work and must believe the person recommending it.' The brief's own example: 63% of US drivers don't trust repair shops, 64% say they've found one they do.", "src": "More Co; Diff §2" },
+      { "name": "Credible commitment through structure", "what": "A perpetual purpose employee ownership trust: the company can never be sold; liquidation goes to charity; five purposes are legally permanent. 'A firm that can walk back a commitment has not made one' — the trust converts a promise into a structure rivals (PE roll-ups) won't sign.", "src": "More Co; Diff §7" },
+      { "name": "Social complexity and causal ambiguity", "what": "An operating culture of 'genuine care' lived in thousands of small moments is socially complex and hard to specify — hard to copy, but also hard to build and verify.", "src": "Diff §7; VRIO §4; More Co" },
+      { "name": "Where the gain lands", "what": "Engaged, experienced technicians → fewer comebacks, more honest tickets, reputation that fills bays without advertising. Some of that lands in price/volume (WTP); some lands in cost (lower turnover, rework, marketing) — and 'a gain that shows up entirely in cost is an operating improvement, not differentiation.'", "src": "More Co; Diff §3, §8" },
+      { "name": "Three networks", "what": "Movement (idea; weakest economic case; low cost to run), community (shared place; moderate), vertical (operational overlap; strongest, direct and measurable; high cost). Failure modes: enthusiasm without practice; stays a chamber of commerce; members join for savings and skip the idea.", "src": "More Ex.4" }
+    ]
+  },
+  "terms": [
+    { "term": "Perpetual purpose employee ownership trust", "def": "A trust that holds the operating businesses permanently for the benefit of employees; can never be sold; ten percent of profits to charity; liquidation proceeds go to charity.", "src": "More Co" },
+    { "term": "ESOP", "def": "Employee stock ownership plan: a retirement trust holding company stock; employees accumulate shares and the company must repurchase them at appraised value when they leave (6,411 US ESOP companies, 15.1M participants, 2023). Clegg's objection: it points everyone at valuation, not value creation, and repurchase obligations and outside offers can force a sale.", "src": "More Co; Ex.5" },
+    { "term": "The MORE idea", "def": "Begin with the person's life, then career, then the company; 'the structure is downstream; it protects the idea.'", "src": "More Co; Ex.1" },
+    { "term": "Very next step", "def": "Clegg's operating shift: help each person turn a large goal into a step measured in days or weeks; replaced the formal monthly one-on-one with frequent, informal contact plus a monthly manager mastermind.", "src": "More Co" },
+    { "term": "Five purposes", "def": "Keep It Evergreen; Own This Together; Dare To Care; Pay It Forward (≥10% of distributable profits); Expand The Circle.", "src": "More Ex.2" },
+    { "term": "The governing number", "def": "Private equity roll-up: valuation. Trust model: value creation.", "src": "More Ex.3" }
+  ],
+  "claims": [
+    { "claim": "Clegg's theory of value is a claim about causation, not morale: investing in what the person is trying to build → an employee who cares → products and service customers value.", "src": "More Co" },
+    { "claim": "When an investor owns the butcher shop, the butcher holds no residual claim on the value created; gains flow to financial owners while risks (layoffs) stay with workers.", "src": "More Co" },
+    { "claim": "A coaching program depends on managers, and managers leave; the goal is an operating culture where self-management and genuine care are simply how the place runs.", "src": "More Co" },
+    { "claim": "Exhibit 3 tradeoffs: the trust model's source of operating advantage is engagement (tenure, trust, service quality, reputation) vs. PE's scale, consolidation, pricing power and cost reduction; its failure modes are slow growth, founder dependence and capital starvation (it cannot sell equity).", "src": "More Ex.3" },
+    { "claim": "Differentiation only counts if the buyer perceives it and pays (or is willing to pay) for it.", "src": "Diff §1" },
+    { "claim": "In credence markets differentiation cannot be demonstrated, only signaled, and the signals carry real economic weight; reputation pays — a one-star rating increase raised revenue 5-9%, entirely among independents (zero for chains).", "src": "Diff §2, Ex.3" }
+  ],
+  "failures": [
+    { "name": "Perceived but not paid", "what": "Employee care that customers never experience as a reason to pay more or come back is a cost, not differentiation.", "src": "Diff §1" },
+    { "name": "Gain lands only in cost", "what": "If engagement shows up only as lower turnover/rework, it is an operating improvement (still valuable, but a different advantage).", "src": "Diff §8" },
+    { "name": "Uneven practice", "what": "About a quarter of the workforce consistently in the conversations; the practice is 'real, uneven and unfinished'.", "src": "More Co" },
+    { "name": "Three internal objections", "what": "Managers lack the skill; employees believe the company has no business in their personal life; production demands crowd out the work.", "src": "More Co" },
+    { "name": "Capital starvation / founder dependence", "what": "The trust cannot raise equity; growth from cash flow and debt only; Clegg 'has never been busier'.", "src": "More Ex.3; More Co" }
+  ],
+  "caseFacts": [
+    { "fact": "2022: four operating businesses moved into a perpetual purpose employee ownership trust; owners (Kevin included) were paid in a negotiated sale to the trust — 'the owner still gets an exit'.", "why": "The structure is a credible commitment that employees and mission will never be subordinated to a future owner.", "src": "More Co; Ex.6" },
+    { "fact": "First full fiscal year (2023): employee profit distributions rose from ~$40,000 to ~$400,000, without raising prices.", "why": "Ambiguous evidence: profit grew without price moving — per the brief's diagnostic, that gain landed in cost/volume, not a price premium.", "src": "More Co; Ex.6" },
+    { "fact": "Summer 2026: best revenue month in company history; about a quarter of the workforce consistently making progress on what matters most.", "why": "Early, correlational evidence; the case cautions the 25% figure is easy to misread.", "src": "More Co; Ex.6" },
+    { "fact": "Gallup H1 2026: 31% of US employees engaged, 51% not engaged, 18% actively disengaged (global: 20/64/16).", "why": "The 'zombie worker' problem the idea targets — and the size of the gap a genuinely engaged workforce could exploit.", "src": "More Co; Ex.5" },
+    { "fact": "Holub (regenerative farming) and Felser (Class B camper vans) changed their companies after a conversation about the idea, not the structure.", "why": "Suggests the idea travels across industries (movement network) — but conversion takes many conversations.", "src": "More Co; Ex.4" },
+    { "fact": "Clegg's three goals: deepen the practice in the shops (prove it works with blue-collar employees at full coverage), launch the movement, build the networks (movement, community, vertical).", "why": "The decision on the table: sequence and focus of scarce founder attention.", "src": "More Co; Ex.4" },
+    { "fact": "51% of owners of employer businesses are 55 or older; small businesses that outlive founders are increasingly sold to PE roll-ups (buy low, cut costs, consolidate, raise prices, exit).", "why": "The supply of founders facing the exit decision — the market for the model.", "src": "More Co; Ex.5" }
+  ],
+  "strongAnalysis": [
+    "Define terms: product differentiation = the offering itself is better on a dimension buyers value; beyond-product = WTP from the people, trust, ownership and community around the offering (Porter's 'people' engine; the brief's 'trust' and 'identity' sources).",
+    "Better (durability): beyond-product differentiation tends to rest on social complexity, causal ambiguity, path dependence and credible commitment — the four mechanisms that make a premium last — whereas product features are routinely copied (Casper) or normalized (Peloton). A perpetual trust is a commitment a PE-owned rival will not sign.",
+    "Better (fit to the market): in a credence business like auto repair, the product can't be verified, so trust IS the product; honest tickets and fewer comebacks are exactly what the buyer pays for.",
+    "Worse (measurability and verification): the payoff lives in customers' heads and is slow; the case's evidence is mostly cost/volume ($40k → $400k distributions without price increases; best revenue month), not a demonstrated price premium. It's hard to scale (one conversation at a time; 25% coverage), founder-dependent, and capital-constrained.",
+    "Judgment: beyond-product differentiation is more durable but harder to build and prove; it is 'better' where the product is a credence good and the encounter is the product, and only if the firm can show the premium or retention in the accounts. Clegg's sequencing logic: deepen the practice first — a claim that it works anywhere is worth little until it works everywhere in one place."
+  ],
+  "counter": {
+    "argument": "Beyond-product differentiation is just good management (operational effectiveness): engaged employees lower turnover and rework — that's a cost improvement any well-run shop can copy, not a strategy.",
+    "response": "Partly right — the brief says a gain that lands only in cost is an operating improvement. But the case's mechanism is trust in a credence market (honest tickets, reputation that fills bays), which lands in WTP and volume. What rivals can't copy is not 'be nice to employees' but the bundle: a structure that can't be sold, a culture lived across thousands of small moments, and years of accumulated reputation (path dependence + social complexity + credible commitment). The burden is on Clegg to show it in retention, comebacks and price realization."
+  },
+  "courseMap": { "text": "Extends S9's differentiation from product to people, trust and governance; connects to VRIO's imitability barriers (S6) and to S11's question of whether a firm can win on both cost and WTP (engagement can do both).", "src": "Diff §7; VRIO §4; Porter §7" },
+  "slideExtras": [],
+  "quant": [ { "what": "Profit distributions ~10x ($40k → $400k) without price increases.", "src": "More Co" } ],
+  "crossLinks402": [],
+  "gaps": [ "No slides and no theory brief specific to S10; the session is built from the A More Company case plus the Differentiation Brief, Porter paper and VRIO brief. Flagged in the gap report.", "The case does not use the phrase 'beyond-product differentiation'; the definition used here is the site's synthesis from the Key Question and the briefs (labeled)." ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "S11",
+  "title": "Dual Advantage: Cost and Differentiation Together",
+  "part": "How it wins: both",
+  "keyQuestion": "How can a firm have both a low-cost and a differentiation advantage? What share of Costco's advantage comes from cost and what share from differentiation?",
+  "keyQuestionSrc": "Canvas S11",
+  "reading": { "name": "No new brief: Porter §7 (hybrid objection and productivity frontier) + Differentiation Brief + cost briefs", "tag": "Porter / Diff" },
+  "case": { "name": "Costco vs Sam's Club: The Fight Clubs or the Clubs Fight", "tag": "Costco" },
+  "slides": "Session 11 slides are not in the export (Canvas lists 'Slides: Session 11' with no file).",
+  "framework": {
+    "name": "Dual advantage, tested against the hybrid objection",
+    "summary": "Porter says advantage comes in two forms and a position requires trade-offs. The hybrid objection points to firms that seem to win on both. Porter's resolution: (1) many 'hybrids' are operational effectiveness misread as position; (2) genuine dual advantage occurs when a business-model innovation shifts the productivity frontier — real while it lasts; (3) most apparent hybrids are ONE strategy whose trade-offs happen to please customers. The practical test is 'what does this firm refuse to do?'",
+    "components": [
+      { "name": "Value stick with both ends moving", "what": "Dual advantage = raising WTP above rivals AND lowering cost below them at the same time; the wedge widens from both ends.", "src": "Diff §1; Porter §2" },
+      { "name": "Operational effectiveness vs. frontier shift", "what": "Being better on both dimensions may just mean being nearer a frontier every rival can reach; a model that shifts the frontier (Toyota) creates real dual advantage that eventually diffuses.", "src": "Porter §7, Fig.4" },
+      { "name": "One strategy with fortunate side effects", "what": "Southwest's cost choices also pleased customers; the proof is what it refused. Apply the same test to Costco: limited SKUs (<4,000), pallets, few promotions, willingness to stop selling Coca-Cola, single Kirkland brand.", "src": "Porter §7; Costco" },
+      { "name": "Where profit lands (decomposition)", "what": "Split operating income into merchandise operations (gross margin − SG&A) and membership fees. Then ask which part of the gap to Sam's comes from lower cost and which from higher WTP (higher fee members pay and renew, more spend per member and per warehouse).", "src": "Costco Ex.1, Ex.3 (site construction)" },
+      { "name": "Premium tests applied to membership", "what": "Price (Costco's fee is higher: $65/$130 vs. $60/$120), volume at parity (revenue per unit roughly double), retention (renewal 92.3% US & Canada), elasticity (fee raised Sept 2024; fee income +14% in a quarter with the increase a little under half of that).", "src": "Diff §3; Costco" }
+    ]
+  },
+  "terms": [
+    { "term": "Dual advantage", "def": "Simultaneously holding a cost advantage and a WTP advantage over rivals.", "src": "Canvas S11; Porter §7" },
+    { "term": "Hybrid objection", "def": "The criticism that some firms run low cost and high differentiation at once (Toyota, IKEA, Zara, Amazon, Southwest, Trader Joe's).", "src": "Porter §7" },
+    { "term": "Membership fee income", "def": "Costco $5,323M in FY2025 (Sam's discloses only 'membership and other income', $2,525M FY2026).", "src": "Costco Ex.1, Ex.3, Ex.6" },
+    { "term": "Low-margin retailer", "def": "Sol Price's self-description: start with product cost and mark up as little as possible so gross margin covers selling costs and leaves a small profit.", "src": "Costco" },
+    { "term": "Markup rule (reported)", "def": "No branded item marked up more than 14%, no Kirkland item more than 15% — reported in 2005, never in a filing.", "src": "Costco" }
+  ],
+  "claims": [
+    { "claim": "Apparent hybrids usually turn out to be one strategy whose trade-offs please customers; genuine dual advantage needs a business-model innovation that shifts the frontier, and it is real while it lasts.", "src": "Porter §7" },
+    { "claim": "A firm that can name three things rivals do that it deliberately won't do has a position.", "src": "Porter §7" },
+    { "claim": "Costco's merchandise operations earn gross margin (11.12%) above SG&A (9.25%) — a positive 1.87% of net sales — and membership fees ($5,323M) are about 51% of operating income ($10,383M).", "src": "Costco Ex.1 (computed)" },
+    { "claim": "Sam's Club: operating income ($2,442M) minus membership and other income ($2,525M) = −$83M, so its gross margin roughly equals (slightly below) its operating expenses — essentially all of Sam's profit comes from fees and other income.", "src": "Costco Ex.3 (computed; case Assignment Q2)" },
+    { "claim": "Sinegal on wages: 'This is not altruistic. This is good business.' On horizon: 'We want to build a company that will still be here 50 and 60 years from now.'", "src": "Costco" },
+    { "claim": "Kirkland's function per Costco's CMO: 'a tremendous negotiating tool.'", "src": "Costco" }
+  ],
+  "failures": [
+    { "name": "Calling operational effectiveness a hybrid", "what": "If Costco's edge were only better practice, Sam's (with Walmart's buying power) could reach the same frontier.", "src": "Porter §7" },
+    { "name": "Buying power that doesn't show up", "what": "Sam's buys alongside a $706B parent yet earns nothing on merchandise — scale in bargaining is the weakest scale mechanism (Scale brief) and Sam's vendor relationships are described as poor (K7 Design judgment).", "src": "Costco; Scale 'Bargaining'" },
+    { "name": "Non-comparable data", "what": "Fiscal years differ; Costco reports total employees, Sam's frontline only; Sam's 'membership and other income' includes other income; Costco square footage is approximated.", "src": "Costco Ex.4 notes" },
+    { "name": "Strategy that tracks the rival", "what": "Sam's leadership turned over five times since 2005; its plan (double members, remodel all clubs, 15 new clubs/yr) produced 2 net clubs in 16 months while Costco opened ~10x that.", "src": "Costco" }
+  ],
+  "caseFacts": [
+    { "fact": "Costco FY2025: net sales $269,912M, membership fees $5,323M, total revenue $275,235M, merchandise costs $239,886M, SG&A $24,966M, operating income $10,383M, net income $8,099M; gross margin 11.12% and SG&A 9.25% of net sales.", "why": "The inputs for the decomposition and the per-warehouse income statement (Assignment Q1-Q2).", "src": "Costco Ex.1" },
+    { "fact": "Sam's FY2026 (Jan 2026): net sales $93,015M, membership and other income $2,525M, operating income $2,442M, 601 clubs, 80,502k sq ft. Walmart does not disclose Sam's gross profit or operating expenses.", "why": "What you can infer: GM% − Opex% ≈ −0.09% of net sales.", "src": "Costco Ex.3" },
+    { "fact": "Per unit: Costco US $318.0M revenue per warehouse vs. Sam's $159.0M; revenue per sq ft ~$2,164 vs. $1,187; employees per unit 355 vs. 166; revenue per employee $897k vs. $955k (definitions differ).", "why": "Roughly double the throughput per box — a 'volume at parity' signal of higher WTP and a driver of lower unit cost (fixed box cost spread over twice the sales).", "src": "Costco Ex.4" },
+    { "fact": "Wages: Costco ~$32.00/hr average, starting ≥$20.00, 94% retention after one year; Sam's average frontline >$19 (Nov 2024), turnover undisclosed.", "why": "Costco pays more yet runs lower SG&A% — wages buy productivity and retention (a cost advantage built on the people engine).", "src": "Costco" },
+    { "fact": "Membership: Costco $65 / $130 Executive (raised Sept 2024); 81.0M paid members (82.9M by May 2026); 38.7M Executive members = ~73.6% of worldwide net sales; renewal 92.3% US & Canada, 89.8% worldwide. Sam's $60 / $120 (raised May 2026); discloses none of these.", "why": "WTP evidence: members pay more for the right to shop and renew at very high rates.", "src": "Costco Ex.6" },
+    { "fact": "Assortment: Costco <4,000 SKUs in warehouse (9,000-10,000 online); Sam's ~4,000 in club (~20,000 online). Kirkland ~600 products, ~28% of sales (2022); Member's Mark ~30% (press estimate), consolidated from ~20 brands in 2017 — 22 years after Kirkland.", "why": "Similar formats — the difference is execution, discipline and time.", "src": "Costco; Ex.4" },
+    { "fact": "Signature items: $1.50 hot dog since the mid-1980s (built hot dog plants rather than raise the price; ~200M sold in FY2023); $4.99 rotisserie chicken (willing to give up $30-40M of margin; built a poultry operation); stopped selling Coca-Cola in 2009 over pricing; ended Amex exclusivity in 2015.", "why": "Credible commitments to low prices and willingness to refuse — passes Porter's trade-off test.", "src": "Costco" },
+    { "fact": "Comparable sales: Sam's ex-fuel slowed from 7.0% to ~3.8-4.4%; Costco US adjusted held 5.9-8.6%. Sam's Q2 FY27 operating income $678M was helped by tariff refunds; prior-year figure restated without explanation.", "why": "Momentum and disclosure quality both favor Costco.", "src": "Costco Ex.5" },
+    { "fact": "Leadership: Costco CEOs Sinegal (28 yrs), Jelinek (12), Vachris (40+ yrs at Costco, started as a forklift operator); CFO Galanti ~40 yrs. Sam's: McMillon, Furner, McLay, Nicholas since 2005.", "why": "Consistency test: Costco's incentives, hiring and capital allocation have pointed the same way for decades.", "src": "Costco" }
+  ],
+  "strongAnalysis": [
+    "How a firm can have both: Costco's cost advantage (low SG&A%, few SKUs, pallets, huge volume per SKU and per box) funds low markups; low prices + Kirkland quality + high-wage, low-turnover staff raise members' WTP (they pay a higher fee, renew at 92%, and spend more per visit); higher volume per box lowers cost further. The two sides reinforce each other — a business model that shifted the frontier (Porter §7, part 2) built from choices made for cost whose trade-offs customers love (part 3).",
+    "Decompose Costco's operating income: ~49% from merchandise operations (GM 11.12% − SG&A 9.25% = 1.87% of sales ≈ $5,060M) and ~51% from membership fees ($5,323M). Fees are the purest measure of WTP for the 'right to shop'; the merchandise spread is where cost efficiency shows up (prices low enough that the margin barely covers SG&A).",
+    "Versus Sam's: Sam's merchandise spread is ≈ 0 (−$83M), so its whole profit is fees and other income. Costco's lead over Sam's sits mostly in merchandise operations (cost per dollar of sales and throughput per box) plus a fee/renewal premium. A defensible answer to 'what share?': state assumptions — e.g., treat the fee premium and the throughput premium (sales per warehouse at parity) as differentiation, and the SG&A-rate gap as cost — then compute (the site's decomposition tool makes each assumption adjustable).",
+    "Answer Q5 (higher fee, higher wages, lower shelf prices all true): fees carry about half the profit, letting markups stay tiny; high wages buy productivity and retention so SG&A per dollar stays low; and throughput per box is roughly double, spreading fixed cost.",
+    "Answer Q4 (Walmart's buying power doesn't help Sam's much): bargaining is the weakest scale mechanism, Costco's volume per SKU (concentrated on <4,000 items) rivals Sam's even at lower total company size, Kirkland is a negotiating tool, and Sam's lacks the consistency (leadership turnover, poor vendor relations) to exploit the parent's scale — an Organization problem in VRIO terms."
+  ],
+  "counter": {
+    "argument": "Costco has no differentiation advantage — it's a pure cost leader. The 'WTP' is just low prices; members pay the fee because the savings exceed it, not because they value Costco more.",
+    "response": "Porter would partly agree (one strategy, fortunate side effects). But the evidence of WTP above Sam's at near-equal prices is in the accounts: a higher fee, 92% renewal, Executive members (~74% of sales) paying $130, and roughly double sales per warehouse — the brief's 'volume at parity' and 'retention' tests. Kirkland quality and trust (credible commitments like the $1.50 hot dog) raise WTP independent of price. The honest answer: the advantage starts as cost and converts into WTP; the split depends on assumptions you must state."
+  },
+  "courseMap": { "text": "Session 11 closes the 'how it wins' arc: cost (S7-S8), differentiation (S9-S10), both (S11), tested against the generic strategies frame and the hybrid objection (S1).", "src": "Porter §7, §9" },
+  "slideExtras": [],
+  "quant": [
+    { "what": "Per-warehouse income statement for an average US Costco and Sam's Club (Assignment Q1): revenue per unit, implied costs, assumptions stated.", "src": "Costco Ex.1-4" },
+    { "what": "Merchandise spread vs. membership share of operating income for each company.", "src": "Costco Ex.1, Ex.3" },
+    { "what": "Revenue per sq ft, per employee, employees per unit (Exhibit 4 computations).", "src": "Costco Ex.4" }
+  ],
+  "crossLinks402": [ { "topic": "Two-part pricing (membership fee + low per-unit price)", "note": "402's advanced pricing covers two-part pricing and block pricing — the economics of the warehouse-club fee." } ],
+  "gaps": [ "Session 11 slides are missing from the export; the session is built from the case, the Porter paper's hybrid section, and the differentiation/cost briefs. Check inputs/strat401/later/.", "The cost-vs-differentiation split is not computed anywhere in the materials; the site's decomposition is a labeled construction with adjustable assumptions." ]
+}

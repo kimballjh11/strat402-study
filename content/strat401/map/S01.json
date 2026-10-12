@@ -1,0 +1,104 @@
+{
+  "id": "S01",
+  "title": "What Is Strategy? Porter's Generic Strategies",
+  "part": "Frame: generic strategy",
+  "keyQuestion": "Can Southwest move to differentiation without destroying its low-cost advantage?",
+  "keyQuestionSrc": "Canvas S1",
+  "reading": { "name": "Porter's Generic Strategy Framework (white paper)", "tag": "Porter" },
+  "case": { "name": "Southwest Airlines: Fixing the Revenue Problem (\"In Need of a Fix\")", "tag": "Southwest" },
+  "slides": "S1 slides (13): 2x2, value stick, Walmart and Louis Vuitton activity systems, 'Can you compete in the middle?'",
+  "framework": {
+    "name": "Porter's generic strategies",
+    "summary": "Two questions produce four positions. Source of advantage: lower cost or higher willingness to pay (only two kinds exist). Scope: whole market or a narrow slice. A position requires a sacrifice; one that requires none 'is not a position; it is a wish.'",
+    "components": [
+      { "name": "Cost leadership", "what": "Lowest-cost producer serving a broad market. Room for exactly one: a shared cost advantage is no advantage and ends in a price war. Sources: scale, experience, and above all structure (business-model design).", "src": "Porter §3" },
+      { "name": "Differentiation", "what": "Unique on dimensions buyers value, charging a premium that exceeds the cost of the uniqueness. Three engines: technology/product, process (selling certainty), people (the encounter is the product).", "src": "Porter §4" },
+      { "name": "Cost focus", "what": "Lowest cost within a segment, not the industry (Aravind, Dollar General, Spirit, Grameen).", "src": "Porter §5" },
+      { "name": "Differentiation focus", "what": "Uniqueness within a segment (Ferrari, In-N-Out, USAA, Patagonia).", "src": "Porter §5" },
+      { "name": "Focus is not a third kind of advantage", "what": "It is one of the first two pursued inside a deliberately narrow segment; the focuser wins because the broad competitor is compromised by serving everybody.", "src": "Porter §5" },
+      { "name": "The value wedge", "what": "Value created = willingness to pay minus cost. Cost leadership widens the gap from below (deleting cost faster than WTP); differentiation widens it from above (adding WTP faster than cost).", "src": "Porter §2" },
+      { "name": "Parity / proximity", "what": "A cost leader must stay at parity or proximity on what buyers care about ('Aldi still has to sell edible groceries'); a differentiator must stay at cost proximity (Ferrari is disciplined about volume). The parity row is the one most often omitted by students.", "src": "Porter §2, Ex.1" },
+      { "name": "Stuck in the middle / U-curve", "what": "No cost advantage, no premium, no protected segment. The U-curve puts profit at both ends of market share and a trough between. Empirically weaker than drawn; its value is locating the danger between positions.", "src": "Porter §6, Fig.3" },
+      { "name": "Operational effectiveness vs. strategy", "what": "Moving toward the productivity frontier (quality programs, lean, systems) is operational effectiveness: necessary, imitable, and it raises everyone's absolute performance without changing relative position. Strategy is the choice of WHERE on the frontier to sit, and it always involves giving something up.", "src": "Porter §7, Fig.4" },
+      { "name": "Three tests (Exhibit 3 worksheet)", "what": "Price test (is realized price deliberately above/below average and can you explain it?), trade-off test (name three things rivals do that you refuse to do), consistency test (do cost structure, hiring, metrics, incentives and capital allocation point the same way?). The tests are sequential.", "src": "Porter §8, Ex.3" }
+    ]
+  },
+  "terms": [
+    { "term": "Generic strategy", "def": "One of four positions produced by crossing source of advantage (lower cost vs. higher WTP) with scope (broad vs. narrow).", "src": "Porter §1" },
+    { "term": "Cost leadership", "def": "Being THE lowest-cost producer in an industry while serving a broad market; there is room for exactly one.", "src": "Porter §3" },
+    { "term": "Differentiation", "def": "Being unique along dimensions buyers value and charging a premium that exceeds the cost of the uniqueness.", "src": "Porter §4" },
+    { "term": "Focus", "def": "Cost leadership or differentiation pursued inside a deliberately narrow segment (customer group, product line, geography, channel). Not a third kind of advantage.", "src": "Porter §5" },
+    { "term": "Stuck in the middle", "def": "Failing to commit to a position: no cost advantage against the low-cost player, no premium against the differentiator, no protected segment against the focuser.", "src": "Porter §6" },
+    { "term": "U-curve", "def": "Porter's 1980 picture of return vs. market share: profitable at both ends, a trough in between.", "src": "Porter Fig.3" },
+    { "term": "Productivity frontier", "def": "The best achievable combination of cost and buyer value using current best practice at a moment in time.", "src": "Porter §7" },
+    { "term": "Operational effectiveness", "def": "Moving toward the productivity frontier through better practice; necessary and imitable, it is not strategy.", "src": "Porter §7" },
+    { "term": "Hybrid objection", "def": "The empirical criticism that firms like Toyota, IKEA, Zara, Amazon, Southwest and Trader Joe's run low cost and differentiation at once.", "src": "Porter §7" },
+    { "term": "Price test", "def": "Is our realized price deliberately above or below the industry average, and can we explain the gap? Failing answer: 'We're competitively priced.'", "src": "Porter Ex.3" },
+    { "term": "Trade-off test", "def": "Name three specific things rivals do that we deliberately refuse to do. Failing answer: a pause, or things we'd like to do but haven't funded.", "src": "Porter Ex.3" },
+    { "term": "Consistency test", "def": "Do cost structure, hiring, metrics, incentives and capital allocation all point the same way? Failing answer: 'Our strategy is premium, and our store managers are paid on labor cost per transaction.'", "src": "Porter Ex.3" },
+    { "term": "Drift", "def": "The real enemy: a series of individually defensible decisions that add capability without adding position.", "src": "Porter §9" },
+    { "term": "Value stick", "def": "Willingness to pay, price, cost, willingness to sell stacked; buyer surplus, firm margin and supplier surplus sit between them. 'The goal is to drive a bigger wedge.'", "src": "S1 slides 9" },
+    { "term": "Activity system", "def": "Tightly linked activities that reinforce one strategy (Walmart for cost; Louis Vuitton for differentiation).", "src": "S1 slides 10-11" }
+  ],
+  "claims": [
+    { "claim": "There are only two kinds of competitive advantage: comparable value at lower cost, or more value buyers will pay for. Brand, service, technology, culture and scale are means to one of those ends, not a third alternative.", "src": "Porter §1" },
+    { "claim": "The hard part of strategy is the choice; a position that requires no sacrifice is not a position, it is a wish.", "src": "Porter §1" },
+    { "claim": "Structure (business-model design) produces the most durable cost positions because it is hardest to copy; rivals who copy one element get nothing (Aldi, Ryanair, Nucor, Vanguard, Geico).", "src": "Porter §3" },
+    { "claim": "Differentiation's payoff lives in customers' heads, where it cannot be audited; 'spending customers cannot perceive is philanthropy toward suppliers.'", "src": "Porter §4" },
+    { "claim": "Firms rarely choose the middle; they drift into it (Sears, JCPenney 2012, Gap, Marks & Spencer).", "src": "Porter §6" },
+    { "claim": "Airline 'airlines within airlines' (Continental Lite, MetroJet, Song, Ted) were built in the middle and failed because the parent's cost structure, unions, hub-and-spoke and service commitments came along — evidence trade-offs are real constraints, not failures of nerve.", "src": "Porter §6" },
+    { "claim": "Resolution of the hybrid objection, part 1: many claimed hybrids are operational effectiveness misread as position — the firm is nearer the frontier, and that decays as best practice spreads.", "src": "Porter §7" },
+    { "claim": "Part 2: genuine dual advantage occurs when a business-model innovation shifts the frontier itself, and it is real while it lasts (Toyota, for decades).", "src": "Porter §7" },
+    { "claim": "Part 3 (most useful): apparent hybrids are usually one strategy whose trade-offs happen to please customers. Southwest is a cost leader; its choices were made for cost and some happen to please customers. Proof: it said no to what full-service carriers say yes to.", "src": "Porter §7" },
+    { "claim": "The practical question is never 'can a firm be both?' but 'what does this firm refuse to do?'", "src": "Porter §7" },
+    { "claim": "Proposition 1: advantage comes in only two forms; a strategy that does not identify which it pursues has not been made.", "src": "Porter §9" },
+    { "claim": "Proposition 2: scope is a genuine choice, not a description of current size.", "src": "Porter §9" },
+    { "claim": "Proposition 3: the enemy is almost never a competitor; it is drift.", "src": "Porter §9" },
+    { "claim": "All four positions usually coexist in the same industry; profitability tracks the coherence of a position more than which position was chosen.", "src": "Porter Ex.2" }
+  ],
+  "failures": [
+    { "name": "Cost leadership: imitation", "what": "The model is copyable (Lidl vs. Aldi; low-cost carriers after Southwest).", "src": "Porter §3" },
+    { "name": "Cost leadership: technological reset", "what": "A new process rebases the cost curve; accumulated experience becomes an asset in the wrong technology.", "src": "Porter §3" },
+    { "name": "Cost leadership: scale ceiling", "what": "The advantage depends on volume the market cannot supply.", "src": "Porter §3" },
+    { "name": "Cost leadership: cutting into WTP", "what": "Removing something customers were actually buying. Measurable: Aldi has the lowest US grocery prices for decades yet ~3% of grocery spend — the market's estimate of what the deleted conveniences were worth.", "src": "Porter §3" },
+    { "name": "Differentiation: invisible spending", "what": "Spending customers cannot perceive; a credible proxy (seal, brand, visible process, warranty) is often worth more than the underlying quality.", "src": "Porter §4" },
+    { "name": "Differentiation: the treadmill", "what": "The premium survives only until the next product cycle.", "src": "Porter §4" },
+    { "name": "Differentiation: over-serving", "what": "The fourth blade, the eleventh megapixel — opens the door to an attacker from below.", "src": "Porter §4" },
+    { "name": "Differentiation: premium harvest", "what": "Quietly trimming invisible spending while keeping the price; excellent years, then hard-to-reverse erosion.", "src": "Porter §4" },
+    { "name": "Focus: segment converges", "what": "The segment's special needs stop being special.", "src": "Porter §5" },
+    { "name": "Focus: growth forces broadening", "what": "The most common death: the firm becomes a mediocre broad player.", "src": "Porter §5" },
+    { "name": "Focus: broad player sub-segments", "what": "A broad rival enters the niche with adequate quality and a bigger cost base to amortize.", "src": "Porter §5" }
+  ],
+  "caseFacts": [
+    { "fact": "47 consecutive profitable years, 1973-2019, built on one aircraft type (737), point-to-point routes, fast turns, no meals, no first class, open seating and Bags Fly Free.", "why": "This is the cost-leader activity system the fix puts at risk; the trade-off test is easy to pass for old Southwest.", "src": "Southwest; Ex.1" },
+    { "fact": "Analysts estimated free bags left more than $1B a year on the table; seat selection and extra-legroom fees generated billions for rivals.", "why": "The case frames the problem as a REVENUE problem, not a cost problem — the bridge into differentiation-like monetization.", "src": "Southwest; Ex.2" },
+    { "fact": "The cost advantage narrowed: new labor contracts, rising unit costs, Boeing delays; Dec 2022 meltdown cost $1B+, 16,000+ cancellations, $140M federal settlement.", "why": "The low-cost advantage was already eroding, which weakens the 'destroying' half of the Key Question.", "src": "Southwest" },
+    { "fact": "Elliott took a $1.9B (~11%) stake in June 2024; board reshaped Nov 2024.", "why": "Activist pressure explains the speed and scope of the change.", "src": "Southwest; Ex.1" },
+    { "fact": "Plan: ~$4B cumulative incremental EBIT by 2027 plus $500M annual cost savings; ~1,750 corporate jobs cut (first mass layoff in 53 years).", "why": "Management is attempting both sides of the wedge at once — the hybrid objection made live.", "src": "Southwest; Ex.3" },
+    { "fact": "Assigned seating fleetwide Jan 27, 2026; ~1/3 of each cabin extra-legroom; 60% of passengers paying for seat products vs. 20% baseline; Q1 2026 RASM guided +9.5%.", "why": "Early evidence buyers will pay (price test moving above average on some products).", "src": "Southwest; Ex.3" },
+    { "fact": "2026 guidance at least $4.00 adjusted EPS vs. $0.93 in 2025; stock +23% YTD vs. Delta +6%.", "why": "Early returns favor the fix — but the case closes on three risks: reliability, holding costs flat while adding complexity, and keeping customers who chose Southwest because it was different.", "src": "Southwest; Ex.3" },
+    { "fact": "Kept two free carry-ons and no change fees.", "why": "Remaining points of differentiation-by-refusal; check whether they are consistent with the new position.", "src": "Southwest" }
+  ],
+  "strongAnalysis": [
+    "Classify old Southwest with the three tests: price below average (deliberate), clear trade-offs (one aircraft, no assigned seats, no interlining, no meals), consistent activity system. It was a cost leader whose trade-offs happened to please customers — the paper's own example (Porter §7).",
+    "Identify what the fix actually is: mostly monetization (unbundling bags, selling seats, basic economy segmentation) — closer to copying network-carrier practice (operational/revenue effectiveness) than to building a unique, hard-to-copy premium. The case calls it closing a 'revenue gap' vs. 'industry practice' (Southwest Ex.2).",
+    "Run the consistency test on the new Southwest: assigned seats, premium cabins, red-eyes, partnerships and loyalty economics add complexity to a system designed for simplicity; the airline-within-airline history (Song, Ted) says carrying two strategies is how firms get built into the middle (Porter §6).",
+    "Price test: realized fares now span basic economy to extra legroom — is Southwest deliberately above or below average? If it cannot say, it fails test 1.",
+    "Trade-off test for the new Southwest: what does it still refuse? Change fees, a second carry-on charge, long-haul international. The list is shrinking — the warning sign of drift (Porter §9).",
+    "Judgment: Southwest can add revenue without destroying its cost position only if the additions don't reintroduce the costs its activity system deleted (turn times, simplicity, culture). Early numbers are positive but don't yet test cost: watch unit costs, turn times and on-time performance."
+  ],
+  "counter": {
+    "argument": "The market already rejected pure cost leadership in airlines: Southwest's margins shrank, Delta and United earn record profits on premium cabins and credit cards, and the early returns (60% paying for seats, EPS guidance 4x) prove customers will pay. Refusing to move would be choosing decline.",
+    "response": "Concede the revenue gap was real, but distinguish monetizing what customers already value from becoming a differentiator. Adding fees closes a gap rivals already exploit (imitable, operational) rather than creating a premium. The question is whether the additions raise unit costs or break the activity system; the counterargument measures revenue, the Key Question is about the cost side. Hold both: take the revenue, guard turn times and simplicity, and refuse the moves (hub-and-spoke, wide-body long-haul) that would import full-service costs."
+  },
+  "courseMap": { "text": "Generic strategy is the frame around the course. Backward to industry analysis (which strategy is viable depends on Five Forces structure); downward to the value chain and cost/differentiation modules (where a position is built activity by activity); inward to organization (a strategy is a set of constraints on how the firm must be run).", "src": "Porter §9" },
+  "slideExtras": [
+    { "topic": "Value stick", "detail": "WTP > price > cost > willingness to sell; buyer surplus, firm margin, supplier surplus. 'The goal is to drive a bigger wedge some how.'", "src": "S1 slides 9" },
+    { "topic": "Walmart activity system", "detail": "Low-cost operations, market position, culture/resource management and reputation for low cost linked by many small choices (deliveries several times a week, rarely use only one source, hub-and-spoke distribution, lower advertising, frugality of TMT, profit sharing).", "src": "S1 slides 10" },
+    { "topic": "Louis Vuitton activity system", "detail": "Limited availability, no discounting, high-quality products and brand linked by company-owned boutiques, tight distribution, heritage production, intentionally limited production, celebrity endorsement, large ad budget.", "src": "S1 slides 11" },
+    { "topic": "Can you compete in the middle?", "detail": "Arrow from cost leadership toward differentiation on the 2x2 — the Southwest question.", "src": "S1 slides 12" }
+  ],
+  "quant": [],
+  "crossLinks402": [ { "topic": "Cost vs. differentiation advantage and the value wedge", "note": "402 treats WTP and cost quantitatively (demand curves, consumer surplus)." } ],
+  "gaps": []
+}

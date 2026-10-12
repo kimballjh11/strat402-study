@@ -1,0 +1,96 @@
+{
+  "id": "S08",
+  "title": "Cost II: Economies of Scale, Learning, and Experience Curves",
+  "part": "How it wins: cost",
+  "keyQuestion": "How does a firm get a scale cost advantage? What is the real reason Tesla beats Ford and GM?",
+  "keyQuestionSrc": "Canvas S8",
+  "reading": { "name": "Economies of Scale: scale, learning, and experience (brief)", "tag": "Scale" },
+  "case": { "name": "Netflix: Riding the Scale Curve", "tag": "Netflix" },
+  "slides": "S8 deck 'Cost Advantage' (41): Aldi anchor, sources of cost advantage, scale and scope, pizza example, Netflix Q1-Q5 model answers, scale curves, scale/learning/experience table, EVs (Tesla, Rivian, Lucid, Ford, GM)",
+  "framework": {
+    "name": "Scale vs. learning vs. experience",
+    "summary": "'Economies of scale' names three different mechanisms that produce near-identical cost curves. Scale is about a current RATE (output per period; a property of your configuration). Learning is about a HISTORY (cumulative output; a property of your past). The experience curve is BCG's deliberate bundle of everything that happens to total cost as volume accumulates — and a prescription to buy share.",
+    "components": [
+      { "name": "Scale economies (the rate)", "what": "Average cost vs. output per period. Build bigger, run longer, spread fixed cost over more units this quarter. Reversible: cut the rate and it's gone the same day.", "src": "Scale 'Three mechanisms', Ex.2" },
+      { "name": "Six scale mechanisms", "what": "1) Geometry (cost ∝ capacity^0.6 for whole plants → ~24% lower unit capital cost per doubling). 2) Indivisibility (blast furnace, sales force, codebase, Super Bowl ad — fixed across a range). 3) Specialization (Smith's pin factory: 4,800 pins/person/day vs. <20; limited by the extent of the market). 4) Bargaining (weakest: Wright's purchased material 88% and raw material 95% curves vs. labor 80%). 5) Statistics (square-root law: pooling n independent locations cuts safety stock to 1/√n). 6) Demand-side scale (network effects raise WTP, don't lower cost; don't run out at MES; markets tip).", "src": "Scale 'Scale: economics of the rate'" },
+      { "name": "Minimum efficient scale (MES)", "what": "The smallest output at which average cost is essentially minimized. Industry structure depends on MES relative to market size, and on the cost penalty below MES (shoes 0.2% of demand → fragmented; autos 21-30% → three to five producers).", "src": "Scale 'How much scale', Ex.3" },
+      { "name": "Plant vs. firm scale (the merger-memo warning)", "what": "Real scale economies are mostly inside a plant. Firm-level economies are small (Bain: 1-2%; none of 12 industries showed moderate firm effects) and diseconomies are well documented (Zenger on R&D).", "src": "Scale 'A warning'" },
+      { "name": "Learning (the history)", "what": "Cost vs. cumulative output. Wright 1936: 80% curve for direct LABOR only (exponent 0.322), cumulative-average not unit; the whole airplane curve flattens from 83% to 90%. Largely irreversible, though it decays.", "src": "Scale 'Learning'" },
+      { "name": "Learning-curve arithmetic", "what": "Y = a·X^−b; progress ratio s = 2^−b, b = −log₂ s; cut per doubling = 1 − s; doublings d = log₂(X₂/X₁), cost ratio = s^d; fit s = (Y₂/Y₁)^(1/d); doublings to close a gap d = ln(C_follower/C_leader) ÷ (−ln s), then required volume = today's × 2^d. Ask which convention 'learning rate' means (s or 1−s).", "src": "Scale App.A" },
+      { "name": "Experience curve (BCG doctrine)", "what": "All costs 'of every kind' in constant dollars vs. accumulated volume, 20-30% per doubling, 'without limit'. Prescription: 'Market share must be maintained at all costs as long as growth rate exceeds the anticipated rate of return'; price new products 'as low as necessary to dominate'.", "src": "Scale 'Experience'" },
+      { "name": "Why they can't be separated", "what": "Pure geometry (24% per doubling of plant capacity) sits inside BCG's 20-30% band; in a growing industry plant capacity and cumulative volume double together, so no cost series distinguishes them. When separated (Thompson's Liberty ships), learning's share was small (~70% capital deepening; ~5% residual).", "src": "Scale 'Why it is difficult'" },
+      { "name": "The three diagnostic questions", "what": "1) Is cost falling because of how much I make this period or how much I've ever made? 2) Would it survive a year at half the volume? 3) Can my competitor read about it (does learning leak)?", "src": "Scale 'Back to the shipyard'" }
+    ]
+  },
+  "terms": [
+    { "term": "Economies of scale", "def": "Brief: a relationship between average cost and output per period. Slides: a reduction in cost per unit due to increased efficiency as the number of goods produced increases (technical, managerial, financial/marketing, network economies).", "src": "Scale; S8 slides 6" },
+    { "term": "Economies of scope", "def": "A reduction in average total cost from increasing the number of DIFFERENT goods produced — from sharing R&D, marketing/brand, distribution, retail relationships (P&G-style), or technology, customer accounts, fulfilment, last mile, Prime, forecasting (Amazon).", "src": "S8 slides 10-13" },
+    { "term": "Learning curve", "def": "Brief: cost vs. cumulative output (Wright: direct labor). Slides: labor costs per unit decrease with increases in volume due to learning.", "src": "Scale; S8 slides 33" },
+    { "term": "Experience curve", "def": "BCG's representation of the relationship between cumulative volume and total product cost; bundles scale, learning and technical change.", "src": "Scale; S8 slides 33" },
+    { "term": "Progress ratio (s)", "def": "Cost at 2X ÷ cost at X; an 80% curve leaves cost at 80% after each doubling (a 20% cut).", "src": "Scale App.A" },
+    { "term": "Minimum efficient scale", "def": "Smallest output at which average cost is essentially minimized.", "src": "Scale" },
+    { "term": "Square-root law", "def": "Consolidating n independent locations leaves safety stock at 1/√n (sixteen into one → −75%); collapses if demands move together.", "src": "Scale App.A" },
+    { "term": "Six-tenths rule", "def": "Whole-plant capital cost rises with capacity^0.6 (Chilton 1950): doubling capacity costs 1.52x, so unit capital cost falls to 0.758x (−24.2%).", "src": "Scale App.A, Ex.A2" },
+    { "term": "Diseconomies of scale", "def": "Williamson's four: atmospheric consequences, bureaucratic insularity, incentive limits of employment, communication distortion. Brooks: n(n−1)/2 channels (50 people → 1,225).", "src": "Scale 'Diseconomies'" },
+    { "term": "Negative learning", "def": "Costs rising with experience: French nuclear construction costs rose (×3 Grubler; ~60% Komanoff) as reactor size grew.", "src": "Scale 'Negative learning'" },
+    { "term": "Learning leaks / spillovers", "def": "Rivals pick up part of your learning (nuclear ~1/3; shipyards spillovers may exceed own learning) — it may be an industry public good you're paying for.", "src": "Scale 'Learning leaks'" }
+  ],
+  "claims": [
+    { "claim": "Scale is about a current rate; learning is about a history.", "src": "Scale 'Three mechanisms'" },
+    { "claim": "Most firms discover which one they had involuntarily, in a recession when demand drops.", "src": "Scale box" },
+    { "claim": "What determines industry structure is not whether scale economies exist but the ratio of MES to market size.", "src": "Scale 'How much scale'" },
+    { "claim": "Entry to the leading edge of chips rose ~14x in twenty years ($2bn → $28bn per fab) and the number of firms who can buy one fell from 18 to 3 — a scale story.", "src": "Scale Ex.4" },
+    { "claim": "The 80% curve is not a law: Dutton & Thomas found progress ratios from 55% to 108% across 100+ studies.", "src": "Scale Ex.5" },
+    { "claim": "Learning decays: Bongers finds only ~7% of Super Hornet experience retained year to year; a paused program does not resume where it stopped.", "src": "Scale 'Learning decays'" },
+    { "claim": "Texas Instruments priced the TI-99/4A down to $99 (and $49) on an experience curve it did not own; Commodore, vertically integrated into its own chips (MOS Technology), sat on a lower curve. TI lost $145M in 1983 and exited.", "src": "Scale 'Where the doctrine goes wrong'" },
+    { "claim": "Ghemawat's conditions: wrong technology kills you regardless of volume; slow-doubling industries can't pay; forcing output can raise cost (TriStar); substitution destroys the accumulated base (cellophane). Du Pont TiO2: mechanics worked, demand didn't.", "src": "Scale 'Ghemawat'" },
+    { "claim": "Rigidity: Ford cut Model T cost ~3/4 and took share 10% → 55%, then needed most of a year (~$200M) to retool for the Model A, handing the market to GM.", "src": "Scale 'rigid'" },
+    { "claim": "Learning lodges in people more than institutions (surgeon volume OR 0.29 vs. hospital 0.35); corporate size is not learning — hospital acquisitions made patient experience worse (−0.17 SD).", "src": "Scale 'A version with no factory'" },
+    { "claim": "Blockbuster had size without scale economies; Netflix had scale economies before it had size.", "src": "S8 slides 15 notes" },
+    { "claim": "Scale economies tell you average cost falls; they don't tell you who captures the surplus — rented inputs from concentrated suppliers leak the value upstream (Starz $30M → $300M).", "src": "S8 slides 21; Netflix" }
+  ],
+  "failures": [
+    { "name": "Calling size 'scale'", "what": "Blockbuster: 9,000 stores, flat average cost — MES was one store.", "src": "Netflix; S8 slides 15" },
+    { "name": "Firm-level scale claims in merger memos", "what": "Evidence for firm-level economies is thin; diseconomies are documented.", "src": "Scale 'A warning'" },
+    { "name": "Experience doctrine as pricing rule", "what": "Pricing ahead of cost on a curve you don't own (TI).", "src": "Scale" },
+    { "name": "Ignoring Ghemawat's conditions", "what": "Wrong technology, slow doubling, forced output, substitution.", "src": "Scale" },
+    { "name": "Ignoring leakage and decay", "what": "Your accumulated volume advantage is smaller than the model says.", "src": "Scale" },
+    { "name": "Diseconomies past MES", "what": "Bureaucracy, communication overload, weaker incentives.", "src": "Scale" }
+  ],
+  "caseFacts": [
+    { "fact": "Blockbuster: 9,000+ stores and ~$6B revenue at the 2004 peak; each store replicated the full cost structure (lease, labor, local inventory); late fees ~$800M (~15% of revenue) in 2000; ~$1B spin-off debt; Total Access losing up to $400M/yr; bankrupt Sept 2010.", "why": "Size without scale economies: average cost per rental about the same for 9,000 stores as for 900.", "src": "Netflix; Ex.2" },
+    { "fact": "DVD-by-mail: one national inventory, ~60 distribution centers, 95% next-day by 2007, Cinematch steering to the back catalog (>half of queue adds from recommendations); subscribers 1M (2002) → 5M (2006) → ~10M (2008).", "why": "Fixed costs (website, recommendation system, DC network) spread over every subscriber; demand pooling raised utilization — a downward-sloping curve with a postage floor.", "src": "Netflix" },
+    { "fact": "Streaming: content and platform become fixed; AC = F/N + c with c a few cents — cost per subscriber halves with every doubling of N. At F = $17B: 10M subs → $1,700/yr ($142/mo); 50M → $340 ($28); 100M → $170 ($14); 200M → $85 ($7.10); 300M → $57 ($4.70). Breakeven on content alone at ~$12 ARPU needs ~118M subscribers.", "why": "The steepness is the whole story: small differences in N produce enormous differences in unit cost, and the leader's spend raises everyone's MES.", "src": "Netflix Ex.5; S8 slides 17-18" },
+    { "fact": "Licensing leaked: Starz ~$30M/yr (2008) → Netflix offered $300M+ (2011) and Starz walked; 2019 reclamations (Disney; The Office $500M/5 yrs; Friends $425M/5 yrs).", "why": "Concentrated suppliers with hold-up power captured the value of Netflix's scale; originals = vertical integration into the input (cost certainty, global perpetual rights, exclusivity).", "src": "Netflix Ex.3; S8 slides 21" },
+    { "fact": "Content spend: Netflix $1.8B (2012) → $12.0B (2018) → $17.5B (2021) → ~$18B planned (2025) vs. HBO ~$2-2.5B. Per subscriber: $17B/200M = $85 vs. $2.5B/40M = $63; at 300M, ~$57.", "why": "Seven times the spend, about the same unit cost; HBO couldn't match because of distribution (MVPDs), the parent's profit pool, and an organization calibrated to a linear schedule.", "src": "Netflix Ex.4; S8 slides 23" },
+    { "fact": "Operating margin 1.4% (2012) → 4.3% (2016) → 12.9% (2019) → 20.6% (2023) → ~29.5% (2025); FCF bottomed at −$3.3B (2019), +$6.9B (2023-24); revenue ~$45B (2025).", "why": "Fixed-cost leverage: cost share of revenue falls, margin rises as revenue grows against a fixed content base.", "src": "Netflix Ex.6; S8 slides 28" },
+    { "fact": "Q3 2025: Netflix quarterly streaming operating profit $2.55B vs. Disney+/Hulu $352M, HBO Max $345M, Paramount+ $340M, Peacock −$217M.", "why": "Rivals sit far up the average-cost curve.", "src": "Netflix Ex.7" },
+    { "fact": "Professor's scale curves: cost per subscriber per month 2006-2013 fit y = 181.61x^−0.297 (R² 0.95) → ~18% per doubling ('scale curve'); 2011-2025 ~4% ('experience curve').", "why": "The answer to the case's Assignment 1 — the curve flattens as Netflix reaches the bottom.", "src": "S8 slides 39-40" },
+    { "fact": "EVs (2025): Tesla 9.0M cumulative, learning rate 7.4%, $46,978 cost per vehicle; Rivian 174k, 18.5%, $123,995, needs 4.7 doublings = 27x its output to date; Lucid 43k, 16.4%, $146,300, 6.4 doublings = 82x. Ford Model e: $4.8B EBIT loss on $6.7B revenue → $32k-57k loss per vehicle; GM est. $12k-18k loss. Tesla takes nearly half of US EV sales.", "why": "The real reason Tesla beats Ford and GM: cumulative EV volume on a NEW cost curve (battery, software, electrical architecture). Incumbents' scale sits in stamping, assembly and distribution; they have volume of the wrong kind.", "src": "S8 slides 31-32 + notes" }
+  ],
+  "strongAnalysis": [
+    "How a firm gets a scale cost advantage: locate the fixed costs, find the unit at which cost is incurred (store vs. nation), measure the slope, and ask who appropriates the gains (S8 synthesis). Netflix moved costs from variable to fixed with each pivot, making each curve steeper, and then pushed MES beyond rivals by raising the content ante.",
+    "Test it with the brief's diagnostic: Netflix's advantage is scale (rate of subscribers), not learning — halve subscribers and cost per subscriber doubles. And it's supply-side, not a network effect: one subscriber's utility doesn't rise because another joins, so it's contestable by a rival willing to finance years of losses (as Netflix proved).",
+    "Tesla vs. Ford/GM: not 'better management' — it's which curve. EV cost falls with cumulative EV output (battery packs, software, architecture). Tesla's 9M cumulative units put it far down that curve; Rivian and Lucid learn faster (18.5%, 16.4%) but each doubling needs twice the volume (27x, 82x output to date — past a century at 2025 rates). Ford/GM have scale in the old curve. Two defensible escapes: stop competing on a dimension decided by cumulative volume, or reset the curve with a different process (S8 slide 31 notes).",
+    "Durability (Q5): for — rising fixed-cost ante (sports rights), new layers on the same base (ads, games, live), consolidation, suppliers need Netflix's checkbook again. Against — content is fixed but not sunk-once (paid every year), talent and rights holders capture rents, international ARPU ~1/3 of US flattens the revenue side, and YouTube/TikTok shift the basis of competition."
+  ],
+  "counter": {
+    "argument": "Netflix's advantage is differentiation (originals, brand, recommendation engine), not cost; Squid Game and Stranger Things are why people subscribe.",
+    "response": "Originals are the differentiation, but the reason Netflix can afford a library rivals can't is cost per subscriber: the same $17B costs it ~$57 per subscriber per year and costs a 41M-subscriber rival seven times that. Exclusivity and recommendations sit on top of a scale cost advantage (S8 slides 21, 23). Both sides of the wedge are moving — a preview of dual advantage (S11)."
+  },
+  "courseMap": { "text": "Scale and learning are two of Porter's ten cost drivers (S7) and two of the three sources of cost leadership named in the generic strategies paper (scale, experience, structure). Contrast with Aldi's structural advantage (S8 synthesis). MES connects to entry barriers in Five Forces (S4).", "src": "Porter §3; VC; S8 slides 37" },
+  "slideExtras": [
+    { "topic": "Pizza scale example", "detail": "Small shop (1,000 pizzas/month): rent $10,000 + equipment $5,000 + ingredients $2,000 + labor $3,000 = $20,000 → $20.00/pizza. Large shop (10,000): $10,000 + $5,000 + $18,000 ($1.80, 10% bulk discount) + $24,000 ($2.40, 20% labor efficiency) = $57,000 → $5.70/pizza, 71.5% lower.", "src": "S8 slides 9" },
+    { "topic": "In-class Netflix questions", "detail": "Q1 why didn't Blockbuster's 10x size protect it; Q2 fixed vs. variable for store, DVD-by-mail, streaming and which curve is steepest; Q3 why value flowed to content owners and what originals changed; Q4 how Netflix could outspend HBO 7x with lower cost per subscriber; Q5 is the advantage durable.", "src": "S8 slides 14-25" },
+    { "topic": "Scale vs. learning in slide notes", "detail": "With scale, small and large firms can coexist if there's an efficient scale beyond which costs rise, or with differentiation; with learning-by-doing, the only cause of coexistence is differentiation (or a new firm hoping to move down the curve).", "src": "S8 slides 34 notes" },
+    { "topic": "Netflix operating margin vs. subscribers", "detail": "2015 ~4.5% at ~70M → 2018 ~10% → 2020 ~18% → 2021 ~21% → 2022 ~18% → 2024 ~27% at ~300M.", "src": "S8 slides 41" }
+  ],
+  "quant": [
+    { "what": "Learning curve: s, b, doublings, unit cost, catch-up volume (Appendix A worked problems: $100→$64 over 1,000→4,000 units = 80%; 85% curve, $500,000 first unit → 64th unit $188,600; 500k-ton plant $200M → 1M tons $303M, capital/ton $400 → $303; follower $124k vs. leader $47k at 81.5% → 4.7 doublings ≈ 27x).", "src": "Scale App.A" },
+    { "what": "Fixed cost per subscriber F/N and breakeven N = F/(ARPU×12).", "src": "Netflix Ex.5; S8 slides 18" },
+    { "what": "Pizza scale example per-unit cost.", "src": "S8 slides 9" },
+    { "what": "Square-root law and six-tenths rule.", "src": "Scale App.A" }
+  ],
+  "crossLinks402": [ { "topic": "Fitting cost curves (ATC = aQ^b), cost change per doubling = 2^b − 1, Netflix break-even", "note": "402's convention: fitted exponent b is negative and the cut per doubling is 2^b − 1. 401's brief writes Y = aX^−b with b positive and progress ratio s = 2^−b. Same math, opposite sign convention." } ],
+  "gaps": [ "The case's 'Assignment 1: compute Netflix's scale curve 2001-2010' cannot be reproduced from the case exhibits alone (no cost data); the professor's fitted curves on S8 slides 39-40 are used as the model answer.", "S8 slides 35-36 are video frames (cooking, packaging) with no recoverable content." ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "S06",
+  "title": "Theories of the Firm: The Resource-Based View, VRIO or VRIN",
+  "part": "What the firm brings: resources",
+  "keyQuestion": "What is a firm? Why does it exist? Does AI offer a firm a sustainable competitive advantage?",
+  "keyQuestionSrc": "Canvas S6",
+  "reading": { "name": "The Resource-Based View: VRIO or VRIN (VRIO Brief)", "tag": "VRIO" },
+  "case": { "name": "VRIO Assignment: Diagnosing a Firm's Competitive Position (your team: In-N-Out)", "tag": "VRIO Asg" },
+  "slides": "S6 slides (29): profit pools, how much industry matters, TCE, knowledge-based view, resource categories, VRIO table, BYU VRIO exercise",
+  "framework": {
+    "name": "VRIO as a sequential gate",
+    "summary": "Two firms facing the same customers, suppliers and regulation still out-earn one another because they are not resource-equivalent. The RBV rests on two assumptions: resources are heterogeneous and imperfectly mobile. VRIO asks four sequential yes/no questions about ONE resource or capability; the first 'no' stops the analysis and fixes the verdict. Its value is that it disqualifies most strengths.",
+    "components": [
+      { "name": "Valuable", "what": "Does it let the firm exploit an opportunity or neutralize a threat by raising WTP or lowering cost? Practical: if it disappeared tomorrow, would revenue fall or cost rise?", "src": "VRIO §3" },
+      { "name": "Rare", "what": "Controlled by only a small number of competitors? If every serious rival has it, it is a requirement to compete, not a source of advantage.", "src": "VRIO §3" },
+      { "name": "Costly to imitate", "what": "Is it costly or difficult for firms that lack it to acquire or develop it? Could a well-funded rival get it, and how long would that take? This is where most advantages die.", "src": "VRIO §3-4" },
+      { "name": "Organized", "what": "Is the firm structured, incentivized and staffed to capture the value? Organization converts potential into captured earnings.", "src": "VRIO §3, §5" },
+      { "name": "Four barriers to imitation", "what": "Unique history / path dependence (built under conditions that no longer exist); causal ambiguity (even insiders can't specify why it works); social complexity (rooted in relationships, trust, norms); legal and economic deterrents (patents and exclusive contracts make imitation unlawful; scale, switching costs and network effects make it uneconomic — NVIDIA's 7.5M CUDA developers).", "src": "VRIO §4" },
+      { "name": "Verdict table (brief / Canvas)", "what": "V=No → competitive disadvantage; V yes, R no → parity ('a requirement to compete'); V, R yes, I no → temporary advantage; V, R, I yes, O no → unexploited advantage ('value left on the table'); all yes → sustained advantage.", "src": "VRIO §5; Canvas S6 graphic" },
+      { "name": "Verdict table (S6 slides version, labeled)", "what": "The slides use an older five-row table: failure (N,N,N,N), parity (Y,N,N,N), competitive advantage (Y,Y,N,N), durable competitive advantage (Y,Y,Y,N), sustained competitive advantage (Y,Y,Y,Y), with 'Is the resource imitable?' as the column. Teach the brief's version as primary; recognize the slide labels if they appear.", "src": "S6 slides 24, 28" },
+      { "name": "Resources vs. capabilities", "what": "Resources are stocks the firm owns or controls (tangible: cash, real estate, branches, plants, spectrum, patents; intangible: brand, reputation, culture, relationships). Capabilities are flows — what the firm is repeatedly good at, embedded in routines. Capabilities are often more defensible: you can buy a building, not fifteen years of underwriting judgment.", "src": "VRIO §2" },
+      { "name": "VRIN and the lineage", "what": "VRIN (valuable, rare, imperfectly imitable, non-substitutable) is the earlier formulation. VRIO folds non-substitutability into imitability (a substitute is another path to imitating the benefit) and adds Organization. Still name substitutes explicitly: substitution most often ends an advantage imitation could not touch.", "src": "VRIO §6" }
+    ]
+  },
+  "terms": [
+    { "term": "Resource-based view (RBV)", "def": "The view that persistent differences in returns between firms facing the same environment come from differences in what they control.", "src": "VRIO §1" },
+    { "term": "Heterogeneous resources", "def": "Firms hold different bundles of resources.", "src": "VRIO §1" },
+    { "term": "Imperfect mobility", "def": "Bundles cannot be bought, copied or rebuilt quickly. If either assumption fails, returns converge.", "src": "VRIO §1" },
+    { "term": "Resource", "def": "An asset the firm owns or controls; a stock (tangible or intangible). Slides: four categories — physical, financial, human, intangible.", "src": "VRIO §2; S6 slides 12" },
+    { "term": "Capability", "def": "What a firm is repeatedly good at doing; a flow embedded in organizational routines that deploy resources.", "src": "VRIO §2; S6 slides 11" },
+    { "term": "Competitive parity", "def": "Valuable but not rare: competence sustains parity and nothing more (regional bank branches).", "src": "VRIO §5, §7" },
+    { "term": "Temporary advantage", "def": "Valuable and rare but not costly to imitate.", "src": "VRIO §5" },
+    { "term": "Unexploited advantage", "def": "Valuable, rare, costly to imitate, but the firm is not organized to capture it — often the most actionable case because the constraint is internal (Intel).", "src": "VRIO §5, §7" },
+    { "term": "Sustained competitive advantage", "def": "Passes all four tests (Visa). Substitution check keeps 'sustained' from meaning 'permanent'.", "src": "VRIO §5, §7" },
+    { "term": "Path dependence", "def": "A resource built under conditions that no longer exist; money can buy the same category of asset today but not the same asset.", "src": "VRIO §4" },
+    { "term": "Causal ambiguity", "def": "Even insiders can't fully specify why a capability works, so outsiders can't copy the recipe.", "src": "VRIO §4" },
+    { "term": "Social complexity", "def": "Rooted in relationships, trust and norms among many people; can be described but not engineered on demand or bought as a unit.", "src": "VRIO §4" },
+    { "term": "Internal analysis", "def": "Analysis of a firm's resources and capabilities to assess how effectively it can deliver the unique value it hopes to provide.", "src": "S6 slides 7" },
+    { "term": "Transaction cost economics", "def": "Williamson (Nobel 2009): the analysis of economic governance, especially the boundaries of the firm — firms exist where organizing a transaction internally is cheaper than using the market.", "src": "S6 slides 9" },
+    { "term": "Knowledge-based view", "def": "Firm boundaries surround critical knowledge elements (Chick-fil-A: sauce, cooking chicken, in-store operations, training inside; raising chickens, making cups/forks, making soda outside).", "src": "S6 slides 10" }
+  ],
+  "claims": [
+    { "claim": "The practical value of VRIO is not that it identifies strengths — every team can list strengths — but that it disqualifies most of them and forces attention onto the few assets actually carrying the position.", "src": "VRIO §1" },
+    { "claim": "Value and rarity are the easy tests; nearly every diagnosis turns on imitability.", "src": "VRIO §4" },
+    { "claim": "An asset can be expensive, hard-won and operationally excellent and still be nothing more than a requirement to compete (branch networks).", "src": "VRIO §7" },
+    { "claim": "Organization is the mechanism that converts potential into captured earnings; fix the fourth test and the same resources begin to earn (Intel's Q2 2026 recovery).", "src": "VRIO §5, §7" },
+    { "claim": "Buying a rare resource and being organized to exploit it are separate achievements, and only the second pays (Capital One / Discover).", "src": "VRIO §7" },
+    { "claim": "Business-unit effects explain 3-5x as much profit variance as industry effects; every study since Schmalensee finds the same ordering (e.g., McGahan & Porter 1997: industry 18.7%, corporate 4.3%, business unit 31.5%).", "src": "S6 slides 5" },
+    { "claim": "Most resources are parity; a page of 'yes' answers usually means the tests were not applied.", "src": "VRIO Asg §2" }
+  ],
+  "failures": [
+    { "name": "Generic strengths", "what": "'Data' is not a resource; 'proprietary risk-pricing data drawn from forty years of claims' is.", "src": "VRIO Asg §1" },
+    { "name": "Conflating valuable with popular, rare with impressive", "what": "Rubric warns against it; rarity must be judged against named competitors.", "src": "VRIO Asg rubric (Canvas)" },
+    { "name": "Not stopping at the first no", "what": "Leave later columns blank once a test returns no; the verdict is fixed.", "src": "VRIO Asg Ws.2" },
+    { "name": "No time-to-imitate", "what": "Imitability should name the blocking mechanism AND estimate how long a funded rival would take.", "src": "VRIO Asg §3" },
+    { "name": "Undated verdicts", "what": "VRIO is a snapshot; note where a verdict is fragile, what would break it and how soon.", "src": "VRIO Asg §2" }
+  ],
+  "caseFacts": [
+    { "fact": "Visa: four-party network, ~5B credentials, 175M+ merchant locations, 258B transactions, $40.0B net revenue (+11%), ~60% operating margin; Mastercard $32.8B at 57.6%. V/R/I/O all yes → sustained; exposure is substitution (Pix 79.8B transactions; UPI 23.66B in July 2026) and interchange regulation (June 2026 settlement).", "why": "Model of a sustained advantage plus the substitution check.", "src": "VRIO §7, Ex.1" },
+    { "fact": "Regional bank branches: valuable (FDIC avg savings 0.38% vs. online >4%), not rare → parity. Branch openings exceeded closings three straight quarters into Q2 2026; the asset is being repositioned to advice and acquisition.", "why": "Model of parity — and how a verdict's activity can change while the verdict holds.", "src": "VRIO §7, Ex.1" },
+    { "fact": "McKinsey: reputation + 50,000-alumni network pass V, R, I; organization '?' — $600M (2021) and $650M (Dec 2024) settlements, frozen starting salaries, headcount ~40,000 (down >10%), revenue flat ~$15-16B vs. Deloitte $70.5B.", "why": "Model of an Organization question (the up-or-out pyramid under strain from cost and AI).", "src": "VRIO §7, Ex.1" },
+    { "fact": "Intel: leading-edge fabs + x86 are V, R, I but O = no: 2024 net loss $18.8B; foundry operating losses $13.3B (2024) and $10.3B (2025) = $23.6B; US government took 9.9% for $8.9B. Q2 2026 under new CEO: revenue $16.1B (+25%), operating income $1.8B.", "why": "Model of an unexploited advantage — 'the resource was never the binding constraint; the organization was.'", "src": "VRIO §7, Ex.1" },
+    { "fact": "Your team's In-N-Out paper: cult brand, private ownership, vertically integrated supply chain (Lancaster, TX plant; one-day-drive radius), employee model all rated sustained; menu simplicity parity; geographic restraint temporary.", "why": "Calibration: four of six all-yes is what the assignment warns about; employee model rarity is weak (rivals copy parts — Chipotle promotes 85% of managers from within); no time-to-imitate estimates.", "src": "my-work VRIO" }
+  ],
+  "strongAnalysis": [
+    "What is a firm and why does it exist? TCE: firms exist where internal governance beats market transactions (boundaries of the firm). Knowledge-based view: boundaries surround critical knowledge. RBV: a firm is a bundle of heterogeneous, imperfectly mobile resources and capabilities; that bundle — not the industry — explains most of the persistent variance in returns (business unit 3-5x industry).",
+    "Does AI offer a sustainable advantage? Run VRIO on 'AI': valuable yes; rare — not when frontier models are available to every rival via API; costly to imitate — no for generic capability. So generic AI is parity at best, temporary if early. AI contributes to sustained advantage only when bundled with a resource that IS rare and hard to copy (proprietary data accumulated over time — path dependence; workflow integration and switching costs; organizational routines that are socially complex) and when the firm is organized to exploit it. (Application of the VRIO brief; the brief doesn't answer this directly.)",
+    "Also note AI as a threat to Organization: the McKinsey case — AI pressure on the base of the pyramid that appropriates the value of reputation.",
+    "Method discipline: one resource at a time; stop at the first no; name competitors for rarity; name the barrier and time to imitate; check substitutes; date the verdict."
+  ],
+  "counter": {
+    "argument": "VRIO is static and tautological: 'valuable' resources are identified by the fact the firm is successful, so it explains success after the fact.",
+    "response": "The brief anticipates this by making each test operational (if it disappeared, would revenue fall or cost rise; name competitors for rarity; estimate time to imitate) and by dating every verdict. Used as a gate on one resource at a time, it mostly says 'no' — that is its value. The substitution check and the 'verdicts move' examples (branches, Intel) make it dynamic."
+  },
+  "courseMap": { "text": "After the outward look (PEST, Five Forces), the RBV asks what the firm brings. VRIO's imitability barriers recur in differentiation durability (S9: path dependence, causal ambiguity, social complexity, credible commitment) and in cost advantages (structure that rivals cannot copy piecemeal, S1/S7).", "src": "VRIO §1; Diff §7" },
+  "slideExtras": [
+    { "topic": "How much does industry matter?", "detail": "Schmalensee 1985 industry 19.5%, business unit 0.6%; Rumelt 1991 8.3% / 2.0% corporate / 46.3% BU; Roquebert 1996 10.2 / 17.9 / 37.1; McGahan & Porter 1997 18.7 / 4.3 / 31.5; Misangyi 2006 7.6 / 7.2 / 36.4; Vanneste 2017 meta 8.0 / 14.0 / 36.0. 'The business unit runs three to five times industry.'", "src": "S6 slides 5" },
+    { "topic": "Profit pools", "detail": "PC industry: manufacturers compete in the largest but least-profitable segment; microprocessors and software earn the margins. Fitness industry: live classes/subscriptions and supplements vs. gym memberships.", "src": "S6 slides 3-4" },
+    { "topic": "Resource examples", "detail": "Physical: bank branches (JPMorgan 5,292), oil reserves (Aramco 259B). Financial: Berkshire $344B cash. Human: best places to work. Intangible: patent owners (Samsung, LG, TSMC...), most admired companies.", "src": "S6 slides 15-20" },
+    { "topic": "BYU VRIO exercise", "detail": "Buildings, location, support from the church, faculty working for less than market, culture — run through V, R, I, O.", "src": "S6 slides 25-27" },
+    { "topic": "Cliff Young", "detail": "Story of the 61-year-old farmer who won the Sydney-Melbourne ultramarathon by shuffling through the night: a sustainable, unconventional approach; character and competence.", "src": "S6 slides 22 notes" }
+  ],
+  "quant": [],
+  "crossLinks402": [],
+  "gaps": [ "VRIO Brief Exhibit 1 is titled 'The Five Diagnoses at a Glance' but lists four cases (Visa, regional bank, McKinsey, Intel); the text labels them Cases A, B, C, E (no Case D). The site teaches the five VERDICTS from §5 as 'the five diagnoses'.", "S6 slides' VRIO table conflicts with the brief's; both shown and labeled.", "No source answers the AI question directly; the site's answer applies the VRIO brief and is labeled as such." ]
+}

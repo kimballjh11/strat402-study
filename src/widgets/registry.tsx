@@ -16,6 +16,9 @@ const registry: Record<string, React.LazyExoticComponent<ComponentType>> = {
   'scale-fitter': lazy(() => import('./ScaleFitter')),
   'two-part': lazy(() => import('./TwoPartTariff')),
   'bundle-table': lazy(() => import('./BundleTable')),
+  'tangent-slider': lazy(() => import('./TangentSlider')),
+  'power-drill': lazy(() => import('./PowerDrill')),
+  'find-max': lazy(() => import('./FindMax')),
 }
 
 export function Widget({ id }: { id: string }) {

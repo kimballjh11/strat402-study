@@ -119,7 +119,7 @@ ${gTable}`,
     {
       id: 's06-ex-guest',
       title: 'Guest-Tek: estimate the cost curves and judge the $0.10 price',
-      setup: r`Eleven quarters of Guest-Tek financials (2004-Q3 to 2007-Q1), costs in $000s, rooms installed 83,209 → 520,201. In early 2007 Guest-Tek offered hotels HSIA for **$0.10 per room per day**. iBahn was earning ~$0.65. [[HSIA Wars case p.1]] [[S06 workbook]]`,
+      setup: r`Eleven quarters of Guest-Tek financials (2004-Q3 to 2007-Q1), costs in $000s, rooms installed 83,209 → 520,201 (workbook figures; the case table lists 2004-Q3 as 83,900). In early 2007 Guest-Tek offered hotels HSIA for **$0.10 per room per day**. iBahn was earning ~$0.65. [[HSIA Wars case p.1]] [[S06 workbook]]`,
       steps: [
         { ask: 'Step 1: fit total cost vs. rooms (power function).', show: r`\(TC(\$000s) = 37.8335\cdot Rooms^{0.4295}\). [[S06 workbook, Solution!C91]]` },
         { ask: 'Step 2: cost per room per day (CPRPD).', show: r`\(CPRPD = \dfrac{TC\times1{,}000}{Rooms\times365/4}\). 2004-Q3: $0.72 → 2007-Q1: $0.21. [[S06 workbook, Solution!G37:G47]]` },

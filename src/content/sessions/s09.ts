@@ -30,7 +30,7 @@ This is how the professor isolated Netflix's price effect: about **596K fewer su
 > CQ5 Q1–Q5 were all “read this regression output” questions, and the professor's midterm practice problem (Provo Peaks Root Beer) is one too. Expect at least one output table on the exam, with no Excel needed to answer it. [[CQ5 Q1]] [[S10 slides pp.10-11]]`,
   intuition: r`Suppose you scatter-plot TV sales against price and draw the line that fits best. **OLS** picks that line by making the vertical misses (residuals) as small as possible. Specifically, it minimizes the *sum of their squares*. [[S09 slides p.20]]
 
-The line's slope is a **coefficient**: “one more dollar of price → 2.60 fewer TVs.” With several x's, each coefficient answers a “holding everything else constant” question. That's the superpower: it is a partial derivative from S05, estimated from data. [[Math Review p.10]]
+The line's slope is a **coefficient**: “one more dollar of price → 2.60 fewer TVs.” [[S09 slides p.25]] With several x's, each coefficient answers a “holding everything else constant” question. That's the superpower: it is a partial derivative from S05, estimated from data. [[Math Review p.10]]
 
 Then ask *how much to trust it*:
 
@@ -70,7 +70,7 @@ Then ask *how much to trust it*:
       steps: [
         { ask: 'Which variable is Y? Write the generic function.', show: r`Quantity depends on price: \(Q_{TV} = a + bP_{TV}\). [[S09 slides p.21]]` },
         { ask: 'Read the coefficients from the output and write the estimated demand function.', show: r`Intercept ${f(tv.coef[0])}, Price ${f(tv.coef[1])} → \(Q_{TV} = 1{,}631.47 - 2.60P_{TV}\). [[S09 slides p.23]]` },
-        { ask: 'Interpret −2.60.', show: 'A $1 increase in price leads to a 2.60-TV decrease in quantity demanded. [[S09 slides p.24]]' },
+        { ask: 'Interpret −2.60.', show: 'A $1 increase in price leads to a 2.60-TV decrease in quantity demanded. [[S09 slides pp.24-25]]' },
         { ask: 'Is price significant? How well does the model fit?', show: r`Price: SE ${f(tv.se[1])}, t ${f(tv.t[1])} (|t| > 2), p ${f(tv.p[1], 4)} (< 0.05) → significant. R² = ${f(tv.r2)} → 75% of the variation in TV sales is explained by price. [[S09 slides pp.25-34]]` },
         { ask: 'Forecast demand at $425.', show: r`\(1{,}631.47 - 2.60(425) = ${f(1631.47 - 2.6 * 425)}\) TVs.` },
       ],

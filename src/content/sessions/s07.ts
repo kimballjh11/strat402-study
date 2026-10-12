@@ -91,7 +91,7 @@ Every buyer who would have paid more than the price walks away with a bonus, the
       steps: [
         { ask: 'Choke price and Q at $1.00?', show: r`\(P_{choke} = 30{,}000/20{,}000 = \$1.50\); \(Q(1) = ${tex(dpQ(1), 0)}\).` },
         { ask: 'Consumer surplus at $1.00?', show: r`\(\tfrac12\times10{,}000\times(1.50 - 1.00) = \$2{,}500\). [[CQ4 Q4]]` },
-        { ask: 'Revenue-maximizing price?', show: r`\(R = 30{,}000P - 20{,}000P^2\); \(dR/dP = 30{,}000 - 40{,}000P = 0\) → **$0.75** (Q = 15,000, R = $11,250). [[CQ4 Q7]]` },
+        { ask: 'Revenue-maximizing price?', show: r`\(R = 30{,}000P - 20{,}000P^2\); \(dR/dP = 30{,}000 - 40{,}000P = 0\) → **$0.75** [[CQ4 Q7]] (Q = 15,000, R = $11,250). [[S08 workbook, OPE - Solution comment B61]]` },
       ],
       takeaway: 'CS is a triangle; revenue max is the S05 recipe.',
       src: 'CQ4 Q4, Q7',

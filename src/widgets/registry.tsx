@@ -12,6 +12,8 @@ const registry: Record<string, React.LazyExoticComponent<ComponentType>> = {
   'wtp-builder': lazy(() => import('./WtpBuilder')),
   'cs-slider': lazy(() => import('./CsSlider')),
   'shift-sim': lazy(() => import('./ShiftSim')),
+  'cost-curves': lazy(() => import('./CostCurves')),
+  'scale-fitter': lazy(() => import('./ScaleFitter')),
 }
 
 export function Widget({ id }: { id: string }) {

@@ -189,3 +189,21 @@ describe('S10 Profit maximization [S10 slides pp.17, 46-48]', () => {
     expect(90 * 15 - (500 + 2 * 225)).toBe(400)
   })
 })
+
+describe('Cost Advantage assignment fits [your Cost Advantage, Part 1; S07 slides p.6]', () => {
+  const NFs = [23410, 23938, 25101, 27146, 29174, 29807, 31092, 33420, 35674, 36224, 37219, 39114, 41397, 42300, 43181, 44738, 46967, 47129]
+  const NFc = [434181, 445306, 460321, 476051, 507299, 519775, 534602, 566932, 597352, 610950, 626296, 660616, 672080, 686118, 719749, 726892, 748488, 793912]
+  const RBr = [196226, 179231, 176367, 187937, 197543, 186684, 199480, 192035, 199972, 169322, 172172, 181279, 173047, 146047, 132645, 135815, 137701, 123593]
+  const RBc = [394124, 361248, 358335, 408313, 415746, 371325, 400728, 359343, 412737, 361969, 352372, 348074, 381495, 340046, 304990, 336030, 334854, 306975]
+  it('Redbox ATC = 656.06·R^−0.476 (professor’s debrief slide)', () => {
+    const f = powerFit(RBr, RBr.map((r, i) => RBc[i] / r))
+    expect(f.A).toBeCloseTo(656.06, 1)
+    expect(f.B).toBeCloseTo(-0.476, 3)
+  })
+  it('Netflix CPSPM = 38.10·S^−0.182; breakeven at $7.99 ≈ 5,339k subscribers', () => {
+    const f = powerFit(NFs, NFs.map((s, i) => NFc[i] / s / 3))
+    expect(f.A).toBeCloseTo(38.0964, 3)
+    expect(f.B).toBeCloseTo(-0.18198, 4)
+    expect((f.A / 7.99) ** (1 / -f.B)).toBeCloseTo(5338.9, 0)
+  })
+})

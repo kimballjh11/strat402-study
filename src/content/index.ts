@@ -12,6 +12,9 @@ import { s09Generators } from './generators/s09'
 import { s07 } from './sessions/s07'
 import { s07Mcqs } from './questions/s07'
 import { s07Generators } from './generators/s07'
+import { s06 } from './sessions/s06'
+import { s06Mcqs } from './questions/s06'
+import { s06Generators } from './generators/s06'
 import type { Generator, LearningObjective, Mcq, SessionId, SessionModule } from './types'
 
 export interface CqQuestion {
@@ -77,7 +80,7 @@ function stub(e: MapEntry): SessionModule {
   }
 }
 
-const built: Partial<Record<SessionId, SessionModule>> = { S07: s07, S08: s08, S09: s09, S10: s10 }
+const built: Partial<Record<SessionId, SessionModule>> = { S06: s06, S07: s07, S08: s08, S09: s09, S10: s10 }
 
 /** Site order follows the course, grouped by the four strategy questions. */
 export const SESSION_ORDER: SessionId[] = ['S01', 'S03', 'S04', 'S05', 'S06', 'S07', 'S08', 'S09', 'S10', 'S11', 'S12']
@@ -91,10 +94,10 @@ export const sessionById = Object.fromEntries(sessions.map((s) => [s.id, s])) as
 
 export const allLos = sessions.flatMap((s) => s.los.map((lo) => ({ ...lo, session: s.id })))
 
-export const mcqs: Mcq[] = [...s07Mcqs, ...s08Mcqs, ...s09Mcqs, ...s10Mcqs]
+export const mcqs: Mcq[] = [...s06Mcqs, ...s07Mcqs, ...s08Mcqs, ...s09Mcqs, ...s10Mcqs]
 export const mcqById = Object.fromEntries(mcqs.map((q) => [q.id, q]))
 
-export const generators: Generator[] = [...s07Generators, ...s08Generators, ...s09Generators, ...s10Generators]
+export const generators: Generator[] = [...s06Generators, ...s07Generators, ...s08Generators, ...s09Generators, ...s10Generators]
 export const generatorById = Object.fromEntries(generators.map((g) => [g.id, g]))
 
 export const SPINES = [

@@ -1,12 +1,11 @@
 /**
- * End-to-end: every module and screen, every widget, a full practice exam, flashcards, quiz retake,
+ * End-to-end: the Learn scroll, a mastery check, a full practice exam, quiz retake,
  * diagnostic, and progress export/import — at 1280px and 375px. Zero console errors, no horizontal scroll.
  */
 import { expect, test, type Page } from '@playwright/test'
 import { mkdirSync, readFileSync } from 'node:fs'
 
-const MODULES = ['S01', 'S03', 'S04', 'S05', 'S06', 'S07', 'S08', 'S09', 'S10', 'S11', 'S12']
-const SCREENS = ['why', 'intuition', 'terms', 'math', 'examples', 'widgets', 'check', 'apply', 'traps', 'explain', 'deeper', 'mastery', 'summary']
+const MODULES = ['S03', 'S04', 'S05', 'S06', 'S07', 'S08', 'S09', 'S10', 'S11']
 const SHOTS = 'work/screenshots/e2e'
 mkdirSync(SHOTS, { recursive: true })
 
@@ -21,40 +20,39 @@ async function noOverflow(page: Page, where: string) {
   expect(ov, `horizontal overflow on ${where}`).toBeLessThanOrEqual(1)
 }
 
-for (const m of MODULES) {
-  test(`module ${m}: all 13 screens + widgets`, async ({ page }, info) => {
-    const errors = watch(page)
-    for (const s of SCREENS) {
-      await page.goto(`/#/learn/${m}?screen=${s}`)
-      await expect(page.locator(`[data-testid="screen-${s}"]`)).toBeVisible()
-      if (s === 'examples') for (const b of await page.getByRole('button', { name: 'Reveal all steps' }).all()) await b.click()
-      if (s === 'widgets') {
-        await page.waitForTimeout(500)
-        await expect(page.getByText('Loading interactive…')).toHaveCount(0, { timeout: 10_000 })
-        // poke every widget: first button / first range input
-        for (const r of await page.locator('input[type=range]').all()) await r.fill(String(await r.getAttribute('min') ?? 0)).catch(() => {})
-        await page.screenshot({ path: `${SHOTS}/${info.project.name}-${m}-widgets.png`, fullPage: true })
-      }
-      await expect(page.locator('.katex-error')).toHaveCount(0)
-      await noOverflow(page, `${m}/${s}`)
-    }
-    expect(errors, errors.join('\n')).toEqual([])
-  })
-}
+test('learn is one scroll, without the group project', async ({ page }, info) => {
+  const errors = watch(page)
+  await page.goto('/#/learn')
+  await expect(page.getByRole('heading', { level: 1, name: 'Learn' })).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Home', exact: true })).toHaveCount(0)
+  await expect(page.getByRole('heading', { name: 'Group Project', exact: true })).toHaveCount(0)
+  await expect(page.getByRole('heading', { name: 'Course Introduction', exact: true })).toHaveCount(0)
+  for (const m of MODULES) await expect(page.getByTestId(`session-${m}`)).toBeAttached()
+  await expect(page.locator('.katex-error')).toHaveCount(0)
+  await page.goto('/#/learn/S08?screen=widgets')
+  await expect(page.getByTestId('screen-S08-widgets')).toBeInViewport()
+  await expect(page.getByText('Loading interactive…')).toHaveCount(0, { timeout: 10_000 })
+  await page.goto('/#/formulas')
+  await expect(page.getByText('Participation and project grade')).toHaveCount(0)
+  await page.screenshot({ path: `${SHOTS}/${info.project.name}-learn.png` })
+  await noOverflow(page, 'formulas')
+  expect(errors, errors.join('\n')).toEqual([])
+})
 
 test('mastery check end-to-end (S10)', async ({ page }) => {
   const errors = watch(page)
   await page.goto('/#/learn/S10?screen=mastery')
-  await page.getByTestId('start-mastery').click()
+  const mastery = page.getByTestId('screen-S10-mastery')
+  await mastery.getByTestId('start-mastery-S10').click()
   for (let i = 0; i < 9; i++) {
-    const opt = page.locator('[data-testid=mcq] .opt').first()
+    const opt = mastery.locator('[data-testid=mcq] .opt').first()
     if (await opt.count()) await opt.click()
-    const inp = page.locator('[data-testid=problem] input').first()
+    const inp = mastery.locator('[data-testid=problem] input').first()
     if (await inp.count()) await inp.fill('1')
-    const next = page.getByRole('button', { name: 'Next →' })
+    const next = mastery.getByRole('button', { name: 'Next →' })
     if (await next.isEnabled()) await next.click()
   }
-  await page.getByTestId('submit-quiz').click()
+  await mastery.getByTestId('submit-quiz').click()
   await expect(page.getByTestId('quiz-results')).toBeVisible()
   expect(errors).toEqual([])
 })
@@ -79,9 +77,6 @@ test('full practice exam (30 MC + 6 SA, flag, submit, results)', async ({ page }
   await expect(page.getByTestId('quiz-results')).toBeVisible()
   await expect(page.getByText(/By learning objective/)).toBeVisible()
   await page.screenshot({ path: `${SHOTS}/${info.project.name}-exam-results.png` })
-  await page.goto('/#/mistakes')
-  await expect(page.getByTestId('mistake').first()).toBeVisible()
-  await page.getByRole('button', { name: 'Retry similar ↻' }).first().click()
   expect(errors).toEqual([])
 })
 
@@ -91,19 +86,6 @@ test('diagnostic', async ({ page }) => {
   await page.getByTestId('start-diagnostic').click()
   await page.getByTestId('submit-quiz').click()
   await expect(page.getByTestId('quiz-results')).toBeVisible()
-  await page.goto('/#/tracker')
-  await expect(page.getByTestId('lo-table')).toBeVisible()
-  expect(errors).toEqual([])
-})
-
-test('flashcards: Space flips, 2 grades', async ({ page }) => {
-  const errors = watch(page)
-  await page.goto('/#/flashcards')
-  await expect(page.getByTestId('flashcard')).toBeVisible()
-  await page.keyboard.press('Space')
-  await expect(page.getByRole('button', { name: /Knew it/ })).toBeVisible()
-  await page.keyboard.press('2')
-  await expect(page.getByRole('button', { name: /Flip/ })).toBeVisible()
   expect(errors).toEqual([])
 })
 
@@ -137,31 +119,29 @@ test('practice: MC keyboard + calculation check', async ({ page }) => {
 
 test('export and import progress round-trip', async ({ page }) => {
   const errors = watch(page)
-  await page.goto('/#/flashcards')
-  await expect(page.getByTestId('flashcard')).toBeVisible()
-  await page.keyboard.press('Space')
-  await expect(page.getByRole('button', { name: /Knew it/ })).toBeVisible()
-  await page.keyboard.press('2')
-  await expect(page.getByRole('button', { name: /Flip/ })).toBeVisible()
+  await page.goto('/#/practice')
+  await page.getByRole('button', { name: 'Concepts' }).click()
+  await page.locator('[data-testid=mcq]').focus()
+  await page.keyboard.press('1')
+  await page.keyboard.press('Enter')
   await page.goto('/#/settings')
   const [dl] = await Promise.all([page.waitForEvent('download'), page.getByTestId('export').click()])
   const path = await dl.path()
   const json = JSON.parse(readFileSync(path!, 'utf8'))
   expect(json.app).toBe('strat402')
-  expect(Object.keys(json.progress.cards).length).toBeGreaterThan(0)
-  // wipe, then import
+  expect(Object.keys(json.progress.answers).length).toBeGreaterThan(0)
   await page.getByLabel(/Type RESET/).fill('RESET')
   await page.getByRole('button', { name: 'Erase' }).click()
-  expect(await page.evaluate(() => Object.keys(JSON.parse(localStorage.getItem('strat402-progress-v1') || '{}').cards ?? {}).length)).toBe(0)
+  expect(await page.evaluate(() => Object.keys(JSON.parse(localStorage.getItem('strat402-progress-v1') || '{}').answers ?? {}).length)).toBe(0)
   await page.getByTestId('import-file').setInputFiles(path!)
   await expect(page.getByText('Progress imported.')).toBeVisible()
-  expect(await page.evaluate(() => Object.keys(JSON.parse(localStorage.getItem('strat402-progress-v1') || '{}').cards ?? {}).length)).toBeGreaterThan(0)
+  expect(await page.evaluate(() => Object.keys(JSON.parse(localStorage.getItem('strat402-progress-v1') || '{}').answers ?? {}).length)).toBeGreaterThan(0)
   expect(errors).toEqual([])
 })
 
 test('core pages render without errors or overflow', async ({ page }, info) => {
   const errors = watch(page)
-  for (const p of ['/', '/learn', '/practice', '/quizzes', '/flashcards', '/tracker', '/exam', '/formulas', '/formulas?tab=drill', '/mistakes', '/excel', '/settings', '/plan', '/more']) {
+  for (const p of ['/', '/learn', '/practice', '/quizzes', '/exam', '/formulas', '/formulas?tab=drill', '/excel', '/settings', '/plan', '/more']) {
     await page.goto('/#' + p)
     await page.waitForTimeout(150)
     await noOverflow(page, p)

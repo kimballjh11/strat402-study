@@ -135,6 +135,25 @@ h1, h2, h3 { font-family: var(--font-serif); color: var(--ink); line-height: 1.2
 }
 
 .rich p { margin: .55rem 0; }
+
+.lesson { border-top: 1px solid var(--line); padding-top: 2.75rem; margin-top: 2.75rem; }
+.lesson-read { max-width: 40rem; }
+.lesson-read .rich p { margin: 1.05rem 0; line-height: 1.75; }
+.lesson-read .rich ul, .lesson-read .rich ol { margin: 1rem 0; line-height: 1.7; }
+.lesson-read .rich li + li { margin-top: .4rem; }
+.lesson-h { margin-top: 2.5rem; margin-bottom: .7rem; font-size: 1.45rem; }
+.lesson-list { display: grid; gap: 1rem; margin: .4rem 0 0; padding: 0; list-style: none; line-height: 1.7; max-width: 40rem; }
+.glossary { display: grid; gap: 1.35rem; margin: .2rem 0 0; }
+.glossary dt { font-weight: 700; }
+.glossary dd { margin: .25rem 0 0; line-height: 1.7; }
+.formula-vars { display: grid; gap: .85rem; margin: .2rem 0 1rem; }
+.formula-vars > div { display: grid; gap: .15rem; }
+.formula-vars dt { font-weight: 650; }
+.formula-vars dd { margin: 0; line-height: 1.65; }
+.lesson-more { border-top: 1px solid var(--line); padding: .85rem 0; }
+.lesson-more summary { cursor: pointer; font-weight: 650; }
+.lesson-more .rich { margin-top: .6rem; }
+.lesson-deck { max-width: 42rem; margin-top: 2.5rem; }
 .rich strong { font-weight: 700; }
 .rich .katex { font-size: 1.05em; }
 .rich .katex-display { margin: .6rem 0; overflow-x: auto; overflow-y: hidden; }

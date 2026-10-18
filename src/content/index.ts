@@ -27,11 +27,6 @@ import { s03Generators } from './generators/s03'
 import { s04 } from './sessions/s04'
 import { s04Mcqs } from './questions/s04'
 import { s04Generators } from './generators/s04'
-import { s01 } from './sessions/s01'
-import { s01Mcqs } from './questions/s01'
-import { s12 } from './sessions/s12'
-import { s12Mcqs } from './questions/s12'
-import { s12Generators } from './generators/s12'
 import type { Generator, LearningObjective, Mcq, SessionId, SessionModule } from './types'
 
 export interface CqQuestion {
@@ -55,7 +50,7 @@ for (const q of cqQuestions) {
     q.quiz === 1 ? 'S01' : q.quiz === 3 ? 'S06' : q.quiz === 4 ? (q.number <= 4 || q.number === 7 ? 'S07' : 'S08') : q.number <= 5 ? 'S09' : 'S10'
 }
 
-/** Learning objectives each CQ question tests (used by the LO tracker). */
+/** Learning objectives each CQ question tests. */
 export const cqLos: Record<string, string[]> = {}
 for (const q of cqQuestions) {
   const k = `${q.quiz}-${q.number}`
@@ -66,7 +61,7 @@ for (const q of cqQuestions) {
     '5-2': ['S09-LO1', 'S09-LO3'], '5-3': ['S09-LO1', 'S09-LO3'], '5-6': ['S10-LO4'], '5-7': ['S10-LO4'], '5-8': ['S10-LO4'],
     '5-9': ['S10-LO2'], '5-10': ['S10-LO1'],
   }
-  cqLos[q.id] = m[k] ?? (q.quiz === 1 ? ['S01-LO3'] : q.quiz === 3 ? ['S06-LO2'] : ['S09-LO3'])
+  cqLos[q.id] = m[k] ?? (q.quiz === 1 ? [] : q.quiz === 3 ? ['S06-LO2'] : ['S09-LO3'])
 }
 
 type MapEntry = { session: string; title: string; spine: string; learningObjectives: LearningObjective[] }
@@ -97,10 +92,10 @@ function stub(e: MapEntry): SessionModule {
   }
 }
 
-const built: Partial<Record<SessionId, SessionModule>> = { S01: s01, S03: s03, S04: s04, S05: s05, S06: s06, S07: s07, S08: s08, S09: s09, S10: s10, S11: s11, S12: s12 }
+const built: Partial<Record<SessionId, SessionModule>> = { S03: s03, S04: s04, S05: s05, S06: s06, S07: s07, S08: s08, S09: s09, S10: s10, S11: s11 }
 
-/** Site order follows the course, grouped by the four strategy questions. */
-export const SESSION_ORDER: SessionId[] = ['S01', 'S03', 'S04', 'S05', 'S06', 'S07', 'S08', 'S09', 'S10', 'S11', 'S12']
+/** Site order follows the course, grouped by the four strategy questions. Session 1 (course introduction) and Session 2 & 12 (group project) are omitted. */
+export const SESSION_ORDER: SessionId[] = ['S03', 'S04', 'S05', 'S06', 'S07', 'S08', 'S09', 'S10', 'S11']
 
 export const sessions: SessionModule[] = SESSION_ORDER.map((id) => {
   const entry = (contentMap as MapEntry[]).find((m) => m.session === id)!
@@ -111,10 +106,10 @@ export const sessionById = Object.fromEntries(sessions.map((s) => [s.id, s])) as
 
 export const allLos = sessions.flatMap((s) => s.los.map((lo) => ({ ...lo, session: s.id })))
 
-export const mcqs: Mcq[] = [...s01Mcqs, ...s03Mcqs, ...s04Mcqs, ...s05Mcqs, ...s06Mcqs, ...s07Mcqs, ...s08Mcqs, ...s09Mcqs, ...s10Mcqs, ...s11Mcqs, ...s12Mcqs]
+export const mcqs: Mcq[] = [...s03Mcqs, ...s04Mcqs, ...s05Mcqs, ...s06Mcqs, ...s07Mcqs, ...s08Mcqs, ...s09Mcqs, ...s10Mcqs, ...s11Mcqs]
 export const mcqById = Object.fromEntries(mcqs.map((q) => [q.id, q]))
 
-export const generators: Generator[] = [...s03Generators, ...s04Generators, ...s05Generators, ...s06Generators, ...s07Generators, ...s08Generators, ...s09Generators, ...s10Generators, ...s11Generators, ...s12Generators]
+export const generators: Generator[] = [...s03Generators, ...s04Generators, ...s05Generators, ...s06Generators, ...s07Generators, ...s08Generators, ...s09Generators, ...s10Generators, ...s11Generators]
 export const generatorById = Object.fromEntries(generators.map((g) => [g.id, g]))
 
 export const SPINES = [

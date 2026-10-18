@@ -1,15 +1,13 @@
-import { useEffect, useMemo, useState } from 'react'
-import { generatorById, mcqById, mcqs, generators, sessionById } from '../content'
-import type { ScreenKey, SessionId, SessionModule } from '../content/types'
+import { useMemo, useState, type ReactNode } from 'react'
+import { generatorById, mcqById, mcqs, generators } from '../content'
+import type { ScreenKey, SessionModule } from '../content/types'
 import { Cite, GeneralBadge } from '../components/Cite'
 import { McqCard } from '../components/McqCard'
 import { NumericAsk } from '../components/NumericAsk'
 import { ProblemCard } from '../components/ProblemCard'
-import { QuizRunner, screenLabel, type QuizItem } from '../components/QuizRunner'
+import { QuizRunner, type QuizItem } from '../components/QuizRunner'
 import { Rich, Tex } from '../components/Rich'
-import { MasteryRing } from '../components/Ring'
 import { WorkedExample } from '../components/WorkedExample'
-import { navigate, useRoute } from '../lib/router'
 import { Rng, newSeed } from '../lib/rng'
 import { setProgress, useProgress } from '../lib/store'
 import { Widget } from '../widgets/registry'
@@ -30,297 +28,245 @@ export const SCREENS: { key: ScreenKey; min: number }[] = [
   { key: 'summary', min: 2 },
 ]
 
-export function ModulePage({ id }: { id: SessionId }) {
-  const m = sessionById[id]
-  const route = useRoute()
-  const screenParam = route.query.get('screen') as ScreenKey | null
-  const idx = Math.max(0, SCREENS.findIndex((s) => s.key === screenParam))
-  const screen = SCREENS[idx].key
-  const mastery = useProgress((p) => p.mastery[id])
-  const visited = useProgress((p) => p.visited[id] ?? [])
-
-  useEffect(() => {
-    setProgress((p) => {
-      const v = p.visited[id] ?? []
-      return {
-        ...p,
-        lastPath: `/learn/${id}?screen=${screen}`,
-        lastScreen: { ...p.lastScreen, [id]: idx },
-        visited: v.includes(idx) ? p.visited : { ...p.visited, [id]: [...v, idx] },
-      }
-    })
-    window.scrollTo({ top: 0 })
-  }, [id, idx, screen])
-
-  if (!m) return <p>Unknown session.</p>
+/** One session as a single reading, with its questions in a flip-through at the end. */
+export function SessionArticle({ m }: { m: SessionModule }) {
+  const mastery = useProgress((p) => p.mastery[m.id])
   if (!m.ready) return <StubModule m={m} />
-
-  const go = (k: number) => navigate(`/learn/${id}?screen=${SCREENS[Math.max(0, Math.min(SCREENS.length - 1, k))].key}`)
-  const total = SCREENS.reduce((a, s) => a + s.min, 0)
-
+  const spine = m.spine === 'markets' ? 'Markets to Pursue' : m.spine === 'value' ? 'Unique Value to Offer' : 'Course framing'
   return (
-    <div className="space-y-5">
-      <header className="flex flex-wrap items-start gap-4">
-        <MasteryRing value={visited.length / SCREENS.length} mastered={mastery?.passed} size={64} label={`${visited.length} of ${SCREENS.length} screens viewed`} />
-        <div className="flex-1 min-w-0">
-          <p className="text-sm muted">
-            Session {m.num} · {m.spine === 'markets' ? 'Markets to Pursue' : m.spine === 'value' ? 'Unique Value to Offer' : 'Course framing'} · about {m.minutes || total} min
+    <article id={m.id} className="lesson scroll-mt-20" data-testid={`session-${m.id}`}>
+      <header className="lesson-read space-y-2">
+        <p className="text-sm muted">
+          Session {m.num} · {spine}
+        </p>
+        <h2 className="text-3xl font-semibold">{m.title}</h2>
+        {mastery && (
+          <p className="text-sm">
+            Mastery check best: <strong>{Math.round(mastery.best * 100)}%</strong> {mastery.passed ? '· Mastered ✓' : ''}
           </p>
-          <h1 className="text-3xl font-semibold">{m.title}</h1>
-          {mastery && (
-            <p className="text-sm mt-1">
-              Mastery check best: <strong>{Math.round(mastery.best * 100)}%</strong> {mastery.passed ? '· Mastered ✓' : ''}
-            </p>
-          )}
-        </div>
-      </header>
-
-      <nav aria-label="Lesson screens" className="scroll-x -mx-1 px-1">
-        <ol className="flex gap-1.5 w-max pb-1">
-          {SCREENS.map((s, k) => (
-            <li key={s.key}>
-              <a
-                href={`#/learn/${id}?screen=${s.key}`}
-                className={`btn btn-sm whitespace-nowrap ${k === idx ? 'btn-primary' : ''}`}
-                aria-current={k === idx ? 'step' : undefined}
-              >
-                <span aria-hidden>{visited.includes(k) && k !== idx ? '✓ ' : `${k + 1}. `}</span>
-                {screenLabel(s.key)}
-              </a>
-            </li>
-          ))}
-        </ol>
-      </nav>
-
-      <section aria-labelledby="screen-title" className="space-y-4" data-testid={`screen-${screen}`}>
-        <div className="flex items-baseline gap-3 flex-wrap">
-          <h2 id="screen-title" className="text-2xl font-semibold">
-            {idx + 1}. {screenLabel(screen)}
-          </h2>
-          <span className="text-sm muted">~{SCREENS[idx].min} min</span>
-        </div>
-        <Screen m={m} screen={screen} />
-      </section>
-
-      <div className="flex justify-between gap-2 pt-4 border-t line no-print">
-        <button type="button" className="btn" onClick={() => go(idx - 1)} disabled={idx === 0}>
-          ← {idx > 0 ? screenLabel(SCREENS[idx - 1].key) : 'Back'}
-        </button>
-        {idx < SCREENS.length - 1 ? (
-          <button type="button" className="btn btn-primary" onClick={() => go(idx + 1)}>
-            {screenLabel(SCREENS[idx + 1].key)} →
-          </button>
-        ) : (
-          <a className="btn btn-primary" href="#/learn">
-            All modules
-          </a>
         )}
-      </div>
-    </div>
-  )
-}
-
-function Screen({ m, screen }: { m: SessionModule; screen: ScreenKey }) {
-  switch (screen) {
-    case 'why':
-      return (
-        <div className="space-y-4">
+      </header>
+      <div className="lesson-read">
+        <div id={`${m.id}-why`} className="scroll-mt-20" data-testid={`screen-${m.id}-why`}>
           <div className="callout text-lg">
             <Rich>{m.takeaway}</Rich>
           </div>
           <Rich>{m.why}</Rich>
-          <div className="card p-4">
-            <h3 className="font-semibold mb-2">Learning objectives (the contract)</h3>
-            <ul className="space-y-1.5">
-              {m.los.map((lo) => (
-                <li key={lo.id} className="text-sm">
-                  <span className="chip mr-2">{lo.id}</span>
-                  {lo.text} <Cite tag={lo.src} />
-                </li>
-              ))}
-            </ul>
-          </div>
+          <h3 className="lesson-h">What you need to be able to do</h3>
+          <ul className="lesson-list">
+            {m.los.map((lo) => (
+              <li key={lo.id}>
+                {lo.text} <Cite tag={lo.src} />
+              </li>
+            ))}
+          </ul>
         </div>
-      )
-    case 'intuition':
-      return <Rich className="text-lg">{m.intuition}</Rich>
-    case 'terms':
-      return <Terms m={m} />
-    case 'math':
-      return (
-        <div className="space-y-4">
-          {m.mathIntro && <Rich>{m.mathIntro}</Rich>}
-          {m.formulas.length === 0 && <p className="callout">No formulas in this session. It’s concepts and course policies. Spend the time on the Check-yourself questions.</p>}
-          {m.formulas.map((f) => (
-            <div key={f.id} className="card p-4">
-              <div className="flex flex-wrap items-center gap-2">
-                <h3 className="font-semibold">{f.name}</h3>
-                {f.general && <GeneralBadge />}
-                <Cite tag={f.src} />
-              </div>
-              <div className="my-2 scroll-x">
-                <Tex display>{f.latex}</Tex>
-              </div>
-              <table className="data-table">
-                <tbody>
-                  {f.vars.map(([sym, meaning]) => (
-                    <tr key={sym}>
-                      <td>
-                        <Tex>{sym}</Tex>
-                      </td>
-                      <td>
-                        <Rich>{meaning}</Rich>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-              <p className="mt-2 text-sm">
-                <strong>Say it in words:</strong> <Rich className="inline">{f.words}</Rich>
-              </p>
-            </div>
-          ))}
+        <div id={`${m.id}-intuition`} className="scroll-mt-20" data-testid={`screen-${m.id}-intuition`}>
+          <Rich>{m.intuition}</Rich>
         </div>
-      )
-    case 'examples':
-      return (
-        <div className="space-y-4">
-          {m.examples.map((ex) => (
-            <WorkedExample key={ex.id} ex={ex} />
-          ))}
-        </div>
-      )
-    case 'widgets':
-      return (
-        <div className="space-y-6">
-          {m.widgets.map((w) => (
-            <section key={w.id} className="card p-4 md:p-5 space-y-3" aria-labelledby={`w-${w.id}`}>
-              <h3 id={`w-${w.id}`} className="text-xl font-semibold">
-                {w.title}
-              </h3>
-              <Rich className="muted">{w.intro}</Rich>
-              <Widget id={w.id} />
-              {(w.numeric?.length || w.questions.length) && (
-                <div className="space-y-3 pt-2">
-                  <h4 className="font-semibold">Use it</h4>
-                  {w.numeric?.map((n) => (
-                    <NumericAsk key={n.id} id={n.id} label={n.label} part={n.part} hint={n.hint} src={n.src} session={m.id} los={m.los.map((l) => l.id)} />
-                  ))}
-                  {w.questions.map((q) => (
-                    <McqCard key={q.id} q={q} />
-                  ))}
-                </div>
-              )}
-            </section>
-          ))}
-        </div>
-      )
-    case 'check':
-      return (
-        <div className="space-y-4">
-          <p className="muted">Quiz-style conceptual questions, with an explanation for every option. Want more? The Practice tab has the whole bank.</p>
-          {m.checkIds.map((qid, k) => (
-            <McqCard key={qid} q={mcqById[qid]} index={k} />
-          ))}
-        </div>
-      )
-    case 'apply':
-      return (
-        <div className="space-y-4">
-          <p className="muted">{m.applyGenerators.length ? "Spreadsheet-style short answers. Every problem regenerates with new numbers, so practice until it's automatic." : 'No calculations in this session. Practice with the quiz-style questions instead.'}</p>
-          {m.applyGenerators.length === 0 &&
-            mcqs
-              .filter((q) => q.session === m.id && !m.checkIds.includes(q.id))
-              .slice(0, 6)
-              .map((q, k) => <McqCard key={q.id} q={q} index={k} />)}
-          {m.applyGenerators.map((gid, k) => (
-            <ProblemCard key={gid} gen={generatorById[gid]} index={k} />
-          ))}
-        </div>
-      )
-    case 'traps':
-      return (
-        <div className="grid md:grid-cols-2 gap-3">
-          {m.traps.map((t) => (
-            <div key={t.title} className="card p-4">
-              <h3 className="font-semibold">⚠ {t.title}</h3>
-              <Rich className="text-sm">{t.body}</Rich>
-            </div>
-          ))}
-        </div>
-      )
-    case 'explain':
-      return (
-        <div className="space-y-5">
-          {m.feynman.map((f) => (
-            <Feynman key={f.id} f={f} />
-          ))}
-        </div>
-      )
-    case 'deeper':
-      return (
-        <div className="space-y-3">
-          <p className="muted">Optional. Extra depth, derivations, and case-interview connections.</p>
-          {m.deeper.map((d) => (
-            <details key={d.title} className="card p-4">
-              <summary className="cursor-pointer font-semibold">
-                {d.kind === 'case-interview' ? '💼 In a case interview: ' : d.kind === 'derivation' ? '∂ ' : '📘 '}
-                {d.title.replace(/^In a case interview: /, '')}
-              </summary>
-              <Rich className="mt-2">{d.body}</Rich>
-            </details>
-          ))}
-        </div>
-      )
-    case 'mastery':
-      return <Mastery m={m} />
-    case 'summary':
-      return (
-        <div className="card p-5">
-          <div className="flex justify-between items-center gap-2 mb-2">
-            <h3 className="text-xl font-semibold">
-              Session {m.num}: {m.title} — one-page summary
+        <section id={`${m.id}-terms`} className="scroll-mt-20" data-testid={`screen-${m.id}-terms`} aria-labelledby={`${m.id}-terms-title`}>
+          <h3 id={`${m.id}-terms-title`} className="lesson-h">
+            Terms
+          </h3>
+          <Terms m={m} />
+        </section>
+        <section id={`${m.id}-math`} className="scroll-mt-20" data-testid={`screen-${m.id}-math`} aria-labelledby={`${m.id}-math-title`}>
+          <h3 id={`${m.id}-math-title`} className="lesson-h">
+            The math
+          </h3>
+          <MathBlock m={m} />
+        </section>
+        {m.examples.length > 0 && (
+          <section id={`${m.id}-examples`} className="scroll-mt-20 space-y-5" data-testid={`screen-${m.id}-examples`} aria-labelledby={`${m.id}-examples-title`}>
+            <h3 id={`${m.id}-examples-title`} className="lesson-h">
+              Worked examples
+            </h3>
+            {m.examples.map((ex) => (
+              <WorkedExample key={ex.id} ex={ex} />
+            ))}
+          </section>
+        )}
+        {m.widgets.length > 0 && (
+          <section id={`${m.id}-widgets`} className="scroll-mt-20 space-y-6" data-testid={`screen-${m.id}-widgets`} aria-labelledby={`${m.id}-widgets-title`}>
+            <h3 id={`${m.id}-widgets-title`} className="lesson-h">
+              Try it
+            </h3>
+            {m.widgets.map((w) => (
+              <section key={w.id} className="space-y-3" aria-labelledby={`w-${w.id}`}>
+                <h4 id={`w-${w.id}`} className="text-lg font-semibold">
+                  {w.title}
+                </h4>
+                <Rich className="muted">{w.intro}</Rich>
+                <Widget id={w.id} />
+              </section>
+            ))}
+          </section>
+        )}
+        <section id={`${m.id}-traps`} className="scroll-mt-20" data-testid={`screen-${m.id}-traps`} aria-labelledby={`${m.id}-traps-title`}>
+          <h3 id={`${m.id}-traps-title`} className="lesson-h">
+            Easy to mix up
+          </h3>
+          <ul className="lesson-list">
+            {m.traps.map((t) => (
+              <li key={t.title}>
+                <strong>{t.title}.</strong> <Rich className="inline">{t.body}</Rich>
+              </li>
+            ))}
+          </ul>
+        </section>
+        {m.deeper.length > 0 && (
+          <section id={`${m.id}-deeper`} className="scroll-mt-20" data-testid={`screen-${m.id}-deeper`} aria-labelledby={`${m.id}-deeper-title`}>
+            <h3 id={`${m.id}-deeper-title`} className="lesson-h">
+              If you want the extra depth
+            </h3>
+            {m.deeper.map((d) => (
+              <details key={d.title} className="lesson-more">
+                <summary>
+                  {d.kind === 'case-interview' ? 'In a case interview: ' : ''}
+                  {d.title.replace(/^In a case interview: /, '')}
+                </summary>
+                <Rich>{d.body}</Rich>
+              </details>
+            ))}
+          </section>
+        )}
+        <section id={`${m.id}-summary`} className="scroll-mt-20" data-testid={`screen-${m.id}-summary`} aria-labelledby={`${m.id}-summary-title`}>
+          <div className="flex justify-between items-baseline gap-3">
+            <h3 id={`${m.id}-summary-title`} className="lesson-h">
+              One-page summary
             </h3>
             <button type="button" className="btn btn-sm no-print" onClick={() => window.print()}>
               Print
             </button>
           </div>
           <Rich>{m.summary}</Rich>
+        </section>
+      </div>
+      <QuestionDeck m={m} />
+      <section id={`${m.id}-mastery`} className="lesson-deck scroll-mt-20" data-testid={`screen-${m.id}-mastery`} aria-labelledby={`${m.id}-mastery-title`}>
+        <h3 id={`${m.id}-mastery-title`} className="text-xl font-semibold mb-3">
+          Mastery check
+        </h3>
+        <Mastery m={m} />
+      </section>
+    </article>
+  )
+}
+
+function MathBlock({ m }: { m: SessionModule }) {
+  if (m.formulas.length === 0) return <p className="muted">No formulas in this session. The questions at the end cover it.</p>
+  return (
+    <div className="space-y-8">
+      {m.mathIntro && <Rich>{m.mathIntro}</Rich>}
+      {m.formulas.map((f) => (
+        <div key={f.id}>
+          <h4 className="text-lg font-semibold">
+            {f.name} {f.general && <GeneralBadge />} <Cite tag={f.src} />
+          </h4>
+          <div className="my-3 scroll-x">
+            <Tex display>{f.latex}</Tex>
+          </div>
+          <dl className="formula-vars">
+            {f.vars.map(([sym, meaning]) => (
+              <div key={sym}>
+                <dt>
+                  <Tex>{sym}</Tex>
+                </dt>
+                <dd>
+                  <Rich>{meaning}</Rich>
+                </dd>
+              </div>
+            ))}
+          </dl>
+          <p>
+            <strong>In words.</strong>
+          </p>
+          <Rich>{f.words}</Rich>
         </div>
-      )
-  }
+      ))}
+    </div>
+  )
 }
 
 function Terms({ m }: { m: SessionModule }) {
-  const starred = useProgress((p) => p.starred)
   return (
-    <div className="space-y-3">
-      <p className="muted text-sm">All of these are already in your flashcards. Star the ones you want to see more often.</p>
-      {m.terms.map((t) => {
-        const cardId = `card-${t.id}`
-        const on = starred.includes(cardId)
-        return (
-          <div key={t.id} className="card p-4">
-            <div className="flex items-start gap-2">
-              <h3 className="font-semibold flex-1">
-                {t.term} {t.general && <GeneralBadge />}
-              </h3>
-              <button
-                type="button"
-                className="btn btn-sm btn-ghost"
-                aria-pressed={on}
-                aria-label={on ? `Unstar ${t.term}` : `Star ${t.term} in flashcards`}
-                onClick={() => setProgress((p) => ({ ...p, starred: on ? p.starred.filter((x) => x !== cardId) : [...p.starred, cardId] }))}
-              >
-                {on ? '★ Starred' : '☆ Star'}
-              </button>
-            </div>
+    <dl className="glossary">
+      {m.terms.map((t) => (
+        <div key={t.id}>
+          <dt>
+            {t.term} {t.general && <GeneralBadge />} <Cite tag={t.src} />
+          </dt>
+          <dd>
             <Rich>{t.def}</Rich>
-            <Cite tag={t.src} />
+          </dd>
+        </div>
+      ))}
+    </dl>
+  )
+}
+
+function QuestionDeck({ m }: { m: SessionModule }) {
+  const slides = useMemo(() => {
+    const los = m.los.map((l) => l.id)
+    const out: { key: string; kind: string; node: ReactNode }[] = []
+    m.checkIds.forEach((qid, k) => {
+      const q = mcqById[qid]
+      if (q) out.push({ key: qid, kind: 'Concept', node: <McqCard q={q} index={k} /> })
+    })
+    if (m.applyGenerators.length === 0) {
+      mcqs
+        .filter((q) => q.session === m.id && !m.checkIds.includes(q.id))
+        .slice(0, 6)
+        .forEach((q, k) => out.push({ key: q.id, kind: 'Concept', node: <McqCard q={q} index={k} /> }))
+    }
+    m.applyGenerators.forEach((gid, k) => {
+      const gen = generatorById[gid]
+      if (gen) out.push({ key: gid, kind: 'Calculation', node: <ProblemCard gen={gen} index={k} /> })
+    })
+    for (const w of m.widgets) {
+      w.numeric?.forEach((n) =>
+        out.push({
+          key: n.id,
+          kind: 'Use the interactive',
+          node: <NumericAsk id={n.id} label={n.label} part={n.part} hint={n.hint} src={n.src} session={m.id} los={los} />,
+        }),
+      )
+      w.questions.forEach((q) => out.push({ key: q.id, kind: 'Use the interactive', node: <McqCard q={q} /> }))
+    }
+    m.feynman.forEach((f) => out.push({ key: f.id, kind: 'Explain it', node: <Feynman f={f} /> }))
+    return out
+  }, [m])
+  const [i, setI] = useState(0)
+  const n = slides.length
+  const at = Math.min(i, Math.max(0, n - 1))
+  if (n === 0) return null
+  return (
+    <section id={`${m.id}-check`} className="lesson-deck scroll-mt-20" data-testid={`screen-${m.id}-check`} aria-roledescription="carousel" aria-label={`Questions for session ${m.num}`}>
+      <span id={`${m.id}-apply`} className="sr-only" />
+      <span id={`${m.id}-explain`} className="sr-only" />
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <h3 className="text-xl font-semibold">Questions</h3>
+        <p className="text-sm muted" aria-live="polite">
+          {slides[at].kind} · {at + 1} of {n}
+        </p>
+      </div>
+      <p className="text-sm muted">One at a time. The Practice tab has the rest of the bank.</p>
+      <div className="mt-3">
+        {slides.map((s, k) => (
+          <div key={s.key} hidden={k !== at}>
+            {s.node}
           </div>
-        )
-      })}
-    </div>
+        ))}
+      </div>
+      <div className="flex items-center justify-between gap-2 mt-4">
+        <button type="button" className="btn" disabled={at === 0} onClick={() => setI(at - 1)}>
+          ← Previous
+        </button>
+        <button type="button" className="btn btn-primary" disabled={at === n - 1} onClick={() => setI(at + 1)}>
+          Next →
+        </button>
+      </div>
+    </section>
   )
 }
 
@@ -394,7 +340,7 @@ function Mastery({ m }: { m: SessionModule }) {
         <p>
           9 mixed questions (conceptual multiple choice plus short-answer calculations where the session has them), drawn fresh each time. No hints until you submit. Score <strong>80% or better</strong> to mark Session {m.num} mastered. Misses link back to the exact screen to review.
         </p>
-        <button type="button" className="btn btn-primary" onClick={() => setAttempt(newSeed())} data-testid="start-mastery">
+        <button type="button" className="btn btn-primary" onClick={() => setAttempt(newSeed())} data-testid={`start-mastery-${m.id}`}>
           Start mastery check
         </button>
       </div>

@@ -159,7 +159,7 @@ function TakeQuiz({ n }: { n: number }) {
           </button>
         ))}
       </nav>
-      {finished && <p className="muted text-sm">Misses went to your Mistake Log.</p>}
+      {finished && <p className="muted text-sm">Retake any you missed before the exam.</p>}
     </div>
   )
 }

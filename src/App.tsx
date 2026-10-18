@@ -6,18 +6,13 @@ import { useRoute } from './lib/router'
 import { markStudyToday } from './lib/store'
 import { Exam } from './pages/Exam'
 import { ExcelLab } from './pages/ExcelLab'
-import { Flashcards } from './pages/Flashcards'
 import { FormulaSheet } from './pages/FormulaSheet'
-import { Home } from './pages/Home'
 import { Learn } from './pages/Learn'
-import { Mistakes } from './pages/Mistakes'
-import { ModulePage } from './pages/ModulePage'
 import { More } from './pages/More'
 import { Plan } from './pages/Plan'
 import { Practice } from './pages/Practice'
 import { Quizzes } from './pages/Quizzes'
 import { Settings } from './pages/Settings'
-import { Tracker } from './pages/Tracker'
 
 export default function App() {
   const { path } = useRoute()
@@ -25,41 +20,26 @@ export default function App() {
     markStudyToday()
   }, [])
   useEffect(() => {
-    const t = path.split('/')[1] || 'home'
+    const t = path.split('/')[1] || 'learn'
     document.title = `STRAT 402 · ${t.charAt(0).toUpperCase() + t.slice(1)}`
   }, [path])
 
   let page
   const m = path.match(/^\/learn\/(S\d\d)$/)
-  if (m && sessionById[m[1] as SessionId]) page = <ModulePage key={m[1]} id={m[1] as SessionId} />
+  if (path === '/' || path === '/learn' || (m && sessionById[m[1] as SessionId])) page = <Learn key={m?.[1] ?? 'all'} focus={m ? (m[1] as SessionId) : undefined} />
   else
     switch (path) {
-      case '/':
-        page = <Home />
-        break
-      case '/learn':
-        page = <Learn />
-        break
       case '/practice':
         page = <Practice />
         break
       case '/quizzes':
         page = <Quizzes />
         break
-      case '/flashcards':
-        page = <Flashcards />
-        break
-      case '/tracker':
-        page = <Tracker />
-        break
       case '/exam':
         page = <Exam />
         break
       case '/formulas':
         page = <FormulaSheet />
-        break
-      case '/mistakes':
-        page = <Mistakes />
         break
       case '/excel':
         page = <ExcelLab />
@@ -77,8 +57,8 @@ export default function App() {
         page = (
           <div className="space-y-2">
             <h1 className="text-2xl font-semibold">Page not found</h1>
-            <a className="underline" href="#/">
-              Go home
+            <a className="underline" href="#/learn">
+              Back to Learn
             </a>
           </div>
         )

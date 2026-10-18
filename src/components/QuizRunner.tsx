@@ -160,7 +160,7 @@ export function QuizRunner({ items, title, timeLimit, onFinish, reviewLinks, pas
               </ul>
             </div>
           </div>
-          <p className="text-sm muted mt-3">Every miss was added to your Mistake Log.</p>
+          <p className="text-sm muted mt-3">Review links jump back to that part of Learn.</p>
         </div>
         {items.map((it2, k) => {
           const m = itemMeta(it2)

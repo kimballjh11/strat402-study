@@ -20,7 +20,7 @@ const PAIRS: Card[] = [
   { text: 'Netflix streaming and Redbox DVD rentals', sub: true, why: 'Same job (entertainment), different way. As streaming got cheaper and better, Redbox demand shifted left.', src: 'S07 slides p.5; S09 slides p.4' },
   { text: 'Hot dogs and hot dog buns', sub: false, why: 'Used together: a pricier bun lowers hot dog demand.', src: 'General econ' },
   { text: 'Uber and Lyft rides', sub: true, why: 'Riders switch apps when one surges.', src: 'General econ' },
-  { text: 'Printers and ink cartridges', sub: false, why: 'Ink is only useful with a printer (the classic cross-subsidy setup in S11).', src: 'General econ (B&P Ch 11)' },
+  { text: 'Printers and ink cartridges', sub: false, why: 'Ink is only useful with a printer, so the goods are complements.', src: 'General econ (B&P Ch 11)' },
   { text: 'Home Depot and Lowe’s', sub: true, why: 'Rival home-improvement retailers selling largely the same job. A high CPE between rivals means intense rivalry.', src: 'S04 slides p.12; S08 slides p.32' },
   { text: 'Gasoline and large SUVs', sub: false, why: 'Expensive gas makes gas-guzzlers less attractive.', src: 'General econ' },
 ]

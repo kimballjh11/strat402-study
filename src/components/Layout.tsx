@@ -4,19 +4,15 @@ import { useRoute } from '../lib/router'
 import { streak, useProgress } from '../lib/store'
 
 export const NAV = [
-  { to: '/', label: 'Home', icon: '⌂' },
   { to: '/learn', label: 'Learn', icon: '📖' },
   { to: '/practice', label: 'Practice', icon: '✎' },
   { to: '/quizzes', label: 'Quiz retakes', icon: '★' },
-  { to: '/flashcards', label: 'Flashcards', icon: '🗂' },
-  { to: '/tracker', label: 'LO Tracker', icon: '▦' },
   { to: '/exam', label: 'Exam Mode', icon: '⏱' },
   { to: '/formulas', label: 'Formula Sheet', icon: 'ƒ' },
-  { to: '/mistakes', label: 'Mistake Log', icon: '✗' },
   { to: '/excel', label: 'Excel Lab', icon: '⊞' },
   { to: '/settings', label: 'Settings & backup', icon: '⚙' },
 ]
-const MOBILE = ['/', '/learn', '/practice', '/flashcards', '/more']
+const MOBILE = ['/learn', '/practice', '/quizzes', '/exam', '/more']
 
 function useTheme() {
   const [dark, setDark] = useState(() => document.documentElement.classList.contains('dark'))
@@ -38,7 +34,7 @@ export function Layout({ children }: { children: ReactNode }) {
   const [dark, setDark] = useTheme()
   const left = daysBetween(new Date(), parseIsoDay(examDate))
   const st = streak(days)
-  const active = (to: string) => (to === '/' ? path === '/' : path === to || path.startsWith(to + '/'))
+  const active = (to: string) => (to === '/learn' ? path === '/' || path === '/learn' || path.startsWith('/learn/') : path === to || path.startsWith(to + '/'))
 
   return (
     <div className="min-h-screen">
@@ -47,7 +43,7 @@ export function Layout({ children }: { children: ReactNode }) {
       </a>
       <header className="sticky top-0 z-20 border-b line" style={{ background: 'var(--surface)' }}>
         <div className="max-w-6xl mx-auto px-4 h-14 flex items-center gap-3">
-          <a href="#/" className="flex items-center gap-2 font-bold" aria-label="STRAT 402 study home">
+          <a href="#/learn" className="flex items-center gap-2 font-bold" aria-label="STRAT 402">
             <span className="grid place-items-center size-8 rounded-lg text-white text-xs" style={{ background: '#002E5D' }}>
               402
             </span>

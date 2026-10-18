@@ -13,6 +13,7 @@ export function describeSource(tag: string): string {
     S08: 'Elasticity & Price Discrimination',
     S09: 'Forecasting Demand Using Linear Regression',
     S10: 'Profit Maximization Across Market Structures',
+    S11: 'Advanced Pricing Strategies',
   }
   let m = t.match(/^(S\d\d) (video )?slides?/i)
   if (m) {
@@ -21,6 +22,7 @@ export function describeSource(tag: string): string {
   }
   m = t.match(/^(S\d\d) workbook/i)
   if (m) return `Canvas › ${m[1]} In-Class Exercise workbook (.xlsx). Cell references point to the Solution tab unless noted.`
+  if (/Advanced Pricing Strategies Exercise/i.test(t)) return 'Canvas › Session 11 › Advanced Pricing Strategies Exercise (Cascade Heating & Air workbook).'
   if (/^CQ\d/i.test(t)) return 'Your Comprehension Quiz results page on Canvas (professor’s answer and feedback, verbatim).'
   if (/Math Review/i.test(t)) return 'Canvas › Session 5 › Read: STRAT 402 Math Review (PDF by Prof. Lewis).'
   if (/Practice Problems|Optional Practice/i.test(t)) return 'Canvas › Session 5 › Optional Practice: Math Review Problems (PDF).'

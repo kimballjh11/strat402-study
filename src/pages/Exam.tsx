@@ -57,7 +57,7 @@ function PracticeExam() {
         <Num label="Short answer" value={nSa} set={setNSa} max={15} />
         <Num label="Minutes" value={mins} set={setMins} max={180} />
         <p className="text-xs muted sm:col-span-3">
-          Bank today: {mcqs.length} MC questions, {generators.length} generators. If the bank is smaller than requested, the exam uses what's available (it grows as modules are built). No hints or feedback during the exam. You can flag questions for review. Results break down by session and LO, and every miss goes to your Mistake Log.
+          Bank today: {mcqs.length} MC questions, {generators.length} generators. If the bank is smaller than requested, the exam uses what's available. No hints or feedback during the exam. You can flag questions for review. Results break down by session and learning objective, with a link back to Learn for each miss.
         </p>
         <button type="button" className="btn btn-primary sm:col-span-3" onClick={() => setSeed(newSeed())} data-testid="start-exam">
           Start practice exam

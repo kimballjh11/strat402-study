@@ -9,6 +9,8 @@ export const NAV = [
   { to: '/flashcards', label: 'Flashcards', icon: '🗂' },
   { to: '/settings', label: 'Settings & backup', icon: '⚙' },
 ]
+/** Static pages that live outside the 401 hash router (served from public/401/). */
+export const EXTRA = [{ href: './401/midterm-walkthrough.html', label: 'Midterm walkthrough', icon: '🧭' }]
 const THEME = 'strat401-theme'
 
 function useTheme() {
@@ -74,6 +76,16 @@ export function Layout401({ children }: { children: ReactNode }) {
                 </a>
               </li>
             ))}
+            {EXTRA.map((n) => (
+              <li key={n.href}>
+                <a href={n.href} className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium">
+                  <span aria-hidden className="w-5 text-center">
+                    {n.icon}
+                  </span>
+                  {n.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
         <main id="main401" className="flex-1 min-w-0 py-6 pb-28 lg:pb-10">
@@ -81,7 +93,7 @@ export function Layout401({ children }: { children: ReactNode }) {
         </main>
       </div>
       <nav aria-label="STRAT 401 (mobile)" className="lg:hidden fixed bottom-0 inset-x-0 z-20 border-t line no-print" style={{ background: 'var(--surface)' }}>
-        <ul className="grid grid-cols-4">
+        <ul className="grid grid-cols-5">
           {NAV.map((n) => (
             <li key={n.to}>
               <a href={to(n.to)} aria-current={active(n.to) ? 'page' : undefined} className="flex flex-col items-center py-2 text-xs min-h-14 justify-center" style={active(n.to) ? { color: 'var(--accent)', fontWeight: 700 } : undefined}>
@@ -89,6 +101,16 @@ export function Layout401({ children }: { children: ReactNode }) {
                   {n.icon}
                 </span>
                 {n.label.split(' ')[0]}
+              </a>
+            </li>
+          ))}
+          {EXTRA.map((n) => (
+            <li key={n.href}>
+              <a href={n.href} className="flex flex-col items-center py-2 text-xs min-h-14 justify-center">
+                <span aria-hidden className="text-lg leading-none">
+                  {n.icon}
+                </span>
+                Walkthrough
               </a>
             </li>
           ))}

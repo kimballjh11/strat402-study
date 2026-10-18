@@ -1,13 +1,13 @@
 import { useMemo, useState } from 'react'
-import { GeneralBadge } from '../components/Cite'
 import { dollars } from '../lib/format'
 
 type Res = [number, number][]
+/** Five Guys slide: Alex values the burger more; Ben values the drink more. Both value the pair at $10. */
 const START: Res = [
-  [20, 5],
-  [8, 14],
-  [12, 10],
+  [8, 2],
+  [6, 4],
 ]
+const NAMES = ['Alex', 'Ben']
 
 /** Each consumer picks the option with the most surplus (≥ 0): A, B, both separately, the bundle, or nothing. */
 function outcome(res: Res, pA: number, pB: number, pBundle: number | null) {
@@ -25,10 +25,10 @@ function outcome(res: Res, pA: number, pB: number, pBundle: number | null) {
 
 export default function BundleTable() {
   const [res, setRes] = useState<Res>(START)
-  const [pA, setPA] = useState(12)
-  const [pB, setPB] = useState(10)
+  const [pA, setPA] = useState(8)
+  const [pB, setPB] = useState(4)
   const [useBundle, setUseBundle] = useState(true)
-  const [pBundle, setPBundle] = useState(22)
+  const [pBundle, setPBundle] = useState(10)
   const out = outcome(res, pA, pB, useBundle ? pBundle : null)
   const revenue = out.reduce((s, o) => s + o[2], 0)
   const best = useMemo(() => {
@@ -49,7 +49,7 @@ export default function BundleTable() {
   return (
     <div className="space-y-3" data-testid="bundle-table">
       <p className="text-sm">
-        <GeneralBadge /> A streaming service sells Sports (A) and Movies (B); marginal cost is $0. Edit the reservation prices, set your prices, and see what each customer buys.
+        Five Guys sells a burger (A) and a Dr Pepper (B). These are the reservation prices from the slide. Set prices and see what Alex and Ben buy.
       </p>
       <div className="scroll-x">
         <table className="data-table">
@@ -66,7 +66,7 @@ export default function BundleTable() {
           <tbody>
             {res.map(([a, b], i) => (
               <tr key={i}>
-                <td>{i + 1}</td>
+                <td>{NAMES[i] ?? i + 1}</td>
                 {[a, b].map((v, j) => (
                   <td key={j}>
                     <label className="sr-only" htmlFor={`b-${i}-${j}`}>
@@ -95,17 +95,17 @@ export default function BundleTable() {
       </div>
       <div className="grid sm:grid-cols-3 gap-3 text-sm">
         <label className="flex flex-col gap-1 font-medium">
-          Price of A: {dollars(pA)}
+          Burger price: {dollars(pA)}
           <input type="range" min={0} max={30} step={1} value={pA} onChange={(e) => setPA(Number(e.target.value))} />
         </label>
         <label className="flex flex-col gap-1 font-medium">
-          Price of B: {dollars(pB)}
+          Drink price: {dollars(pB)}
           <input type="range" min={0} max={30} step={1} value={pB} onChange={(e) => setPB(Number(e.target.value))} />
         </label>
         <label className="flex flex-col gap-1 font-medium">
           <span>
             <input type="checkbox" className="size-4 mr-2 align-middle" checked={useBundle} onChange={(e) => setUseBundle(e.target.checked)} />
-            Offer bundle: {dollars(pBundle)}
+            Offer combo: {dollars(pBundle)}
           </span>
           <input type="range" min={0} max={50} step={1} value={pBundle} disabled={!useBundle} onChange={(e) => setPBundle(Number(e.target.value))} />
         </label>

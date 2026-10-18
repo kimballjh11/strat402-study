@@ -1,7 +1,10 @@
+import { sessions } from '../content'
 import { isoDay, parseIsoDay } from '../lib/format'
 import { buildPlan } from '../lib/plan'
 import { useProgress } from '../lib/store'
-import { minutes, titles } from './Home'
+
+const titles = Object.fromEntries(sessions.map((s) => [s.id, s.title]))
+const minutes = Object.fromEntries(sessions.map((s) => [s.id, s.minutes]))
 
 export function Plan() {
   const p = useProgress((x) => x)
@@ -12,7 +15,7 @@ export function Plan() {
       <header>
         <h1 className="text-3xl font-semibold">Study plan</h1>
         <p className="muted">
-          From today to your exam date ({p.examDate}): new modules first (weakest first once you've taken the diagnostic), then mixed practice, two full practice exams, and a final review day on your Mistake Log and flashcards. It re-plans automatically as you master modules.{' '}
+          From today to your exam date ({p.examDate}): new sessions first (weakest first once you've taken the diagnostic), then mixed practice, two full practice exams, and a final review day on Learn and the formula sheet. It re-plans automatically as you master sessions.{' '}
           <a className="underline" href="#/settings">
             Change exam date
           </a>

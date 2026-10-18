@@ -23,7 +23,7 @@ export function CourseTabs({ active }: { active: '401' | '402' }) {
   const last = readLast()
   const tabs = [
     { id: '401', label: 'STRAT 401', sub: 'Foundations of Strategy', href: '#' + (last['401'] && is401Path(last['401'].split('?')[0]) ? last['401'] : '/401') },
-    { id: '402', label: 'STRAT 402', sub: 'Economics of Strategy', href: '#' + (last['402'] && !is401Path(last['402'].split('?')[0]) ? last['402'] : '/') },
+    { id: '402', label: 'STRAT 402', sub: 'Economics of Strategy', href: '#' + (last['402'] && !is401Path(last['402'].split('?')[0]) && last['402'].split('?')[0] !== '/' ? last['402'] : '/learn') },
   ] as const
   return (
     <nav aria-label="Course" className="no-print border-b line" style={{ background: 'var(--surface-2)' }}>

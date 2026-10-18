@@ -1,0 +1,1375 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>STRAT 401 Midterm Walkthrough</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: sticky packet-order index on the left, one reading column; each framework = diagram, then explanation, traps, self-check */
+:root{
+  --bg:#F3F6F8; --surface:#FFFFFF; --panel:#E9EEF2; --ink:#14202C; --muted:#56657A; --line:#CDD6DE;
+  --acc:#1D4F91; --acc-soft:#D9E5F5; --on-acc:#FFFFFF;
+  --amber:#B86E0B; --amber-soft:#F6E5C8; --rose:#B23B33; --rose-soft:#F5D9D6; --green:#2A7A50; --green-soft:#D5ECDF;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E141A; --surface:#161F28; --panel:#1E2933; --ink:#E4EBF1; --muted:#9AA9B7; --line:#2C3946;
+  --acc:#82AAE8; --acc-soft:#1D3150; --on-acc:#0E141A;
+  --amber:#E5A54A; --amber-soft:#3A2A10; --rose:#E57E75; --rose-soft:#3F201D; --green:#6DC598; --green-soft:#163828; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E141A; --surface:#161F28; --panel:#1E2933; --ink:#E4EBF1; --muted:#9AA9B7; --line:#2C3946;
+  --acc:#82AAE8; --acc-soft:#1D3150; --on-acc:#0E141A;
+  --amber:#E5A54A; --amber-soft:#3A2A10; --rose:#E57E75; --rose-soft:#3F201D; --green:#6DC598; --green-soft:#163828; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.6}
+.wrap{display:grid;grid-template-columns:250px minmax(0,1fr);gap:40px;max-width:1180px;margin:0 auto;padding-inline:20px;padding-block:24px 80px}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px);align-self:start;max-height:calc(100vh - 32px);overflow:auto;font-size:13.5px;padding-right:6px}
+.toc h4{font-family:var(--display);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:16px 0 4px}
+.toc a{display:flex;gap:8px;align-items:center;color:var(--ink);text-decoration:none;padding:3px 6px;border-radius:6px}
+.toc a:hover{background:var(--panel)}
+.toc a .dot{width:9px;height:9px;border-radius:50%;border:1.5px solid var(--line);flex:none}
+.toc a.done .dot{background:var(--green);border-color:var(--green)}
+.prog{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px}
+.prog b{font-family:var(--display);font-size:22px}
+.bar{height:8px;background:var(--panel);border-radius:6px;overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;background:var(--green);width:0;transition:width .3s}
+main{min-width:0;max-width:800px}
+header.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(30px,5vw,46px);line-height:1.05;margin:8px 0 10px;text-wrap:balance;letter-spacing:-.01em}
+.hero p{color:var(--muted);max-width:62ch;margin:0 0 10px}
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:18px 0 8px}
+.how div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:14px}
+.how b{display:block;font-family:var(--display)}
+h2.part{font-family:var(--display);font-size:30px;font-weight:800;margin:64px 0 4px;padding-top:18px;border-top:3px solid var(--ink);text-wrap:balance}
+h2.part small{display:block;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);font-weight:700;margin-bottom:4px}
+.kq{color:var(--muted);font-style:italic;margin:0 0 10px}
+section.fw{margin-top:40px;scroll-margin-top:16px}
+.fw-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-bottom:10px}
+.fw-head h3{font-family:var(--display);font-size:23px;font-weight:700;margin:0;text-wrap:balance}
+.tag{font-family:var(--mono);font-size:12px;color:var(--acc);background:var(--acc-soft);padding:2px 8px;border-radius:5px}
+.got{margin-left:auto;font-size:13.5px;display:flex;gap:6px;align-items:center;cursor:pointer;user-select:none;color:var(--muted)}
+.got input{width:17px;height:17px;accent-color:var(--green)}
+figure.fig{margin:0 0 14px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 10px;overflow-x:auto}
+figure.fig svg{display:block;width:100%;min-width:560px;height:auto}
+figure.fig figcaption{font-size:13px;color:var(--muted);margin-top:6px}
+svg text{fill:var(--ink);font-family:var(--body);font-size:13px}
+svg .sm{font-size:11.5px} svg .lg{font-size:16px;font-weight:700;font-family:var(--display)} svg .b{font-weight:700}
+svg .mono{font-family:var(--mono);font-size:12px}
+svg .ink{fill:var(--ink)} svg .mut{fill:var(--muted)} svg .acc{fill:var(--acc)} svg .accs{fill:var(--acc-soft)}
+svg .amb{fill:var(--amber)} svg .ambs{fill:var(--amber-soft)} svg .rose{fill:var(--rose)} svg .roses{fill:var(--rose-soft)}
+svg .grn{fill:var(--green)} svg .grns{fill:var(--green-soft)} svg .pan{fill:var(--surface)} svg .pan2{fill:var(--panel)} svg .onacc{fill:var(--on-acc)}
+svg .st{stroke:var(--line);stroke-width:1.5} svg .sti{stroke:var(--ink);stroke-width:1.5} svg .sta{stroke:var(--acc);stroke-width:2}
+svg .str{stroke:var(--rose);stroke-width:2} svg .stam{stroke:var(--amber);stroke-width:2} svg .stg{stroke:var(--green);stroke-width:2} svg .stm{stroke:var(--muted);stroke-width:1.2}
+svg .nf{fill:none} svg .dash{stroke-dasharray:5 4}
+.explain p{margin:0 0 12px;max-width:68ch}
+.explain ul,.explain ol{margin:0 0 12px;padding-left:22px;max-width:68ch}
+.explain li{margin-bottom:5px}
+.explain strong{font-weight:700}
+.f{font-family:var(--mono);font-size:14px;background:var(--panel);padding:1px 6px;border-radius:4px;white-space:nowrap}
+.trap{border:1px solid var(--rose);background:var(--rose-soft);border-radius:10px;padding:10px 14px;margin:12px 0;font-size:15px}
+.trap b{color:var(--rose);font-family:var(--display);letter-spacing:.04em;text-transform:uppercase;font-size:12.5px;display:block}
+.case{border:1px solid var(--amber);background:var(--amber-soft);border-radius:10px;padding:10px 14px;margin:12px 0;font-size:15px}
+.case b.h{color:var(--amber);font-family:var(--display);letter-spacing:.04em;text-transform:uppercase;font-size:12.5px;display:block}
+details.check{border:1px dashed var(--acc);border-radius:10px;padding:8px 14px;margin:10px 0;background:var(--surface)}
+details.check summary{cursor:pointer;font-weight:700;color:var(--acc)}
+details.check summary::marker{color:var(--acc)}
+details.check p{margin:8px 0 4px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:0 0 14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-width:0}
+.card h5{font-family:var(--display);font-size:16px;margin:0 0 6px}
+.card p,.card ul{margin:0;font-size:14.5px}
+.card ul{padding-left:18px}
+.chip{display:inline-block;font-size:12px;font-weight:700;padding:1px 8px;border-radius:20px;margin:1px 2px}
+.c-g{background:var(--green-soft);color:var(--green)} .c-r{background:var(--rose-soft);color:var(--rose)} .c-a{background:var(--amber-soft);color:var(--amber)} .c-b{background:var(--acc-soft);color:var(--acc)}
+.tblwrap{overflow-x:auto;margin:0 0 14px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+table.t{border-collapse:collapse;width:100%;min-width:520px;font-size:14.5px}
+table.t th,table.t td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+table.t th{font-family:var(--display);background:var(--panel)}
+table.t tr:last-child td{border-bottom:0}
+.errc{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:14px}
+.errc div{padding:12px 14px;background:var(--surface);border:1px solid var(--line);min-width:0}
+.errc b{font-family:var(--display);font-size:18px;display:block}
+.errc .q{font-size:13.5px;color:var(--muted);display:block;margin-bottom:4px}
+.steps{counter-reset:s;list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:0 0 14px}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px 10px 44px;position:relative;font-size:14.5px}
+.steps li::before{content:counter(s);position:absolute;left:12px;top:9px;width:22px;height:22px;border-radius:50%;background:var(--acc);color:var(--on-acc);font-weight:700;font-size:13px;display:grid;place-items:center}
+.formulas{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+.formulas div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.formulas span{display:block;font-size:13px;color:var(--muted)}
+.formulas code{font-family:var(--mono);font-size:14px}
+a{color:var(--acc)}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.mobnav{display:none}
+@media (max-width:900px){
+  .wrap{grid-template-columns:minmax(0,1fr);gap:0}
+  nav.toc{display:none}
+  .mobnav{display:block;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px 12px;margin:10px 0}
+  .mobnav summary{font-weight:700;cursor:pointer}
+  .mobnav .toc{display:block;position:static;max-height:none}
+}
+@media (prefers-reduced-motion:reduce){.bar i{transition:none}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" style="fill:var(--ink)"/></marker>
+    <marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" style="fill:var(--acc)"/></marker>
+    <marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" style="fill:var(--rose)"/></marker>
+    <marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" style="fill:var(--green)"/></marker>
+    <marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" style="fill:var(--amber)"/></marker>
+  </defs>
+</svg>
+
+<div class="wrap">
+<nav class="toc" id="toc" aria-label="Frameworks in packet order"></nav>
+<main>
+<header class="hero">
+  <span class="tag">STRAT 401 · Sessions 1 to 11 · Midterm</span>
+  <h1>Every framework in the packet, in packet order</h1>
+  <p>Section numbers match your printed study guide (§1 to §9). For each framework: look at the diagram, read the explanation, then try the check question before you open it. Tick "Got it" when you could teach it back without notes.</p>
+  <div class="how">
+    <div><b>Exam shape</b>45 MC (90 pts), 3 short answers (15), 2 mini-cases (20). 125 total.</div>
+    <div><b>Highest yield</b>Value stick math, HHI and merger tests, VRIO verdicts, v + F/n, experience curve, PPP.</div>
+    <div><b>Window</b>Testing Center, October 12 to 20.</div>
+  </div>
+  <details class="mobnav"><summary>Jump to a framework</summary><div class="toc" id="toc2"></div></details>
+</header>
+<!-- ================= §1 ================= -->
+<h2 class="part" data-part="§1 What is strategy"><small>§1 · Session 1</small>What is strategy</h2>
+<p class="kq">Key question: Can Southwest move toward differentiation without destroying its low-cost advantage?</p>
+<div class="explain"><p><strong>The one-sentence definition:</strong> strategy is a set of choices about where to compete and how to win that lets a firm create more value than rivals and keep some of it. Competitive advantage means the firm's gap between what customers will pay and what it costs to serve them is wider than rivals' gaps.</p></div>
+
+<section class="fw" id="value-stick" data-title="Value stick">
+<div class="fw-head"><span class="tag">§1</span><h3>The value stick</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 380" role="img" aria-label="Value stick drawn to scale: WTP 50, price 35, cost 20, WTS 12">
+  <rect x="250" y="70" width="70" height="84" class="accs"/>
+  <rect x="250" y="154" width="70" height="84" class="acc"/>
+  <rect x="250" y="238" width="70" height="45" class="ambs"/>
+  <rect x="250" y="283" width="70" height="67" class="pan2"/>
+  <rect x="250" y="70" width="70" height="280" class="nf sti"/>
+  <g class="sti"><line x1="236" y1="70" x2="250" y2="70"/><line x1="236" y1="154" x2="250" y2="154"/><line x1="236" y1="238" x2="250" y2="238"/><line x1="236" y1="283" x2="250" y2="283"/></g>
+  <text x="230" y="75" text-anchor="end" class="b">WTP  $50</text>
+  <text x="230" y="159" text-anchor="end" class="b">Price  $35</text>
+  <text x="230" y="243" text-anchor="end" class="b">Cost  $20</text>
+  <text x="230" y="288" text-anchor="end" class="b">WTS  $12</text>
+  <text x="230" y="303" text-anchor="end" class="sm mut">supplier's willingness to sell</text>
+  <line x1="285" y1="66" x2="285" y2="28" class="sta" marker-end="url(#aha)"/>
+  <text x="296" y="38" class="sm acc b">raise WTP = create value</text>
+  <line x1="285" y1="290" x2="285" y2="338" class="sta" marker-end="url(#aha)"/>
+  <text x="296" y="334" class="sm acc b">lower cost / WTS = create value</text>
+  <g class="stm"><path d="M330,72 h8 v80 h-8" class="nf"/><path d="M330,156 h8 v80 h-8" class="nf"/><path d="M330,240 h8 v41 h-8" class="nf"/></g>
+  <text x="348" y="108" class="b">Buyer surplus = WTP − price</text><text x="348" y="125" class="mono">$50 − $35 = $15 → customers</text>
+  <text x="348" y="192" class="b">Firm margin = price − cost</text><text x="348" y="209" class="mono">$35 − $20 = $15 → the firm</text>
+  <text x="348" y="256" class="b">Supplier surplus = cost − WTS</text><text x="348" y="273" class="mono">$20 − $12 = $8 → suppliers, employees</text>
+  <path d="M48,70 h-10 v213 h10" class="nf sta"/>
+  <text transform="translate(26,177) rotate(-90)" text-anchor="middle" class="b acc sm">Total value created = WTP − WTS = $38</text>
+</svg>
+<figcaption>Drawn to scale with the numbers from practice question 2. The three slices always add up to the total.</figcaption>
+</figure>
+<div class="explain">
+<p>Read the stick from top to bottom. The top is the most a customer would pay (WTP). The bottom is the least a supplier would accept to provide its inputs (WTS). Everything between them is the <strong>total value created</strong>, and two lines in the middle (price and cost) cut that total into three slices.</p>
+<ul>
+<li><strong>Value is created only at the ends.</strong> Push WTP up (make the product better in a way customers care about) or push cost and WTS down (make it cheaper to produce, or make suppliers willing to sell for less). Nothing else changes the total.</li>
+<li><strong>Price only divides value.</strong> Moving the price line shifts value between customers and the firm. The total length of the stick stays the same.</li>
+<li><strong>Creating and capturing are different problems.</strong> A firm can lengthen the stick a lot and still keep a thin slice if buyers or suppliers are powerful. Five forces (§4) explains who captures what.</li>
+<li>This stick is the backbone of the course. Cost advantage (§7) lowers the floor. Differentiation (§8) raises the ceiling. Dual advantage (§9) does both.</li>
+</ul>
+</div>
+<div class="trap"><b>Exam trap</b>"A price cut creates value for customers." It moves value to customers but creates none: buyer surplus rises by exactly what firm margin loses. Only WTP or WTS/cost moves change the total.</div>
+<details class="check"><summary>Check yourself: WTP $80, price $60, cost $45, WTS $30. Give all four numbers.</summary><p>Buyer surplus 80 − 60 = $20. Firm margin 60 − 45 = $15. Supplier surplus 45 − 30 = $15. Total 80 − 30 = $50, and 20 + 15 + 15 = 50 confirms it.</p></details>
+</section>
+
+<section class="fw" id="generic" data-title="Generic strategies">
+<div class="fw-head"><span class="tag">§1</span><h3>Porter's generic strategies</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 370" role="img" aria-label="Two by two: cost or differentiation advantage, broad or narrow scope">
+  <text x="400" y="18" text-anchor="middle" class="b mut">TYPE OF ADVANTAGE</text>
+  <text x="280" y="48" text-anchor="middle" class="lg">Cost advantage</text>
+  <text x="520" y="48" text-anchor="middle" class="lg">Differentiation advantage</text>
+  <text transform="translate(30,200) rotate(-90)" text-anchor="middle" class="b mut">COMPETITIVE SCOPE</text>
+  <text x="148" y="135" text-anchor="end" class="lg">Broad</text>
+  <text x="148" y="275" text-anchor="end" class="lg">Narrow</text>
+  <rect x="160" y="60" width="240" height="140" class="accs st"/><rect x="400" y="60" width="240" height="140" class="ambs st"/>
+  <rect x="160" y="200" width="240" height="140" class="pan2 st"/><rect x="400" y="200" width="240" height="140" class="pan2 st"/>
+  <text x="280" y="108" text-anchor="middle" class="b">Cost leadership</text><text x="280" y="128" text-anchor="middle" class="sm mut">lowest cost, whole market</text><text x="280" y="145" text-anchor="middle" class="sm mut">e.g. Walmart</text>
+  <text x="520" y="108" text-anchor="middle" class="b">Differentiation</text><text x="520" y="128" text-anchor="middle" class="sm mut">premium &gt; cost of earning it</text><text x="520" y="145" text-anchor="middle" class="sm mut">e.g. Louis Vuitton</text>
+  <text x="280" y="270" text-anchor="middle" class="b">Focused low cost</text><text x="280" y="290" text-anchor="middle" class="sm mut">cheapest for one segment</text>
+  <text x="520" y="270" text-anchor="middle" class="b">Focused differentiation</text><text x="520" y="290" text-anchor="middle" class="sm mut">best for one segment</text><text x="520" y="307" text-anchor="middle" class="sm mut">e.g. premium ultramarathon shoes</text>
+  <circle cx="400" cy="200" r="44" class="roses str"/>
+  <text x="400" y="196" text-anchor="middle" class="b rose sm">Stuck in</text><text x="400" y="212" text-anchor="middle" class="b rose sm">the middle</text>
+</svg>
+<figcaption>Two questions build the grid: what kind of advantage, and how broad a market.</figcaption>
+</figure>
+<div class="explain">
+<p>Porter says a firm answers two questions. <strong>What type of advantage?</strong> Either lower cost than rivals at acceptable quality, or a product customers will pay a premium for. <strong>How broad a scope?</strong> The whole industry, or one narrow segment.</p>
+<ul>
+<li><strong>Cost leadership</strong> wins by having the lowest cost, so it earns a margin at prices rivals can't match. It needs efficient scale, tight cost control, a standardized offering. It fails when rivals imitate, technology shifts, the firm cuts something customers were actually paying for, or costs creep back in.</li>
+<li><strong>Differentiation</strong> wins when the premium customers pay is bigger than the cost of earning it. It needs brand, design, quality, service or innovation that buyers value. It fails when the premium gets too big, buyers stop caring, or rivals copy.</li>
+<li><strong>Focus</strong> (either flavor) wins by serving one segment better or cheaper than broad players can. It needs deep segment knowledge and activities tailored to it. It fails when the segment disappears or broad rivals learn to serve it.</li>
+<li><strong>Stuck in the middle:</strong> chasing every position at once and ending up with neither the lowest cost nor a premium. Hold onto this idea for §9, where dual advantage is the exception.</li>
+</ul>
+</div>
+<div class="trap"><b>Exam trap</b>Scope is about the <em>breadth of the market served</em>, not company size. A huge firm can be focused; a premium price to a niche = focused differentiation, not differentiation.</div>
+<details class="check"><summary>Check yourself: A discount airline flies only between three small regional cities at the lowest fares. Which box?</summary><p>Focused low cost: cost advantage, narrow scope.</p></details>
+</section>
+
+<section class="fw" id="activity" data-title="Trade-offs & activity systems">
+<div class="fw-head"><span class="tag">§1</span><h3>Trade-offs and activity systems (fit)</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 400" role="img" aria-label="Southwest activity system map">
+  <g class="st">
+    <line x1="130" y1="70" x2="550" y2="70"/><line x1="130" y1="70" x2="110" y2="290"/><line x1="550" y1="70" x2="570" y2="290"/>
+    <line x1="110" y1="290" x2="340" y2="330"/><line x1="570" y1="290" x2="340" y2="330"/>
+    <line x1="340" y1="190" x2="130" y2="70"/><line x1="340" y1="190" x2="550" y2="70"/><line x1="340" y1="190" x2="110" y2="290"/><line x1="340" y1="190" x2="570" y2="290"/><line x1="340" y1="190" x2="340" y2="330"/>
+  </g>
+  <ellipse cx="340" cy="190" rx="100" ry="36" class="acc"/>
+  <text x="340" y="186" text-anchor="middle" class="onacc b">Low-cost position</text><text x="340" y="203" text-anchor="middle" class="onacc sm">(Southwest)</text>
+  <g class="pan sti"><rect x="45" y="50" width="170" height="40" rx="8"/><rect x="465" y="50" width="170" height="40" rx="8"/><rect x="25" y="270" width="170" height="40" rx="8"/><rect x="485" y="270" width="170" height="40" rx="8"/><rect x="255" y="310" width="170" height="40" rx="8"/></g>
+  <text x="130" y="75" text-anchor="middle" class="b">One aircraft type</text>
+  <text x="550" y="75" text-anchor="middle" class="b">Fast turnarounds</text>
+  <text x="110" y="295" text-anchor="middle" class="b">Point-to-point routes</text>
+  <text x="570" y="295" text-anchor="middle" class="b">No assigned seats</text>
+  <text x="340" y="335" text-anchor="middle" class="b">No frills</text>
+  <rect x="470" y="355" width="200" height="38" rx="8" class="roses str dash"/>
+  <text x="570" y="372" text-anchor="middle" class="sm rose b">+ assigned seats, premium</text><text x="570" y="386" text-anchor="middle" class="sm rose">adds back cost + complexity</text>
+  <line x1="600" y1="355" x2="600" y2="312" class="str dash" marker-end="url(#ahr)"/>
+  <text x="340" y="24" text-anchor="middle" class="sm mut">Every line is a choice that makes another choice cheaper or possible. Rivals can copy a node; copying the web is hard.</text>
+</svg>
+<figcaption>An activity map. The advantage lives in the links, not in any one box.</figcaption>
+</figure>
+<div class="explain">
+<ul>
+<li><strong>Operational effectiveness (OE) is not strategy.</strong> Doing the same activities better than rivals is necessary, but best practices get copied fast, so OE alone gives no lasting edge.</li>
+<li><strong>Strategy requires trade-offs.</strong> Choosing what <em>not</em> to do is what makes a position hard to copy. A rival who tries to match you must give up something of its own.</li>
+<li><strong>Fit.</strong> Advantage sits in a system of activities that reinforce each other. Walmart's system reinforces cost leadership. Louis Vuitton's (no discounting, limited availability, company-owned boutiques, heritage production) reinforces differentiation.</li>
+<li>A rival can copy one activity. Copying a whole system of interlocking choices is far harder.</li>
+</ul>
+</div>
+<div class="case"><b class="h">Case: Southwest</b>One aircraft type, point-to-point routes, fast turnarounds, no assigned seats or frills. Adding assigned seating and premium services may raise WTP, but each addition reintroduces costs and complexity the original model deleted. The case question: can you move along one dimension (differentiation) without unraveling the system that produced advantage on the other (cost)?</div>
+<details class="check"><summary>Check yourself: What must a rival give up to copy Southwest?</summary><p>A legacy carrier would have to give up its hub-and-spoke network, its mixed fleet, and the assigned seating and premium services its business travelers pay for. Copying means dismantling its own system and revenue model. That is what a trade-off protects.</p></details>
+</section>
+
+<!-- ================= §2 ================= -->
+<h2 class="part" data-part="§2 Structured problem solving"><small>§2 · Session 2</small>Structured problem solving</h2>
+<p class="kq">Key questions: What is theory? How do I organize a compelling case?</p>
+
+<section class="fw" id="theory" data-title="What is theory">
+<div class="fw-head"><span class="tag">§2</span><h3>What is theory?</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 230" role="img" aria-label="Independent variables cause a dependent variable, within conditions">
+  <rect x="10" y="10" width="660" height="210" rx="12" class="nf stm dash"/>
+  <text x="24" y="30" class="sm mut b">UNDER WHAT CONDITIONS (the boundary where the theory holds)</text>
+  <g class="pan sti"><rect x="40" y="50" width="190" height="40" rx="8"/><rect x="40" y="105" width="190" height="40" rx="8"/><rect x="40" y="160" width="190" height="40" rx="8"/></g>
+  <text x="135" y="75" text-anchor="middle">Entry barriers</text><text x="135" y="130" text-anchor="middle">Buyer power</text><text x="135" y="185" text-anchor="middle">Rivalry</text>
+  <text x="135" y="44" text-anchor="middle" class="sm acc b">Independent variables (drivers)</text>
+  <g class="sti"><line x1="230" y1="70" x2="440" y2="118" marker-end="url(#ah)"/><line x1="230" y1="125" x2="440" y2="125" marker-end="url(#ah)"/><line x1="230" y1="180" x2="440" y2="132" marker-end="url(#ah)"/></g>
+  <text x="335" y="110" text-anchor="middle" class="sm b">what causes what</text><text x="335" y="148" text-anchor="middle" class="sm b">and WHY (mechanism)</text>
+  <rect x="445" y="100" width="200" height="50" rx="8" class="acc"/>
+  <text x="545" y="122" text-anchor="middle" class="onacc b">Industry profitability</text><text x="545" y="139" text-anchor="middle" class="onacc sm">dependent variable (outcome)</text>
+</svg>
+<figcaption>Every framework in the course has this shape. Here: five forces as a theory of profitability.</figcaption>
+</figure>
+<div class="explain">
+<p>A theory is a statement of <strong>what causes what, why, and under what conditions</strong>. It links an outcome (the dependent variable) to its drivers (independent variables). Good theory lets you <strong>predict</strong> what happens in a situation you have not seen before.</p>
+<p>That's why the course keeps calling frameworks theories: five forces predicts industry profitability; VRIO predicts whether an advantage will last. When you use a framework on the exam, you're applying a cause-and-effect claim, not filling in a checklist.</p>
+</div>
+<details class="check"><summary>Check yourself: In VRIO, what's the dependent variable?</summary><p>Whether a resource gives a sustained competitive advantage (or parity, temporary, etc.). The four tests are the drivers.</p></details>
+</section>
+
+<section class="fw" id="pyramid" data-title="Minto pyramid & SCQA">
+<div class="fw-head"><span class="tag">§2</span><h3>The Pyramid Principle, the hourglass, and SCQA</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 420" role="img" aria-label="Hourglass: SCQA narrows to the Answer, support broadens below">
+  <polygon points="140,20 540,20 340,190" class="accs"/>
+  <text x="340" y="48" text-anchor="middle" class="b">S · Situation: what the reader already accepts</text>
+  <text x="340" y="84" text-anchor="middle" class="b">C · Complication: what changed</text>
+  <text x="340" y="120" text-anchor="middle" class="b">Q · Question</text>
+  <text x="340" y="136" text-anchor="middle" class="sm mut">explicit and narrow</text>
+  <rect x="235" y="190" width="210" height="40" rx="8" class="acc"/>
+  <text x="340" y="215" text-anchor="middle" class="onacc b">A · ANSWER (one sentence)</text>
+  <polygon points="340,230 40,410 640,410" class="ambs"/>
+  <g class="sti"><line x1="340" y1="230" x2="180" y2="290"/><line x1="340" y1="230" x2="340" y2="290"/><line x1="340" y1="230" x2="500" y2="290"/></g>
+  <g class="pan sti"><rect x="115" y="290" width="130" height="36" rx="7"/><rect x="275" y="290" width="130" height="36" rx="7"/><rect x="435" y="290" width="130" height="36" rx="7"/></g>
+  <text x="180" y="313" text-anchor="middle" class="sm b">Reason / premise 1</text><text x="340" y="313" text-anchor="middle" class="sm b">Reason / premise 2</text><text x="500" y="313" text-anchor="middle" class="sm b">Reason / premise 3</text>
+  <g class="stm"><line x1="180" y1="326" x2="145" y2="365"/><line x1="180" y1="326" x2="215" y2="365"/><line x1="340" y1="326" x2="305" y2="365"/><line x1="340" y1="326" x2="375" y2="365"/><line x1="500" y1="326" x2="465" y2="365"/><line x1="500" y1="326" x2="535" y2="365"/></g>
+  <g class="pan stm"><rect x="115" y="365" width="60" height="26" rx="5"/><rect x="185" y="365" width="60" height="26" rx="5"/><rect x="275" y="365" width="60" height="26" rx="5"/><rect x="345" y="365" width="60" height="26" rx="5"/><rect x="435" y="365" width="60" height="26" rx="5"/><rect x="505" y="365" width="60" height="26" rx="5"/></g>
+  <text x="340" y="383" text-anchor="middle" class="sm mut">evidence</text><text x="180" y="383" text-anchor="middle" class="sm mut">evidence</text><text x="500" y="383" text-anchor="middle" class="sm mut">evidence</text>
+  <text x="470" y="160" class="sm acc b">Top pyramid: SCQA</text><text x="470" y="176" class="sm acc">narrows TO the Answer</text>
+  <text x="470" y="248" class="sm amb b">Bottom pyramid: support</text><text x="470" y="264" class="sm amb">broadens FROM the Answer</text>
+</svg>
+<figcaption>Two pyramids joined at the Answer. The Answer ends the introduction and is the premise of everything after it.</figcaption>
+</figure>
+<div class="explain">
+<p>Minto's insight: <strong>clear writing comes from clear thinking.</strong> Readers absorb ideas best as a pyramid: one governing thought on top, a few grouped, logically ordered arguments under it. Lead with the conclusion, then give the support.</p>
+<p><strong>SCQA</strong> is how the introduction gets you to the Answer:</p>
+<ul>
+<li><strong>Situation:</strong> what the reader already accepts. No tension yet. <em>"Cartier sells through its own boutiques and select jewelers."</em></li>
+<li><strong>Complication:</strong> what changed or went wrong. It creates the need to act. <em>"A discount retailer offers to carry the full line, nearly doubling volume."</em></li>
+<li><strong>Question:</strong> the question the complication provokes. Explicit and narrow, never just "What should we do?" <em>"Should Cartier sell through the discount channel?"</em></li>
+<li><strong>Answer:</strong> one complete, declarative sentence that answers the Question and <strong>could be proven false</strong>. <em>"Cartier should decline because the channel would cost more in brand value than it adds in volume."</em></li>
+</ul>
+<p>An Answer is <strong>never</strong> a topic ("the distribution decision"), a list of options, or a restatement of the Complication.</p>
+</div>
+<div class="trap"><b>Exam trap</b>On MC, sort candidate Answers fast: a noun phrase = topic; a fact about what went wrong = Complication; "options include..." = list. The valid one is a falsifiable recommendation.</div>
+<details class="check"><summary>Check yourself: Is "Our three growth options and their trade-offs" a valid Answer?</summary><p>No. It's a topic (and a list). A valid Answer would be "Enter the Mexican market through a local partner in 2027."</p></details>
+</section>
+
+<section class="fw" id="deduct" data-title="Deductive vs inductive">
+<div class="fw-head"><span class="tag">§2</span><h3>Deductive and inductive support</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 320" role="img" aria-label="Deductive chain vs inductive group">
+  <text x="170" y="22" text-anchor="middle" class="lg">Deductive: a chain</text>
+  <g class="pan sti"><rect x="25" y="40" width="290" height="50" rx="8"/><rect x="25" y="120" width="290" height="50" rx="8"/></g>
+  <rect x="25" y="200" width="290" height="50" rx="8" class="acc"/>
+  <text x="170" y="61" text-anchor="middle" class="sm b">Major premise</text><text x="170" y="78" text-anchor="middle" class="sm">Premium brands lose pricing power in discount channels</text>
+  <text x="170" y="141" text-anchor="middle" class="sm b">Minor premise</text><text x="170" y="158" text-anchor="middle" class="sm">Cartier is a premium brand</text>
+  <text x="170" y="221" text-anchor="middle" class="sm b onacc">Therefore</text><text x="170" y="238" text-anchor="middle" class="sm onacc">Cartier should stay out</text>
+  <line x1="170" y1="90" x2="170" y2="118" class="sti" marker-end="url(#ah)"/><line x1="170" y1="170" x2="170" y2="198" class="sti" marker-end="url(#ah)"/>
+  <text x="170" y="282" text-anchor="middle" class="sm rose b">Reject ONE link → the whole chain collapses</text>
+  <text x="170" y="300" text-anchor="middle" class="sm mut">Strength: conclusion is forced if premises hold</text>
+  <line x1="340" y1="20" x2="340" y2="305" class="st"/>
+  <text x="510" y="22" text-anchor="middle" class="lg">Inductive: a group</text>
+  <rect x="380" y="40" width="260" height="44" rx="8" class="acc"/><text x="510" y="67" text-anchor="middle" class="onacc b">Stay out, for three reasons</text>
+  <g class="sti"><line x1="510" y1="84" x2="415" y2="140"/><line x1="510" y1="84" x2="510" y2="140"/><line x1="510" y1="84" x2="605" y2="140"/></g>
+  <g class="pan sti"><rect x="370" y="140" width="90" height="70" rx="8"/><rect x="465" y="140" width="90" height="70" rx="8"/></g>
+  <rect x="560" y="140" width="90" height="70" rx="8" class="roses str dash"/>
+  <text x="415" y="170" text-anchor="middle" class="sm">Margins</text><text x="415" y="186" text-anchor="middle" class="sm">halve</text>
+  <text x="510" y="166" text-anchor="middle" class="sm">Brand beside</text><text x="510" y="182" text-anchor="middle" class="sm">cheaper</text><text x="510" y="198" text-anchor="middle" class="sm">rivals</text>
+  <text x="605" y="166" text-anchor="middle" class="sm">Customer</text><text x="605" y="182" text-anchor="middle" class="sm">relationship</text><text x="605" y="198" text-anchor="middle" class="sm">lost</text>
+  <line x1="568" y1="148" x2="642" y2="202" class="str"/><line x1="642" y1="148" x2="568" y2="202" class="str"/>
+  <text x="510" y="240" text-anchor="middle" class="sm grn b">Lose ONE reason → weaker, but still stands</text>
+  <text x="510" y="262" text-anchor="middle" class="sm mut">Reasons must be parallel (same kind) and MECE</text>
+</svg>
+<figcaption>Deductive = premises in series. Inductive = reasons in parallel.</figcaption>
+</figure>
+<div class="explain">
+<ul>
+<li><strong>Deductive</strong>: a chain (major premise, minor premise, therefore). If the premises hold, the conclusion is forced. Weakness: one rejected link kills it. Use it with tight logic and a reader willing to follow a line of reasoning.</li>
+<li><strong>Inductive</strong>: a group of parallel reasons of the same kind. Robust and easy to absorb. Weakness: reasons must be truly parallel and MECE. Use it for most recommendations and for skeptical or hurried readers.</li>
+<li>Complex arguments often combine them: a <strong>deductive spine at the top, with each premise supported inductively</strong> beneath it.</li>
+</ul>
+</div>
+<details class="check"><summary>Check yourself: A memo gives three independent reasons to reject an acquisition. The reader rejects one. What happens?</summary><p>It weakens but survives, because inductive reasons are independent (practice Q4). If it had been a deductive chain, it would collapse.</p></details>
+</section>
+
+<section class="fw" id="quality" data-title="Four quality tests">
+<div class="fw-head"><span class="tag">§2</span><h3>The four quality tests</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 250" role="img" aria-label="Pyramid annotated with four tests">
+  <rect x="230" y="20" width="220" height="40" rx="8" class="acc"/><text x="340" y="45" text-anchor="middle" class="onacc b">Governing thought</text>
+  <g class="sti"><line x1="340" y1="60" x2="220" y2="120"/><line x1="340" y1="60" x2="340" y2="120"/><line x1="340" y1="60" x2="460" y2="120"/></g>
+  <g class="pan sti"><rect x="160" y="120" width="120" height="36" rx="7"/><rect x="280" y="120" width="120" height="36" rx="7"/><rect x="400" y="120" width="120" height="36" rx="7"/></g>
+  <text x="220" y="143" text-anchor="middle" class="sm">Group A</text><text x="340" y="143" text-anchor="middle" class="sm">Group B</text><text x="460" y="143" text-anchor="middle" class="sm">Group C</text>
+  <circle cx="470" cy="40" r="12" class="amb"/><text x="470" y="45" text-anchor="middle" class="onacc b sm">1</text><text x="490" y="36" class="sm b">Single governing thought</text><text x="490" y="52" class="sm mut">one Answer, written as a sentence</text>
+  <circle cx="545" cy="138" r="12" class="amb"/><text x="545" y="143" text-anchor="middle" class="onacc b sm">2</text><text x="563" y="134" class="sm b">MECE</text><text x="563" y="150" class="sm mut">no overlap, no gaps</text>
+  <circle cx="135" cy="138" r="12" class="amb"/><text x="135" y="143" text-anchor="middle" class="onacc b sm">3</text><text x="118" y="134" text-anchor="end" class="sm b">Valid logic</text><text x="118" y="150" text-anchor="end" class="sm mut">chains follow; groups parallel</text>
+  <path d="M220,175 C220,215 460,215 460,175" class="nf sta" marker-end="url(#aha)"/>
+  <circle cx="340" cy="220" r="12" class="amb"/><text x="340" y="225" text-anchor="middle" class="onacc b sm">4</text>
+  <text x="360" y="225" class="sm b">So what?</text><text x="360" y="241" class="sm mut">every group summarizes UP into the idea above it</text>
+</svg>
+</figure>
+<div class="explain">
+<ol>
+<li><strong>Single governing thought.</strong> One Answer at the apex, written as a sentence.</li>
+<li><strong>MECE groupings.</strong> Mutually exclusive (no overlap) and collectively exhaustive (no gaps).</li>
+<li><strong>Valid logic.</strong> Deductive chains actually follow; inductive groups are actually parallel.</li>
+<li><strong>So what?</strong> Each group should roll up into the idea above it. If you can't say what a group adds up to, it doesn't belong.</li>
+</ol>
+<p>Bonus: a strong argument also <strong>names and defeats the strongest competing answer</strong>.</p>
+</div>
+<details class="check"><summary>Check yourself: Reasons "cuts costs," "reduces expenses," and "improves margins" support one Answer. Which test fails?</summary><p>MECE (mutually exclusive). The first two overlap, and the third partly restates them.</p></details>
+</section>
+
+<section class="fw" id="logic" data-title="Logic trees">
+<div class="fw-head"><span class="tag">§2</span><h3>Logic trees and market sizing</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 330" role="img" aria-label="Profit logic tree with operators, identities solid, hypothesis dashed">
+  <g class="stm nf">
+    <path d="M100,157 H120 V70 H140"/><path d="M120,157 V245 H140"/>
+    <path d="M240,70 H260 V30 H290"/><path d="M260,70 V110 H290"/>
+    <path d="M240,245 H260 V210 H290"/><path d="M260,245 V280 H290"/>
+    <path d="M400,110 H420 V85 H450"/><path d="M420,110 V135 H450"/>
+  </g>
+  <rect x="10" y="140" width="90" height="34" rx="7" class="acc"/><text x="55" y="162" text-anchor="middle" class="onacc b">Profit</text>
+  <g class="pan sti"><rect x="140" y="53" width="100" height="34" rx="7"/><rect x="140" y="228" width="100" height="34" rx="7"/>
+  <rect x="290" y="13" width="110" height="34" rx="7"/><rect x="290" y="93" width="110" height="34" rx="7"/><rect x="290" y="193" width="110" height="34" rx="7"/><rect x="290" y="263" width="110" height="34" rx="7"/>
+  <rect x="450" y="68" width="110" height="34" rx="7"/><rect x="450" y="118" width="110" height="34" rx="7"/></g>
+  <text x="190" y="75" text-anchor="middle">Revenue</text><text x="190" y="250" text-anchor="middle">Cost</text>
+  <text x="345" y="35" text-anchor="middle">Unit price</text><text x="345" y="115" text-anchor="middle">Volume</text><text x="345" y="215" text-anchor="middle">Fixed cost</text><text x="345" y="285" text-anchor="middle">Variable cost</text>
+  <text x="505" y="90" text-anchor="middle" class="sm">Channel A units</text><text x="505" y="140" text-anchor="middle" class="sm">Channel B units</text>
+  <g><circle cx="120" cy="157" r="11" class="amb"/><text x="120" y="162" text-anchor="middle" class="onacc b">−</text>
+  <circle cx="260" cy="70" r="11" class="amb"/><text x="260" y="75" text-anchor="middle" class="onacc b">×</text>
+  <circle cx="260" cy="245" r="11" class="amb"/><text x="260" y="250" text-anchor="middle" class="onacc b">+</text>
+  <circle cx="420" cy="110" r="11" class="amb"/><text x="420" y="115" text-anchor="middle" class="onacc b">+</text></g>
+  <rect x="440" y="5" width="230" height="46" rx="7" class="roses str dash"/>
+  <text x="555" y="24" text-anchor="middle" class="sm rose b">HYPOTHESIS: "a rival's discounts</text><text x="555" y="40" text-anchor="middle" class="sm rose b">pulled our price down" → test it</text>
+  <line x1="440" y1="30" x2="402" y2="30" class="str dash" marker-end="url(#ahr)"/>
+  <text x="450" y="200" class="sm b">Solid boxes = identities</text><text x="450" y="216" class="sm mut">always true by arithmetic</text>
+  <text x="450" y="244" class="sm b rose">Dashed = hypothesis</text><text x="450" y="260" class="sm mut">a claim about WHY a term moved;</text><text x="450" y="276" class="sm mut">needs evidence before it goes in</text>
+</svg>
+<figcaption>Every join is an operator. Channels add; price and volume multiply.</figcaption>
+</figure>
+<figure class="fig">
+<svg viewBox="0 0 680 90" role="img" aria-label="Market sizing chain">
+  <g class="pan sti"><rect x="5" y="22" width="100" height="44" rx="7"/><rect x="125" y="22" width="100" height="44" rx="7"/><rect x="245" y="22" width="100" height="44" rx="7"/><rect x="365" y="22" width="100" height="44" rx="7"/><rect x="485" y="22" width="80" height="44" rx="7"/></g>
+  <rect x="590" y="22" width="85" height="44" rx="7" class="acc"/>
+  <text x="55" y="49" text-anchor="middle" class="sm">Population</text><text x="175" y="41" text-anchor="middle" class="sm">% who</text><text x="175" y="57" text-anchor="middle" class="sm">buy</text>
+  <text x="295" y="41" text-anchor="middle" class="sm">Purchases</text><text x="295" y="57" text-anchor="middle" class="sm">per year</text>
+  <text x="415" y="41" text-anchor="middle" class="sm">Units per</text><text x="415" y="57" text-anchor="middle" class="sm">purchase</text>
+  <text x="525" y="49" text-anchor="middle" class="sm">Price</text><text x="632" y="49" text-anchor="middle" class="sm onacc b">Market $</text>
+  <g class="b amb"><text x="115" y="50" text-anchor="middle">×</text><text x="235" y="50" text-anchor="middle">×</text><text x="355" y="50" text-anchor="middle">×</text><text x="475" y="50" text-anchor="middle">×</text><text x="578" y="50" text-anchor="middle">=</text></g>
+  <text x="340" y="84" text-anchor="middle" class="sm mut">Split by channel when price or frequency differs between channels, then add the channels.</text>
+</svg>
+</figure>
+<div class="explain">
+<ul>
+<li>Break the dependent variable into drivers <strong>until you reach something you can measure and act on</strong>. "Profitability" isn't actionable; "unit price" is.</li>
+<li>Each level must be <strong>MECE</strong>. If the children don't sum (or multiply) to the parent, the branch is wrong.</li>
+<li><strong>Every join is an arithmetic operator.</strong> Channels add. Price and volume multiply.</li>
+<li><strong>Identity vs hypothesis.</strong> Sales = price × volume is an identity, always true. "Market share is declining" is a hypothesis about why a term moved. It must be checked against evidence before it earns a place on the page.</li>
+<li>Market sizing uses the same logic: population × % who buy × frequency × volume per purchase × price.</li>
+</ul>
+</div>
+<details class="check"><summary>Check yourself: A restaurant's profit fell. Build the first two levels and name one hypothesis.</summary><p>Profit = Revenue − Cost. Revenue = covers (customers) × average check. Cost = fixed (rent, salaried staff) + variable (food, hourly labor). These are identities. A hypothesis: "A new competitor opened nearby and pulled covers down." It needs evidence (cover counts before/after the opening).</p></details>
+</section>
+<!-- ================= §3 ================= -->
+<h2 class="part" data-part="§3 PEST"><small>§3 · Session 3</small>The macro environment: PEST</h2>
+<p class="kq">Key question: How did Khama change the PEST for De Beers?</p>
+
+<section class="fw" id="pest" data-title="PEST & its three jobs">
+<div class="fw-head"><span class="tag">§3</span><h3>PEST and its three jobs</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 330" role="img" aria-label="PEST quadrants around the firm, and accept versus shape spectrum">
+  <rect x="20" y="10" width="315" height="100" rx="10" class="accs"/><rect x="345" y="10" width="315" height="100" rx="10" class="ambs"/>
+  <rect x="20" y="120" width="315" height="100" rx="10" class="grns"/><rect x="345" y="120" width="315" height="100" rx="10" class="pan2"/>
+  <text x="36" y="36" class="lg">P · Political</text><text x="36" y="58" class="sm">stability, regulation, tax, trade policy,</text><text x="36" y="74" class="sm">property rights, corruption</text><text x="36" y="94" class="sm mut">can change overnight, by announcement</text>
+  <text x="644" y="36" text-anchor="end" class="lg">E · Economic</text><text x="644" y="58" text-anchor="end" class="sm">growth, inflation, rates, exchange rates,</text><text x="644" y="74" text-anchor="end" class="sm">unemployment, income distribution, debt</text><text x="644" y="94" text-anchor="end" class="sm mut">how much customers can spend; cost to operate</text>
+  <text x="36" y="146" class="lg">S · Socio-cultural</text><text x="36" y="168" class="sm">demographics, values, education,</text><text x="36" y="184" class="sm">lifestyle, culture (Culture Map)</text>
+  <text x="644" y="146" text-anchor="end" class="lg">T · Technological</text><text x="644" y="168" text-anchor="end" class="sm">physical, information and human</text><text x="644" y="184" text-anchor="end" class="sm">infrastructure</text>
+  <circle cx="340" cy="115" r="46" class="acc"/><text x="340" y="111" text-anchor="middle" class="onacc b">Firm</text><text x="340" y="127" text-anchor="middle" class="onacc sm">no single firm</text><text x="340" y="141" text-anchor="middle" class="onacc sm">controls these</text>
+  <text x="340" y="252" text-anchor="middle" class="b">Three jobs: ① detect the level of risk  ② locate bargaining power  ③ separate accept from shape</text>
+  <defs><linearGradient id="gsh" x1="0" x2="1"><stop offset="0" style="stop-color:var(--rose-soft)"/><stop offset="1" style="stop-color:var(--green-soft)"/></linearGradient></defs>
+  <rect x="40" y="268" width="600" height="26" rx="13" fill="url(#gsh)"/>
+  <text x="52" y="286" class="sm b rose">MUST ACCEPT (fixed constraint)</text><text x="628" y="286" text-anchor="end" class="sm b grn">CAN SHAPE (influence it)</text>
+  <text x="120" y="316" text-anchor="middle" class="sm mut">e.g. global commodity prices</text><text x="540" y="316" text-anchor="middle" class="sm mut">e.g. local-content terms, a JV with the state</text>
+</svg>
+<figcaption>Job ③ is the one that matters most. A list of factors is not an analysis.</figcaption>
+</figure>
+<div class="explain">
+<p>PEST scans forces <strong>outside the industry</strong> that no single firm controls. It does three jobs: detect the level of risk, locate bargaining power, and separate what must be accepted from what can be shaped. The analysis is the third job: deciding which factors are fixed constraints and which the firm can influence.</p>
+</div>
+<div class="case"><b class="h">Case: Debswana</b>Botswana's president Seretse Khama and De Beers formed a joint venture to mine the country's diamonds. A firm that might have faced expropriation gained a stable long-term partner; the country gained revenue and development. Lesson: political conditions were <strong>shaped</strong>, not just accepted (job ③).</div>
+<details class="check"><summary>Check yourself: A manager lists a new local-content rule as a threat to live with, without asking if terms are negotiable. What job was skipped?</summary><p>Job ③, separating what must be accepted from what can be shaped (practice Q5).</p></details>
+</section>
+
+<section class="fw" id="political" data-title="Political risk & corruption">
+<div class="fw-head"><span class="tag">§3 · P</span><h3>Political risk, seizure, and corruption</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 260" role="img" aria-label="Political risk matrix: macro or micro, bilateral or unilateral">
+  <text x="300" y="20" text-anchor="middle" class="lg">Macro</text><text x="300" y="36" text-anchor="middle" class="sm mut">affects ALL firms</text>
+  <text x="530" y="20" text-anchor="middle" class="lg">Micro</text><text x="530" y="36" text-anchor="middle" class="sm mut">affects SPECIFIC firms/industries</text>
+  <text x="170" y="95" text-anchor="end" class="lg">Bilateral</text><text x="170" y="112" text-anchor="end" class="sm mut">between countries</text>
+  <text x="170" y="195" text-anchor="end" class="lg">Unilateral</text><text x="170" y="212" text-anchor="end" class="sm mut">one government</text>
+  <rect x="185" y="48" width="230" height="100" class="accs st"/><rect x="415" y="48" width="230" height="100" class="ambs st"/>
+  <rect x="185" y="148" width="230" height="100" class="pan2 st"/><rect x="415" y="148" width="230" height="100" class="roses st"/>
+  <text x="300" y="85" text-anchor="middle" class="sm">territorial disputes, trade battles,</text><text x="300" y="102" text-anchor="middle" class="sm">WTO cases, war</text>
+  <text x="530" y="80" text-anchor="middle" class="sm">FCPA exposure, entry mandates,</text><text x="530" y="97" text-anchor="middle" class="sm">limits on IP and money flows,</text><text x="530" y="114" text-anchor="middle" class="sm">trade agreements</text>
+  <text x="300" y="180" text-anchor="middle" class="sm">fiscal and monetary policy, price caps,</text><text x="300" y="197" text-anchor="middle" class="sm">inflation, government instability</text>
+  <text x="530" y="180" text-anchor="middle" class="sm">expropriation, currency controls,</text><text x="530" y="197" text-anchor="middle" class="sm">local-content requirements</text>
+</svg>
+</figure>
+<figure class="fig">
+<svg viewBox="0 0 680 160" role="img" aria-label="Forms of seizure compared">
+  <g class="st"><rect x="5" y="10" width="160" height="140" rx="10" class="roses"/><rect x="175" y="10" width="160" height="140" rx="10" class="ambs"/><rect x="345" y="10" width="160" height="140" rx="10" class="accs"/><rect x="515" y="10" width="160" height="140" rx="10" class="pan2"/></g>
+  <text x="85" y="36" text-anchor="middle" class="lg">Confiscation</text><text x="85" y="60" text-anchor="middle" class="b rose">NO compensation</text><text x="85" y="90" text-anchor="middle" class="sm mut">Zimbabwe seized</text><text x="85" y="106" text-anchor="middle" class="sm mut">5,000+ farms</text>
+  <text x="255" y="36" text-anchor="middle" class="lg">Expropriation</text><text x="255" y="60" text-anchor="middle" class="b amb">WITH compensation</text><text x="255" y="90" text-anchor="middle" class="sm mut">Venezuela forced out</text><text x="255" y="106" text-anchor="middle" class="sm mut">ExxonMobil, ConocoPhillips</text>
+  <text x="425" y="36" text-anchor="middle" class="lg">Nationalization</text><text x="425" y="60" text-anchor="middle" class="b acc">whole INDUSTRY,</text><text x="425" y="76" text-anchor="middle" class="b acc">with or without comp</text><text x="425" y="102" text-anchor="middle" class="sm mut">Venezuela cement (2008)</text><text x="425" y="118" text-anchor="middle" class="sm mut">Bolivia airports (2013)</text>
+  <text x="595" y="36" text-anchor="middle" class="lg">Creeping</text><text x="595" y="60" text-anchor="middle" class="b">GRADUAL: taxes,</text><text x="595" y="76" text-anchor="middle" class="b">new codes, admin</text><text x="595" y="102" text-anchor="middle" class="sm mut">Mali vs Barrick</text>
+</svg>
+<figcaption>Ask two things: was the owner paid, and is it one firm's asset or an entire industry?</figcaption>
+</figure>
+<div class="explain">
+<p><strong>Political risk</strong> is the threat that political decisions or events in a country hurt the profitability of an investment. The matrix sorts risks by <strong>who</strong> they hit (macro: everyone; micro: specific firms or industries) and <strong>where they come from</strong> (bilateral: between countries; unilateral: one government acting alone).</p>
+<p><strong>Corruption</strong> is an exchange that influences the allocation of resources and involves using public power for private benefit. It misallocates capital, obstructs firm growth, undermines trade and investment, and distorts information.</p>
+</div>
+<div class="grid2">
+<div class="card"><h5>FCPA (1977, U.S.)</h5><ul><li>No bribes to <strong>foreign officials</strong> to get or keep business</li><li>Covers U.S. companies and citizens, their subsidiaries and agents, and issuers of U.S. securities</li><li><strong>DOJ</strong> enforces anti-bribery; <strong>SEC</strong> enforces accounting provisions</li><li>Exceptions: payments for routine government action; payments lawful under the foreign country's <em>written</em> law; reasonable, bona fide expenditures</li></ul></div>
+<div class="card"><h5>UK Bribery Act (tougher)</h5><ul><li>Also bars <strong>private-sector</strong> bribes</li><li>Applies to <strong>both the payer and the receiver</strong></li></ul><h5 style="margin-top:10px">Two ethical positions</h5><ul><li><strong>Relativism:</strong> "When in Rome, do as the Romans do"</li><li><strong>Imperialism:</strong> "My way or the highway"</li></ul></div>
+</div>
+<div class="explain"><p><strong>Political risk can be an opportunity.</strong> Firms that add value to the state, strike alliances, and build to stay can turn government from a threat into a partner (Debswana).</p></div>
+<div class="trap"><b>Exam trap</b>Expropriation = compensated. Confiscation = not compensated. Nationalization = a whole industry, either way. "Creeping" works through taxes and rules over time, not one act.</div>
+<details class="check"><summary>Check yourself: A U.S. firm pays a customs clerk a small fee to process routine paperwork it is already entitled to. FCPA violation?</summary><p>Likely falls under the routine government action exception. A payment to win a contract would not.</p></details>
+</section>
+
+<section class="fw" id="economic" data-title="Economic: systems, GDP, PPP">
+<div class="fw-head"><span class="tag">§3 · E</span><h3>Economic systems, policy, GDP, and PPP</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 110" role="img" aria-label="Spectrum of economic systems">
+  <line x1="40" y1="50" x2="640" y2="50" class="sti"/>
+  <circle cx="60" cy="50" r="9" class="rose"/><circle cx="340" cy="50" r="9" class="amb"/><circle cx="620" cy="50" r="9" class="grn"/>
+  <text x="60" y="28" text-anchor="middle" class="b">Planned</text><text x="340" y="28" text-anchor="middle" class="b">Mixed</text><text x="620" y="28" text-anchor="middle" class="b">Market</text>
+  <text x="60" y="78" text-anchor="start" class="sm">government decides;</text><text x="60" y="94" class="sm mut">North Korea, Cuba</text>
+  <text x="340" y="78" text-anchor="middle" class="sm">both; state steps in for vital firms</text><text x="340" y="94" text-anchor="middle" class="sm mut">France</text>
+  <text x="640" y="78" text-anchor="end" class="sm">supply and demand decide</text><text x="640" y="94" text-anchor="end" class="sm mut">United States, Switzerland</text>
+</svg>
+<figcaption>Who decides what is produced, how much, and at what price.</figcaption>
+</figure>
+<div class="grid2">
+<div class="card"><h5>Fiscal policy</h5><p>Government <strong>spending and taxation</strong>. Watch deficits, debt as a share of GDP, interest costs.</p></div>
+<div class="card"><h5>Monetary policy (central bank)</h5><ul><li><strong>Discount rate:</strong> what banks pay to borrow from the Fed</li><li><strong>Reserve requirements</strong></li><li><strong>Open market operations:</strong> buy/sell bonds to move the federal funds rate</li></ul></div>
+</div>
+<figure class="fig">
+<svg viewBox="0 0 680 210" role="img" aria-label="GDP versus GNP and GDP components">
+  <rect x="20" y="20" width="300" height="130" rx="10" class="accs sta dash"/>
+  <text x="30" y="40" class="sm b acc">INSIDE THE COUNTRY'S BORDERS</text>
+  <rect x="35" y="55" width="125" height="80" rx="8" class="pan sti"/><text x="97" y="85" text-anchor="middle" class="sm b">Domestic-owned</text><text x="97" y="101" text-anchor="middle" class="sm">plant at home</text><text x="97" y="122" text-anchor="middle" class="sm grn b">GDP ✓ GNP ✓</text>
+  <rect x="180" y="55" width="125" height="80" rx="8" class="pan sti"/><text x="242" y="85" text-anchor="middle" class="sm b">Foreign-owned</text><text x="242" y="101" text-anchor="middle" class="sm">plant here</text><text x="242" y="122" text-anchor="middle" class="sm b acc">GDP only</text>
+  <rect x="340" y="55" width="125" height="80" rx="8" class="pan sti"/><text x="402" y="85" text-anchor="middle" class="sm b">Our firm's plant</text><text x="402" y="101" text-anchor="middle" class="sm">abroad</text><text x="402" y="122" text-anchor="middle" class="sm b amb">GNP only</text>
+  <text x="500" y="45" class="b">GDP</text><text x="500" y="62" class="sm">where it's produced</text><text x="500" y="80" class="sm mut">(borders)</text>
+  <text x="500" y="108" class="b">GNP</text><text x="500" y="125" class="sm">who owns the factors</text><text x="500" y="143" class="sm mut">(nationality)</text>
+  <text x="20" y="178" class="b">GDP = C + I + G + NX</text>
+  <rect x="210" y="166" width="300" height="18" class="acc"/><rect x="510" y="166" width="141" height="18" class="pan2 st"/>
+  <text x="360" y="179" text-anchor="middle" class="sm onacc b">C (consumption) ≈ 68% of U.S. GDP</text><text x="580" y="179" text-anchor="middle" class="sm">I + G + NX</text>
+  <text x="210" y="202" class="sm mut">Only newly produced, final goods and services count.</text>
+</svg>
+</figure>
+<div class="tblwrap"><table class="t"><tr><th>Component</th><th>Counts</th><th>Does NOT count</th></tr>
+<tr><td><b>C</b> Consumption</td><td>Household spending on final goods and services</td><td>Used goods (not newly produced)</td></tr>
+<tr><td><b>I</b> Investment</td><td>New factories, equipment, <b>new homes</b>, software, inventories</td><td>Stocks, bonds, <b>existing homes</b></td></tr>
+<tr><td><b>G</b> Government</td><td>Government purchases of goods and services</td><td><b>Transfers</b> such as Social Security</td></tr>
+<tr><td><b>NX</b> Net exports</td><td>Exports minus imports</td><td>Negative when imports exceed exports</td></tr></table></div>
+<figure class="fig">
+<svg viewBox="0 0 680 190" role="img" aria-label="PPP number line: PPP rate 3.53 versus market rate 6.84 yuan per dollar">
+  <text x="20" y="22" class="b">Big Mac: ¥12.50 in China, $3.54 in the U.S. → PPP rate = 12.5 ÷ 3.54 = 3.53 ¥ per $</text>
+  <line x1="40" y1="100" x2="640" y2="100" class="sti"/>
+  <g class="sm mut"><text x="40" y="120" text-anchor="middle">0</text><text x="115" y="120" text-anchor="middle">1</text><text x="190" y="120" text-anchor="middle">2</text><text x="265" y="120" text-anchor="middle">3</text><text x="340" y="120" text-anchor="middle">4</text><text x="415" y="120" text-anchor="middle">5</text><text x="490" y="120" text-anchor="middle">6</text><text x="565" y="120" text-anchor="middle">7</text><text x="640" y="120" text-anchor="middle">8 ¥ per $</text></g>
+  <g class="stm"><line x1="40" y1="95" x2="40" y2="105"/><line x1="115" y1="95" x2="115" y2="105"/><line x1="190" y1="95" x2="190" y2="105"/><line x1="265" y1="95" x2="265" y2="105"/><line x1="340" y1="95" x2="340" y2="105"/><line x1="415" y1="95" x2="415" y2="105"/><line x1="490" y1="95" x2="490" y2="105"/><line x1="565" y1="95" x2="565" y2="105"/><line x1="640" y1="95" x2="640" y2="105"/></g>
+  <circle cx="305" cy="100" r="9" class="acc"/><text x="305" y="78" text-anchor="middle" class="b acc">PPP says 3.53</text>
+  <circle cx="553" cy="100" r="9" class="rose"/><text x="553" y="78" text-anchor="middle" class="b rose">Market says 6.84</text>
+  <path d="M315,62 Q430,40 545,62" class="nf stm" marker-end="url(#ah)"/>
+  <text x="340" y="150" text-anchor="middle" class="b">A dollar buys MORE yuan than PPP says it should.</text>
+  <text x="340" y="170" text-anchor="middle">→ dollar <tspan class="b rose">overvalued</tspan>, yuan <tspan class="b acc">undervalued</tspan></text>
+</svg>
+<figcaption>Rule: if the market rate (foreign units per $) is above the PPP rate, the foreign currency is undervalued.</figcaption>
+</figure>
+<div class="explain">
+<ul>
+<li><strong>Output</strong> comes from labor, capital, and total factor productivity (how effectively labor and capital are used).</li>
+<li><strong>GDP vs GNP:</strong> GDP is production within borders, by anyone. GNP is production by a country's own factors, anywhere.</li>
+<li>GDP is objective but incomplete, hence alternatives like Bhutan's <strong>Gross National Happiness</strong>. Happiness is hard to measure and rises much more slowly than income once a country is no longer poor.</li>
+<li><strong>Law of one price:</strong> the same good should cost the same everywhere once converted; if not, there's an arbitrage opportunity. <strong>PPP</strong> predicts the exchange rate from relative prices: <span class="f">price in A ÷ price in B</span>. The Big Mac index applies it with one product. PPP is a useful anchor but often fails in the short run.</li>
+</ul>
+</div>
+<div class="trap"><b>Exam trap</b>Put the currency you want "per" in the denominator's country. Yen per pound = yen price ÷ pound price. Then compare to the actual rate.</div>
+<details class="check"><summary>Check yourself: Big Mac = ¥480 in Japan, £4.59 in the UK. PPP rate? If the market rate is ¥190 per £, which currency is undervalued?</summary><p>480 ÷ 4.59 ≈ <b>104.6 yen per pound</b>. At ¥190 per £ the pound buys more yen than PPP says, so the pound is overvalued and the yen is undervalued.</p></details>
+<details class="check"><summary>Check yourself: Classify each: a newly built house bought by a family; a Social Security check; Toyota's Kentucky plant output.</summary><p>New house = I (investment). Social Security = not in G (a transfer). Toyota Kentucky = counts in U.S. GDP and in Japan's GNP.</p></details>
+</section>
+
+<section class="fw" id="culture" data-title="Culture Map">
+<div class="fw-head"><span class="tag">§3 · S</span><h3>Socio-cultural: Erin Meyer's Culture Map</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 420" role="img" aria-label="Eight Culture Map scales with U.S. placements">
+  <circle cx="160" cy="14" r="6" class="acc"/><text x="172" y="18" class="sm">= United States, where the packet places it (shows one country can sit at different ends)</text>
+  <g id="cm">
+  <text x="10" y="54" class="b">Communicating</text><line x1="150" y1="48" x2="660" y2="48" class="st"/><text x="150" y="68" class="sm">Low-context, explicit (US, Germany)</text><text x="660" y="68" text-anchor="end" class="sm">High-context, read between lines (Japan, China)</text><circle cx="162" cy="48" r="6" class="acc"/>
+  <text x="10" y="102" class="b">Evaluating</text><line x1="150" y1="96" x2="660" y2="96" class="st"/><text x="150" y="116" class="sm">Direct negative feedback (Netherlands, Germany)</text><text x="660" y="116" text-anchor="end" class="sm">Indirect (Japan, Thailand)</text><circle cx="330" cy="96" r="6" class="acc"/>
+  <text x="10" y="150" class="b">Persuading</text><line x1="150" y1="144" x2="660" y2="144" class="st"/><text x="150" y="164" class="sm">Principles-first, theory first (France, Italy)</text><text x="660" y="164" text-anchor="end" class="sm">Applications-first (US, Canada)</text><circle cx="648" cy="144" r="6" class="acc"/>
+  <text x="10" y="198" class="b">Leading</text><line x1="150" y1="192" x2="660" y2="192" class="st"/><text x="150" y="212" class="sm">Egalitarian (Denmark, Sweden)</text><text x="660" y="212" text-anchor="end" class="sm">Hierarchical (China, India)</text>
+  <text x="10" y="246" class="b">Deciding</text><line x1="150" y1="240" x2="660" y2="240" class="st"/><text x="150" y="260" class="sm">Consensual: slow decide, fast implement (Japan, Sweden)</text><text x="660" y="260" text-anchor="end" class="sm">Top-down (China, US)</text><circle cx="640" cy="240" r="6" class="acc"/>
+  <text x="10" y="294" class="b">Trusting</text><line x1="150" y1="288" x2="660" y2="288" class="st"/><text x="150" y="308" class="sm">Task-based, reliable work (US, Germany)</text><text x="660" y="308" text-anchor="end" class="sm">Relationship-based (China, Brazil)</text><circle cx="162" cy="288" r="6" class="acc"/>
+  <text x="10" y="342" class="b">Disagreeing</text><line x1="150" y1="336" x2="660" y2="336" class="st"/><text x="150" y="356" class="sm">Confrontational (France, Israel)</text><text x="660" y="356" text-anchor="end" class="sm">Avoids confrontation (Japan, Indonesia)</text>
+  <text x="10" y="390" class="b">Scheduling</text><line x1="150" y1="384" x2="660" y2="384" class="st"/><text x="150" y="404" class="sm">Linear time, punctual (Germany, Switzerland)</text><text x="660" y="404" text-anchor="end" class="sm">Flexible time (India, Brazil)</text>
+  </g>
+</svg>
+<figcaption>Mnemonic for the eight: <b>C</b>ommunicating, <b>E</b>valuating, <b>P</b>ersuading, <b>L</b>eading, <b>D</b>eciding, <b>T</b>rusting, <b>D</b>isagreeing, <b>S</b>cheduling.</figcaption>
+</figure>
+<div class="explain">
+<p>Cultural differences are <strong>systematic and predictable</strong>. Three rules for reading the map:</p>
+<ul>
+<li><strong>No culture is better.</strong> Each end of a scale is a valid approach.</li>
+<li><strong>Position is relative.</strong> What matters is where two cultures sit compared with each other, not the absolute spot.</li>
+<li><strong>The same country can sit at different ends on different scales.</strong> The U.S. is low-context (very explicit) but softens negative feedback more than the Dutch or Germans.</li>
+</ul>
+<p>Watch the Deciding scale: consensual cultures decide <em>slowly</em> but implement <em>fast</em> (everyone already agreed); top-down cultures decide fast and implement more slowly.</p>
+</div>
+<details class="check"><summary>Check yourself: You negotiate with a partner from a high-context, relationship-based culture. What changes?</summary><p>Invest time in the relationship before the deal (meals, personal connection). Read between the lines and watch what's not said; don't expect explicit "no." Avoid blunt public criticism. Confirm understanding in conversation rather than relying on the contract alone.</p></details>
+</section>
+
+<section class="fw" id="tech" data-title="Technological infrastructure">
+<div class="fw-head"><span class="tag">§3 · T</span><h3>Technological: three infrastructures</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 230" role="img" aria-label="Three infrastructures, human capital as binding constraint; gap as opportunity">
+  <line x1="30" y1="190" x2="330" y2="190" class="sti"/>
+  <rect x="50" y="60" width="70" height="130" class="accs sta"/><rect x="140" y="50" width="70" height="140" class="accs sta"/><rect x="230" y="140" width="70" height="50" class="roses str"/>
+  <text x="85" y="208" text-anchor="middle" class="sm b">Physical</text><text x="175" y="208" text-anchor="middle" class="sm b">Information</text><text x="265" y="208" text-anchor="middle" class="sm b">Human</text>
+  <text x="85" y="224" text-anchor="middle" class="sm mut">roads, energy</text><text x="175" y="224" text-anchor="middle" class="sm mut">telecom, data, laws</text><text x="265" y="224" text-anchor="middle" class="sm mut">skilled people</text>
+  <text x="265" y="110" text-anchor="middle" class="sm rose b">slowest to build</text><text x="265" y="126" text-anchor="middle" class="sm rose b">= binding constraint</text>
+  <text x="30" y="24" class="b">How available is each? (illustrative country)</text>
+  <line x1="380" y1="190" x2="660" y2="190" class="sti"/>
+  <rect x="410" y="50" width="80" height="140" class="grns stg"/><rect x="540" y="160" width="80" height="30" class="pan2 sti"/>
+  <text x="450" y="208" text-anchor="middle" class="sm b">Mobile coverage</text><text x="580" y="208" text-anchor="middle" class="sm b">Bank branches</text>
+  <path d="M495,70 Q580,70 580,152" class="nf stam" marker-end="url(#ahm)"/>
+  <text x="590" y="90" class="sm amb b">GAP =</text><text x="590" y="106" class="sm amb b">opportunity:</text><text x="590" y="122" class="sm amb b">mobile banking</text>
+  <text x="380" y="24" class="b">A gap between infrastructures</text>
+</svg>
+</figure>
+<div class="explain">
+<p>Technological factors show where a country stands on the technology and infrastructure a business needs: equipment maturity, information systems, platforms, research funding, consumer access, roads. Assess three infrastructures and ask, for each, <strong>to what extent is it available?</strong></p>
+<ul><li><strong>Physical:</strong> raw materials, manufacturing equipment, transportation, energy.</li><li><strong>Information:</strong> communication tech, data storage and processing, supporting laws.</li><li><strong>Human:</strong> skilled, trained people. Slowest to build, so most likely the binding constraint.</li></ul>
+<p>A <strong>gap</strong> between infrastructures is often the opportunity: strong mobile coverage + few bank branches invites mobile banking.</p>
+</div>
+</section>
+<!-- ================= §4 ================= -->
+<h2 class="part" data-part="§4 Five forces"><small>§4 · Session 4</small>Industry structure: the five forces</h2>
+<p class="kq">Key question: How did Coke structure an industry to give itself a competitive advantage?</p>
+
+<section class="fw" id="forces" data-title="Five forces">
+<div class="fw-head"><span class="tag">§4</span><h3>Porter's five forces</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 390" role="img" aria-label="Five forces diagram">
+  <rect x="235" y="140" width="210" height="100" rx="10" class="acc"/>
+  <text x="340" y="172" text-anchor="middle" class="onacc lg">Rivalry</text><text x="340" y="192" text-anchor="middle" class="onacc sm">strong: many/equal rivals, slow</text><text x="340" y="207" text-anchor="middle" class="onacc sm">growth, high fixed or exit costs,</text><text x="340" y="222" text-anchor="middle" class="onacc sm">commodity product, lumpy capacity</text>
+  <g class="pan sti"><rect x="235" y="15" width="210" height="80" rx="10"/><rect x="235" y="285" width="210" height="80" rx="10"/><rect x="10" y="140" width="185" height="100" rx="10"/><rect x="485" y="140" width="185" height="100" rx="10"/></g>
+  <text x="340" y="40" text-anchor="middle" class="lg">Threat of entry</text><text x="340" y="60" text-anchor="middle" class="sm">strong when barriers are LOW: little</text><text x="340" y="76" text-anchor="middle" class="sm">scale, cheap to enter, no retaliation</text>
+  <text x="340" y="310" text-anchor="middle" class="lg">Threat of substitutes</text><text x="340" y="330" text-anchor="middle" class="sm">other industries doing the same job;</text><text x="340" y="346" text-anchor="middle" class="sm">good price-performance, cheap to switch</text>
+  <text x="102" y="166" text-anchor="middle" class="lg">Supplier power</text><text x="102" y="186" text-anchor="middle" class="sm">concentrated, unique input,</text><text x="102" y="202" text-anchor="middle" class="sm">costly to switch, can</text><text x="102" y="218" text-anchor="middle" class="sm">integrate forward</text>
+  <text x="577" y="166" text-anchor="middle" class="lg">Buyer power</text><text x="577" y="186" text-anchor="middle" class="sm">few and large, standard</text><text x="577" y="202" text-anchor="middle" class="sm">product, cheap to switch,</text><text x="577" y="218" text-anchor="middle" class="sm">price sensitive, can verify</text>
+  <g class="sti"><line x1="340" y1="95" x2="340" y2="137" marker-end="url(#ah)"/><line x1="340" y1="285" x2="340" y2="243" marker-end="url(#ah)"/><line x1="195" y1="190" x2="232" y2="190" marker-end="url(#ah)"/><line x1="485" y1="190" x2="448" y2="190" marker-end="url(#ah)"/></g>
+  <rect x="10" y="285" width="200" height="90" rx="10" class="roses str dash"/>
+  <text x="110" y="306" text-anchor="middle" class="sm b rose">NOT forces (factors):</text><text x="110" y="324" text-anchor="middle" class="sm">growth, government,</text><text x="110" y="340" text-anchor="middle" class="sm">technology, complements</text><text x="110" y="358" text-anchor="middle" class="sm mut">they act THROUGH the five</text>
+  <rect x="470" y="285" width="200" height="90" rx="10" class="ambs stam"/>
+  <text x="570" y="312" text-anchor="middle" class="sm b">Stronger forces</text><text x="570" y="330" text-anchor="middle" class="sm b">→ less profit left</text><text x="570" y="348" text-anchor="middle" class="sm b">for the firms</text>
+  <text x="570" y="20" text-anchor="middle" class="sm mut">Airlines ≈ 5.9% ROIC</text><text x="570" y="36" text-anchor="middle" class="sm mut">Security brokers ≈ 40.9%</text><text x="570" y="52" text-anchor="middle" class="sm mut">U.S. avg ≈ 14.9% (1992 to 2006)</text>
+  <text x="110" y="28" text-anchor="middle" class="sm mut">Gaps that large = structure,</text><text x="110" y="44" text-anchor="middle" class="sm mut">not management quality</text>
+</svg>
+<figcaption>Each arrow is a claim on the industry's value. What's left over is industry profit.</figcaption>
+</figure>
+<div class="explain">
+<p>Industry structure decides <strong>how the value an industry creates is divided</strong> and how much the competitors keep. Think of the value stick: suppliers pull up on cost, buyers push down on price, substitutes cap the price, entrants add capacity and price pressure, and rivalry hands value to customers.</p>
+<p><strong>Price rivalry is the most destructive</strong> form. Rivalry on features, service, or brand can raise WTP and is less damaging (Coke vs Pepsi on advertising).</p>
+</div>
+<h4 style="font-family:var(--display);margin:6px 0 8px">How to run it</h4>
+<ol class="steps">
+<li>Define the industry: which products, which geography</li>
+<li>Identify the players in each of the five groups</li>
+<li>Assess each force's drivers; decide which are strong</li>
+<li>Explain overall profitability from the strongest forces</li>
+<li>Look for change: which forces are shifting, which can the firm influence?</li>
+<li>Position where forces are weakest, or reshape them</li>
+</ol>
+<div class="trap"><b>Common mistakes (MC favorites)</b>
+<b style="text-transform:none;letter-spacing:0;color:var(--ink);display:inline">1. Wrong industry boundary</b> (most common and costly; every force changes when it moves). 
+<b style="text-transform:none;letter-spacing:0;color:var(--ink);display:inline">2. Treating growth as a force.</b> A fast-growing market with weak barriers and powerful buyers draws in capacity and hands gains to customers. It turns investor capital into consumer surplus. 
+<b style="text-transform:none;letter-spacing:0;color:var(--ink);display:inline">3. Confusing factors with forces</b> (technology, government, complements). 
+<b style="text-transform:none;letter-spacing:0;color:var(--ink);display:inline">4. Listing instead of concluding.</b> 
+<b style="text-transform:none;letter-spacing:0;color:var(--ink);display:inline">5. Treating structure as fixed.</b></div>
+<details class="check"><summary>Check yourself: Which is NOT one of the five forces: substitutes, industry growth rate, supplier power, rivalry?</summary><p>Industry growth rate (practice Q6). Structure decides who keeps the value growth creates.</p></details>
+</section>
+
+<section class="fw" id="profitpools" data-title="Profit pools">
+<div class="fw-head"><span class="tag">§4</span><h3>Profit pools</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 310" role="img" aria-label="Profit pool: widths are revenue share, heights are profit per point of revenue">
+  <line x1="60" y1="260" x2="645" y2="260" class="sti"/><line x1="60" y1="40" x2="60" y2="260" class="sti"/>
+  <g class="sm mut"><text x="52" y="264" text-anchor="end">0</text><text x="52" y="194" text-anchor="end">1.0</text><text x="52" y="124" text-anchor="end">2.0</text><text x="52" y="54" text-anchor="end">3.0</text></g>
+  <text transform="translate(18,150) rotate(-90)" text-anchor="middle" class="sm b">profit share ÷ revenue share</text>
+  <line x1="60" y1="190" x2="645" y2="190" class="stm dash"/><text x="642" y="184" text-anchor="end" class="sm mut">1.0 = profit in line with revenue</text>
+  <rect x="60" y="246" width="290" height="14" class="pan2 sti"/>
+  <rect x="350" y="190" width="174" height="70" class="accs sta"/>
+  <rect x="524" y="50" width="116" height="210" class="acc"/>
+  <text x="205" y="238" text-anchor="middle" class="sm b">10% of profit · 0.2× per point</text>
+  <text x="437" y="182" text-anchor="middle" class="sm b">30% profit · 1.0×</text>
+  <text x="582" y="44" text-anchor="middle" class="sm b">60% profit · 3.0×</text>
+  <text x="205" y="280" text-anchor="middle" class="sm">Layer 1: 50% of revenue</text><text x="437" y="280" text-anchor="middle" class="sm">Layer 2: 30%</text><text x="582" y="280" text-anchor="middle" class="sm">Layer 3: 20%</text>
+  <text x="340" y="302" text-anchor="middle" class="sm mut">Width = share of revenue. Height = profitability. Area = share of profit.</text>
+  <text x="300" y="90" text-anchor="middle" class="b acc">Layer 3 earns 3.0 ÷ 0.2 = 15× more</text><text x="300" y="108" text-anchor="middle" class="b acc">profit per point of revenue than Layer 1</text>
+</svg>
+<figcaption>Drawn to scale with practice question 20. The biggest layer by revenue can be the worst by profit.</figcaption>
+</figure>
+<div class="explain">
+<p>The distribution of profit along a value chain rarely matches the distribution of revenue. In personal computers, PC makers competed in the largest but least profitable layer while microprocessors and software earned the margins.</p>
+<ul>
+<li>Compare layers by <strong>profit per point of revenue = profit share ÷ revenue share</strong>.</li>
+<li>Low barriers and low profit in a layer are <strong>the same fact seen twice</strong>.</li>
+<li><strong>Profit collects at the point of control.</strong> Before entering any layer, understand what protects the most profitable one.</li>
+</ul>
+</div>
+<div class="case"><b class="h">Case: Cola Wars</b>Two layers, two structures. <b>Concentrate:</b> little capital, few competitors, strong brands → very profitable. <b>Bottling:</b> capital intensive, thin margins. Coke and Pepsi kept the attractive layer, set terms for bottlers through franchise agreements, and fought each other on advertising and brand more than price. They didn't just find an attractive industry; they <b>structured</b> one.</div>
+<details class="check"><summary>Check yourself: Why can two firms in the same value chain earn very different returns?</summary><p>Each layer has its own five-forces structure. Concentrate faces few rivals, weak buyers (bottlers bound by franchise terms), and strong brands; bottling faces heavy capital needs, powerful retail buyers, and concentrate suppliers who set terms.</p></details>
+</section>
+
+<!-- ================= §5 ================= -->
+<h2 class="part" data-part="§5 Concentration & entry"><small>§5 · Session 5</small>Concentration and entry</h2>
+<p class="kq">Key questions: How does concentration affect strategy? How do you break into a concentrated market?</p>
+
+<section class="fw" id="hhi" data-title="C4 and HHI">
+<div class="fw-head"><span class="tag">§5</span><h3>Measuring concentration: C4 and HHI</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 270" role="img" aria-label="Two markets with C4 of 80 but very different HHI">
+  <text x="170" y="20" text-anchor="middle" class="b">Market A: four matched rivals</text><text x="510" y="20" text-anchor="middle" class="b">Market B: dominant firm + fringe</text>
+  <line x1="40" y1="200" x2="300" y2="200" class="sti"/><line x1="380" y1="200" x2="640" y2="200" class="sti"/>
+  <g class="acc"><rect x="55" y="152" width="50" height="48"/><rect x="115" y="152" width="50" height="48"/><rect x="175" y="152" width="50" height="48"/><rect x="235" y="152" width="50" height="48"/><rect x="395" y="44" width="50" height="156"/></g>
+  <g class="accs"><rect x="455" y="188" width="50" height="12"/><rect x="515" y="188" width="50" height="12"/><rect x="575" y="188" width="50" height="12"/></g>
+  <g class="sm b" text-anchor="middle"><text x="80" y="146">20%</text><text x="140" y="146">20%</text><text x="200" y="146">20%</text><text x="260" y="146">20%</text><text x="420" y="38">65%</text><text x="480" y="182">5%</text><text x="540" y="182">5%</text><text x="600" y="182">5%</text></g>
+  <text x="170" y="226" text-anchor="middle" class="mono">C4 = 80</text><text x="170" y="246" text-anchor="middle" class="mono">HHI (top 4) = 4 × 400 = 1,600</text>
+  <text x="510" y="226" text-anchor="middle" class="mono">C4 = 80</text><text x="510" y="246" text-anchor="middle" class="mono">HHI (top 4) = 4,225 + 75 = 4,300</text>
+  <text x="340" y="266" text-anchor="middle" class="sm rose b">Same C4. Very different markets. HHI sees it because squaring weights big firms.</text>
+</svg>
+</figure>
+<figure class="fig">
+<svg viewBox="0 0 680 120" role="img" aria-label="HHI classification bands under 2023 Merger Guidelines">
+  <rect x="40" y="40" width="140" height="26" class="grns stg"/><rect x="180" y="40" width="112" height="26" class="ambs stam"/><rect x="292" y="40" width="308" height="26" class="roses str"/>
+  <text x="110" y="58" text-anchor="middle" class="sm b">Unconcentrated</text><text x="236" y="58" text-anchor="middle" class="sm b">Moderate</text><text x="446" y="58" text-anchor="middle" class="sm b">Highly concentrated</text>
+  <g class="sm mut" text-anchor="middle"><text x="40" y="86">0</text><text x="180" y="86">1,000</text><text x="292" y="86">1,800</text><text x="460" y="86">3,000</text><text x="600" y="86">4,000</text></g>
+  <path d="M600,53 h40" class="sti" marker-end="url(#ah)"/><text x="660" y="30" text-anchor="end" class="sm mut">… 10,000 = monopoly (100²)</text>
+  <polygon points="264,36 258,26 270,26" class="acc"/><text x="264" y="20" text-anchor="middle" class="sm b acc">A: 1,600</text>
+  <text x="340" y="112" text-anchor="middle" class="sm mut">2023 Merger Guidelines bands (axis drawn to 4,000)</text>
+</svg>
+</figure>
+<div class="explain">
+<p><strong>Why concentration matters:</strong> in concentrated markets firms recognize their interdependence, price competition is more restrained, and incumbents have more ability and incentive to defend. In fragmented markets no firm can influence price and rivalry is hard to contain.</p>
+<ul>
+<li><strong>C4</strong> = sum of the four largest shares. Simple, but ignores how share is split among the four and ignores everyone else.</li>
+<li><strong>HHI</strong> = sum of <strong>squared</strong> shares of <strong>every</strong> firm, shares in percentage points (30% → 30² = 900). Large shares count disproportionately. Range: near 0 to 10,000.</li>
+<li>Bands: <b>below 1,000</b> unconcentrated, <b>1,000 to 1,800</b> moderately concentrated, <b>above 1,800</b> highly concentrated.</li>
+</ul>
+</div>
+<details class="check"><summary>Check yourself: Shares 35, 25, 20, 10, 10. C4 and HHI?</summary><p>C4 = 35 + 25 + 20 + 10 = <b>90</b>. HHI = 1,225 + 625 + 400 + 100 + 100 = <b>2,450</b> (highly concentrated).</p></details>
+</section>
+
+<section class="fw" id="merger" data-title="Merger review & 2ab">
+<div class="fw-head"><span class="tag">§5</span><h3>Merger review and the 2ab shortcut</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 300" role="img" aria-label="Geometric proof that HHI rises by 2ab">
+  <rect x="40" y="30" width="150" height="150" class="accs sta"/><rect x="190" y="180" width="100" height="100" class="accs sta"/>
+  <rect x="190" y="30" width="100" height="150" class="ambs stam"/><rect x="40" y="180" width="150" height="100" class="ambs stam"/>
+  <text x="115" y="100" text-anchor="middle" class="b">a² = 225</text><text x="115" y="118" text-anchor="middle" class="sm mut">a = 15</text>
+  <text x="240" y="235" text-anchor="middle" class="b">b² = 100</text><text x="240" y="253" text-anchor="middle" class="sm mut">b = 10</text>
+  <text x="240" y="100" text-anchor="middle" class="b amb">ab = 150</text><text x="115" y="235" text-anchor="middle" class="b amb">ab = 150</text>
+  <text x="165" y="20" text-anchor="middle" class="sm b">merged firm: (a + b)² = 25² = 625</text>
+  <text x="330" y="60" class="b">Before the merger the two firms add  a² + b²</text>
+  <text x="330" y="86" class="b">After:  (a + b)² = a² + <tspan class="amb">2ab</tspan> + b²</text>
+  <text x="330" y="112" class="b">Change in HHI = <tspan class="amb">2ab</tspan> = 2 × 15 × 10 = 300</text>
+  <text x="330" y="150">Every other firm's square is untouched,</text><text x="330" y="170">so it cancels out of the change.</text>
+  <text x="330" y="208" class="sm mut">That's practice short answer 23.</text>
+  <text x="330" y="240" class="sm rose b">Divestiture remedy moves share to a 3rd firm?</text><text x="330" y="258" class="sm rose">2ab no longer applies. Recompute post-merger</text><text x="330" y="276" class="sm rose">HHI from the new shares, minus pre-merger HHI.</text>
+</svg>
+<figcaption>The two orange rectangles are the new concentration the merger creates.</figcaption>
+</figure>
+<figure class="fig">
+<svg viewBox="0 0 680 350" role="img" aria-label="Merger review decision flow">
+  <rect x="200" y="10" width="280" height="38" rx="8" class="pan sti"/><text x="340" y="34" text-anchor="middle" class="b">1. Define the market (comes first)</text>
+  <line x1="340" y1="48" x2="340" y2="66" class="sti" marker-end="url(#ah)"/>
+  <rect x="160" y="68" width="360" height="38" rx="8" class="pan sti"/><text x="340" y="92" text-anchor="middle" class="b">2. Compute post-merger HHI and the change (2ab)</text>
+  <line x1="300" y1="106" x2="180" y2="128" class="sti" marker-end="url(#ah)"/><line x1="380" y1="106" x2="500" y2="128" class="sti" marker-end="url(#ah)"/>
+  <rect x="20" y="130" width="300" height="66" rx="8" class="accs sta"/><text x="170" y="154" text-anchor="middle" class="b">Concentration test</text><text x="170" y="174" text-anchor="middle" class="sm">post-merger HHI &gt; 1,800</text><text x="170" y="189" text-anchor="middle" class="sm b">AND change &gt; 100</text>
+  <rect x="360" y="130" width="300" height="66" rx="8" class="accs sta"/><text x="510" y="154" text-anchor="middle" class="b">Share test</text><text x="510" y="174" text-anchor="middle" class="sm">merged share &gt; 30%</text><text x="510" y="189" text-anchor="middle" class="sm b">AND change &gt; 100</text>
+  <text x="340" y="168" text-anchor="middle" class="lg amb">OR</text>
+  <line x1="170" y1="196" x2="300" y2="226" class="sti" marker-end="url(#ah)"/><line x1="510" y1="196" x2="380" y2="226" class="sti" marker-end="url(#ah)"/>
+  <rect x="150" y="228" width="380" height="40" rx="8" class="roses str"/><text x="340" y="253" text-anchor="middle" class="b rose">Either met → structural presumption of harm</text>
+  <line x1="340" y1="268" x2="340" y2="286" class="sti" marker-end="url(#ah)"/>
+  <rect x="110" y="288" width="460" height="52" rx="8" class="pan sti"/><text x="340" y="310" text-anchor="middle" class="b">Parties may rebut (burden is on them)</text><text x="340" y="328" text-anchor="middle" class="sm">entry must be timely, likely, AND sufficient. Announced plans ≠ built plants.</text>
+</svg>
+</figure>
+<div class="explain">
+<ul>
+<li>The presumption turns on the <strong>level</strong> of concentration and the <strong>change</strong>. The merged firm's rank relative to the leader is <strong>irrelevant</strong>.</li>
+<li>Pre-merger HHI being "only moderate" doesn't save a deal. The tests look at <strong>post</strong>-merger HHI and the size of the increase.</li>
+<li>Market definition comes first: the same deal can look harmless or harmful depending on how the market is drawn.</li>
+<li>Why two small firms merging raises no concern: 2ab is tiny when both are small (3% + 2% → 12 points). Second and third largest (25% + 20%) → 1,000 points.</li>
+</ul>
+</div>
+<div class="trap"><b>Exam trap</b>Both tests need the change to exceed 100. And "we'd only tie the leader" is never a defense (Mini-case A).</div>
+<details class="check"><summary>Check yourself: Pre-merger HHI 1,500. Firms with 10% and 6% merge. Presumption?</summary><p>Change = 2 × 10 × 6 = 120. Post = 1,620, below 1,800, so the concentration test fails. Merged share = 16%, below 30%, so the share test fails. <b>No presumption</b> (practice Q9).</p></details>
+<details class="check"><summary>Check yourself: Mini-case A in 60 seconds. Shares 25, 20, 15, 15, 10, 10, 5; a 15 merges with a 10.</summary><p>Pre HHI = 625 + 400 + 225 + 225 + 100 + 100 + 25 = 1,700. Change = 300. Post = 2,000. Concentration test met (2,000 &gt; 1,800 and 300 &gt; 100). Share test not met (25%). Either is enough → presumption applies.</p></details>
+</section>
+
+<section class="fw" id="entry" data-title="Cracking a guarded market">
+<div class="fw-head"><span class="tag">§5</span><h3>Cracking a well-guarded market</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 260" role="img" aria-label="Entry routes against a fortified incumbent">
+  <rect x="440" y="50" width="220" height="170" rx="10" class="pan2 sti"/>
+  <text x="550" y="78" text-anchor="middle" class="lg">Incumbent</text>
+  <text x="550" y="100" text-anchor="middle" class="sm">scale · brands · switching costs</text><text x="550" y="116" text-anchor="middle" class="sm">distribution · ability to retaliate</text>
+  <rect x="440" y="130" width="14" height="40" class="roses"/>
+  <text x="550" y="150" text-anchor="middle" class="sm b rose">a trade-off it can't</text><text x="550" y="166" text-anchor="middle" class="sm b rose">abandon = the crack</text>
+  <path d="M30,30 C250,0 600,0 640,46" class="nf stg" marker-end="url(#ahg)"/><text x="40" y="22" class="sm b grn">Change the basis of competition: new model, technology, or channel (their assets matter less)</text>
+  <line x1="30" y1="150" x2="436" y2="150" class="stg" marker-end="url(#ahg)"/><text x="40" y="142" class="sm b grn">Exploit trade-offs: what would a competent incumbent have to GIVE UP to respond?</text>
+  <line x1="30" y1="200" x2="420" y2="200" class="str dash" marker-end="url(#ahr)"/><text x="40" y="192" class="sm b rose">Head-on attack on its strength</text><text x="428" y="205" class="b rose">✕</text>
+  <rect x="30" y="226" width="90" height="26" rx="6" class="grns stg"/><text x="75" y="244" text-anchor="middle" class="sm b">Beachhead</text>
+  <line x1="120" y1="239" x2="260" y2="239" class="stg" marker-end="url(#ahg)"/><text x="268" y="244" class="sm b grn">expand (a niche with no path off it is just a small business)</text>
+</svg>
+</figure>
+<div class="explain">
+<p>Incumbents in concentrated markets are protected by scale, brands, switching costs, distribution, and the ability to retaliate. A head-on attack on their strength usually fails. Successful entrants tend to:</p>
+<ul>
+<li><strong>Exploit the incumbent's trade-offs.</strong> Don't ask "could they respond?" Ask "what would they have to give up to respond?" The best entry points are ones where responding would damage the incumbent's core business.</li>
+<li><strong>Start with a segment the incumbent underserves or doesn't value</strong>, then expand.</li>
+<li><strong>Change the basis of competition</strong> (business model, technology, channel) so the incumbent's assets matter less.</li>
+</ul>
+<p>In-class applications: cracking internet search; whether DOJ would allow Netflix or Paramount to buy Warner Brothers.</p>
+</div>
+<details class="check"><summary>Check yourself: A dominant search engine earns most of its revenue from ads beside results. What would it have to give up to answer an ad-free, subscription AI answer engine?</summary><p>Its ad revenue on those queries. Matching the entrant cannibalizes the core business, so it is a trade-off the incumbent resists. That's the kind of entry point the framework looks for.</p></details>
+</section>
+<!-- ================= §6 ================= -->
+<h2 class="part" data-part="§6 Theories of the firm, RBV, VRIO"><small>§6 · Session 6</small>Theories of the firm: RBV and VRIO</h2>
+<p class="kq">Key questions: What is a firm? Why does it exist? Does AI offer a sustainable competitive advantage?</p>
+
+<section class="fw" id="firm" data-title="Why firms exist">
+<div class="fw-head"><span class="tag">§6</span><h3>Why firms exist: three theories</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 270" role="img" aria-label="Firm boundary: Chick-fil-A keeps drive-through and sauce, buys cups and forks">
+  <ellipse cx="200" cy="140" rx="180" ry="105" class="accs sta"/>
+  <text x="200" y="62" text-anchor="middle" class="b acc">FIRM BOUNDARY (make)</text>
+  <rect x="80" y="90" width="240" height="38" rx="8" class="acc"/><text x="200" y="114" text-anchor="middle" class="onacc b">Drive-through operations</text>
+  <rect x="80" y="140" width="240" height="38" rx="8" class="acc"/><text x="200" y="164" text-anchor="middle" class="onacc b">Sauce recipe</text>
+  <text x="200" y="208" text-anchor="middle" class="sm">critical knowledge stays inside</text>
+  <rect x="400" y="95" width="90" height="34" rx="8" class="pan sti"/><text x="445" y="117" text-anchor="middle">Cups</text>
+  <rect x="400" y="145" width="90" height="34" rx="8" class="pan sti"/><text x="445" y="167" text-anchor="middle">Forks</text>
+  <text x="445" y="200" text-anchor="middle" class="sm mut">buy on market</text>
+  <line x1="575" y1="30" x2="575" y2="240" class="sti" marker-start="url(#ah)" marker-end="url(#ah)"/>
+  <text x="590" y="40" class="sm b">HIGH</text><text x="590" y="56" class="sm">transaction cost</text><text x="590" y="72" class="sm b acc">→ MAKE</text>
+  <text x="590" y="205" class="sm b">LOW</text><text x="590" y="221" class="sm">transaction cost</text><text x="590" y="237" class="sm b">→ BUY</text>
+  <text x="590" y="120" class="sm mut">specialized</text><text x="590" y="136" class="sm mut">assets,</text><text x="590" y="152" class="sm mut">uncertainty,</text><text x="590" y="168" class="sm mut">hold-up risk</text>
+</svg>
+<figcaption>Chick-fil-A keeps the drive-through and the sauce, and buys cups and forks.</figcaption>
+</figure>
+<div class="grid2">
+<div class="card"><h5>Transaction cost economics</h5><p><b>Coase, Williamson.</b> Using the market costs something: searching, negotiating, enforcing contracts. Firms exist when organizing internally is cheaper than buying. <b>Make</b> when transaction costs are high (specialized assets, uncertainty, hold-up risk); <b>buy</b> when low.</p></div>
+<div class="card"><h5>Knowledge-based view</h5><p>Firms exist to <b>create, combine, and protect knowledge</b> markets can't easily transfer. Boundaries surround the critical knowledge.</p></div>
+<div class="card"><h5>Resource-based view</h5><p>Firms are <b>bundles of resources and capabilities</b>. Lasting performance differences come from those bundles. The firm keeps what gives it advantage.</p></div>
+</div>
+<details class="check"><summary>Check yourself: Why would a firm make something it could buy more cheaply on the market?</summary><p>The sticker price ignores transaction costs. If the input needs specialized assets, faces uncertainty, or exposes the firm to hold-up (a supplier exploiting dependence), the total cost of buying is higher. Or the activity holds critical knowledge the firm wants to protect.</p></details>
+</section>
+
+<section class="fw" id="industry-firm" data-title="Industry vs firm">
+<div class="fw-head"><span class="tag">§6</span><h3>Does industry or the firm matter more?</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 150" role="img" aria-label="Business unit explains three to five times as much profit variance as industry">
+  <text x="20" y="40" class="b">Industry</text><rect x="150" y="24" width="80" height="26" class="ambs stam"/><text x="240" y="42" class="sm">1×</text>
+  <text x="20" y="96" class="b">Business unit</text><rect x="150" y="80" width="240" height="26" class="acc"/><rect x="390" y="80" width="160" height="26" class="accs sta dash"/>
+  <text x="270" y="98" text-anchor="middle" class="onacc sm b">3×</text><text x="560" y="98" class="sm">up to 5×</text>
+  <text x="20" y="138" class="sm mut">Share of profit variance explained (Rumelt 1991 and later studies)</text>
+</svg>
+</figure>
+<div class="explain"><p>Studies since Rumelt (1991) find the business unit explains <strong>three to five times</strong> as much profit variance as the industry. Industry analysis (§4) tells you what the environment allows. Internal analysis (this section) tells you why one firm in that industry out-earns another.</p></div>
+</section>
+
+<section class="fw" id="rbv" data-title="Resource-based view">
+<div class="fw-head"><span class="tag">§6</span><h3>The resource-based view</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 270" role="img" aria-label="RBV assumptions and resources versus capabilities">
+  <rect x="20" y="15" width="170" height="54" rx="8" class="accs sta"/><text x="105" y="38" text-anchor="middle" class="b">Heterogeneity</text><text x="105" y="56" text-anchor="middle" class="sm">firms hold different bundles</text>
+  <text x="210" y="48" class="lg">+</text>
+  <rect x="235" y="15" width="190" height="54" rx="8" class="accs sta"/><text x="330" y="38" text-anchor="middle" class="b">Immobility</text><text x="330" y="56" text-anchor="middle" class="sm">can't be bought, copied, rebuilt fast</text>
+  <line x1="430" y1="42" x2="468" y2="42" class="sti" marker-end="url(#ah)"/>
+  <rect x="472" y="15" width="190" height="54" rx="8" class="acc"/><text x="567" y="47" text-anchor="middle" class="onacc b">Advantage can persist</text>
+  <rect x="20" y="100" width="260" height="150" rx="10" class="pan2 sti"/>
+  <text x="150" y="124" text-anchor="middle" class="lg">Resources = STOCKS</text><text x="150" y="142" text-anchor="middle" class="sm mut">what the firm owns or controls</text>
+  <g class="sm"><text x="36" y="168"><tspan class="b">Physical</tspan> plants, locations, reserves</text><text x="36" y="188"><tspan class="b">Financial</tspan> cash, access to capital</text><text x="36" y="208"><tspan class="b">Human</tspan> skills, experience</text><text x="36" y="228"><tspan class="b">Intangible</tspan> brand, patents, culture</text></g>
+  <path d="M285,175 H400" class="sta" marker-end="url(#aha)"/><text x="342" y="165" text-anchor="middle" class="sm b acc">deployed by</text>
+  <rect x="405" y="100" width="255" height="150" rx="10" class="accs sta"/>
+  <text x="532" y="124" text-anchor="middle" class="lg">Capabilities = FLOWS</text><text x="532" y="142" text-anchor="middle" class="sm mut">what the firm is repeatedly good at</text>
+  <text x="532" y="172" text-anchor="middle" class="sm">routines that deploy resources,</text><text x="532" y="190" text-anchor="middle" class="sm">embedded in people and process</text>
+  <text x="532" y="220" text-anchor="middle" class="sm b">Often MORE defensible: you can buy</text><text x="532" y="236" text-anchor="middle" class="sm b">a building, not 15 years of judgment</text>
+</svg>
+</figure>
+<div class="explain"><p>RBV rests on two assumptions: <strong>resource heterogeneity</strong> (firms hold different bundles) and <strong>resource immobility</strong> (bundles can't be bought, copied, or rebuilt quickly). Where both hold, advantage can persist. Resources are stocks; capabilities are flows, the routines that put resources to work.</p></div>
+</section>
+
+<section class="fw" id="vrio" data-title="VRIO">
+<div class="fw-head"><span class="tag">§6</span><h3>VRIO: a gate, not a scorecard</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 410" role="img" aria-label="VRIO gate flow with verdicts">
+  <g class="pan sta"><rect x="40" y="20" width="250" height="56" rx="10"/><rect x="40" y="105" width="250" height="56" rx="10"/><rect x="40" y="190" width="250" height="56" rx="10"/><rect x="40" y="275" width="250" height="56" rx="10"/></g>
+  <text x="165" y="44" text-anchor="middle" class="b">V · Valuable?</text><text x="165" y="62" text-anchor="middle" class="sm mut">raises WTP or lowers cost</text>
+  <text x="165" y="129" text-anchor="middle" class="b">R · Rare?</text><text x="165" y="147" text-anchor="middle" class="sm mut">only a few rivals control it</text>
+  <text x="165" y="214" text-anchor="middle" class="b">I · Costly to imitate?</text><text x="165" y="232" text-anchor="middle" class="sm mut">hard to buy, build, or substitute</text>
+  <text x="165" y="299" text-anchor="middle" class="b">O · Organized to capture it?</text><text x="165" y="317" text-anchor="middle" class="sm mut">structure, process, incentives, culture</text>
+  <g class="sta"><line x1="165" y1="76" x2="165" y2="102" marker-end="url(#aha)"/><line x1="165" y1="161" x2="165" y2="187" marker-end="url(#aha)"/><line x1="165" y1="246" x2="165" y2="272" marker-end="url(#aha)"/><line x1="165" y1="331" x2="165" y2="352" marker-end="url(#aha)"/></g>
+  <g class="sm b acc"><text x="174" y="94">yes</text><text x="174" y="179">yes</text><text x="174" y="264">yes</text><text x="174" y="347">yes</text></g>
+  <g class="stm"><line x1="290" y1="48" x2="378" y2="48" marker-end="url(#ah)"/><line x1="290" y1="133" x2="378" y2="133" marker-end="url(#ah)"/><line x1="290" y1="218" x2="378" y2="218" marker-end="url(#ah)"/><line x1="290" y1="303" x2="378" y2="303" marker-end="url(#ah)"/></g>
+  <g class="sm b"><text x="322" y="42">no</text><text x="322" y="127">no</text><text x="322" y="212">no</text><text x="322" y="297">no</text></g>
+  <rect x="382" y="25" width="285" height="46" rx="8" class="roses str"/><text x="524" y="45" text-anchor="middle" class="b">Competitive DISADVANTAGE</text><text x="524" y="62" text-anchor="middle" class="sm">removing it wouldn't hurt</text>
+  <rect x="382" y="110" width="285" height="46" rx="8" class="ambs stam"/><text x="524" y="130" text-anchor="middle" class="b">Competitive PARITY</text><text x="524" y="147" text-anchor="middle" class="sm">table stakes; still required</text>
+  <rect x="382" y="195" width="285" height="46" rx="8" class="accs sta"/><text x="524" y="215" text-anchor="middle" class="b">TEMPORARY advantage</text><text x="524" y="232" text-anchor="middle" class="sm">has a clock on it</text>
+  <rect x="382" y="280" width="285" height="46" rx="8" class="grns stg dash"/><text x="524" y="300" text-anchor="middle" class="b">UNEXPLOITED advantage</text><text x="524" y="317" text-anchor="middle" class="sm">value left on the table (most actionable)</text>
+  <rect x="40" y="356" width="250" height="46" rx="10" class="acc"/><text x="165" y="384" text-anchor="middle" class="onacc b">SUSTAINED advantage</text>
+  <text x="310" y="384" class="sm mut">sustained ≠ permanent: lasts while its conditions hold</text>
+</svg>
+<figcaption>Run the tests in order on ONE resource at a time. The first "no" stops the analysis and fixes the verdict.</figcaption>
+</figure>
+<div class="grid2">
+<div class="card"><h5>Why resources resist imitation</h5><ul><li><b>Unique history</b> (path dependence): built under conditions that can't be re-created</li><li><b>Causal ambiguity</b>: even insiders can't say why it works. Cuts both ways: the firm can't reliably move it to a new plant and may destroy it in a reorganization</li><li><b>Social complexity</b>: relationships, trust, culture</li><li><b>Legal and economic deterrents</b>: patents, exclusive contracts, scale, network effects</li></ul></div>
+<div class="card"><h5>Reading the verdicts</h5><ul><li><b>Parity</b> is still required; losing it creates a disadvantage</li><li><b>Temporary</b> earns above-normal returns until a rival buys or builds it</li><li><b>Unexploited</b> is most actionable: the constraint is internal, in management's control</li><li><b>Sustained</b> ≠ permanent: patents expire, substitutes arrive</li><li>An <b>unanswered</b> test is not a failed test; if O is open, no verdict yet</li></ul></div>
+</div>
+<div class="explain">
+<p><strong>VRIN</strong> is the earlier version: valuable, rare, inimitable, non-substitutable. VRIO folds substitution into imitability and adds organization.</p>
+<p><strong>Applying it to AI:</strong> a widely available AI model is valuable but not rare, so by itself it yields <strong>parity</strong>. Any advantage comes from what's rare and hard to copy around it: proprietary data, complementary capabilities, an organization built to use it.</p>
+</div>
+<div class="trap"><b>Common mistakes</b>Confusing valuable with popular. Calling something rare because it's impressive. Treating <em>expensive</em> as inimitable (if a well-funded rival can buy it, it fails I). Forgetting organization. Auditing everything the firm owns instead of the 2 or 3 resources that explain its position.</div>
+<details class="check"><summary>Check yourself: Valuable, rare, organized, but a rival could buy the same equipment on the open market. Verdict?</summary><p>Temporary competitive advantage. Fails imitability (practice Q10).</p></details>
+<details class="check"><summary>Check yourself: Every bank has a mobile app and customers won't open an account without one.</summary><p>Competitive parity. Valuable but not rare: table stakes (practice Q11).</p></details>
+<details class="check"><summary>Check yourself (short answer 22): V, R, I pass, O fails. Verdict and why it's most actionable?</summary><p>Unexploited advantage. The binding constraint is internal: structure, processes, and incentives are in management's control, while rarity and imitability depend on what rivals do.</p></details>
+</section>
+<!-- ================= §7 ================= -->
+<h2 class="part" data-part="§7 Cost advantage"><small>§7 · Sessions 7 and 8</small>Cost advantage</h2>
+<p class="kq">Key questions: How does a firm get a structural cost advantage (Aldi)? A scale cost advantage (Netflix)?</p>
+<div class="explain"><p>A cost advantage <strong>lowers the floor of the value stick</strong>. The firm delivers a comparable offering at lower cost, so it can match rivals' prices and earn more, or undercut them and still earn a margin.</p></div>
+
+<section class="fw" id="value-chain" data-title="Value chain">
+<div class="fw-head"><span class="tag">§7</span><h3>The value chain</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 300" role="img" aria-label="Porter value chain">
+  <g class="st"><rect x="20" y="20" width="540" height="30" class="ambs"/><rect x="20" y="52" width="540" height="30" class="ambs"/><rect x="20" y="84" width="540" height="30" class="ambs"/><rect x="20" y="116" width="540" height="30" class="ambs"/></g>
+  <g class="sm b"><text x="290" y="40" text-anchor="middle">Firm infrastructure</text><text x="290" y="72" text-anchor="middle">Human resource management</text><text x="290" y="104" text-anchor="middle">Technology development</text><text x="290" y="136" text-anchor="middle">Procurement</text></g>
+  <g class="st accs"><rect x="20" y="152" width="106" height="118"/><rect x="128" y="152" width="106" height="118"/><rect x="236" y="152" width="106" height="118"/><rect x="344" y="152" width="106" height="118"/><rect x="452" y="152" width="108" height="118"/></g>
+  <g class="sm b" text-anchor="middle"><text x="73" y="205">Inbound</text><text x="73" y="221">logistics</text><text x="181" y="213">Operations</text><text x="289" y="205">Outbound</text><text x="289" y="221">logistics</text><text x="397" y="205">Marketing</text><text x="397" y="221">and sales</text><text x="506" y="213">Service</text></g>
+  <polygon points="562,20 600,20 668,145 600,270 562,270" class="acc"/><text x="610" y="150" text-anchor="middle" class="onacc b">Margin</text>
+  <text x="290" y="292" text-anchor="middle" class="sm mut">Bottom row: PRIMARY activities (the product's path). Top four bands: SUPPORT activities (span all of them).</text>
+</svg>
+</figure>
+<div class="explain">
+<p><strong>A firm has no costs. Activities have costs.</strong> The value chain breaks the firm into the activities it performs so cost and value can be traced to their source.</p>
+<p>To use it: list the activities → assign costs to each → identify each activity's <strong>cost driver</strong> → compare with rivals → find where the advantage is created. Class examples: Costco's few SKUs and low turnover, Ryanair's single aircraft type, Toyota's supplier network, Little Caesars' simple menu.</p>
+</div>
+<details class="check"><summary>Check yourself: Is procurement primary or support?</summary><p>Support. Primary = inbound logistics, operations, outbound logistics, marketing and sales, service.</p></details>
+</section>
+
+<section class="fw" id="cost-types" data-title="Sources → three types">
+<div class="fw-head"><span class="tag">§7</span><h3>Five sources of cost advantage sort into three types</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 290" role="img" aria-label="Five sources mapped to structural, scale, experience">
+  <g class="pan sti"><rect x="20" y="20" width="230" height="40" rx="8"/><rect x="20" y="75" width="230" height="40" rx="8"/><rect x="20" y="130" width="230" height="40" rx="8"/><rect x="20" y="185" width="230" height="40" rx="8"/><rect x="20" y="240" width="230" height="40" rx="8"/></g>
+  <g text-anchor="middle"><text x="135" y="45">Different business model</text><text x="135" y="100">Lower input costs</text><text x="135" y="155">Economies of scale / scope</text><text x="135" y="210">Learning and experience</text><text x="135" y="265">Proprietary knowledge</text></g>
+  <rect x="450" y="40" width="210" height="50" rx="10" class="grns stg"/><text x="555" y="62" text-anchor="middle" class="lg">Structural</text><text x="555" y="80" text-anchor="middle" class="sm">design: costs never arise</text>
+  <rect x="450" y="125" width="210" height="50" rx="10" class="accs sta"/><text x="555" y="147" text-anchor="middle" class="lg">Scale</text><text x="555" y="165" text-anchor="middle" class="sm">volume per period</text>
+  <rect x="450" y="210" width="210" height="50" rx="10" class="ambs stam"/><text x="555" y="232" text-anchor="middle" class="lg">Experience</text><text x="555" y="250" text-anchor="middle" class="sm">cumulative volume</text>
+  <line x1="250" y1="40" x2="447" y2="62" class="stg"/>
+  <line x1="250" y1="95" x2="447" y2="68" class="stg dash"/><line x1="250" y1="95" x2="447" y2="145" class="sta dash"/>
+  <line x1="250" y1="150" x2="447" y2="150" class="sta"/>
+  <line x1="250" y1="205" x2="447" y2="230" class="stam"/>
+  <line x1="250" y1="260" x2="447" y2="240" class="stam dash"/><line x1="250" y1="260" x2="447" y2="80" class="stg dash"/>
+  <text x="340" y="285" text-anchor="middle" class="sm mut">dashed = can be either</text>
+</svg>
+</figure>
+<div class="tblwrap"><table class="t">
+<tr><th></th><th>Structural</th><th>Scale</th><th>Experience</th></tr>
+<tr><td><b>Driver</b></td><td>Business model design: whole categories of cost never arise</td><td>Fixed cost spread over <i>this period's</i> volume</td><td>Learning banked over <i>cumulative</i> volume</td></tr>
+<tr><td><b>Key variable</b></td><td>The design itself; works at any size</td><td>Volume per period, now</td><td>All volume ever produced</td></tr>
+<tr><td><b>Reversible?</b></td><td>No; travels with the model</td><td><b>Yes</b>; gone the quarter volume is lost</td><td>Largely no; banked in people, process, tooling</td></tr>
+<tr><td><b>Main defense</b></td><td>Copying would destroy the rival's own revenue model</td><td>Being unmatchably big; defend share</td><td>Stay ahead on doublings</td></tr>
+<tr><td><b>How it dies</b></td><td>Entrants adopt the design; self-inflicted complexity</td><td>Fragmentation; tech shrinks the fixed cost; diseconomies</td><td>Curve flattens; learning leaks; tech resets the axis</td></tr>
+<tr><td><b>Examples</b></td><td>Aldi, IKEA, early Southwest, Costco, Vanguard</td><td>Netflix, Microsoft, TSMC, Visa</td><td>Model T, Liberty ships, solar, batteries</td></tr>
+</table></div>
+<div class="explain"><p>Memorize one line: <strong>scale is about a rate; learning is about a history; structure is about a design.</strong></p></div>
+</section>
+
+<section class="fw" id="cost-tests" data-title="Three diagnostic tests">
+<div class="fw-head"><span class="tag">§7</span><h3>The three diagnostic tests</h3></div>
+<div class="tblwrap"><table class="t">
+<tr><th>Test</th><th>Structural</th><th>Scale</th><th>Experience</th></tr>
+<tr><td><b>Shrink</b><br><span style="color:var(--muted);font-size:13px">cut current volume in half</span></td><td><span class="chip c-g">survives</span></td><td><span class="chip c-r">destroyed immediately</span></td><td><span class="chip c-g">survives</span></td></tr>
+<tr><td><b>Startup</b><br><span style="color:var(--muted);font-size:13px">open one new unit in a new market</span></td><td><span class="chip c-g">arrives day one</span></td><td><span class="chip c-r">not until volume does</span></td><td><span class="chip c-a">only as far as learning is portable</span></td></tr>
+<tr><td><b>Copy</b><br><span style="color:var(--muted);font-size:13px">hand a well-funded rival the blueprint; what stops them?</span></td><td><span class="chip c-b">their own revenue model</span></td><td><span class="chip c-b">volume</span></td><td><span class="chip c-b">cumulative production they haven't lived through</span></td></tr>
+</table></div>
+<div class="explain"><p>Misdiagnosis produces the wrong response. <strong>A price war against a structural advantage cannot be won</strong>, because the rival's costs never exist in the first place.</p></div>
+<details class="check"><summary>Check yourself: Volume fell by half and unit cost barely moved. The firm does the same activities as rivals, just more efficiently. Which type?</summary><p>Experience. It survives the shrink test, so not scale. Same activities, so not structural (practice Q14).</p></details>
+</section>
+
+<section class="fw" id="structural" data-title="Structural (Aldi)">
+<div class="fw-head"><span class="tag">§7</span><h3>Structural cost advantage: Aldi</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 230" role="img" aria-label="Aldi 1,400 items vs 30,000 at conventional grocers, to scale">
+  <text x="20" y="24" class="b">Items carried (to scale)</text>
+  <text x="20" y="56" class="sm b">Aldi</text><rect x="140" y="42" width="23" height="22" class="grn"/><text x="172" y="58" class="sm b">≈ 1,400</text>
+  <text x="20" y="92" class="sm b">Conventional</text><rect x="140" y="78" width="500" height="22" class="pan2 sti"/><text x="630" y="94" text-anchor="end" class="sm b">30,000+</text>
+  <text x="20" y="140" class="b">Made of absences: costs that never arise</text>
+  <g class="sm"><text x="20" y="166" style="text-decoration:line-through">28,600 extra SKUs</text><text x="190" y="166" style="text-decoration:line-through">most national brands</text><text x="380" y="166" style="text-decoration:line-through">big store crews</text><text x="530" y="166" style="text-decoration:line-through">baggers</text>
+  <text x="20" y="190" style="text-decoration:line-through">promotions</text><text x="190" y="190" style="text-decoration:line-through">large stores</text></g>
+  <text x="20" y="218" class="sm mut">~90% private label · small stores · crews of 4 to 6 · customers bag their own</text>
+</svg>
+</figure>
+<div class="explain">
+<p>A structural advantage is <strong>made of absences</strong>. The firm doesn't do the same activities more cheaply; it arranged its business so many of them don't exist.</p>
+<ul><li>It doesn't depend on being the biggest.</li><li>It is many interlocking choices, each affordable only with the others (an activity system, §1).</li><li>It is protected by the <strong>rival's own economics</strong>, not secrecy. Copying would destroy the rival's revenue logic.</li></ul>
+<p>Conventional grocers have watched Aldi for fifty years without copying, because cutting assortment destroys the one-stop shop and going private label forfeits supplier payments.</p>
+</div>
+</section>
+
+<section class="fw" id="scale" data-title="Economies of scale (Netflix)">
+<div class="fw-head"><span class="tag">§7</span><h3>Economies of scale: v + F/n, MES, Netflix</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 320" role="img" aria-label="Unit cost curve 5 plus 2 million over n">
+  <line x1="70" y1="270" x2="645" y2="270" class="sti"/><line x1="70" y1="25" x2="70" y2="270" class="sti"/>
+  <g class="sm mut"><text x="62" y="274" text-anchor="end">$0</text><text x="62" y="226" text-anchor="end">$10</text><text x="62" y="178" text-anchor="end">$20</text><text x="62" y="130" text-anchor="end">$30</text><text x="62" y="82" text-anchor="end">$40</text><text x="62" y="34" text-anchor="end">$50</text>
+  <text x="70" y="290" text-anchor="middle">0</text><text x="184" y="290" text-anchor="middle">100k</text><text x="298" y="290" text-anchor="middle">200k</text><text x="412" y="290" text-anchor="middle">300k</text><text x="526" y="290" text-anchor="middle">400k</text><text x="640" y="290" text-anchor="middle">500k</text></g>
+  <text x="355" y="312" text-anchor="middle" class="sm b">units this period (n)</text>
+  <line x1="70" y1="246" x2="640" y2="246" class="stam dash"/><text x="636" y="240" text-anchor="end" class="sm amb b">variable cost v = $5 (the floor)</text>
+  <path d="M121.3,32.9 L127,54 L138.4,86.2 L149.8,108.7 L161.2,126 L184,150 L212.5,169.2 L241,182.2 L298,198 L355,207.6 L412,213.8 L469,218.6 L526,222 L583,224.9 L640,226.8" class="nf sta" style="stroke-width:3"/>
+  <circle cx="184" cy="150" r="6" class="acc"/><text x="194" y="140" class="sm b">100k → 5 + 2,000,000/100,000 = $25</text>
+  <circle cx="526" cy="222" r="6" class="acc"/><text x="526" y="208" text-anchor="middle" class="sm b">400k → 5 + 5 = $10</text>
+  <text x="390" y="60" class="b">Unit cost = v + F/n</text><text x="390" y="80" class="sm">F = $2M fixed, v = $5 per unit</text><text x="390" y="100" class="sm mut">Steep early, flat later: the advantage is bounded</text>
+</svg>
+<figcaption>Drawn to scale with the review question (F = $2 million, v = $5).</figcaption>
+</figure>
+<figure class="fig">
+<svg viewBox="0 0 680 210" role="img" aria-label="Blockbuster flat unit cost vs Netflix falling unit cost (illustrative)">
+  <line x1="60" y1="180" x2="640" y2="180" class="sti"/><line x1="60" y1="20" x2="60" y2="180" class="sti"/>
+  <text transform="translate(30,100) rotate(-90)" text-anchor="middle" class="sm b">avg cost / rental</text><text x="350" y="200" text-anchor="middle" class="sm b">size of the business</text>
+  <line x1="70" y1="95" x2="630" y2="95" class="str" style="stroke-width:3"/><text x="630" y="85" text-anchor="end" class="b rose">Blockbuster: unit of cost = the STORE → flat</text>
+  <path d="M75,30 C140,120 260,150 630,165" class="nf sta" style="stroke-width:3"/><text x="250" y="145" class="b acc">Netflix: unit of cost = the NATION → falls</text>
+  <text x="640" y="200" text-anchor="end" class="sm mut">illustrative shape</text>
+</svg>
+<figcaption>Size is not scale. Every new Blockbuster store repeated the lease, staff, and inventory.</figcaption>
+</figure>
+<div class="explain">
+<p><strong>Economies of scale</strong> = lower cost per unit as output <em>per period</em> rises, because fixed cost F is spread over more units n. Unit cost falls toward v but never below it.</p>
+<ul>
+<li><strong>Sources:</strong> technical (automation, bigger equipment), managerial (specialization), financial and marketing (cheaper capital, ads spread over more units), purchasing.</li>
+<li><strong>Minimum efficient scale (MES):</strong> smallest volume where unit cost is near its minimum. <span class="f">Efficient plants ≈ 100 ÷ MES share of demand</span>. The cost penalty is how much it costs to run below MES, and only firms below MES pay it. Tiny MES → nearly everyone reaches it → fragmented industry.</li>
+<li><strong>Diseconomies</strong> set in when coordination, bureaucracy, and complexity raise unit cost.</li>
+<li><strong>Size is not scale.</strong> The test is whether average cost falls as volume grows. Ask at what unit cost is incurred.</li>
+<li><strong>Scale is not a network effect.</strong> Scale is supply-side (cost per unit falls). A network effect is demand-side (each user makes the product worth more to others).</li>
+</ul>
+</div>
+<div class="case"><b class="h">Case: Netflix</b>Each pivot (store → DVD by mail → streaming) moved cost from variable to fixed and steepened the curve. A $17B content budget at ~$12/month: 17B ÷ (12 × 12 = $144/yr) ≈ <b>118 million subscribers</b> to break even on content alone. Only Netflix clears it. But scale doesn't say who keeps the gains: Starz raised its license fee tenfold in three years. Originals solved that by <b>owning the input</b>. Habit: locate the fixed costs, find the unit of scale, measure the slope, ask who appropriates the gains.</div>
+<details class="check"><summary>Check yourself: F = $600,000, v = $4, n = 300,000. Unit cost? And MES = 5% of demand: how many efficient plants?</summary><p>4 + 600,000 ÷ 300,000 = <b>$6</b> (Q12). 100 ÷ 5 = <b>20 plants</b> (Q15).</p></details>
+<details class="check"><summary>Check yourself (short answer 21): Why didn't Blockbuster's 10× size give it a scale advantage?</summary><p>Scale economies exist only when average cost falls with volume. Blockbuster incurred cost at the store level (lease, labor, local inventory replicated per location), so cost per rental was flat however big it got. Netflix incurred fixed costs once for the nation and spread them over every subscriber. Blockbuster had size without scale; Netflix had scale before size.</p></details>
+</section>
+
+<section class="fw" id="scope" data-title="Economies of scope">
+<div class="fw-head"><span class="tag">§7</span><h3>Economies of scope</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 200" role="img" aria-label="Amazon shared resources across categories">
+  <rect x="220" y="75" width="240" height="56" rx="10" class="acc"/><text x="340" y="99" text-anchor="middle" class="onacc b">Shared: technology,</text><text x="340" y="117" text-anchor="middle" class="onacc b">fulfillment centers, Prime</text>
+  <g class="pan sti"><rect x="20" y="20" width="140" height="38" rx="8"/><rect x="20" y="145" width="140" height="38" rx="8"/><rect x="520" y="20" width="140" height="38" rx="8"/><rect x="520" y="145" width="140" height="38" rx="8"/></g>
+  <g text-anchor="middle"><text x="90" y="44">Category A</text><text x="90" y="169">Category B</text><text x="590" y="44">Category C</text><text x="590" y="169">Category D</text></g>
+  <g class="sta"><line x1="220" y1="90" x2="160" y2="45"/><line x1="220" y1="115" x2="160" y2="160"/><line x1="460" y1="90" x2="520" y2="45"/><line x1="460" y1="115" x2="520" y2="160"/></g>
+</svg>
+</figure>
+<div class="explain"><p><strong>Scope</strong> = lower average cost from producing a <strong>wider range of products</strong>, by sharing resources across them: R&amp;D, brand, distribution, customer accounts, fulfillment. Amazon shares technology, fulfillment centers, and Prime across categories. Scale = more of the same thing; scope = more different things on the same base.</p></div>
+</section>
+
+<section class="fw" id="experience" data-title="Experience curve">
+<div class="fw-head"><span class="tag">§7</span><h3>Learning and experience curves (Wright's law)</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 300" role="img" aria-label="80 percent experience curve over four doublings">
+  <line x1="70" y1="260" x2="640" y2="260" class="sti"/><line x1="70" y1="30" x2="70" y2="260" class="sti"/>
+  <g class="sm mut"><text x="62" y="264" text-anchor="end">0%</text><text x="62" y="154" text-anchor="end">50%</text><text x="62" y="44" text-anchor="end">100%</text></g>
+  <g class="sm" text-anchor="middle"><text x="90" y="280">100th</text><text x="220" y="280">200th</text><text x="350" y="280">400th</text><text x="480" y="280">800th</text><text x="610" y="280">1,600th</text></g>
+  <text x="350" y="297" text-anchor="middle" class="sm b">cumulative units (each step = one doubling)</text>
+  <polyline points="90,40 220,84 350,119.2 480,147.4 610,169.8" class="nf stam" style="stroke-width:3"/>
+  <g class="amb"><circle cx="90" cy="40" r="6"/><circle cx="220" cy="84" r="6"/><circle cx="350" cy="119.2" r="6"/><circle cx="480" cy="147.4" r="6"/><circle cx="610" cy="169.8" r="6"/></g>
+  <g class="sm b"><text x="102" y="36">100%</text><text x="232" y="80">80%</text><text x="362" y="114">64%</text><text x="492" y="142">51.2%</text><text x="610" y="194" text-anchor="middle">41%</text></g>
+  <text x="300" y="220" class="b">Cost of unit 2n = b × cost of unit n</text><text x="300" y="240" class="sm">after k doublings: cost × bᵏ   (80% curve: b = 0.8)</text>
+</svg>
+<figcaption>Unit cost relative to the 100th unit on an 80% curve.</figcaption>
+</figure>
+<div class="explain">
+<ul>
+<li><strong>Learning curve:</strong> labor cost per unit falls as workers repeat a task. <strong>Experience curve:</strong> <em>all</em> costs fall with cumulative volume, as learning gets built into people, process, tooling, and design.</li>
+<li><strong>Wright's law (1936):</strong> each doubling of cumulative output cuts unit cost by a constant percentage.</li>
+<li>Early doublings come fast; later ones take years, so curves flatten as industries mature.</li>
+<li>A follower can't catch up by building a big factory. It has to live through the cumulative volume, and the leader keeps producing. Rivian needs 4.7 doublings to reach Tesla's cumulative volume.</li>
+<li>Erodes when learning leaks (employees, suppliers), the curve flattens, or new technology resets the axis.</li>
+</ul>
+</div>
+<div class="trap"><b>Exam trap</b>Count doublings, not units. 1,000th → 4,000th is <b>two</b> doublings (×0.8 × 0.8), not three or four.</div>
+<details class="check"><summary>Check yourself: 80% curve, 1,000th unit costs $50. Cost of the 4,000th?</summary><p>Two doublings: 50 × 0.8 × 0.8 = <b>$32</b> (Q13).</p></details>
+</section>
+
+<section class="fw" id="stacking" data-title="Stacking cost advantages">
+<div class="fw-head"><span class="tag">§7</span><h3>Stacking and maintaining cost advantages</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 170" role="img" aria-label="Cost gap: harvest as margin or reinvest in price">
+  <rect x="20" y="62" width="140" height="46" rx="10" class="acc"/><text x="90" y="90" text-anchor="middle" class="onacc b">Cost gap</text>
+  <line x1="160" y1="75" x2="240" y2="35" class="sti" marker-end="url(#ah)"/><line x1="160" y1="95" x2="240" y2="135" class="sti" marker-end="url(#ah)"/>
+  <rect x="245" y="15" width="200" height="40" rx="8" class="ambs stam"/><text x="345" y="40" text-anchor="middle" class="b">Harvest as margin</text>
+  <rect x="245" y="115" width="200" height="40" rx="8" class="grns stg"/><text x="345" y="140" text-anchor="middle" class="b">Reinvest in lower prices</text>
+  <line x1="445" y1="135" x2="500" y2="135" class="stg" marker-end="url(#ahg)"/>
+  <rect x="505" y="115" width="160" height="40" rx="8" class="grns stg"/><text x="585" y="140" text-anchor="middle" class="b">More share</text>
+  <path d="M585,115 C585,70 300,80 162,88" class="nf stg dash" marker-end="url(#ahg)"/><text x="470" y="78" class="sm grn b">more scale + experience widen the gap</text>
+</svg>
+</figure>
+<div class="explain">
+<ul>
+<li>The strongest positions <strong>combine sources that feed each other</strong>. Aldi's limited assortment (structural) creates purchasing scale at the item level.</li>
+<li>A cost gap creates a choice: <strong>harvest it as margin</strong> or <strong>reinvest it in lower prices</strong> to build share.</li>
+<li>Each type needs its own maintenance: structure needs discipline against added complexity; scale needs share defense; experience needs continued motion down the curve.</li>
+</ul>
+</div>
+<details class="check"><summary>Check yourself: Why can a small firm have a cost advantage over a much bigger rival?</summary><p>Its advantage may be structural (a design that deletes costs at any size, like Aldi) or experience-based, neither of which needs current size. And the big rival may have size without scale (Blockbuster) or suffer diseconomies.</p></details>
+</section>
+<!-- ================= §8 ================= -->
+<h2 class="part" data-part="§8 Differentiation"><small>§8 · Sessions 9 and 10</small>Differentiation</h2>
+<p class="kq">Key questions: Is what the company sees as added value recognized and rewarded by customers (Chipotle)? Is differentiation beyond the product better or worse than product differentiation (A More Co)?</p>
+
+<section class="fw" id="diff-econ" data-title="Economics of differentiation">
+<div class="fw-head"><span class="tag">§8</span><h3>The economics: raise WTP by more than cost</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 420" role="img" aria-label="Value stick before and after a redesign, Mini-case B">
+  <text x="180" y="20" text-anchor="middle" class="lg">Before</text><text x="450" y="20" text-anchor="middle" class="lg">After redesign</text>
+  <rect x="150" y="86" width="60" height="88" class="accs"/><rect x="150" y="174" width="60" height="66" class="acc"/><rect x="150" y="240" width="60" height="44" class="ambs"/><rect x="150" y="284" width="60" height="66" class="pan2"/><rect x="150" y="86" width="60" height="264" class="nf sti"/>
+  <rect x="420" y="42" width="60" height="96.8" class="accs"/><rect x="420" y="138.8" width="60" height="79.2" class="acc"/><rect x="420" y="218" width="60" height="66" class="ambs"/><rect x="420" y="284" width="60" height="66" class="pan2"/><rect x="420" y="42" width="60" height="308" class="nf sti"/>
+  <g class="sm b" text-anchor="end"><text x="142" y="90">WTP $60</text><text x="142" y="178">Price $40</text><text x="142" y="244">Cost $25</text><text x="142" y="288">WTS $15</text>
+  <text x="412" y="46">WTP $70</text><text x="412" y="143">Price $48</text><text x="412" y="222">Cost $30</text><text x="412" y="288">WTS $15</text></g>
+  <g class="sm"><text x="218" y="134">Buyer $20</text><text x="218" y="211">Firm $15</text><text x="218" y="266">Supplier $10</text>
+  <text x="488" y="94">Buyer $22 <tspan class="grn b">(+2)</tspan></text><text x="488" y="182">Firm $18 <tspan class="grn b">(+3)</tspan></text><text x="488" y="255">Supplier $15 <tspan class="grn b">(+5)</tspan></text></g>
+  <path d="M218,86 L412,42" class="nf stm dash"/><path d="M218,240 L412,218" class="nf stm dash"/>
+  <rect x="20" y="364" width="640" height="48" rx="8" class="pan2"/>
+  <text x="340" y="384" text-anchor="middle" class="b">ΔWTP = +$10 &gt; Δcost = +$5 → value created: total 45 → 55 (+$10)</text>
+  <text x="340" y="402" text-anchor="middle" class="sm">The firm kept only $3 of the $10. Suppliers took $5: a sign of supplier power over what the redesign needs.</text>
+</svg>
+<figcaption>Mini-case B drawn to scale. Always recompute all three slices before and after.</figcaption>
+</figure>
+<div class="explain">
+<p>Differentiation <strong>raises the ceiling of the value stick</strong>: raising WTP by more than it costs to create the reason buyers pay a premium. Being unique or famous is not the test. <strong>The customer must recognize the difference and reward it.</strong></p>
+<ul>
+<li><strong>The test:</strong> compare ΔWTP with Δunit cost, in dollars. If cost rises more than WTP, the move destroys value.</li>
+<li><strong>Consumer surplus</strong> = WTP − price. Success = customers better off <em>and</em> the firm with a higher margin.</li>
+<li><strong>Creating vs capturing:</strong> recompute buyer surplus, firm margin, and supplier surplus before and after. Powerful buyers who can verify quality themselves can take most of what's created.</li>
+<li><strong>The diagnostic:</strong> if profits improved but <strong>no price moved</strong>, the achievement was in cost, not differentiation. Cost achievements diffuse to rivals.</li>
+</ul>
+</div>
+<div class="case"><b class="h">Cases</b><b>Chipotle:</b> the test isn't what the company believes adds value; it's whether customers recognize it and pay for it. <b>Ferrari:</b> enormous costs, tiny scale, and the industry's highest margins anyway, because the wedge between WTP and cost is so wide. Volume is capped below demand on purpose.</div>
+<details class="check"><summary>Check yourself: A redesign raises WTP by $4 and unit cost by $5.</summary><p>It destroys $1 of value per unit (Q16), however "better" the product is.</p></details>
+<details class="check"><summary>Check yourself: Customer satisfaction rose, but prices and volume didn't. Did it differentiate?</summary><p>No evidence of it. Differentiation shows up as customers rewarding the difference (a premium or more volume). Unrewarded satisfaction is just cost.</p></details>
+</section>
+
+<section class="fw" id="price-disc" data-title="Price discrimination">
+<div class="fw-head"><span class="tag">§8</span><h3>Price discrimination: three degrees</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 200" role="img" aria-label="First, second, third degree price discrimination (illustrative)">
+  <text x="110" y="20" text-anchor="middle" class="b">1st degree: each pays own max</text>
+  <g class="acc"><rect x="30" y="50" width="28" height="110"/><rect x="62" y="70" width="28" height="90"/><rect x="94" y="90" width="28" height="70"/><rect x="126" y="108" width="28" height="52"/><rect x="158" y="125" width="28" height="35"/></g>
+  <line x1="25" y1="160" x2="195" y2="160" class="sti"/><text x="110" y="182" text-anchor="middle" class="sm mut">e.g. auctions</text>
+  <text x="340" y="20" text-anchor="middle" class="b">2nd degree: price varies by quantity</text>
+  <rect x="260" y="60" width="50" height="100" class="accs sta"/><rect x="320" y="80" width="50" height="80" class="accs sta"/><rect x="380" y="100" width="50" height="60" class="accs sta"/>
+  <g class="sm" text-anchor="middle"><text x="285" y="54">1 unit</text><text x="345" y="74">10 units</text><text x="405" y="94">100 units</text></g>
+  <line x1="255" y1="160" x2="435" y2="160" class="sti"/><text x="345" y="182" text-anchor="middle" class="sm mut">e.g. bulk discounts (price per unit)</text>
+  <text x="570" y="20" text-anchor="middle" class="b">3rd degree: price varies by group</text>
+  <rect x="500" y="100" width="60" height="60" class="ambs stam"/><rect x="580" y="55" width="60" height="105" class="acc"/>
+  <g class="sm" text-anchor="middle"><text x="530" y="94">Students</text><text x="610" y="49">Business</text></g>
+  <line x1="495" y1="160" x2="645" y2="160" class="sti"/><text x="570" y="182" text-anchor="middle" class="sm mut">e.g. student/senior; business vs economy</text>
+</svg>
+<figcaption>Illustrative shapes. All three capture more surplus by charging closer to each buyer's WTP.</figcaption>
+</figure>
+<div class="explain"><p>Price discrimination captures more of the buyer surplus by charging according to WTP. <strong>1st:</strong> each customer pays his or her reservation price (auctions). <strong>2nd:</strong> price varies with quantity purchased (bulk discounts). <strong>3rd:</strong> price varies by customer group (student and senior discounts; business and economy fares).</p></div>
+<details class="check"><summary>Check yourself: A "buy 2, get 1 free" deal is which degree?</summary><p>Second degree: price depends on quantity, not on who you are.</p></details>
+</section>
+
+<section class="fw" id="quality-types" data-title="Search, experience, credence">
+<div class="fw-head"><span class="tag">§8</span><h3>How buyers judge quality: search, experience, credence</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 170" role="img" aria-label="Spectrum of when quality can be verified">
+  <text x="340" y="18" text-anchor="middle" class="b">When can the buyer verify quality?</text>
+  <rect x="20" y="32" width="205" height="56" rx="8" class="grns stg"/><rect x="237" y="32" width="205" height="56" rx="8" class="ambs stam"/><rect x="454" y="32" width="205" height="56" rx="8" class="roses str"/>
+  <text x="122" y="56" text-anchor="middle" class="lg">Search</text><text x="122" y="76" text-anchor="middle" class="sm">BEFORE purchase</text>
+  <text x="339" y="56" text-anchor="middle" class="lg">Experience</text><text x="339" y="76" text-anchor="middle" class="sm">only AFTER purchase</text>
+  <text x="556" y="56" text-anchor="middle" class="lg">Credence</text><text x="556" y="76" text-anchor="middle" class="sm">NEVER</text>
+  <text x="122" y="112" text-anchor="middle" class="sm b">specifications sell it</text><text x="339" y="112" text-anchor="middle" class="sm b">reputation substitutes for inspection</text><text x="556" y="112" text-anchor="middle" class="sm b">signals: brand, certification, warranty</text>
+  <text x="122" y="136" text-anchor="middle" class="sm mut">laptop with published specs</text><text x="339" y="136" text-anchor="middle" class="sm mut">restaurant meal, haircut</text><text x="556" y="136" text-anchor="middle" class="sm mut">supplement w/ long-term claims</text>
+  <line x1="40" y1="156" x2="640" y2="156" class="stm" marker-end="url(#ah)"/><text x="340" y="168" text-anchor="middle" class="sm mut">harder to demonstrate, harder to imitate</text>
+</svg>
+</figure>
+<div class="explain">
+<p><strong>Sources of differentiation.</strong> <em>Product:</em> features, performance, quality, design, reliability. <em>Beyond the product:</em> service, convenience, customization, brand and reputation, experience, mission and values, relationships, community.</p>
+<p>Product differences are easier for customers to see <strong>and</strong> for rivals to copy. Differences rooted in brand, relationships, and experience are harder to demonstrate <strong>and</strong> harder to imitate. That's the A More Co trade-off.</p>
+</div>
+<details class="check"><summary>Check yourself: Best example of a credence good: laptop, restaurant meal, haircut, daily supplement with long-term claims?</summary><p>The supplement (Q17). You can't verify it even after use, so it must be signaled.</p></details>
+</section>
+
+<section class="fw" id="canvas" data-title="Strategy canvas">
+<div class="fw-head"><span class="tag">§8</span><h3>Strategy canvas</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 310" role="img" aria-label="Strategy canvas: traditional circus vs Cirque du Soleil (illustrative)">
+  <line x1="50" y1="250" x2="650" y2="250" class="sti"/><line x1="50" y1="40" x2="50" y2="250" class="sti"/>
+  <text x="44" y="56" text-anchor="end" class="sm mut">high</text><text x="44" y="250" text-anchor="end" class="sm mut">low</text>
+  <polyline points="80,150 170,90 260,90 350,90 440,190 530,230 620,230" class="nf stm" style="stroke-width:3"/>
+  <polyline points="80,90 170,230 260,250 350,170 440,90 530,70 620,70" class="nf sta" style="stroke-width:3"/>
+  <g class="mut"><circle cx="80" cy="150" r="5"/><circle cx="170" cy="90" r="5"/><circle cx="260" cy="90" r="5"/><circle cx="350" cy="90" r="5"/><circle cx="440" cy="190" r="5"/><circle cx="530" cy="230" r="5"/><circle cx="620" cy="230" r="5"/></g>
+  <g class="acc"><circle cx="80" cy="90" r="5"/><circle cx="170" cy="230" r="5"/><circle cx="260" cy="250" r="5"/><circle cx="350" cy="170" r="5"/><circle cx="440" cy="90" r="5"/><circle cx="530" cy="70" r="5"/><circle cx="620" cy="70" r="5"/></g>
+  <g class="sm" text-anchor="middle"><text x="80" y="270">Price</text><text x="170" y="270">Star</text><text x="170" y="285">performers</text><text x="260" y="270">Animal</text><text x="260" y="285">shows</text><text x="350" y="270">Humor &amp;</text><text x="350" y="285">thrills</text><text x="440" y="270">Venue</text><text x="440" y="285">quality</text><text x="530" y="270">Artistic</text><text x="530" y="285">theme</text><text x="620" y="270">Refined</text><text x="620" y="285">environment</text></g>
+  <line x1="420" y1="20" x2="450" y2="20" class="sta" style="stroke-width:3"/><text x="456" y="24" class="sm b acc">Cirque du Soleil</text>
+  <line x1="560" y1="20" x2="590" y2="20" class="stm" style="stroke-width:3"/><text x="596" y="24" class="sm b mut">Circus</text>
+  <text x="60" y="24" class="sm mut">Levels illustrative. The point is the SHAPE.</text>
+</svg>
+<figcaption>X axis: factors the industry competes on. Y axis: level each player offers. The line is the value curve.</figcaption>
+</figure>
+<div class="explain"><p>Plot the factors an industry competes on against the level each competitor offers. A good strategy shows <strong>focus</strong> (peaks and valleys, not a flat line) and <strong>divergence</strong> from rivals. If your curve sits on top of a rival's, you're competing on the same terms.</p></div>
+</section>
+
+<section class="fw" id="errc" data-title="Four actions (ERRC)">
+<div class="fw-head"><span class="tag">§8</span><h3>Four actions framework</h3></div>
+<div class="errc">
+<div style="background:var(--rose-soft)"><b>Eliminate</b><span class="q">Which factors the industry takes for granted should go?</span>Cirque: animal shows, star performers</div>
+<div style="background:var(--green-soft)"><b>Raise</b><span class="q">Which should rise well above the industry standard?</span>Cirque: venue quality</div>
+<div style="background:var(--amber-soft)"><b>Reduce</b><span class="q">Which should fall well below the industry standard?</span>Cirque: humor and thrills</div>
+<div style="background:var(--acc-soft)"><b>Create</b><span class="q">Which should be offered for the first time?</span>Cirque: artistic theme, refined environment</div>
+</div>
+<div class="explain"><p>Left column (eliminate, reduce) <strong>cuts cost</strong>. Right column (raise, create) <strong>raises WTP</strong>. Done together, the value curve diverges from rivals on the canvas above. Other examples: Nintendo Wii and Airbnb. This is also a route to dual advantage (§9).</p></div>
+<details class="check"><summary>Check yourself: Map each ERRC action onto the strategy canvas above.</summary><p>Eliminate: Cirque's dots drop to the floor (animals, stars). Reduce: lower than circus (humor/thrills). Raise: above circus (venue). Create: factors where the circus is near zero and Cirque is high (theme, refined environment).</p></details>
+</section>
+
+<section class="fw" id="customer-tools" data-title="Jobs, consumption chain, segments">
+<div class="fw-head"><span class="tag">§8</span><h3>Jobs to be done, the consumption chain, segmentation</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 110" role="img" aria-label="Consumption chain steps">
+  <g class="accs sta">
+  <polygon points="5,20 90,20 105,50 90,80 5,80"/><polygon points="96,20 185,20 200,50 185,80 96,80 111,50"/><polygon points="191,20 280,20 295,50 280,80 191,80 206,50"/><polygon points="286,20 375,20 390,50 375,80 286,80 301,50"/><polygon points="381,20 470,20 485,50 470,80 381,80 396,50"/><polygon points="476,20 565,20 580,50 565,80 476,80 491,50"/><polygon points="571,20 660,20 675,50 660,80 571,80 586,50"/></g>
+  <g class="sm b" text-anchor="middle"><text x="52" y="55">Awareness</text><text x="150" y="55">Search</text><text x="245" y="55">Purchase</text><text x="340" y="55">Delivery</text><text x="435" y="55">Use</text><text x="530" y="55">Service</text><text x="625" y="55">Disposal</text></g>
+  <text x="340" y="102" text-anchor="middle" class="sm mut">Every step is a place to differentiate.</text>
+</svg>
+</figure>
+<div class="explain">
+<ul>
+<li><strong>Jobs to be done:</strong> customers <em>hire</em> a product to do a job. Define the job, not the product category, and competitors and opportunities look different.</li>
+<li><strong>Mapping the consumption chain:</strong> trace every step of the customer's experience (above) and look for a step to differentiate on.</li>
+<li><strong>Customer segmentation:</strong> group customers by similar needs; look for segments <strong>overserved</strong> (paying for more than they want → cost play) or <strong>underserved</strong> (needs unmet → differentiation play).</li>
+</ul>
+</div>
+</section>
+
+<section class="fw" id="nps" data-title="Net Promoter Score">
+<div class="fw-head"><span class="tag">§8</span><h3>Net Promoter Score</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 150" role="img" aria-label="NPS scale 0 to 10">
+  <text x="340" y="20" text-anchor="middle" class="b">"How likely are you to recommend us?"</text>
+  <g class="roses str"><rect x="40" y="35" width="50" height="40"/><rect x="95" y="35" width="50" height="40"/><rect x="150" y="35" width="50" height="40"/><rect x="205" y="35" width="50" height="40"/><rect x="260" y="35" width="50" height="40"/><rect x="315" y="35" width="50" height="40"/><rect x="370" y="35" width="50" height="40"/></g>
+  <g class="ambs stam"><rect x="425" y="35" width="50" height="40"/><rect x="480" y="35" width="50" height="40"/></g>
+  <g class="grns stg"><rect x="535" y="35" width="50" height="40"/><rect x="590" y="35" width="50" height="40"/></g>
+  <g class="b" text-anchor="middle"><text x="65" y="60">0</text><text x="120" y="60">1</text><text x="175" y="60">2</text><text x="230" y="60">3</text><text x="285" y="60">4</text><text x="340" y="60">5</text><text x="395" y="60">6</text><text x="450" y="60">7</text><text x="505" y="60">8</text><text x="560" y="60">9</text><text x="615" y="60">10</text></g>
+  <text x="230" y="96" text-anchor="middle" class="b rose">Detractors (6 or below)</text><text x="478" y="96" text-anchor="middle" class="b amb">Passives</text><text x="478" y="112" text-anchor="middle" class="sm amb">not counted</text><text x="588" y="96" text-anchor="middle" class="b grn">Promoters</text>
+  <text x="340" y="138" text-anchor="middle" class="mono">NPS = % promoters − % detractors</text>
+</svg>
+</figure>
+<details class="check"><summary>Check yourself: 200 responses: 90 promoters, 60 passives, 50 detractors. NPS?</summary><p>45% − 25% = <b>20</b>. Passives are in the denominator but not subtracted or added.</p></details>
+<div class="trap"><b>Risks of differentiation</b>The premium exceeds what customers think the difference is worth · customers don't perceive or value it · rivals imitate and it becomes the standard · the cost of differentiating rises faster than WTP.</div>
+</section>
+
+<!-- ================= §9 ================= -->
+<h2 class="part" data-part="§9 Dual advantage"><small>§9 · Session 11</small>Dual advantage</h2>
+<p class="kq">Key question: How can a firm have both low cost and differentiation? What share of Costco's advantage is cost vs differentiation?</p>
+
+<section class="fw" id="dual" data-title="Dual advantage vs stuck">
+<div class="fw-head"><span class="tag">§9</span><h3>Dual advantage on the value stick</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 300" role="img" aria-label="Five value sticks: average, cost leader, differentiator, stuck in the middle, dual advantage (illustrative)">
+  <line x1="20" y1="95" x2="660" y2="95" class="stm dash"/><text x="660" y="89" text-anchor="end" class="sm mut">industry avg WTP</text>
+  <line x1="20" y1="165" x2="660" y2="165" class="stm dash"/><text x="660" y="181" text-anchor="end" class="sm mut">industry avg cost</text>
+  <rect x="65" y="95" width="50" height="70" class="pan2 sti"/>
+  <rect x="195" y="109" width="50" height="91" class="accs sta"/>
+  <rect x="325" y="46" width="50" height="98" class="accs sta"/>
+  <rect x="455" y="102" width="50" height="59.5" class="roses str"/>
+  <rect x="585" y="53" width="50" height="147" class="acc"/>
+  <g class="sm b" text-anchor="middle"><text x="90" y="225">Average</text><text x="220" y="225">Cost leader</text><text x="350" y="225">Differentiator</text><text x="480" y="225">Stuck in middle</text><text x="610" y="225">Dual advantage</text></g>
+  <g class="sm" text-anchor="middle"><text x="90" y="243">gap $20</text><text x="220" y="243">floor down · $26</text><text x="350" y="243">ceiling up · $28</text><text x="480" y="243">neither · $17</text><text x="610" y="243" class="b acc">both · $42</text></g>
+  <text x="340" y="22" text-anchor="middle" class="b">Bar top = WTP, bar bottom = cost, bar height = value created per unit</text>
+  <text x="340" y="285" text-anchor="middle" class="sm mut">Illustrative numbers. Dual advantage sits at the extremes of BOTH ends, not a moderate middle.</text>
+</svg>
+</figure>
+<div class="explain">
+<p>Generic strategies (§1) warn that pursuing both cost and differentiation leaves a firm <strong>stuck in the middle</strong>. Dual advantage is the exception: lower costs and higher WTP at the same time.</p>
+<ul>
+<li><strong>On the value stick</strong> it moves the floor down and the ceiling up at once. It's an extreme on both ends, not a moderate position.</li>
+<li><strong>What makes it real is a reinforcing loop</strong>: each element makes the next one cheaper or more valuable.</li>
+<li><strong>Dual vs stuck:</strong> a stuck firm borrows activities from two systems that conflict. A dual-advantage firm builds one system whose parts feed each other.</li>
+</ul>
+<p><strong>How firms get there:</strong> choices that cut cost and raise value together (a curated assortment is cheaper <em>and</em> easier to shop); scale or experience funding quality; eliminating what customers don't value and reinvesting in what they do (four actions); a revenue model that changes the trade-off (membership fees let a retailer price near cost).</p>
+</div>
+</section>
+
+<section class="fw" id="costco" data-title="Costco's reinforcing loop">
+<div class="fw-head"><span class="tag">§9</span><h3>Case: Costco's reinforcing loop</h3></div>
+<figure class="fig">
+<svg viewBox="0 0 680 330" role="img" aria-label="Costco reinforcing loop">
+  <rect x="20" y="20" width="180" height="48" rx="8" class="ambs stam"/><text x="110" y="40" text-anchor="middle" class="sm b">Limited selection</text><text x="110" y="57" text-anchor="middle" class="sm">≈ 4,000 items</text>
+  <line x1="200" y1="44" x2="236" y2="56" class="stam" marker-end="url(#ahm)"/>
+  <rect x="240" y="34" width="200" height="52" rx="8" class="acc"/><text x="340" y="56" text-anchor="middle" class="onacc sm b">Lower cost + concentrated</text><text x="340" y="73" text-anchor="middle" class="onacc sm b">buying power per item</text>
+  <rect x="460" y="144" width="210" height="52" rx="8" class="acc"/><text x="565" y="166" text-anchor="middle" class="onacc sm b">Low prices (markup ≈ 14% cap)</text><text x="565" y="183" text-anchor="middle" class="onacc sm b">+ curated quality</text>
+  <rect x="240" y="254" width="200" height="52" rx="8" class="acc"/><text x="340" y="276" text-anchor="middle" class="onacc sm b">More members, higher</text><text x="340" y="293" text-anchor="middle" class="onacc sm b">WTP to belong, renewals</text>
+  <rect x="10" y="144" width="210" height="52" rx="8" class="acc"/><text x="115" y="166" text-anchor="middle" class="onacc sm b">Membership fees (most of</text><text x="115" y="183" text-anchor="middle" class="onacc sm b">operating profit) + volume</text>
+  <path d="M440,70 Q560,80 565,140" class="nf sta" marker-end="url(#aha)"/>
+  <path d="M565,196 Q560,270 444,280" class="nf sta" marker-end="url(#aha)"/>
+  <path d="M240,280 Q120,270 115,200" class="nf sta" marker-end="url(#aha)"/>
+  <path d="M115,144 Q120,80 236,66" class="nf sta" marker-end="url(#aha)"/>
+  <text x="340" y="160" text-anchor="middle" class="lg">Reinforcing loop</text>
+  <text x="340" y="180" text-anchor="middle" class="sm mut">fees fund low prices;</text><text x="340" y="196" text-anchor="middle" class="sm mut">volume strengthens buying power</text>
+</svg>
+<figcaption>Each link makes the next one cheaper or more valuable. That interaction is what a challenger has to break.</figcaption>
+</figure>
+<div class="explain">
+<p>Costco carries roughly 4,000 items, caps markups near 14%, and earns most of its operating profit from membership fees. Limited selection lowers cost and concentrates buying power. Low prices and curated quality raise what members will pay to belong. Membership income funds lower prices, which attracts more members. Sam's Club runs the same warehouse model, so the comparison <strong>isolates what Costco's loop adds</strong>.</p>
+<p><strong>Why it's hard to attack:</strong> the strongest positions stack sources that reinforce one another. Ask of any strong competitor how its sources interact, because that interaction is what a challenger must break.</p>
+</div>
+<details class="check"><summary>Check yourself: Two warehouse retailers both have low costs and loyal customers. In one, selection → lower cost → lower prices → more members → buying power. What does it have that the other lacks?</summary><p>A reinforcing loop (Q18). That separates dual advantage from doing two things well.</p></details>
+<details class="check"><summary>Check yourself: How would you estimate how much of Costco's edge is cost vs WTP?</summary><p>Benchmark against Sam's Club. Cost side: compare operating cost as a share of sales and prices on matched items. WTP side: compare membership fee levels, renewal rates, and sales per member/visit at similar prices. The fee premium members pay and renew at is a direct read on WTP.</p></details>
+</section>
+
+<h2 class="part" id="formulas" data-part="Formulas"><small>Cheat sheet</small>Formulas and numbers to know cold</h2>
+<div class="formulas">
+<div><span>Buyer surplus</span><code>WTP − price</code></div>
+<div><span>Firm margin</span><code>price − cost</code></div>
+<div><span>Supplier surplus</span><code>cost − WTS</code></div>
+<div><span>Total value created</span><code>WTP − WTS</code></div>
+<div><span>GDP</span><code>C + I + G + NX</code></div>
+<div><span>PPP rate (A per B)</span><code>price in A ÷ price in B</code></div>
+<div><span>C4</span><code>sum of 4 largest shares</code></div>
+<div><span>HHI</span><code>Σ (share %)²</code></div>
+<div><span>ΔHHI from merger</span><code>2 × a × b</code></div>
+<div><span>Concentration test</span><code>post HHI &gt; 1,800 &amp; Δ &gt; 100</code></div>
+<div><span>Share test</span><code>share &gt; 30% &amp; Δ &gt; 100</code></div>
+<div><span>HHI bands</span><code>&lt;1,000 · 1,000 to 1,800 · &gt;1,800</code></div>
+<div><span>Unit cost with scale</span><code>v + F/n</code></div>
+<div><span>Efficient plants</span><code>≈ 100 ÷ MES share</code></div>
+<div><span>Experience curve</span><code>cost × bᵏ (k doublings)</code></div>
+<div><span>Profit per point of revenue</span><code>profit share ÷ revenue share</code></div>
+<div><span>Differentiation test</span><code>ΔWTP &gt; Δcost</code></div>
+<div><span>NPS</span><code>% promoters − % detractors</code></div>
+</div>
+<p style="color:var(--muted);margin-top:28px;font-size:14px">Next step after this page: do the 20 MC, 3 short answers, and 2 mini-cases at the back of the packet closed-book, then check the key.</p>
+</main>
+</div>
+
+<script>
+(function(){
+  var KEY='strat401-got';
+  var saved={};
+  try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){saved={};}
+  var secs=[].slice.call(document.querySelectorAll('section.fw'));
+  var navHtml='<div class="prog"><b id="pc">0</b> / '+secs.length+' frameworks mastered<div class="bar"><i id="pb"></i></div></div>';
+  var lastPart='';
+  var nodes=[].slice.call(document.querySelectorAll('h2.part, section.fw'));
+  nodes.forEach(function(n){
+    if(n.tagName==='H2'){navHtml+='<h4>'+n.getAttribute('data-part')+'</h4>';if(n.id){navHtml+='<a href="#'+n.id+'"><span class="dot" style="visibility:hidden"></span>Cheat sheet</a>';}}
+    else{navHtml+='<a href="#'+n.id+'" data-for="'+n.id+'"><span class="dot"></span>'+n.getAttribute('data-title')+'</a>';}
+  });
+  document.getElementById('toc').innerHTML=navHtml;
+  document.getElementById('toc2').innerHTML=navHtml.replace('id="pc"','').replace('id="pb"','');
+  secs.forEach(function(s){
+    var head=s.querySelector('.fw-head');
+    var lab=document.createElement('label');lab.className='got';
+    var cb=document.createElement('input');cb.type='checkbox';cb.id='got-'+s.id;cb.checked=!!saved[s.id];
+    lab.appendChild(cb);lab.appendChild(document.createTextNode('Got it'));head.appendChild(lab);
+    cb.addEventListener('change',function(){saved[s.id]=cb.checked;try{localStorage.setItem(KEY,JSON.stringify(saved));}catch(e){}update();});
+  });
+  function update(){
+    var n=0;secs.forEach(function(s){var on=!!saved[s.id];if(on)n++;
+      document.querySelectorAll('a[data-for="'+s.id+'"]').forEach(function(a){a.classList.toggle('done',on);});});
+    document.getElementById('pc').textContent=n;
+    document.getElementById('pb').style.width=(100*n/secs.length)+'%';
+  }
+  update();
+})();
+</script>
+
+</body>
+</html>

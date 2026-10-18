@@ -169,7 +169,7 @@ Why care? At the **top of a hill (max) or bottom of a valley (min), the ground i
   ],
   deeper: [
     { title: 'Max or min? The second derivative', kind: 'derivation', body: r`[[GEN]] If \(f''(x) < 0\) at the critical point, it's a maximum (the curve bends down: \(R = 100P - 2P^2\), \(R'' = -4\)). If \(f''(x) > 0\), it's a minimum (\(ATC'' = 4\)). The course just reads it off the shape: \(-P^2\) opens down, \(+Q^2\) opens up.` },
-    { title: 'Where calculus shows up later', kind: 'textbook', body: 'MC = dC/dQ (S06). Revenue max dR/dP = 0 (S07). OPE = (∂Q/∂P)(P/Q) (S08). Regression coefficients = partial effects (S09). MR = dR/dQ and MR = MC (S10). Markup rule from MR = MC (S11).' },
+    { title: 'Where calculus shows up later', kind: 'textbook', body: 'MC = dC/dQ (S06). Revenue max dR/dP = 0 (S07). OPE = (∂Q/∂P)(P/Q) (S08). Regression coefficients = partial effects (S09). MR = dR/dQ and MR = MC (S10). Two-part fees, block prices, and peak-load MR = MC (S11).' },
     { title: 'In a case interview', kind: 'case-interview', body: 'You won’t differentiate in a case, but you will reason at the margin: “What does one more store / one more salesperson / a $1 price increase add vs. cost?” That’s the derivative in words. Quick check: if a profit curve is concave, the best point is where the marginal gain hits zero.' },
   ],
   summary: r`**Function:** inputs → outputs. **Slope:** Δy/Δx (constant for lines, varies for curves). **Derivative:** slope at any x (tangent line). [[Math Review pp.1-5]]

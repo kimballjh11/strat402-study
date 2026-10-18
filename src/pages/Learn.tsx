@@ -1,46 +1,53 @@
+import { useEffect } from 'react'
 import { SPINES, sessions } from '../content'
-import { MasteryRing } from '../components/Ring'
-import { useProgress } from '../lib/store'
-import { moduleProgress } from './Home'
+import type { SessionId } from '../content/types'
+import { useRoute } from '../lib/router'
+import { setProgress } from '../lib/store'
+import { SessionArticle } from './ModulePage'
 
-export function Learn() {
-  const mastery = useProgress((p) => p.mastery)
-  useProgress((p) => p.visited)
+/** Every Midterm 1 session, read in course order. Jump links land on a session or a section inside it. */
+export function Learn({ focus }: { focus?: SessionId }) {
+  const screen = useRoute().query.get('screen')
+  useEffect(() => {
+    const target = focus ? (screen && document.getElementById(`${focus}-${screen}`) ? `${focus}-${screen}` : focus) : null
+    if (target) document.getElementById(target)?.scrollIntoView({ block: 'start' })
+    setProgress((p) => ({ ...p, lastPath: focus ? `/learn/${focus}${screen ? `?screen=${screen}` : ''}` : '/learn' }))
+  }, [focus, screen])
+
   return (
-    <div className="space-y-8">
-      <header>
+    <div className="space-y-10">
+      <header className="space-y-3">
         <h1 className="text-3xl font-semibold">Learn</h1>
-        <p className="muted mt-1">
-          The course is organized around four strategy questions. Midterm 1 covers the first two. Every module has the same 13 screens: why it matters → intuition → terms → math → worked examples → interactives → checks → practice → traps → explain it back → go deeper → mastery check → summary.
+        <p className="muted max-w-3xl">
+          Midterm 1 in one pass, in course order. Read each session straight through, then flip through its questions at the end.
         </p>
+        <nav aria-label="Sessions" className="card p-4">
+          <ol className="grid sm:grid-cols-2 gap-x-6 gap-y-1">
+            {sessions.map((s) => (
+              <li key={s.id}>
+                <a className="underline text-sm" href={`#/learn/${s.id}`}>
+                  Session {s.num}. {s.title}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
       </header>
-      {SPINES.map((sp) => {
-        const mods = sessions.filter((s) => s.spine === sp.key)
-        return (
-          <section key={sp.key} aria-labelledby={`sp-${sp.key}`} className={sp.locked ? 'rounded-xl border border-dashed p-4' : ''} style={sp.locked ? { borderColor: 'var(--line)' } : undefined}>
+      {SPINES.filter((sp) => !sp.locked && sessions.some((s) => s.spine === sp.key)).map((sp) => (
+        <section key={sp.key} className="space-y-10" aria-labelledby={`sp-${sp.key}`}>
+          <header>
             <h2 id={`sp-${sp.key}`} className="text-xl font-semibold">
-              {sp.title} {sp.locked && <span className="chip ml-1">🔒 coming later</span>}
+              {sp.title}
             </h2>
-            <p className="muted text-sm mb-3">{sp.q}</p>
-            {mods.length > 0 && (
-              <div className="grid sm:grid-cols-2 gap-3">
-                {mods.map((s) => (
-                  <a key={s.id} href={`#/learn/${s.id}`} className="card p-4 flex gap-3 items-start" data-testid={`module-${s.id}`}>
-                    <MasteryRing value={moduleProgress(s.id)} mastered={mastery[s.id]?.passed} size={48} label={`${s.title} progress`} />
-                    <div className="min-w-0">
-                      <div className="text-xs muted">
-                        Session {s.num} · ~{s.minutes} min
-                      </div>
-                      <div className="font-semibold">{s.title}</div>
-                      <div className="text-xs muted mt-1">{s.los.length} learning objectives{s.ready ? '' : ' · being built'}</div>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            )}
-          </section>
-        )
-      })}
+            <p className="muted text-sm">{sp.q}</p>
+          </header>
+          {sessions
+            .filter((s) => s.spine === sp.key)
+            .map((s) => (
+              <SessionArticle key={s.id} m={s} />
+            ))}
+        </section>
+      ))}
     </div>
   )
 }

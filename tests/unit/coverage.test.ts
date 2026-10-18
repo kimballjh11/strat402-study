@@ -10,7 +10,7 @@ import type { SessionId } from '../../src/content/types'
 /** LOs that involve calculation (need a generator). */
 const QUANT = new Set([
   'S03-LO2', 'S04-LO3', 'S05-LO1', 'S05-LO2', 'S06-LO2', 'S06-LO3', 'S07-LO2', 'S07-LO3', 'S07-LO4',
-  'S08-LO2', 'S09-LO1', 'S09-LO3', 'S10-LO1', 'S10-LO4', 'S11-LO3', 'S12-LO3',
+  'S08-LO2', 'S09-LO1', 'S09-LO3', 'S10-LO1', 'S10-LO4', 'S11-LO3', 'S11-LO5',
 ])
 
 describe('LO coverage', () => {
@@ -42,8 +42,7 @@ describe('LO coverage', () => {
       '## Notes',
       '',
       '- **S07-LO5** (four sources of differentiation): covered only through course evidence of differentiation (gross margin as willingness to pay, Whole Foods vs. Kroger). The professor’s four categories live in the LearnStrategy video, whose transcript is not in the inputs. See gap-report.md.',
-      '- **S11** is built entirely from standard managerial economics (labeled) until the Session 11 slides are added.',
-      '- **S01-LO3** is a derived LO (course policies tested in CQ1); it is not stated as an LO by the professor.',
+      '- **S11** follows the Advanced Pricing Strategies slides and the Cascade exercise. The objective slide names cross-subsidies; the deck does not teach them.',
       '',
     ]
     writeFileSync('content/coverage-report.md', lines.join('\n'))

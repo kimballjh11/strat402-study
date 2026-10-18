@@ -1538,26 +1538,31 @@
   "learningObjectives": [
    {
     "id": "S11-LO1",
-    "text": "Know and understand the following economic terms: block pricing, commodity bundling, cross-subsidies, price discrimination, peak-load pricing, two-part pricing, transfer pricing",
-    "src": "course-data.js Session 11"
+    "text": "Know and understand price discrimination, two-part pricing, block pricing, commodity bundling, and peak-load pricing",
+    "src": "S11 slides p.17"
    },
    {
     "id": "S11-LO2",
     "text": "Know and understand the three forms of price discrimination",
-    "src": "course-data.js Session 11"
+    "src": "S11 slides p.17"
    },
    {
     "id": "S11-LO3",
-    "text": "Know how to calculate the profit-maximizing price when using two-part pricing, block pricing, commodity bundling, peak-load pricing, cross-subsidies, and transfer pricing",
-    "src": "course-data.js Session 11"
+    "text": "Know how to calculate the profit-maximizing price when using two-part pricing, block pricing, commodity bundling, and peak-load pricing",
+    "src": "S11 slides p.17"
    },
    {
     "id": "S11-LO4",
     "text": "Be able to articulate the benefits and risks of charging different prices to different customers",
-    "src": "course-data.js Session 11"
+    "src": "S11 slides p.17"
+   },
+   {
+    "id": "S11-LO5",
+    "text": "Know how to calculate consumer surplus and describe what it means",
+    "src": "S11 slides p.17"
    }
   ],
-  "status": "Session 11 slides not yet posted. All definitions/formulas are GENERAL ECON (B&P Ch 11 'Pricing Strategies for Firms with Market Power', pp. 352-370 topics) until slides arrive.",
+  "status": "Rebuilt from S11 Slides - Advanced Pricing Strategies.pdf and the Cascade Heating & Air exercise. The slide objective also names cross-subsidies; the deck does not define or calculate one.",
   "keyTerms": [
    {
     "term": "Price discrimination",

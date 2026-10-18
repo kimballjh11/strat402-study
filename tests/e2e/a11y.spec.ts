@@ -2,7 +2,7 @@
 import AxeBuilder from '@axe-core/playwright'
 import { expect, test } from '@playwright/test'
 
-const PAGES = ['/', '/learn', '/learn/S08?screen=math', '/learn/S08?screen=widgets', '/learn/S05?screen=check', '/practice', '/quizzes?q=3', '/flashcards', '/tracker', '/exam', '/formulas', '/excel', '/settings', '/plan']
+const PAGES = ['/', '/learn', '/practice', '/quizzes?q=3', '/exam', '/formulas', '/excel', '/settings', '/plan']
 
 for (const theme of ['light', 'dark']) {
   test(`axe: no serious/critical violations (${theme})`, async ({ page }) => {
